@@ -1,0 +1,700 @@
+[
+  {
+    "id": "2610.41199",
+    "version": "2610.41199v1",
+    "title": "Beyond CLIP: Calibrated (Few-Shot) Defect Detection With System One Decision Models",
+    "abstract": "Cameras and vision sensors are widely used for product and process inspection in manufacturing environments. Traditionally, this process required thousands of images of both nominal and defective products to train such models. Recent research shows that vision transformer (ViT) models, such as CLIP, can reduce this requirement to 50-100 images per nominal and defective class. However, collecting even 50 defective images can be difficult in high-yield or low-volume manufacturing processes. In this paper, we examine the utility of two recently proposed structured decision models (Jev and Clef-Flash) in applications using as few as k=2 reference images per class at inference. In the process, we provide three main contributions: (a) a framework for k-shot learning of these models for image classification/inspection applications; (b) an agentic approach for automatically refining the text descriptions that guide image classification in these decision models; and (c) an approach to calibrate the resulting defect probabilities to improve their reliability for inspection decisions. We test these contributions in five manufacturing case studies. Using two reference images per class, both Jev and Clef-Flash outperform CLIP's test accuracies with the same references (0.75-1.00 [Jev] and 0.71-0.99 [Clef-Flash] vs 0.67-0.84 [CLIP]). Furthermore, we show that our agentic refinement of text descriptions significantly improves accuracy across 6 of 8 model-application combinations, and our calibration approach reduces the Brier score in 13 of the 15 model-application configurations. To support the reproducibility of our work, we provide our replication code and have created the R \"decisions\" package for evaluating additional models. We also provide a publicly available web app that allows practitioners to inspect their own images with no code.",
+    "authors": [
+      "Fadel M. Megahed",
+      "Ying-Ju Chen"
+    ],
+    "published": "2026-10-30T03:21:02Z",
+    "updated": "2026-10-30T03:21:02Z",
+    "url": "https://arxiv.org/abs/2610.41199",
+    "pdf_url": "https://arxiv.org/pdf/2610.41199",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "10 pages, 5 figures",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "用每类少量参考图做制造质检，自动改进分类文本描述，并校准缺陷概率以辅助判定。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2610.41199",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "少样本",
+      "概率校准",
+      "工业质检"
+    ]
+  },
+  {
+    "id": "2610.40580",
+    "version": "2610.40580v1",
+    "title": "RADIOlogy: A Single-Pass Approach to Training-Free Zero-Shot Anomaly Detection",
+    "abstract": "Current zero-shot anomaly detection methods often rely on complex prompt-learning techniques or computationally expensive sliding-window strategies to achieve fine-grained visual alignment to detect small-scale anomalies. This reliance stems from the fundamental limitation of standard CLIP architectures, where [CLS] token attention and spatial patch pooling struggle to capture subtle, localized anomaly features. While prompt-learning approaches aim to bridge this gap, they typically require a large number of ground-truth segmentation masks from auxiliary datasets, which are often unavailable in specialized domains. In this work, we show an emerging property of multi-head attention pooling in vision-language models: remarkable zero-shot anomaly localization and detection right out of the box. We translate this property into a single-pass anomaly detection technique, RADIOlogy, that does not require dense, windowed execution and significantly outperforms other training-free baselines. Instead, the method relies on a simple contrastive scoring approach that compares the average similarity between vision features and a suite of normal and abnormal prompts. Furthermore, we leverage the agglomerative features of RADIO models to enhance pixel-level anomaly segmentation using a dense anomaly refinement pipeline. Finally, we show how the vision-language family of training-free zero-shot anomaly detection techniques can be applied successfully to the medical domain with minimal modifications. Code is available at https://github.com/jacomof/RADIOlogy.",
+    "authors": [
+      "Joaquín Figueira",
+      "Giacomo D'Amicantonio",
+      "Egor Bondarau"
+    ],
+    "published": "2026-10-29T17:45:35Z",
+    "updated": "2026-10-29T17:45:35Z",
+    "url": "https://arxiv.org/abs/2610.40580",
+    "pdf_url": "https://arxiv.org/pdf/2610.40580",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Accepted to WACV 2027. Code available at https://github.com/jacomof/RADIOlogy",
+    "venue": "WACV 2027（作者声明）",
+    "code_urls": [
+      "https://github.com/jacomof/RADIOlogy"
+    ],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2610.40732",
+    "version": "2610.40732v1",
+    "title": "Don't Just Impute, Detect: Task-Aware Diffusion Pipelines for Edge Anomaly Detection",
+    "abstract": "Industrial Internet of Things (IIoT) edge pipelines routinely lose contiguous blocks of multi-sensor data to network dropouts and hardware faults. The standard remedy is a disjointed \"impute-then-detect\" pipeline whose imputer is trained only for Mean Squared Error (MSE). Such an imputer fills a missing block with the most probable normal pattern: a partially observed anomaly is smoothed back toward normality, and boundary artifacts on normal data raise false alarms. We call this imputation bias and propose the Task-Aware Diffusion Refiner (TADR), a conditional diffusion refiner trained against the loss landscape of a frozen downstream detector. Because back-propagating through the sampling trajectory is intractable, the task-aware terms act on the one-step clean-window estimate that the noise prediction already yields, so training costs no more than plain diffusion training. Under strict Point-to-Point evaluation over five seeds with paired significance tests, TADR raises F1 by $0.338$ over the unrefined detector on SMD ($p = 0.0015$), and the anomaly enhancement objective alone contributes $0.463$ in ablation. We also characterise when the method helps: the gain tracks the continuous, mutually redundant channels available and the anomaly evidence the outage removes, and it is absent on telemetry datasets dominated by one-hot command channels and on PSM. At ten sampling steps TADR runs in $41.4$ ms per window on a single CPU core, sustaining about $24$ concurrent 1 Hz streams from a $4.03$ MB model. Code and per-seed results are available at https://github.com/int-park422/TADR.",
+    "authors": [
+      "Jeongsu Park",
+      "Taehyeon Yun",
+      "Geonwoo Kim",
+      "Yuji Lim",
+      "Moohong Min"
+    ],
+    "published": "2026-10-29T12:23:18Z",
+    "updated": "2026-10-29T12:23:18Z",
+    "url": "https://arxiv.org/abs/2610.40732",
+    "pdf_url": "https://arxiv.org/pdf/2610.40732",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "11 pages, 6 figures. Accepted at the 33rd IEEE International Conference on High Performance Computing, Data, and Analytics (HiPC 2026)",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [
+      "https://github.com/int-park422/TADR"
+    ],
+    "categories": [
+      "cs.LG"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2610.39727",
+    "version": "2610.39727v1",
+    "title": "Cross-Encoder Anchor Refinement for Zero-Shot Anomaly Detection",
+    "abstract": "Zero-shot anomaly detection aims to transfer anomaly discrimination from auxiliary training domains to unseen categories while localizing subtle defects. A key challenge is to construct discriminative references that combine contextual representations with complementary local evidence. We present Cross-Encoder Anchor Refinement (CEAR), which connects two visual encoding paths for the same image at the anchor stage, before normal and anomalous prototypes are constructed. An independent convolutional encoder pretrained for industrial product recognition builds an image-specific memory shared across selected vision transformer (ViT) layers. Spatial anchors read from ViT patch features query this memory through cross-attention and undergo residual refinement. Image-conditioned normal and anomalous queries then gate anchor aggregation to construct prototypes for anomaly scoring. Across 13 industrial and medical datasets, CEAR achieves the best performance in 57 of 68 evaluations spanning image-level detection and pixel-level localization. Notably, CEAR surpasses all other state-of-the-art methods in 41 of 44 pixel-level comparisons. Across 11 localization datasets, mean gains in pixel-level maximum F1 score and average precision are 4.45 and 3.79 percentage points, respectively. This study shows how cross-encoder interaction at the anchor stage can integrate complementary visual representations for fine-grained anomaly localization across domains.",
+    "authors": [
+      "Kaisong Ji",
+      "Ziyang Xu",
+      "Chang Bian",
+      "Yu Zhou",
+      "Wenyu Liu",
+      "Xinggang Wang"
+    ],
+    "published": "2026-10-29T09:56:26Z",
+    "updated": "2026-10-29T09:56:26Z",
+    "url": "https://arxiv.org/abs/2610.39727",
+    "pdf_url": "https://arxiv.org/pdf/2610.39727",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "15 pages, 6 figures",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "在构建正常和异常原型前融合卷积与视觉 Transformer 的局部特征，用于跨类别的细粒度异常定位。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2610.39727",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "零样本",
+      "特征融合",
+      "缺陷定位"
+    ]
+  },
+  {
+    "id": "2610.38194",
+    "version": "2610.38194v1",
+    "title": "Prototype-Guided Dynamic Domain Modulation and a Large-Scale Multi-SKU Benchmark for Shampoo Bottle Surface Defect Detection",
+    "abstract": "Industrial shampoo-bottle surface defect detection must operate across many stock keeping units (SKUs), where differences in bottle geometry, material, label layout, reflectance, and imaging conditions can substantially alter the appearance of the same defect. Existing industrial defect datasets rarely provide both instance-level defect annotations and product-variant identities, making it difficult to study SKU-aware detection under realistic manufacturing conditions. We introduce Bottle-SKU, a large-scale multi-SKU benchmark for shampoo bottle surface defect detection. Bottle-SKU contains 13,119 images, 20,419 instance-level bounding boxes, seven defect categories, and 48 bottle SKUs, enabling evaluation of both shared defect recognition and SKU-specific appearance variation. To address the challenge of SKU-specific appearance variation, we propose Prototype-Guided Dynamic Domain Modulation (ProDMM). ProDMM constructs a visual prototype for each SKU from training images and predicts a soft SKU distribution for each input. The resulting prototype-conditioned representation dynamically generates low-rank Query/Value modulation for the visual backbone and residual conditioning for defect-text-to-visual attention, while preserving the pretrained Grounding DINO detection pathway. The model is trained jointly with detection, SKU-domain classification, and modulation-regularization objectives. Experiments on Bottle-SKU and the public GC10-DET-SKU metallic surface defect dataset demonstrate the effectiveness of prototype-guided domain conditioning for industrial surface defect detection.",
+    "authors": [
+      "Yuehang Li",
+      "Xiao Wang",
+      "Qiang Chen",
+      "Yangyi Fan",
+      "Bo Jiang",
+      "Yaowei Wang",
+      "Jin Tang"
+    ],
+    "published": "2026-10-28T02:40:18Z",
+    "updated": "2026-10-28T02:40:18Z",
+    "url": "https://arxiv.org/abs/2610.38194",
+    "pdf_url": "https://arxiv.org/pdf/2610.38194",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.AI"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "提出多款洗发水瓶表面缺陷基准 Bottle-SKU，并用产品原型动态调整检测模型，以适应不同瓶型的外观差异。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2610.38194",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "表面缺陷",
+      "跨产品",
+      "数据集"
+    ]
+  },
+  {
+    "id": "2610.35753",
+    "version": "2610.35753v1",
+    "title": "CLOSURE: Cross-Channel Closure for Multivariate Time Series Anomaly Detection",
+    "abstract": "Multivariate time series produced by industrial installations and server clusters are under continuous monitoring, and anomaly detection is the first line of defense before a local fault escalates into a system-wide failure. In the absence of labels, the dominant paradigm trains a reconstruction model on normal data and scores the residual to reach a verdict. Recent work has steadily enriched the expressiveness of the recovery map through Transformers, diffusion models, and cross-scale associations. A residual, however, only certifies that an observation can be recovered; it does not certify that the variables still explain one another as they do under normal operation. A coordinated yet unfamiliar operating transition inflates the residual without breaking any relationship, whereas a sensor drifting away from its peers may leave the residual silent. Methods that fold inter-variable dependencies into the reconstruction objective inherit this ambiguity, because their relational evidence is ultimately supervised by the same recovery loss. We therefore propose CLOSURE, which evaluates recoverability and cross-channel consistency as two normal-data prediction tasks learned in separation. The recoverability task is solved by a diffusion reconstructor conditioned on a discrete memory of normal temporal bases. The consistency task is solved by a relation-closure operator that predicts every channel exclusively from the others, where the target's own trajectory is withheld and sparse signed gates decide which peers are actually used. The two scores are reconciled only through calibration on normal data. Extensive experiments show that CLOSURE consistently outperforms recent reconstruction-, frequency-, and topology-based detectors on public benchmark streams, confirming the value of examining consistency alongside recoverability.",
+    "authors": [
+      "Fan Xu",
+      "Hao Wu",
+      "Zhi Song",
+      "Hanbo Huang",
+      "Wenzhuo Ma",
+      "Nan Wang",
+      "Wei Gong",
+      "Xibin Zhao"
+    ],
+    "published": "2026-10-26T17:02:10Z",
+    "updated": "2026-10-26T17:02:10Z",
+    "url": "https://arxiv.org/abs/2610.35753",
+    "pdf_url": "https://arxiv.org/pdf/2610.35753",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.AI"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2610.35400",
+    "version": "2610.35400v1",
+    "title": "AdaTrendLike: Adaptive Hierarchical Detrending and Trend Likelihood Scoring for Time Series Anomaly Detection",
+    "abstract": "The rapid proliferation of Industrial Internet of Things devices has led to increasingly large-scale and non-stationary time-series data, posing significant challenges for time-series anomaly detection (TSAD). Existing approaches often focus on reconstructing or forecasting observations while overlooking the role of trend dynamics, which constitute a major source of non-stationarity and contain valuable information for anomaly identification. To address this limitation, we propose AdaTrendLike, a TSAD framework that directly estimates trend likelihoods for anomaly detection. Specifically, we introduce Standardization Embedding to capture local statistical characteristics as latent representations and AdaDetrending to adaptively decompose input series into trend and detrended components. The detrended component is processed through a Fast Fourier Transform and a complex-valued convolutional neural network to learn normal periodic patterns, while TrendEst models the distribution of the trend component. Based on the estimated distribution, TrendLike computes anomaly scores by measuring the likelihood of observed trends, enabling effective detection of deviations from normal behavior. In addition to improving detection performance, the proposed framework provides feature-level interpretability by identifying anomalies through deviations in the estimated trend distribution. Extensive experiments on five public benchmark datasets demonstrate that AdaTrendLike consistently outperforms state-of-the-art TSAD methods, validating its effectiveness and robustness across diverse application scenarios.",
+    "authors": [
+      "Van Kwan Zhi Koh",
+      "Songnan Lin",
+      "Rongmo Luo",
+      "Zhiping Lin",
+      "Bihan Wen"
+    ],
+    "published": "2026-10-26T13:14:23Z",
+    "updated": "2026-10-26T13:14:23Z",
+    "url": "https://arxiv.org/abs/2610.35400",
+    "pdf_url": "https://arxiv.org/pdf/2610.35400",
+    "source": "arXiv",
+    "journal_ref": "IEEE Transactions on Industrial Informatics (2026)",
+    "comment": "",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.AI"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2610.34897",
+    "version": "2610.34897v1",
+    "title": "SGDB: Semantic-Geometric Decoupling and Evidence Binding for Logical Anomaly Detection",
+    "abstract": "Logical anomaly detection requires recognizing scene components and measuring whether their configuration satisfies task constraints. Correct identities can coexist with inaccurate geometry; clean mask fragments can yield misleading lengths. We propose Semantic-Geometric Decoupling and Evidence Binding (SGDB). A semantic decoder learns object identities from component-annotated normal sources and factual edits; a separate reader supplies final measurements. Partial one-to-one association binds geometric witnesses to identities while retaining unmatched objects in the count. A support-certified reader selects mask-derived axes using line quality and complete component ownership. Explicit task requirements and normal-data references define executable checks, with decision thresholds fixed by independent normal calibration. Execution-grounded explanation traces rule contributions to source objects and measurements, extracting compact sufficient alarm certificates. A frozen language model expresses selected outcomes as cited claims, with numeric evidence retained by the executor. Reports preserve observed deviations and unavailable evidence. SGDB achieves 98.19% AUROC and 94.52% fixed-threshold F1 on five MVTec LOCO logical categories, and 93.56% AUROC and 92.76% F1 across all 50 VID-AD tasks. Frozen-output controls evaluate geometric readout and explanatory sufficiency and compactness.",
+    "authors": [
+      "Chenrui Ji",
+      "Jiafan Lu",
+      "Zilu Luo",
+      "Feng Wan",
+      "Qiuhui Chen",
+      "Weimin Zhong"
+    ],
+    "published": "2026-10-26T06:17:14Z",
+    "updated": "2026-10-26T06:17:14Z",
+    "url": "https://arxiv.org/abs/2610.34897",
+    "pdf_url": "https://arxiv.org/pdf/2610.34897",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "13 pages, 7 figures, includes supplementary material. Code: https://github.com/Qybc/SGDB",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [
+      "https://github.com/Qybc/SGDB"
+    ],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "分开识别零件和测量几何属性，再依据明确规则判断装配配置是否异常，并给出可追溯的告警证据。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2610.34897",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "逻辑异常",
+      "MVTec LOCO",
+      "可解释性"
+    ]
+  },
+  {
+    "id": "2610.34610",
+    "version": "2610.34610v1",
+    "title": "Do Words Matter? What Text Contributes to Few and Full-Shot Vision-Language Anomaly Detection",
+    "abstract": "Vision-language anomaly detectors describe normal and abnormal appearance with text, and their gains are commonly credited to the semantic content of these descriptions. This attribution is plausible in the zero-shot setting, but few- and full-shot detectors interpose a trained visual adapter, and in that setting it has not been isolated. Changing a description changes both its meaning and its geometry, so accuracy comparisons cannot separate the two. We ask what a fixed pair of text embeddings, or anchors, contributes to such a detector: semantic content, effective scale, or joint anchor geometry. For a single anchor pair, the answer is effective scale alone. The score reads the anchors only through their difference, and a trained adapter can rotate to follow any replacement direction, leaving that direction, and with it the linguistic content, unidentifiable. We prove that replacement anchors with the same difference-vector length permit exactly the same probability maps and attainable losses. Across seven medical datasets, three vision backbones, both supervision regimes, and three adapter families, scale-matched random and orthogonal anchors track correct prompts; breaking the scale match opens a gap that restoring it closes without text. The same pattern holds in MVFA and when MadCLIP's learned prompts are replaced by a text-free learned scale. When one adapter serves many categories, the answer expands to their joint arrangement. Rotating all category axes together changes nothing, as predicted. For the tested CLIP prompts, these axes are nearly collinear, and meaning-free rotations that spread them apart improve performance on both industrial benchmarks. Even under frozen zero-shot transfer, a random anchor frame transfers as well as the prompt frame: coordinate consistency, not meaning. What these detectors read from their prompts is scale and arrangement, not semantic content.",
+    "authors": [
+      "Arda Baris Basaran",
+      "Mesut Ceylan",
+      "Elgar Fleisch",
+      "Filipe Barata"
+    ],
+    "published": "2026-10-25T22:17:23Z",
+    "updated": "2026-10-25T22:17:23Z",
+    "url": "https://arxiv.org/abs/2610.34610",
+    "pdf_url": "https://arxiv.org/pdf/2610.34610",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "36 pages, 1 figure, 28 tables",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "通过理论分析和替换实验拆解文本提示在视觉语言异常检测中的作用，并在工业基准上检验类别锚点几何的影响。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2610.34610",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "视觉语言模型",
+      "提示词",
+      "方法分析"
+    ]
+  },
+  {
+    "id": "2610.34468",
+    "version": "2610.34468v1",
+    "title": "GNSS Anomaly Detection in Urban Canyons: A Comprehensive Survey of Multimodal Visibility Inference",
+    "abstract": "Reliable GNSS positioning in dense urban environments depends on assessing satellite visibility and identifying measurements degraded by non-line-of-sight (NLOS) reception and multipath. This survey organizes reception-state inference into three complementary evidence families: receiver-side signals, 3D maps and environmental models, and auxiliary sensors. Receiver-side approaches span antenna/electromagnetic, tracking/baseband, and observable-domain evidence, interpreted through rule-based, statistical, machine-learning, and deep-learning methods. Map-based approaches are examined by reviewing environmental representations and methods such as geometric screening, shadow matching, 3D ray tracing, and neural implicit visibility prediction. IMU, camera, and LiDAR measurements provide complementary kinematic, visual, and geometric evidence for online screening. Across these families, we compare accuracy, interpretability, hardware and calibration requirements, map dependence, computational cost, and suitability for real-time deployment. We identify open challenges in dataset quality and labeling, domain generalization, map freshness, and resource-efficient implementation. The resulting synthesis connects signal processing, environmental modeling, and sensor fusion to guide the design of robust urban GNSS measurement-screening systems.",
+    "authors": [
+      "Abdelgabar Ahmed",
+      "Tarig Ballal",
+      "Nour Kouzayha",
+      "Tareq Y. Al-Naffouri"
+    ],
+    "published": "2026-10-25T17:39:35Z",
+    "updated": "2026-10-25T17:39:35Z",
+    "url": "https://arxiv.org/abs/2610.34468",
+    "pdf_url": "https://arxiv.org/pdf/2610.34468",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Accepted for publication in IEEE Aerospace and Electronic Systems Magazine. DOI: 10.1109/MAES.2026.3746915",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "eess.SP"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2610.34304",
+    "version": "2610.34304v1",
+    "title": "Real-Time Conveyor Belt Defect Detection via Edge TPU-Accelerated YOLOv11 on Raspberry Pi 5",
+    "abstract": "Conveyor belts are vital arteries in continuous bulk material handling, particularly in heavy process industries such as cement manufacturing. Undetected structural anomalies (longitudinal tears, holes, degraded patch repairs, and impact punctures) cause catastrophic belt snapping, costly downtime, and severe safety hazards. While deep learning offers high accuracy, existing models rely on power-hungry workstation GPUs, hindering practical deployment at remote industrial edge points. In this paper, we propose, implement, and validate an end-to-end, low-power edge AI vision system for real-time conveyor belt defect detection deployed on a Raspberry Pi 5 accelerated by a Google Coral Edge TPU coprocessor. The system leverages an optimized YOLOv11 nano (YOLOv11n) architecture trained on a multi-source industrial corpus exceeding 3,000 augmented samples from an operational cement plant in West Java, open-source datasets, and automated captures. The model undergoes post-training full integer quantization (INT8) compiled for systolic tensor execution. Experimental results demonstrate robust detection capability, achieving precision of 0.742, recall of 0.730, and mAP@0.5 of 0.764 across four defect classes. Deployed on-site in an IP-rated enclosure interfaced with an RTSP PoE industrial camera, the system achieves stable throughput of 30-40 FPS at 320x320 resolution with an end-to-end latency of 70-90 ms. Operational profiling under harsh clinker dust confirms thermal equilibrium at 55 +/- 5 deg C on the host CPU and ~65 deg C on the Edge TPU with zero frame loss. This demonstrates that edge AI bridges the gap between high-accuracy computer vision and cost-effective predictive maintenance in continuous manufacturing.",
+    "authors": [
+      "Muhammad Nur Bijak Bestari",
+      "Mulki Indana Zulfa"
+    ],
+    "published": "2026-10-25T14:14:37Z",
+    "updated": "2026-10-25T14:14:37Z",
+    "url": "https://arxiv.org/abs/2610.34304",
+    "pdf_url": "https://arxiv.org/pdf/2610.34304",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "8 pages, 9 figures, 2 tables",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "把量化后的 YOLOv11n 部署到 Raspberry Pi 5 和 Coral Edge TPU，用于输送带表面缺陷的实时检测。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2610.34304",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "表面缺陷",
+      "边缘部署",
+      "YOLO"
+    ]
+  },
+  {
+    "id": "2610.32964",
+    "version": "2610.32964v1",
+    "title": "Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection",
+    "abstract": "Few-shot industrial anomaly detection requires modeling category-specific normality from only a handful of defect-free images. Common approaches tie inference to stored exemplars, impose rigid linear structure, or risk reproducing anomalous content. Flownomaly instead casts the problem as normal-counterpart recovery in frozen DINOv2 feature space. Given normal supports, a velocity field is learned through conditional flow matching over frozen patch tokens to transport Gaussian noise toward normal features. Along straight paths, a single recovery step using one evaluation of the optimal field yields the posterior mean of the clean normal token without trajectory integration. The operating time governs how strongly recovery modifies a query token. With no anomalous validation samples available for tuning, a normal-only Jacobian gain-to-noise criterion selects this time from the supports alone. Squared residuals between query tokens and their recovered counterparts yield anomaly signals for both dense localization and image-level detection. Across 1-, 2-, and 4-shot benchmarks on MVTec-AD and VisA, together with sample-shot evaluations on Real-IAD, Flownomaly achieves state-of-the-art performance against recent category-specific methods. In the 1-shot setting, image- and pixel-level AUROC reach 97.8% and 98.0% on MVTec-AD and 95.3% and 98.7% on VisA, with a 2.1-point image-level AUROC improvement over the strongest baseline on VisA. Code is available at https://github.com/b-rbmp/Flownomaly.",
+    "authors": [
+      "Bernardo Perrone Ribeiro",
+      "Erkut Akdag",
+      "Egor Bondarev"
+    ],
+    "published": "2026-10-23T17:53:30Z",
+    "updated": "2026-10-23T17:53:30Z",
+    "url": "https://arxiv.org/abs/2610.32964",
+    "pdf_url": "https://arxiv.org/pdf/2610.32964",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Accepted to WACV 2027",
+    "venue": "WACV 2027（作者声明）",
+    "code_urls": [
+      "https://github.com/b-rbmp/Flownomaly"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "在 DINOv2 特征空间用条件流匹配单步恢复正常局部特征，再以恢复残差检测和定位少样本工业缺陷。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2610.32964",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "少样本",
+      "流匹配",
+      "缺陷定位"
+    ]
+  },
+  {
+    "id": "2610.33143",
+    "version": "2610.33143v1",
+    "title": "Learning Pathology-Sensitive Representations for Unsupervised Retinal OCT Anomaly Detection",
+    "abstract": "Deep learning approaches for retinal optical coherence tomography (OCT) predominantly rely on predefined disease categories, limiting their ability to detect rare or previously unseen abnormalities. While visual foundation models provide transferable representations, their effectiveness in identifying pathological deviations from normal retinal anatomy remains insufficiently understood. In this work, we introduce an unsupervised framework for retinal OCT anomaly detection and localization that adapts pretrained visual representations to normal retinal anatomy through anatomy-aware reconstruction and contrastive triplet learning guided by synthetic structural perturbations, without requiring disease-specific annotations. We systematically investigate the influence of pretraining strategies, anatomy-aware representation adaptation, and anomaly scoring mechanisms on the detection and localization of unseen retinal abnormalities. Our findings demonstrate that adapting pretrained representations to normal retinal structure improves anomaly sensitivity, while pixel-space reconstruction errors and feature-space deviations provide complementary signals for identifying pathological changes. These findings underscore the importance of anatomy-aware representation learning and offer insights into developing generalizable retinal anomaly detection frameworks beyond predefined disease categories.",
+    "authors": [
+      "Tania Haghighi",
+      "Sina Gholami",
+      "Behafarin Emam",
+      "Jennifer I Lim",
+      "Theodore Leng",
+      "Atalie C Thompson",
+      "Hamed Tabkhi",
+      "Minhaj Nur Alam"
+    ],
+    "published": "2026-10-23T16:50:29Z",
+    "updated": "2026-10-23T16:50:29Z",
+    "url": "https://arxiv.org/abs/2610.33143",
+    "pdf_url": "https://arxiv.org/pdf/2610.33143",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2610.31538",
+    "version": "2610.31538v1",
+    "title": "LACToS: Local Anomaly Detection via Conditional Typicality of Superpixels",
+    "abstract": "Local anomaly detection is the task of identifying spatially confined anomalous or out-of-distribution (OOD) regions within an otherwise in-distribution (ID) image. Most existing methods are designed for a specific context, with a strong focus on industrial defect detection, where they achieve excellent performance on well-established benchmarks. However, we observe that these methods can exhibit significant performance drops in other contexts, especially when the inlier distribution is multimodal. To account for this inlier complexity, we propose LACToS, a principled local OOD detection method based on statistical typicality and made tractable through two innovations: (i) grouping pixels into superpixels and (ii) using a computationally efficient proxy to estimate typicality. We evaluate LACToS across three diverse applications spanning medical imaging, human faces, and X-ray security screening. LACToS performs more robustly than prior methods across these benchmarks. The code is released here: https://github.com/voilalab/LACToS.",
+    "authors": [
+      "Jihoon Hong",
+      "Alireza Kheirandish",
+      "Rohan Sanda",
+      "Sara Fridovich-Keil"
+    ],
+    "published": "2026-10-22T16:46:09Z",
+    "updated": "2026-10-22T16:46:09Z",
+    "url": "https://arxiv.org/abs/2610.31538",
+    "pdf_url": "https://arxiv.org/pdf/2610.31538",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [
+      "https://github.com/voilalab/LACToS"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2610.28560",
+    "version": "2610.28560v1",
+    "title": "Agentic Ensemble with Vision-Language Models for Visual Anomaly Detection",
+    "abstract": "Visual anomaly detection aims to detect abnormal objects, while anomaly samples are often scarce during model training. Assembling multiple pretrained detectors can help by leveraging their transferable image scores and anomaly maps. However, most existing ensemble methods apply fixed fusion rules over saved predictions which struggle when pretrained detectors clearly disagree due to different training objectives, priors, and visual representations. To this end, we design AnomalyAgent, a post-training fusion framework for accurate visual anomaly detection. AnomalyAgent aligns heterogeneous scores and maps, summarizes score- and region-level disagreement, and treats fusion as a finite action-selection problem. It implements two types of actions: 1) score actions that determine how to fuse image-level detector confidence via consensus, robust aggregation, detector weighting, or score-map consistency; 2) map actions that fuse dense anomaly responses via consensus, detector weighting, geometric aggregation, or disagreement correction. A constrained vision-language model (VLM) is introduced to inspect high-conflict samples and select valid score action and map action to produce the final prediction. We evaluate AnomalyAgent on MVTec AD and VisA as primary benchmarks, together with seven additional public anomaly benchmarks and Real-IAD for large-scale score-level evaluation. Across these benchmarks, AnomalyAgent consistently improves over equal-weight fusion and achieves the best mean image AUROC and pixel AP among the compared fusion methods on MVTec AD and VisA, while demonstrating robust transfer across additional anomaly domains.",
+    "authors": [
+      "Shangquan Sun",
+      "Wenjun Luo",
+      "Xu He",
+      "Yoonsoo Lee",
+      "Shijian Lu"
+    ],
+    "published": "2026-10-20T17:22:25Z",
+    "updated": "2026-10-20T17:22:25Z",
+    "url": "https://arxiv.org/abs/2610.28560",
+    "pdf_url": "https://arxiv.org/pdf/2610.28560",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "10 pages, 2 figures, 13 tables",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.AI"
+    ],
+    "added_at": "2026-11-02T07:44:48+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "用视觉语言模型判断多个检测器意见不一致的样本，再选择如何融合图像分数和像素异常图。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2610.28560",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "视觉语言模型",
+      "集成",
+      "缺陷定位"
+    ]
+  },
+  {
+    "id": "2310.18961",
+    "version": "2310.18961v12",
+    "title": "AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection",
+    "abstract": "Zero-shot anomaly detection (ZSAD) requires detection models trained using auxiliary data to detect anomalies without any training sample in a target dataset. It is a crucial task when training data is not accessible due to various concerns, eg, data privacy, yet it is challenging since the models need to generalize to anomalies across different domains where the appearance of foreground objects, abnormal regions, and background features, such as defects/tumors on different products/organs, can vary significantly. Recently large pre-trained vision-language models (VLMs), such as CLIP, have demonstrated strong zero-shot recognition ability in various vision tasks, including anomaly detection. However, their ZSAD performance is weak since the VLMs focus more on modeling the class semantics of the foreground objects rather than the abnormality/normality in the images. In this paper we introduce a novel approach, namely AnomalyCLIP, to adapt CLIP for accurate ZSAD across different domains. The key insight of AnomalyCLIP is to learn object-agnostic text prompts that capture generic normality and abnormality in an image regardless of its foreground objects. This allows our model to focus on the abnormal image regions rather than the object semantics, enabling generalized normality and abnormality recognition on diverse types of objects. Large-scale experiments on 17 real-world anomaly detection datasets show that AnomalyCLIP achieves superior zero-shot performance of detecting and segmenting anomalies in datasets of highly diverse class semantics from various defect inspection and medical imaging domains. Code will be made available at https://github.com/zqhang/AnomalyCLIP.",
+    "authors": [
+      "Qihang Zhou",
+      "Guansong Pang",
+      "Yu Tian",
+      "Shibo He",
+      "Jiming Chen"
+    ],
+    "published": "2023-10-29T10:03:49Z",
+    "updated": "2026-01-01T03:03:39Z",
+    "url": "https://arxiv.org/abs/2310.18961",
+    "pdf_url": "https://arxiv.org/pdf/2310.18961",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Accepted by ICLR 2024",
+    "venue": "ICLR 2024（作者声明）",
+    "code_urls": [
+      "https://github.com/zqhang/AnomalyCLIP"
+    ],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-02T07:44:41+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "学习与物体类别无关的正常和异常提示词，让 CLIP 能在未见类别中检测和定位缺陷。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2310.18961",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "零样本",
+      "提示词学习",
+      "跨类别泛化"
+    ]
+  },
+  {
+    "id": "2303.14814",
+    "version": "2303.14814v1",
+    "title": "WinCLIP: Zero-/Few-Shot Anomaly Classification and Segmentation",
+    "abstract": "Visual anomaly classification and segmentation are vital for automating industrial quality inspection. The focus of prior research in the field has been on training custom models for each quality inspection task, which requires task-specific images and annotation. In this paper we move away from this regime, addressing zero-shot and few-normal-shot anomaly classification and segmentation. Recently CLIP, a vision-language model, has shown revolutionary generality with competitive zero-/few-shot performance in comparison to full-supervision. But CLIP falls short on anomaly classification and segmentation tasks. Hence, we propose window-based CLIP (WinCLIP) with (1) a compositional ensemble on state words and prompt templates and (2) efficient extraction and aggregation of window/patch/image-level features aligned with text. We also propose its few-normal-shot extension WinCLIP+, which uses complementary information from normal images. In MVTec-AD (and VisA), without further tuning, WinCLIP achieves 91.8%/85.1% (78.1%/79.6%) AUROC in zero-shot anomaly classification and segmentation while WinCLIP+ does 93.1%/95.2% (83.8%/96.4%) in 1-normal-shot, surpassing state-of-the-art by large margins.",
+    "authors": [
+      "Jongheon Jeong",
+      "Yang Zou",
+      "Taewan Kim",
+      "Dongqing Zhang",
+      "Avinash Ravichandran",
+      "Onkar Dabeer"
+    ],
+    "published": "2023-03-26T20:41:21Z",
+    "updated": "2023-03-26T20:41:21Z",
+    "url": "https://arxiv.org/abs/2303.14814",
+    "pdf_url": "https://arxiv.org/pdf/2303.14814",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Accepted to Conference on Computer Vision and Pattern Recognition (CVPR) 2023",
+    "venue": "CVPR 2023（作者声明）",
+    "code_urls": [],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "added_at": "2026-11-02T07:44:41+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "将 CLIP 的图像、窗口与局部特征对齐到正常和异常文本，可做零样本定位，也支持少量正常图作参考。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2303.14814",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "零样本",
+      "少样本",
+      "缺陷定位"
+    ]
+  },
+  {
+    "id": "2106.08265",
+    "version": "2106.08265v2",
+    "title": "Towards Total Recall in Industrial Anomaly Detection",
+    "abstract": "Being able to spot defective parts is a critical component in large-scale industrial manufacturing. A particular challenge that we address in this work is the cold-start problem: fit a model using nominal (non-defective) example images only. While handcrafted solutions per class are possible, the goal is to build systems that work well simultaneously on many different tasks automatically. The best performing approaches combine embeddings from ImageNet models with an outlier detection model. In this paper, we extend on this line of work and propose \\textbf{PatchCore}, which uses a maximally representative memory bank of nominal patch-features. PatchCore offers competitive inference times while achieving state-of-the-art performance for both detection and localization. On the challenging, widely used MVTec AD benchmark PatchCore achieves an image-level anomaly detection AUROC score of up to $99.6\\%$, more than halving the error compared to the next best competitor. We further report competitive results on two additional datasets and also find competitive results in the few samples regime.\\freefootnote{$^*$ Work done during a research internship at Amazon AWS.} Code: github.com/amazon-research/patchcore-inspection.",
+    "authors": [
+      "Karsten Roth",
+      "Latha Pemula",
+      "Joaquin Zepeda",
+      "Bernhard Schölkopf",
+      "Thomas Brox",
+      "Peter Gehler"
+    ],
+    "published": "2021-06-15T16:27:02Z",
+    "updated": "2022-05-05T23:01:53Z",
+    "url": "https://arxiv.org/abs/2106.08265",
+    "pdf_url": "https://arxiv.org/pdf/2106.08265",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Accepted to CVPR 2022",
+    "venue": "CVPR 2022（作者声明）",
+    "code_urls": [
+      "https://github.com/amazon-research/patchcore-inspection"
+    ],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-02T07:44:41+00:00",
+    "status": "accepted",
+    "topic": "待分类",
+    "summary_zh": "从正常图像中选取代表性局部特征构成记忆库，用特征距离检测和定位工业缺陷。",
+    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "source": "https://arxiv.org/abs/2106.08265",
+        "method": "initial_curation"
+      }
+    ],
+    "tags": [
+      "记忆库",
+      "仅正常样本",
+      "缺陷定位"
+    ]
+  }
+]

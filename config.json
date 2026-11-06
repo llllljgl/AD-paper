@@ -1,0 +1,13 @@
+{
+  "name": "AD Paper Radar",
+  "description": "工业异常检测论文雷达",
+  "arxiv_query": "(ti:\"anomaly detection\" OR ti:\"anomaly localization\" OR ti:\"defect detection\" OR ti:\"defect segmentation\") AND (all:industrial OR all:visual OR all:MVTec OR all:VisA OR all:manufacturing)",
+  "initial_days": 14,
+  "overlap_days": 3,
+  "page_size": 100,
+  "max_candidates": 1000,
+  "max_llm_calls": 60,
+  "model": "gpt-4.1-mini",
+  "topics": ["特征与记忆库", "重建与生成", "视觉语言模型", "少样本与零样本", "定位与分割", "数据集与评估", "其他"],
+  "scope": "工业场景中的视觉异常检测、异常定位、表面缺陷检测与分割；包括 MVTec AD、MVTec LOCO、VisA 等。排除医疗、网络、金融、时间序列异常检测，除非论文明确评估工业视觉场景。"
+}

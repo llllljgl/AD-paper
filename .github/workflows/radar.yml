@@ -1,0 +1,70 @@
+name: Update paper list
+
+on:
+  schedule:
+    - cron: '23 1 * * 1' # Monday 09:23 Asia/Shanghai
+  workflow_dispatch:
+    inputs:
+      since:
+        description: 'Backfill start YYYY-MM-DD (optional)'
+        type: string
+      until:
+        description: 'Backfill end YYYY-MM-DD (optional)'
+        type: string
+      no_llm:
+        description: 'Collect without LLM'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ['radar/**', 'tests/**', 'data/**', 'config.json', 'README.md', '.github/workflows/radar.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paper-radar
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test
+        run: python -m unittest discover -s tests -v
+      - name: Collect papers
+        if: github.event_name != 'push'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          INPUT_SINCE: ${{ inputs.since }}
+          INPUT_UNTIL: ${{ inputs.until }}
+          INPUT_NO_LLM: ${{ inputs.no_llm }}
+        shell: bash
+        run: |
+          args=()
+          if [ -n "$INPUT_SINCE" ]; then args+=(--since "$INPUT_SINCE"); fi
+          if [ -n "$INPUT_UNTIL" ]; then args+=(--until "$INPUT_UNTIL"); fi
+          if [ "$INPUT_NO_LLM" = "true" ]; then args+=(--no-llm); fi
+          python -m radar collect "${args[@]}"
+      - name: Update README
+        run: python -m radar build
+      - name: Save collection and README
+        if: github.event_name != 'push'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/ README.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update paper list'
+            git push origin HEAD:main
+          fi
