@@ -6,7 +6,7 @@
 
 <!-- PAPER-LIST:START -->
 
-已收录 **110 篇** · 待筛选 **15 篇**
+已收录 **106 篇** · 待筛选 **13 篇**
 
 ### AAAI 2026
 
@@ -62,18 +62,6 @@
 | [ADSeeker: A Knowledge-Grounded Reasoning Framework for Industry Anomaly Detection and Reasoning](https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_ADSeeker_A_Knowledge-Grounded_Reasoning_Framework_for_Industry_Anomaly_Detection_and_CVPR_2026_paper.html) | <code>多模态</code> <code>检索增强</code> <code>缺陷推理</code> | [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_ADSeeker_A_Knowledge-Grounded_Reasoning_Framework_for_Industry_Anomaly_Detection_and_CVPR_2026_paper.pdf) | <details><summary>查看 Tip</summary><p>构建工业缺陷视觉知识库，根据待检图像检索相似案例与文档，让模型结合领域证据做质检推理。</p></details> |
 | [Bidirectional Multimodal Prompt Learning with Scale-Aware Training for Few-Shot Multi-Class Anomaly Detection](https://openaccess.thecvf.com/content/CVPR2026/html/Lee_Bidirectional_Multimodal_Prompt_Learning_with_Scale-Aware_Training_for_Few-Shot_Multi-Class_CVPR_2026_paper.html) | <code>少样本</code> <code>多类别</code> <code>双向提示</code> | [PDF](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_Bidirectional_Multimodal_Prompt_Learning_with_Scale-Aware_Training_for_Few-Shot_Multi-Class_CVPR_2026_paper.pdf) | <details><summary>查看 Tip</summary><p>让文本提示与图像提示双向交换类别语义和样本细节，在同一模型中处理少样本多类别缺陷检测。</p></details> |
 
-### CVPR 2023
-
-| 论文 | 标签 | 链接 | Tip |
-| --- | --- | --- | --- |
-| [WinCLIP: Zero-/Few-Shot Anomaly Classification and Segmentation](https://arxiv.org/abs/2303.14814) | <code>零样本</code> <code>少样本</code> <code>缺陷定位</code> | [PDF](https://arxiv.org/pdf/2303.14814) | <details><summary>查看 Tip</summary><p>将 CLIP 的图像、窗口与局部特征对齐到正常和异常文本，可做零样本定位，也支持少量正常图作参考。</p></details> |
-
-### CVPR 2022
-
-| 论文 | 标签 | 链接 | Tip |
-| --- | --- | --- | --- |
-| [Towards Total Recall in Industrial Anomaly Detection](https://arxiv.org/abs/2106.08265) | <code>记忆库</code> <code>仅正常样本</code> <code>缺陷定位</code> | [PDF](https://arxiv.org/pdf/2106.08265) · [代码](https://github.com/amazon-research/patchcore-inspection) | <details><summary>查看 Tip</summary><p>从正常图像中选取代表性局部特征构成记忆库，用特征距离检测和定位工业缺陷。</p></details> |
-
 ### ECCV 2026
 
 | 论文 | 标签 | 链接 | Tip |
@@ -109,12 +97,6 @@
 | [PIRN: Prototypical-based Intra-modal Reconstruction with Normality Communication for Multi-modal Anomaly Detection.](https://proceedings.iclr.cc/paper_files/paper/2026/hash/f7e7fabd73b3df96c54a320862afcb78-Abstract-Conference.html) | <code>少样本</code> <code>RGB 与点云</code> <code>原型重建</code> | [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/f7e7fabd73b3df96c54a320862afcb78-Paper-Conference.pdf) | <details><summary>查看 Tip</summary><p>为 RGB 和三维模态建立正常原型，并在重建时交换正常线索，缓解少样本下跨模态对齐不可靠的问题。</p></details> |
 | [JUDO: A Juxtaposed Domain-Oriented Multimodal Reasoner for Industrial Anomaly QA](https://proceedings.iclr.cc/paper_files/paper/2026/hash/92a7a03e1c716970848a4a86cc8243ee-Abstract-Conference.html) | <code>多模态</code> <code>视觉问答</code> <code>缺陷分割</code> | [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/92a7a03e1c716970848a4a86cc8243ee-Paper-Conference.pdf) | <details><summary>查看 Tip</summary><p>并排比较正常参考图和待检图以定位缺陷，再通过监督微调和强化学习提升工业异常问答能力。</p></details> |
 | [MRAD: Zero-Shot Anomaly Detection with Memory-Driven Retrieval](https://proceedings.iclr.cc/paper_files/paper/2026/hash/4c12e97f2e05304a451e18c9c945036f-Abstract-Conference.html) | <code>零样本</code> <code>记忆库</code> <code>跨域</code> | [PDF](https://proceedings.iclr.cc/paper_files/paper/2026/file/4c12e97f2e05304a451e18c9c945036f-Paper-Conference.pdf) · [代码](https://github.com/CROVO1026/MRAD) | <details><summary>查看 Tip</summary><p>将辅助数据的图像级和像素级特征存入记忆库，通过相似检索为新类别预测异常分数和位置。</p></details> |
-
-### ICLR 2024
-
-| 论文 | 标签 | 链接 | Tip |
-| --- | --- | --- | --- |
-| [AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection](https://arxiv.org/abs/2310.18961) | <code>零样本</code> <code>提示词学习</code> <code>跨类别泛化</code> | [PDF](https://arxiv.org/pdf/2310.18961) · [代码](https://github.com/zqhang/AnomalyCLIP) | <details><summary>查看 Tip</summary><p>学习与物体类别无关的正常和异常提示词，让 CLIP 能在未见类别中检测和定位缺陷。</p></details> |
 
 ### ICML 2026
 
@@ -174,12 +156,6 @@
 | [PCBClip: Vision-Language Defect Detection Model for Low-Sample Inspection Systems](https://doi.org/10.1109/tpami.2026.3711750) | <code>PCB 质检</code> <code>少标注</code> <code>视觉语言模型</code> | — | <details><summary>查看 Tip</summary><p>用局部图像块生成候选区域，以领域文本提示和正常样本约束减少少量粗标注对 PCB 缺陷检测的影响。</p></details> |
 | [ZUMA: Training-Free Zero-Shot Unified Multimodal Anomaly Detection](https://doi.org/10.1109/tpami.2026.3658856) | <code>零样本</code> <code>多模态</code> <code>免训练</code> | — | <details><summary>查看 Tip</summary><p>通过跨域校准缩小 CLIP 与点云表征之间的差距，直接利用纹理和三维结构开展免训练异常检测。</p></details> |
 | [MuSc-V2: Zero-Shot Multimodal Industrial Anomaly Classification and Segmentation With Mutual Scoring of Unlabeled Samples](https://doi.org/10.1109/tpami.2026.3688174) | <code>零样本</code> <code>多模态</code> <code>互评分</code> | [PDF](https://arxiv.org/pdf/2511.10047) · [代码](https://github.com/HUST-SLOW/MuSc-V2) | <details><summary>查看 Tip</summary><p>通过无标签样本之间的局部相似性互相评分，并融合二维与三维异常图以找回单一模态容易漏检的缺陷。</p></details> |
-
-### WACV 2027
-
-| 论文 | 标签 | 链接 | Tip |
-| --- | --- | --- | --- |
-| [Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection](https://arxiv.org/abs/2610.32964) | <code>少样本</code> <code>流匹配</code> <code>缺陷定位</code> | [PDF](https://arxiv.org/pdf/2610.32964) · [代码](https://github.com/b-rbmp/Flownomaly) | <details><summary>查看 Tip</summary><p>在 DINOv2 特征空间用条件流匹配单步恢复正常局部特征，再以恢复残差检测和定位少样本工业缺陷。</p></details> |
 
 ### arXiv 2026
 

@@ -135,38 +135,6 @@
     "trace": []
   },
   {
-    "id": "2611.08080",
-    "version": "2611.08080v1",
-    "title": "Spatiotemporal Dynamics-Aware Industrial Anomaly Detection and Reasoning",
-    "abstract": "Industrial Anomaly Detection (IAD) is a long-established problem that aims to detect defects in industrial products during manufacturing for quality control. Most existing studies focus on static visual patterns as the basis for detection. However, in real manufacturing environments, many anomalies are dynamics-based, such as irregular movements that cannot be perceived from static cues alone. We observe that even recent Multimodal Large Language Model (MLLM)-based approaches fall short in identifying such dynamic anomalies due to limited temporal modeling capability. To address this, we introduce MUSTARD: MUltimodal SpatioTemporal Anomaly Reasoning and Detection, a framework that equips MLLMs with fine-grained spatiotemporal dynamics awareness for detecting and reasoning about dynamics-based defects. MUSTARD introduces optical-flow-guided keyframe selection and augmented modalities to capture critical motion irregularities through local motion patterns and global dynamic evolution. Its normal pattern-based reasoning pipeline requires only a few normal reference samples as the detection basis, avoiding any model updates. This enables efficient adaptation across various products and provides high decision interpretability. MUSTARD is the first MLLM-based framework for dynamics-based IAD. Experiments demonstrate its superior performance in detecting spatiotemporal anomalies and providing plausible explanations. The code will be made publicly available.",
-    "authors": [
-      "S-Wei Chen",
-      "Siangyu Yang",
-      "Yi-Chen Jan",
-      "Chun-Yi Lee",
-      "Shao-Yuan Lo"
-    ],
-    "published": "2026-11-05T14:30:20Z",
-    "updated": "2026-11-05T14:30:20Z",
-    "url": "https://arxiv.org/abs/2611.08080",
-    "pdf_url": "https://arxiv.org/pdf/2611.08080",
-    "source": "arXiv",
-    "journal_ref": "",
-    "comment": "Accepted at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2027",
-    "venue": "WACV 2027（作者声明）",
-    "code_urls": [],
-    "categories": [
-      "cs.CV"
-    ],
-    "added_at": "2026-11-06T06:45:26+00:00",
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
-  },
-  {
     "id": "2611.07356",
     "version": "2611.07356v1",
     "title": "Acoustic Anomaly Detection for Early Identification of Drill Jamming",
@@ -335,37 +303,6 @@
       "概率校准",
       "工业质检"
     ]
-  },
-  {
-    "id": "2610.40580",
-    "version": "2610.40580v1",
-    "title": "RADIOlogy: A Single-Pass Approach to Training-Free Zero-Shot Anomaly Detection",
-    "abstract": "Current zero-shot anomaly detection methods often rely on complex prompt-learning techniques or computationally expensive sliding-window strategies to achieve fine-grained visual alignment to detect small-scale anomalies. This reliance stems from the fundamental limitation of standard CLIP architectures, where [CLS] token attention and spatial patch pooling struggle to capture subtle, localized anomaly features. While prompt-learning approaches aim to bridge this gap, they typically require a large number of ground-truth segmentation masks from auxiliary datasets, which are often unavailable in specialized domains. In this work, we show an emerging property of multi-head attention pooling in vision-language models: remarkable zero-shot anomaly localization and detection right out of the box. We translate this property into a single-pass anomaly detection technique, RADIOlogy, that does not require dense, windowed execution and significantly outperforms other training-free baselines. Instead, the method relies on a simple contrastive scoring approach that compares the average similarity between vision features and a suite of normal and abnormal prompts. Furthermore, we leverage the agglomerative features of RADIO models to enhance pixel-level anomaly segmentation using a dense anomaly refinement pipeline. Finally, we show how the vision-language family of training-free zero-shot anomaly detection techniques can be applied successfully to the medical domain with minimal modifications. Code is available at https://github.com/jacomof/RADIOlogy.",
-    "authors": [
-      "Joaquín Figueira",
-      "Giacomo D'Amicantonio",
-      "Egor Bondarau"
-    ],
-    "published": "2026-10-29T17:45:35Z",
-    "updated": "2026-10-29T17:45:35Z",
-    "url": "https://arxiv.org/abs/2610.40580",
-    "pdf_url": "https://arxiv.org/pdf/2610.40580",
-    "source": "arXiv",
-    "journal_ref": "",
-    "comment": "Accepted to WACV 2027. Code available at https://github.com/jacomof/RADIOlogy",
-    "venue": "WACV 2027（作者声明）",
-    "code_urls": [
-      "https://github.com/jacomof/RADIOlogy"
-    ],
-    "categories": [
-      "cs.CV"
-    ],
-    "added_at": "2026-11-02T07:44:48+00:00",
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "reason": "等待 Agent 筛选",
-    "trace": []
   },
   {
     "id": "2610.40732",
@@ -708,49 +645,6 @@
     ]
   },
   {
-    "id": "2610.32964",
-    "version": "2610.32964v1",
-    "title": "Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection",
-    "abstract": "Few-shot industrial anomaly detection requires modeling category-specific normality from only a handful of defect-free images. Common approaches tie inference to stored exemplars, impose rigid linear structure, or risk reproducing anomalous content. Flownomaly instead casts the problem as normal-counterpart recovery in frozen DINOv2 feature space. Given normal supports, a velocity field is learned through conditional flow matching over frozen patch tokens to transport Gaussian noise toward normal features. Along straight paths, a single recovery step using one evaluation of the optimal field yields the posterior mean of the clean normal token without trajectory integration. The operating time governs how strongly recovery modifies a query token. With no anomalous validation samples available for tuning, a normal-only Jacobian gain-to-noise criterion selects this time from the supports alone. Squared residuals between query tokens and their recovered counterparts yield anomaly signals for both dense localization and image-level detection. Across 1-, 2-, and 4-shot benchmarks on MVTec-AD and VisA, together with sample-shot evaluations on Real-IAD, Flownomaly achieves state-of-the-art performance against recent category-specific methods. In the 1-shot setting, image- and pixel-level AUROC reach 97.8% and 98.0% on MVTec-AD and 95.3% and 98.7% on VisA, with a 2.1-point image-level AUROC improvement over the strongest baseline on VisA. Code is available at https://github.com/b-rbmp/Flownomaly.",
-    "authors": [
-      "Bernardo Perrone Ribeiro",
-      "Erkut Akdag",
-      "Egor Bondarev"
-    ],
-    "published": "2026-10-23T17:53:30Z",
-    "updated": "2026-10-23T17:53:30Z",
-    "url": "https://arxiv.org/abs/2610.32964",
-    "pdf_url": "https://arxiv.org/pdf/2610.32964",
-    "source": "arXiv",
-    "journal_ref": "",
-    "comment": "Accepted to WACV 2027",
-    "venue": "WACV 2027（作者声明）",
-    "code_urls": [
-      "https://github.com/b-rbmp/Flownomaly"
-    ],
-    "categories": [
-      "cs.CV",
-      "cs.LG"
-    ],
-    "added_at": "2026-11-02T07:44:48+00:00",
-    "status": "accepted",
-    "topic": "待分类",
-    "summary_zh": "在 DINOv2 特征空间用条件流匹配单步恢复正常局部特征，再以恢复残差检测和定位少样本工业缺陷。",
-    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
-    "trace": [
-      {
-        "action": "keep",
-        "source": "https://arxiv.org/abs/2610.32964",
-        "method": "initial_curation"
-      }
-    ],
-    "tags": [
-      "少样本",
-      "流匹配",
-      "缺陷定位"
-    ]
-  },
-  {
     "id": "2610.33143",
     "version": "2610.33143v1",
     "title": "Learning Pathology-Sensitive Representations for Unsupervised Retinal OCT Anomaly Detection",
@@ -857,140 +751,6 @@
     "tags": [
       "视觉语言模型",
       "集成",
-      "缺陷定位"
-    ]
-  },
-  {
-    "id": "2310.18961",
-    "version": "2310.18961v12",
-    "title": "AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection",
-    "abstract": "Zero-shot anomaly detection (ZSAD) requires detection models trained using auxiliary data to detect anomalies without any training sample in a target dataset. It is a crucial task when training data is not accessible due to various concerns, eg, data privacy, yet it is challenging since the models need to generalize to anomalies across different domains where the appearance of foreground objects, abnormal regions, and background features, such as defects/tumors on different products/organs, can vary significantly. Recently large pre-trained vision-language models (VLMs), such as CLIP, have demonstrated strong zero-shot recognition ability in various vision tasks, including anomaly detection. However, their ZSAD performance is weak since the VLMs focus more on modeling the class semantics of the foreground objects rather than the abnormality/normality in the images. In this paper we introduce a novel approach, namely AnomalyCLIP, to adapt CLIP for accurate ZSAD across different domains. The key insight of AnomalyCLIP is to learn object-agnostic text prompts that capture generic normality and abnormality in an image regardless of its foreground objects. This allows our model to focus on the abnormal image regions rather than the object semantics, enabling generalized normality and abnormality recognition on diverse types of objects. Large-scale experiments on 17 real-world anomaly detection datasets show that AnomalyCLIP achieves superior zero-shot performance of detecting and segmenting anomalies in datasets of highly diverse class semantics from various defect inspection and medical imaging domains. Code will be made available at https://github.com/zqhang/AnomalyCLIP.",
-    "authors": [
-      "Qihang Zhou",
-      "Guansong Pang",
-      "Yu Tian",
-      "Shibo He",
-      "Jiming Chen"
-    ],
-    "published": "2023-10-29T10:03:49Z",
-    "updated": "2026-01-01T03:03:39Z",
-    "url": "https://arxiv.org/abs/2310.18961",
-    "pdf_url": "https://arxiv.org/pdf/2310.18961",
-    "source": "arXiv",
-    "journal_ref": "",
-    "comment": "Accepted by ICLR 2024",
-    "venue": "ICLR 2024（作者声明）",
-    "code_urls": [
-      "https://github.com/zqhang/AnomalyCLIP"
-    ],
-    "categories": [
-      "cs.CV"
-    ],
-    "added_at": "2026-11-02T07:44:41+00:00",
-    "status": "accepted",
-    "topic": "待分类",
-    "summary_zh": "学习与物体类别无关的正常和异常提示词，让 CLIP 能在未见类别中检测和定位缺陷。",
-    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
-    "trace": [
-      {
-        "action": "keep",
-        "source": "https://arxiv.org/abs/2310.18961",
-        "method": "initial_curation"
-      }
-    ],
-    "tags": [
-      "零样本",
-      "提示词学习",
-      "跨类别泛化"
-    ]
-  },
-  {
-    "id": "2303.14814",
-    "version": "2303.14814v1",
-    "title": "WinCLIP: Zero-/Few-Shot Anomaly Classification and Segmentation",
-    "abstract": "Visual anomaly classification and segmentation are vital for automating industrial quality inspection. The focus of prior research in the field has been on training custom models for each quality inspection task, which requires task-specific images and annotation. In this paper we move away from this regime, addressing zero-shot and few-normal-shot anomaly classification and segmentation. Recently CLIP, a vision-language model, has shown revolutionary generality with competitive zero-/few-shot performance in comparison to full-supervision. But CLIP falls short on anomaly classification and segmentation tasks. Hence, we propose window-based CLIP (WinCLIP) with (1) a compositional ensemble on state words and prompt templates and (2) efficient extraction and aggregation of window/patch/image-level features aligned with text. We also propose its few-normal-shot extension WinCLIP+, which uses complementary information from normal images. In MVTec-AD (and VisA), without further tuning, WinCLIP achieves 91.8%/85.1% (78.1%/79.6%) AUROC in zero-shot anomaly classification and segmentation while WinCLIP+ does 93.1%/95.2% (83.8%/96.4%) in 1-normal-shot, surpassing state-of-the-art by large margins.",
-    "authors": [
-      "Jongheon Jeong",
-      "Yang Zou",
-      "Taewan Kim",
-      "Dongqing Zhang",
-      "Avinash Ravichandran",
-      "Onkar Dabeer"
-    ],
-    "published": "2023-03-26T20:41:21Z",
-    "updated": "2023-03-26T20:41:21Z",
-    "url": "https://arxiv.org/abs/2303.14814",
-    "pdf_url": "https://arxiv.org/pdf/2303.14814",
-    "source": "arXiv",
-    "journal_ref": "",
-    "comment": "Accepted to Conference on Computer Vision and Pattern Recognition (CVPR) 2023",
-    "venue": "CVPR 2023（作者声明）",
-    "code_urls": [],
-    "categories": [
-      "cs.CV",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "added_at": "2026-11-02T07:44:41+00:00",
-    "status": "accepted",
-    "topic": "待分类",
-    "summary_zh": "将 CLIP 的图像、窗口与局部特征对齐到正常和异常文本，可做零样本定位，也支持少量正常图作参考。",
-    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
-    "trace": [
-      {
-        "action": "keep",
-        "source": "https://arxiv.org/abs/2303.14814",
-        "method": "initial_curation"
-      }
-    ],
-    "tags": [
-      "零样本",
-      "少样本",
-      "缺陷定位"
-    ]
-  },
-  {
-    "id": "2106.08265",
-    "version": "2106.08265v2",
-    "title": "Towards Total Recall in Industrial Anomaly Detection",
-    "abstract": "Being able to spot defective parts is a critical component in large-scale industrial manufacturing. A particular challenge that we address in this work is the cold-start problem: fit a model using nominal (non-defective) example images only. While handcrafted solutions per class are possible, the goal is to build systems that work well simultaneously on many different tasks automatically. The best performing approaches combine embeddings from ImageNet models with an outlier detection model. In this paper, we extend on this line of work and propose \\textbf{PatchCore}, which uses a maximally representative memory bank of nominal patch-features. PatchCore offers competitive inference times while achieving state-of-the-art performance for both detection and localization. On the challenging, widely used MVTec AD benchmark PatchCore achieves an image-level anomaly detection AUROC score of up to $99.6\\%$, more than halving the error compared to the next best competitor. We further report competitive results on two additional datasets and also find competitive results in the few samples regime.\\freefootnote{$^*$ Work done during a research internship at Amazon AWS.} Code: github.com/amazon-research/patchcore-inspection.",
-    "authors": [
-      "Karsten Roth",
-      "Latha Pemula",
-      "Joaquin Zepeda",
-      "Bernhard Schölkopf",
-      "Thomas Brox",
-      "Peter Gehler"
-    ],
-    "published": "2021-06-15T16:27:02Z",
-    "updated": "2022-05-05T23:01:53Z",
-    "url": "https://arxiv.org/abs/2106.08265",
-    "pdf_url": "https://arxiv.org/pdf/2106.08265",
-    "source": "arXiv",
-    "journal_ref": "",
-    "comment": "Accepted to CVPR 2022",
-    "venue": "CVPR 2022（作者声明）",
-    "code_urls": [
-      "https://github.com/amazon-research/patchcore-inspection"
-    ],
-    "categories": [
-      "cs.CV"
-    ],
-    "added_at": "2026-11-02T07:44:41+00:00",
-    "status": "accepted",
-    "topic": "待分类",
-    "summary_zh": "从正常图像中选取代表性局部特征构成记忆库，用特征距离检测和定位工业缺陷。",
-    "reason": "初始清单依据 arXiv 摘要整理，明确涉及工业视觉异常检测或缺陷检测。",
-    "trace": [
-      {
-        "action": "keep",
-        "source": "https://arxiv.org/abs/2106.08265",
-        "method": "initial_curation"
-      }
-    ],
-    "tags": [
-      "记忆库",
-      "仅正常样本",
       "缺陷定位"
     ]
   },

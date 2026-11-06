@@ -62,6 +62,27 @@ def source_venue(text):
     return "{} {}（作者声明）".format(match[1].upper(), match[2]) if match else "arXiv / 未确认会议"
 
 
+def venue_and_year(paper):
+    year = paper["published"][:4]
+    venue = re.fullmatch(r"(.+?) (20\d{2})(?:（作者声明）)?", paper.get("venue", ""))
+    if venue:
+        return venue.group(1), venue.group(2)
+    journal_ref = paper.get("journal_ref", "").strip()
+    if journal_ref:
+        # Keep the name and strip common trailing citation metadata.
+        suffix = r"\s*[,;]\s*(?:vol\.?|volume|no\.?|pp\.?)\s|\s*\(20\d{2}\)\s*$|\s+20\d{2}\s*$"
+        name = re.split(suffix, journal_ref, maxsplit=1, flags=re.I)[0].rstrip(" ,;")
+        ref_year = re.search(r"\b20\d{2}\b", journal_ref)
+        return name or journal_ref, ref_year.group() if ref_year else year
+    return "arXiv", year
+
+
+def filter_collection_year(papers, year):
+    if year is None:
+        return papers
+    return [paper for paper in papers if venue_and_year(paper)[1] == str(year)]
+
+
 def parse_feed(raw):
     root = ET.fromstring(raw)
     papers = []
@@ -230,7 +251,8 @@ def run(root, since=None, until=None, no_llm=False, source=None):
     source = source or Arxiv()
     # Complete every page before mutating the durable collection or its checkpoint.
     incoming = source.collect(config, start, end)
-    papers = merge(load_json(root / "data/papers.json", []), incoming, now_iso())
+    year = config.get("collection_year")
+    papers = filter_collection_year(merge(load_json(root / "data/papers.json", []), incoming, now_iso()), year)
     agent = Agent(config, source)
     errors = 0
     for paper in papers:
@@ -246,6 +268,8 @@ def run(root, since=None, until=None, no_llm=False, source=None):
             paper["reason"] = "Agent 暂未完成，下次重试"
             print("Review pending for {} ({})".format(paper["id"], type(exc).__name__))
             break  # Avoid spending the budget repeatedly on a broken provider.
+    # A metadata recheck can correct the venue year after the first filter.
+    papers = filter_collection_year(papers, year)
     save_json(root / "data/papers.json", papers)
     if not since and not until:
         state["last_collected_until"] = end.isoformat()

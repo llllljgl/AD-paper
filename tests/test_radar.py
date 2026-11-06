@@ -99,13 +99,18 @@ class RadarTests(unittest.TestCase):
             root = Path(folder)
             save_json(root / "config.json", json.loads((ROOT / "config.json").read_text()))
             source = Mock()
-            source.collect.return_value = [paper()]
+            source.collect.return_value = [
+                paper(published="2025-12-01T00:00:00Z", venue="CVPR 2026（作者声明）"),
+                paper(id="future", title="Future venue", venue="WACV 2027（作者声明）"),
+            ]
             with patch.dict(os.environ, {"OPENAI_API_KEY": ""}):
                 state = run(root, source=source)
                 checkpoint = state["last_collected_until"]
                 run(root, since="2026-01-01", until="2026-01-31", no_llm=True, source=source)
             saved = json.loads((root / "data/state.json").read_text())
             self.assertEqual(saved["last_collected_until"], checkpoint)
+            collected = json.loads((root / "data/papers.json").read_text())
+            self.assertEqual([p["id"] for p in collected], ["2601.00001"])
             source.collect.side_effect = RuntimeError("offline")
             before = (root / "data/papers.json").read_bytes()
             with self.assertRaises(RuntimeError):
@@ -142,6 +147,12 @@ class RadarTests(unittest.TestCase):
             self.assertTrue(result.endswith("Keep this text.\n"))
             build(root)
             self.assertEqual(readme.read_text(encoding="utf-8"), result)
+            save_json(root / "config.json", {"collection_year": 2026})
+            build(root)
+            result = readme.read_text(encoding="utf-8")
+            self.assertIn("### CVPR 2026\n", result)
+            self.assertNotIn("### CVPR 2025\n", result)
+            self.assertNotIn("### Pattern Recognition 2025\n", result)
 
 
 if __name__ == "__main__":

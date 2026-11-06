@@ -3,7 +3,7 @@ import html
 import re
 from pathlib import Path
 from urllib.parse import quote, urlsplit
-from .core import load_json, run
+from .core import filter_collection_year, load_json, run, venue_and_year
 
 ROOT = Path(__file__).resolve().parent.parent
 LIST_START = "<!-- PAPER-LIST:START -->"
@@ -26,28 +26,14 @@ def markdown_link(label, url):
     return label
 
 
-def venue_and_year(paper):
-    year = paper["published"][:4]
-    venue = re.fullmatch(r"(.+?) (20\d{2})(?:（作者声明）)?", paper.get("venue", ""))
-    if venue:
-        return venue.group(1), venue.group(2)
-    journal_ref = paper.get("journal_ref", "").strip()
-    if journal_ref:
-        # Keep the name and strip common trailing citation metadata.
-        suffix = r"\s*[,;]\s*(?:vol\.?|volume|no\.?|pp\.?)\s|\s*\(20\d{2}\)\s*$|\s+20\d{2}\s*$"
-        name = re.split(suffix, journal_ref, maxsplit=1, flags=re.I)[0].rstrip(" ,;")
-        ref_year = re.search(r"\b20\d{2}\b", journal_ref)
-        return name or journal_ref, ref_year.group() if ref_year else year
-    return "arXiv", year
-
-
 def build(root=ROOT):
     target = root / "README.md"
     readme = target.read_text(encoding="utf-8")
     if readme.count(LIST_START) != 1 or readme.count(LIST_END) != 1 or readme.index(LIST_START) > readme.index(LIST_END):
         raise ValueError("README must contain one ordered pair of paper list markers")
 
-    papers = load_json(root / "data/papers.json", [])
+    config = load_json(root / "config.json", {})
+    papers = filter_collection_year(load_json(root / "data/papers.json", []), config.get("collection_year"))
     groups = {}
     for paper in papers:
         if paper["status"] == "accepted":

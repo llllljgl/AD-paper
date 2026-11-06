@@ -1,6 +1,7 @@
 {
   "name": "AD Paper Radar",
   "description": "工业异常检测论文雷达",
+  "collection_year": 2026,
   "arxiv_query": "(ti:\"anomaly detection\" OR ti:\"anomaly localization\" OR ti:\"defect detection\" OR ti:\"defect segmentation\") AND (all:industrial OR all:visual OR all:MVTec OR all:VisA OR all:manufacturing)",
   "initial_days": 14,
   "overlap_days": 3,
