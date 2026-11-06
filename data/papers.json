@@ -75,7 +75,8 @@
         "reason": "摘要明确针对工业场景的无监督异常检测，利用冻结ViT跨层特征预测与前景先验，并在MVTec-AD、VisA、Real-IAD等工业数据集评估。"
       }
     ],
-    "reviewed_at": "2026-11-06T09:02:05+00:00"
+    "reviewed_at": "2026-11-06T09:02:05+00:00",
+    "code_checked_at": "2026-11-06T09:11:38+00:00"
   },
   {
     "id": "2611.08136",
@@ -117,7 +118,8 @@
         "reason": "摘要明确提出在MVTec AD与VisA工业视觉异常检测和像素级定位上评估无训练随机特征方法，属于工业视觉异常检测范围。"
       }
     ],
-    "reviewed_at": "2026-11-06T09:02:07+00:00"
+    "reviewed_at": "2026-11-06T09:02:07+00:00",
+    "code_checked_at": "2026-11-06T09:11:42+00:00"
   },
   {
     "id": "2611.07356",
@@ -168,7 +170,8 @@
         "reason": "摘要明确针对CNC钻孔加工中的声学异常检测与卡钻早期识别，属于工业视觉相关异常检测框架（基于声学信号、半监督自编码器），并发布工业数据集与评估。"
       }
     ],
-    "reviewed_at": "2026-11-06T09:02:11+00:00"
+    "reviewed_at": "2026-11-06T09:02:11+00:00",
+    "code_checked_at": "2026-11-06T09:11:45+00:00"
   },
   {
     "id": "2611.04754",
@@ -207,7 +210,8 @@
         "reason": "摘要提出工业视觉异常检测（MVTec AD、VisA）的新评估指标，明确属于数据集与评估范围"
       }
     ],
-    "reviewed_at": "2026-11-06T09:02:13+00:00"
+    "reviewed_at": "2026-11-06T09:02:13+00:00",
+    "code_checked_at": "2026-11-06T09:11:48+00:00"
   },
   {
     "id": "2611.02654",
@@ -335,7 +339,8 @@
       "少样本",
       "概率校准",
       "工业质检"
-    ]
+    ],
+    "code_checked_at": "2026-11-06T09:11:52+00:00"
   },
   {
     "id": "2610.40732",
@@ -1329,7 +1334,7 @@
   {
     "id": "eccv:f32e7533a91a98a2",
     "added_at": "2026-11-06T07:00:38+00:00",
-    "abstract": "",
+    "abstract": "Industrial Video Anomaly Detection (IVAD) aims to identifyanomalous objects and events in an industrial process, which is crucial formodern manufacturing and quality control systems. Existing VLM-basedanomaly reasoning methods are capable of detecting open-ended anoma-lies in general domains. However, their performance declines in industrialsettings characterized by intricate object transformations, strict physics,and procedural constraints. To tackle the complexity of such interaction-intensive detection, we introduce a training-free agentic framework O-VAD for anomaly detection free of domain-specific knowledge, empha-sizing object state evolution like humans inspectors. It is designed totrack spatial-temporal dynamics and underlying transformations of de-tected objects over time, and then reason over the object-wise temporalstate trajectories to identify abnormal objects in grounded frames. Ourmethod overcomes limitations of prior approaches that rely on retrainingon normal clips or injecting domain knowledge as context for test-timeinference. Extensive experiments on three IVAD datasets demonstratethat our method outperforms frontier VLMs, agentic frameworks, andtraditional VAD methods fine-tuned on the respective datasets, whileproviding interpretable reports over anomaly processes and types.",
     "categories": [],
     "title": "O-VAD: Industrial Video Anomaly Detection through Object-Centric Tracking and Reasoning",
     "authors": [],
@@ -1356,12 +1361,13 @@
         "method": "source_review",
         "source": "https://eccv.ecva.net/virtual/2026/poster/4659"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:14+00:00"
   },
   {
     "id": "eccv:cfbf60c2ad05603f",
     "added_at": "2026-11-06T07:00:38+00:00",
-    "abstract": "",
+    "abstract": "Ensuring the reliability of deep learning models in real-timeindustrial defect detection is critical for high-stakes quality inspection.To mine uncertain samples within continuous industrial media streams,thereby enhancing the reliability of the detection system, this paperproposes a streaming active learning method based on the Fuzzy Dual-dimensional Uncertainty (FuDU) framework. Specifically, we first designa Prototype-based Global Uncertainty Quantification (PGUQ) moduleon the backbone to evaluate image-level uncertainty via normal/defectivefeature prototypes. A Dual-entropy defect Uncertainty Evaluator (DeUE)is then integrated into the detection head to quantify box-level uncer-tainty. Finally, by modeling uncertainty as systematic error, we pro-pose a fuzzy dual-dimensional uncertainty-aware strategy that lever-ages fuzzy inference to fuse dual-dimensional uncertainties, enabling ex-pert knowledge-driven adaptive sampling decisions. Comprehensive ex-periments demonstrate that FuDU is efficient and flexible, making itwell-suited for challenging industrial inspection tasks such as the de-tection of nuclear fuel rod defects. Our code is publicly available at:https://github.com/wangzhaoyang-508/FuDU.",
     "categories": [],
     "title": "FuDU: A Fuzzy Dual-dimension Uncertainty Framework for Streaming Active Learning in Industrial Defect Detection",
     "authors": [],
@@ -1390,7 +1396,8 @@
         "method": "source_review",
         "source": "https://eccv.ecva.net/virtual/2026/poster/5087"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:15+00:00"
   },
   {
     "id": "eccv:98e7046673261398",
@@ -1502,7 +1509,7 @@
   {
     "id": "iclr:53d4d25f3c1b1119",
     "added_at": "2026-11-06T07:00:38+00:00",
-    "abstract": "",
+    "abstract": "Industrial anomaly detection has been significantly advanced by Large Multimodal Models (LMMs), enabling diverse human instructions beyond detection, particularly through visually grounded reasoning for better image understanding. However, LMMs lack domain-specific knowledge, which limits their ability to generate accurate responses in complex industrial scenarios. In this work, we present JUDO, Juxtaposed Domain-Oriented Multimodal Reasoner, a framework that efficiently incorporates domain knowledge and context in visual and textual reasoning. Through visual reasoning, our model segments the defect region by juxtaposing query images with normal images as visual domain context, enabling a fine-grained visual comparative inspection. Furthermore, we inject domain knowledge through supervised fine-tuning (SFT) to enhance context understanding and subsequently guide domain reasoning through reinforcement learning (GRPO) with tailored rewards, opting for a domain-oriented reasoning process. Experimental results demonstrate that JUDO achieves superior performance on the MMAD benchmark, surpassing models such as Qwen2.5-VL-7B and GPT-4o. These results highlight the importance of enhancing domain knowledge and context for effective reasoning in anomaly understanding.",
     "categories": [],
     "title": "JUDO: A Juxtaposed Domain-Oriented Multimodal Reasoner for Industrial Anomaly QA",
     "authors": [
@@ -1534,12 +1541,13 @@
         "method": "source_review",
         "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/92a7a03e1c716970848a4a86cc8243ee-Abstract-Conference.html"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:31+00:00"
   },
   {
     "id": "iclr:69c3306541c79867",
     "added_at": "2026-11-06T07:00:38+00:00",
-    "abstract": "",
+    "abstract": "Few-shot anomaly detection streamlines and simplifies industrial safety inspection. However, limited samples make accurate differentiation between normal and abnormal features challenging, and even more so under category-agnostic conditions. Large-scale pre-training of foundation visual encoders has advanced many fields, as the enormous quantity of data helps to learn the general distribution of normal images. We observe that the anomaly amount in an image directly correlates with the difference in the learnt embeddings and utilize this to design a few-shot anomaly detector termed FoundAD. This is done by learning a nonlinear projection operator onto the natural image manifold. The simple operator acts as an effective tool for anomaly detection to characterize and identify out-of-distribution regions in an image. Extensive experiments show that our approach supports multi-class detection and achieves competitive performance compared to other approaches, while surpassing them in model size and inference efficiency. Backed up by evaluations with multiple foundation encoders, including fresh DINOv3, we believe this idea broadens the perspective on foundation features and advances the field of few-shot anomaly detection. Our code is at https://github.com/ymxlzgy/FoundAD.",
     "categories": [],
     "title": "Foundation Visual Encoders Are Secretly Few-Shot Anomaly Detectors",
     "authors": [
@@ -1575,7 +1583,8 @@
         "method": "source_review",
         "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9e47a0bc530cc88b09b7670d2c130a29-Abstract-Conference.html"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:31+00:00"
   },
   {
     "id": "iclr:6087de2ef5522485",
@@ -1807,7 +1816,7 @@
   {
     "id": "neurips:7f9438e1ab55cf42",
     "added_at": "2026-11-06T07:00:38+00:00",
-    "abstract": "",
+    "abstract": "Industrial anomaly detection demands precise reasoning over fine-grained defect patterns. However, existing multimodal large language models (MLLMs), pretrained on general-domain data, often struggle to capture category-specific anomalies, thereby limiting both detection accuracy and interpretability. To address these limitations, we propose Reason-IAD, a knowledge-guided dynamic latent reasoning framework for explainable industrial anomaly detection. Reason-IAD comprises two core components. First, a retrieval-augmented knowledge module incorporates category-specific textual descriptions into the model input, enabling context-aware reasoning over domain-specific defects. Second, an entropy-driven latent reasoning mechanism conducts iterative exploration within a compact latent space using optimizable latent think tokens, guided by an entropy-based reward that encourages confident and stable predictions. Furthermore, a dynamic visual injection strategy selectively incorporates the most informative image patches into the latent sequence, directing the reasoning process toward regions critical for anomaly detection. Extensive experimental results demonstrate that Reason-IAD consistently outperforms state-of-the-art methods across multiple tasks. The code will be publicly available upon publication.",
     "categories": [],
     "title": "Towards Explainable Industrial Anomaly Detection via Knowledge-Guided Latent Reasoning",
     "authors": [],
@@ -1834,7 +1843,8 @@
         "method": "source_review",
         "source": "https://neurips.cc/virtual/2026/poster/151471"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:24+00:00"
   },
   {
     "id": "neurips:a7c3d46b9547702f",
@@ -2183,7 +2193,7 @@
   {
     "id": "doi:10.1109/tip.2026.3728632",
     "added_at": "2026-11-06T07:00:38+00:00",
-    "abstract": "",
+    "abstract": "Few-shot defect segmentation (FSDS) has emerged as an effective approach to address the challenge of limited annotated samples in industrial quality inspection. However, existing methods often rely on features extracted from a single semantic level, without effectively suppressing noise interference, which leads to suboptimal performance when segmenting complex and diverse defect patterns. Motivated by these limitations, we propose a novel framework named Hierarchical Dense Aggregation Network (HDANet), which systematically integrates multilevel complementary information through three targeted components: 1) The Prior Disentanglement Module (PDM) explicitly mitigates semantic confusion between defective and defect-free regions by introducing dual training-free prior masks that provide robust structural guidance. 2) The Activation Enhancement Module (AEM) performs dense feature activation to capture fine-grained multiscale details while suppressing class-irrelevant noise. 3) The Progressive Aggregation Module (PAM) models hierarchical long-range dependencies among discrete defects and aggregates contextual relationships across multiple semantic levels. To alleviate the scarcity of annotated metal surface defect data, we further introduce MSD-Seg, a comprehensive benchmark dataset comprising 1,109 high-quality pixel-level annotated images covering 24 representative defect categories from five types of industrial materials. Extensive experiments on MSD-Seg, FSSD-12, and Defect- $4i$ demonstrate that HDANet achieves superior defect segmentation performance. The dataset and code will be made publicly available at https://github.com/VDT-2048/HDANet.",
     "categories": [],
     "title": "Hierarchical Dense Aggregation Network for Few-Shot Metal Surface Defect Segmentation",
     "authors": [
@@ -2219,7 +2229,8 @@
         "source": "https://doi.org/10.1109/tip.2026.3728632"
       }
     ],
-    "publisher_url": "https://ieeexplore.ieee.org/document/11677301/"
+    "publisher_url": "https://ieeexplore.ieee.org/document/11677301/",
+    "metadata_checked_at": "2026-11-06T09:09:43+00:00"
   },
   {
     "id": "doi:10.1109/tip.2026.3671617",
@@ -2391,7 +2402,7 @@
   {
     "id": "2603.21511",
     "added_at": "2026-11-06T07:12:07+00:00",
-    "abstract": "",
+    "abstract": "Zero-shot (ZS) 3D anomaly detection is crucial for reliable industrial inspection, as it enables detecting and localizing defects without requiring any target-category training data. Existing approaches render 3D point clouds into 2D images and leverage pre-trained Vision-Language Models (VLMs) for anomaly detection. However, such strategies inevitably discard geometric details and exhibit limited sensitivity to local anomalies. In this paper, we revisit intrinsic 3D representations and explore the potential of pre-trained Point-Language Models (PLMs) for ZS 3D anomaly detection. We propose BTP (Back To Point), a novel framework that effectively aligns 3D point cloud and textual embeddings. Specifically, BTP aligns multi-granularity patch features with textual representations for localized anomaly detection, while incorporating geometric descriptors to enhance sensitivity to structural anomalies. Furthermore, we introduce a joint representation learning strategy that leverages auxiliary point cloud data to improve robustness and enrich anomaly semantics. Extensive experiments on Real3D-AD and Anomaly-ShapeNet demonstrate that BTP achieves superior performance in ZS 3D anomaly detection.",
     "categories": [],
     "title": "Back to Point: Exploring Point-Language Models for Zero-Shot 3D Anomaly Detection",
     "authors": [
@@ -2425,12 +2436,14 @@
         "method": "source_review",
         "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Back_to_Point_Exploring_Point-Language_Models_for_Zero-Shot_3D_Anomaly_CVPR_2026_paper.html"
       }
-    ]
+    ],
+    "arxiv_id": "2603.21511",
+    "metadata_checked_at": "2026-11-06T09:08:12+00:00"
   },
   {
     "id": "2603.07952",
     "added_at": "2026-11-06T07:12:07+00:00",
-    "abstract": "",
+    "abstract": "Zero-shot anomaly detection (ZSAD) requires detecting and localizing anomalies without access to target-class anomaly samples. Mainstream methods rely on vision-language models (VLMs) such as CLIP: they build hand-crafted or learned prompt sets for normal and abnormal semantics, then compute image-text similarities for open-set discrimination. While effective, this paradigm depends on a text encoder and cross-modal alignment, which can lead to training instability and parameter redundancy. This work revisits the necessity of the text branch in ZSAD and presents VisualAD, a purely visual framework built on Vision Transformers. We introduce two learnable tokens within a frozen backbone to directly encode normality and abnormality. Through multi-layer self-attention, these tokens interact with patch tokens, gradually acquiring high-level notions of normality and anomaly while guiding patches to highlight anomaly-related cues. Additionally, we incorporate a Spatial-Aware Cross-Attention (SCA) module and a lightweight Self-Alignment Function (SAF): SCA injects fine-grained spatial information into the tokens, and SAF recalibrates patch features before anomaly scoring. VisualAD achieves state-of-the-art performance on 13 zero-shot anomaly detection benchmarks spanning industrial and medical domains, and adapts seamlessly to pretrained vision backbones such as the CLIP image encoder and DINOv2. Our code is publicly available at https://github.com/7HHHHH/VisualAD.",
     "categories": [],
     "title": "VisualAD: Language-Free Zero-Shot Anomaly Detection via Vision Transformer",
     "authors": [
@@ -2467,12 +2480,14 @@
         "method": "source_review",
         "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Hou_VisualAD_Language-Free_Zero-Shot_Anomaly_Detection_via_Vision_Transformer_CVPR_2026_paper.html"
       }
-    ]
+    ],
+    "arxiv_id": "2603.07952",
+    "metadata_checked_at": "2026-11-06T09:08:12+00:00"
   },
   {
     "id": "cvpr:440cafeeb4a23164",
     "added_at": "2026-11-06T07:12:07+00:00",
-    "abstract": "",
+    "abstract": "Unsupervised Anomaly Detection (UAD) is crucial for industrial quality control. Many existing embedding-based methods adopt a single-prototype assumption and learn, for example, a compact hypersphere to enclose all normal features. However, this strategy breaks down under intra-class variance caused by changes in illumination, pose, or texture. To cover all diverse normal samples, a single prototype may induce an overly loose decision boundary, making subtle anomalies hard to detect. To overcome this limitation, we propose PGBL (Prototype-Guided Boundary Learning), a framework that synergizes structured representation learning with targeted anomaly synthesis. First, the Multi-Prototype Compact Constraint (MPCC) module models the normal feature distribution as a mixture of multiple semantic prototypes, enabling tighter local representations for each normal sub-pattern. Second, instead of blind anomaly synthesis, the Boundary-Aware Anomaly Synthesis (BAAS) module generates pseudo-anomalies at the topological boundaries between MPCC clusters. Finally, a Discriminative Boundary Refiner (DBR) learns to shape the final decision surface by separating normal clusters from the synthesized anomalies. Extensive experiments on MVTec-AD, VisA and Real-IAD show that PGBL consistently outperforms prior methods in both anomaly detection and localization.",
     "categories": [],
     "title": "Multi-Prototype Compactness and Boundary-Aware Synthesis for Unsupervised Anomaly Detection",
     "authors": [
@@ -2506,12 +2521,13 @@
         "method": "source_review",
         "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Liao_Multi-Prototype_Compactness_and_Boundary-Aware_Synthesis_for_Unsupervised_Anomaly_Detection_CVPR_2026_paper.html"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:12+00:00"
   },
   {
     "id": "cvpr:346206d26b16f716",
     "added_at": "2026-11-06T07:12:07+00:00",
-    "abstract": "",
+    "abstract": "Defect synthesis, as a core technology for addressing the problem of few-shot defect classification, has been widely adopted in industrial scenarios. It helps alleviate the problem of insufficient model generalization capability owing to data scarcity by establishing a data augmentation pipeline. Recently, remarkable progress has been achieved in both explicit defect image generation and implicit defect feature synthesis approaches. However, existing methods are always conducted in Euclidean space. Constrained by the flatness of Euclidean space, it is difficult to synthesize defect data containing complex structures. In this paper, we attempt to explore defect generation in hyperbolic space and propose a hyperbolic defect feature synthesis (HypDFS) method. By modeling the potential defect distribution via a small number of hyperbolic defect prototypes and further optimizing the synthetic defect features with the hierarchical defect contrastive loss in hyperbolic space, our HypDFS method can obtain a better generalized defect representation that is more conducive to downstream few-shot defect classification task. Extensive experiments on the MVTec-FS benchmark and standard MTD dataset under the few-shot settings demonstrate that the proposed HypDFS surpasses the Euclidean baseline by a large margin, showing promising prospects for defect synthesis in hyperbolic space.",
     "categories": [],
     "title": "Hyperbolic Defect Feature Synthesis for Few-Shot Defect Classification",
     "authors": [
@@ -2544,7 +2560,8 @@
         "method": "source_review",
         "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Hyperbolic_Defect_Feature_Synthesis_for_Few-Shot_Defect_Classification_CVPR_2026_paper.html"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:12+00:00"
   },
   {
     "id": "cvpr:8470b3f5f0a20ac1",
@@ -3355,7 +3372,7 @@
   {
     "id": "eccv:74efad1369f4d184",
     "added_at": "2026-11-06T07:12:07+00:00",
-    "abstract": "",
+    "abstract": "Detecting anomalies in images and video is an essential task for multi-ple real-world problems, including industrial inspection, computer-assisted diag-nosis, and environmental monitoring. Anomaly detection is typically formulatedas a one-class classification problem, where the training data consists solely ofnominal values, leaving methods built on this assumption susceptible to train-ing label noise. We present Bootstrap Aggregation Anomaly Filtering (BAAF),a method that transforms an arbitrary one-class classifier-based anomaly detec-tor into a fully unsupervised method. This is achieved by leveraging the uniqueintrinsic properties of anomaly detection: anomalies are uncommon in the sam-pled data and generally heterogeneous. These properties enable us to design amodified Bootstrap Aggregation method that uses multiple independently trainedinstances of supervised one-class classifiers to filter the training dataset for anoma-lies. This transformation requires no modifications to the underlying anomaly de-tector; only the algorithmically selected data bags used for training change. Wedemonstrate empirically that our method can transform a wide variety of one-classclassifier-based image anomaly detectors into unsupervised ones. Consequently,we present the first fully unsupervised logical anomaly detection method for im-ages. We also demonstrate that our method achieves state-of-the-art performancein fully unsupervised anomaly detection on the MVTec AD, ViSA, Real-IAD andMvTec LOCO AD datasets. As improvements to one-class classifiers are made,our method directly transfers those improvements to the unsupervised domain,linking the domains.",
     "categories": [],
     "title": "BAAF: Universal Transformation of One-Class Classifiers for Unsupervised Image Anomaly Detection",
     "authors": [],
@@ -3382,12 +3399,13 @@
         "method": "source_review",
         "source": "https://eccv.ecva.net/virtual/2026/poster/5489"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:14+00:00"
   },
   {
     "id": "eccv:fae16bc59b8dd600",
     "added_at": "2026-11-06T07:12:07+00:00",
-    "abstract": "",
+    "abstract": "Detecting anomalies in industrial objects is an importanttopic for increasing production efficiency. More complex objects oftenrequire the analysis of several view points, which has led to the fieldof multi-view anomaly detection. We present MATCH , the first multi-view anomaly detection method based on Flow Matching (FM). Withthe ODE formulation of Flow Matching, we can estimate likelihoods andthereby derive an anomaly score to detect anomalies in multi-view imagedata at object, image, and pixel-level. The architectural flexibility of FMmodels allows us to efficiently transform features of different spatial sizesto the normal distribution. We evaluate thoroughly on the already estab-lished Real-IAD data set and are also the first to provide a comprehen-sive evaluation of popular anomaly detection methods for the MANTA-Tiny data set. MATCH achieves state-of-the-art performance in bothanomaly detection and segmentation, all while running on consumer-levelhardware. By omitting the costly divergence term needed for likelihoodestimation, we ensure that MATCH is usable in real-time productionscenarios. Lastly, several ablation studies are conducted to validate themethodological choices. Code: https://github.com/m-kruse98/MATCH",
     "categories": [],
     "title": "MATCH: Flow Matching for Multi-View Anomaly Detection",
     "authors": [],
@@ -3416,12 +3434,13 @@
         "method": "source_review",
         "source": "https://eccv.ecva.net/virtual/2026/poster/4872"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:15+00:00"
   },
   {
     "id": "eccv:c135e6143f0f1955",
     "added_at": "2026-11-06T07:12:07+00:00",
-    "abstract": "",
+    "abstract": "The deployment of Industrial Anomaly Detection (IAD) inreal-world manufacturing frequently encounters a challenging cold-startbottleneck, in which limited normal samples fail to represent the fullnormal distribution and only a few anomalies are available. Under sucha regime, existing methods struggle to form compact normal boundariesand fail to effectively exploit supervised signals from rare defects. To ad-dress this challenge, we propose Anomaly-Rectified Cold-start AD (Ar-cAD), a plug-and-play calibration framework for reconstruction-basedIAD baselines. ArcAD follows a push–pull learning paradigm to constructa compact and discriminative normal boundary under data scarcity. Onthe one hand, ArcAD projects limited normal samples onto a hypersphereand pulls them into multiple compact clusters to maximize coverage ofthe normal manifold. On the other hand, it synthesizes pseudo-anomalieson the hypersphere and leverages real anomalies to push the boundaryinward and sharpen anomaly discrimination. Extensive experiments onMVTec-AD, VisA, Real-IAD, and MANTA demonstrate that ArcADsignificantly outperforms state-of-the-art supervised and unsupervisedmethods in both single-class and multi-class settings under cold-startconditions. Code is available at: https://github.com/LGC-AD/ArcAD.",
     "categories": [],
     "title": "ArcAD: Anomaly-Rectified Calibration for Cold-Start Supervised Anomaly Detection",
     "authors": [],
@@ -3450,12 +3469,13 @@
         "method": "source_review",
         "source": "https://eccv.ecva.net/virtual/2026/poster/5146"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:15+00:00"
   },
   {
     "id": "eccv:7b9d6c57f0fc14d4",
     "added_at": "2026-11-06T07:12:07+00:00",
-    "abstract": "",
+    "abstract": "Current anomaly detection methods primarily focus on struc-tural anomalies, while paying insu x001E cient attention to anomalies that vi-olate logical constraints. Conversely, top-performing logical anomaly de-tection approaches address this by modeling global semantic consistency,but perform poorly on subtle structural anomalies due to inadequate de-tection granularity. In this paper, we propose LogiCo , a uni x001C ed frame-work for Logi cal and structural anomaly detection via Co mponent-levelfeature reconstruction. Unlike existing methods that rely on explicitglobal semantic modeling, LogiCo employs a novel component-level fea-ture reconstruction technique to capture inter-component logical con-straints. Speci x001C cally, LogiCo maps pre-trained image features into a dis-crete component-level feature space and performs collaborative featurereconstruction at both component and patch levels, enabling it to ef-fectively detect both logical and structural anomalies. Furthermore, toaddress the speci x001C c challenge of count-related logical anomalies, we inte-grate a segmentation-map discriminator that extends the model's capa-bility to identify quantitative inconsistencies. LogiCo achieves state-of-the-art performance on both logical and structural anomaly detectionacross four benchmarks, including MVTec-LOCO, MVTec-AD, VisA,and Real-IAD, demonstrating its superiority and practical feasibility.The code is available at https://github.com/cnulab/LogiCo.",
     "categories": [],
     "title": "LogiCo: A Unified Framework for Logical and Structural Anomaly Detection",
     "authors": [],
@@ -3484,7 +3504,8 @@
         "method": "source_review",
         "source": "https://eccv.ecva.net/virtual/2026/poster/3604"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:15+00:00"
   },
   {
     "id": "eccv:4841bd901f8e8259",
@@ -3589,7 +3610,7 @@
   {
     "id": "icml:cb9af1c0d97f92ca",
     "added_at": "2026-11-06T07:12:07+00:00",
-    "abstract": "",
+    "abstract": "Anomaly detection (AD) under data contamination is critical for deploying unsupervised defect detection in industrial environments, where curating perfectly clean training sets is impractical. However, existing methods are sensitive to contamination, suffering significant performance degradation as the noise ratio increases. In this paper, we propose Memory-Distilled Selection (MeDS), a training algorithm based on data selection. MeDS constructs an ensemble of partial memories via random subsampling, where the resulting sparsity acts as a low-pass filter that captures nominal patterns across a wide range of noise ratios, enabling coarse-level identification of contaminated samples. The aggregated distances to the bootstrapped memories are then distilled into a reconstruction score network, which is subsequently fine-tuned on clean data filtered using scores from the distilled model, enabling fine-grained localization of anomalies. MeDS is robust across a wide range of noise ratios without requiring noise-ratio-specific hyperparameter tuning, achieving 99.16% image-level AUROC on MVTecAD at a 40% noise ratio, and attaining state-of-the-art performance on both VisA and Real-IAD under noisy settings. We thoroughly verify the efficacy of MeDS on industrial AD benchmarks under noisy data scenarios, accompanied by in-depth empirical analyses.",
     "categories": [],
     "title": "Memory-Distilled Selection for Noise-Robust Anomaly Detection",
     "authors": [
@@ -3624,7 +3645,8 @@
         "method": "source_review",
         "source": "https://proceedings.mlr.press/v306/safarov26a.html"
       }
-    ]
+    ],
+    "metadata_checked_at": "2026-11-06T09:08:33+00:00"
   },
   {
     "id": "neurips:30f0b4d8d33a42a2",
@@ -4007,7 +4029,7 @@
     ],
     "published": "2026",
     "updated": "2026",
-    "abstract": "Unsupervised visual  anomaly detection from multi-view images presents a significant challenge: distinguishing genuine defects from benign appearance variations caused by viewpoint changes. Existing methods, often designed for single-view inputs, treat multiple views as a disconnected set of images, leading to inconsistent feature representations and a high false-positive rate. To address this, we introduce ViewSense-AD (VSAD), a novel framework that learns viewpoint-invariant representations by explicitly modeling geometric consistency across views. At its core is our Multi-View Alignment Module (MVAM), which leverages homography to project and align corresponding feature regions between neighboring views. We integrate MVAM into a View-Align Latent Diffusion Model (VALDM), enabling progressive and multi-stage alignment during the denoising process. This allows the model to build a coherent and holistic understanding of the object's surface from coarse to fine scales. Furthermore, a lightweight Fusion Refiner Module (FRM) enhances the global consistency of the aligned features, suppressing noise and improving discriminative power. Anomaly detection is performed by comparing multi-level features from the diffusion model against a learned memory bank of normal prototypes. Extensive experiments on the challenging RealIAD and MANTA datasets demonstrate that VSAD sets a new state-of-the-art, significantly outperforming existing methods in pixel, view, and sample-level visual anomaly detection, proving its robustness to large viewpoint shifts and complex textures.",
+    "abstract": "Unsupervised visual anomaly detection from multi-view images presents a significant challenge: distinguishing genuine defects from benign appearance variations caused by viewpoint changes. Existing methods, often designed for single-view inputs, treat multiple views as a disconnected set of images, leading to inconsistent feature representations and a high false-positive rate. To address this, we introduce ViewSense-AD (VSAD), a novel framework that learns viewpoint-invariant representations by explicitly modeling geometric consistency across views. At its core is our Multi-View Alignment Module (MVAM), which leverages homography to project and align corresponding feature regions between neighboring views. We integrate MVAM into a View-Align Latent Diffusion Model (VALDM), enabling progressive and multi-stage alignment during the denoising process. This allows the model to build a coherent and holistic understanding of the object's surface from coarse to fine scales. Furthermore, a lightweight Fusion Refiner Module (FRM) enhances the global consistency of the aligned features, suppressing noise and improving discriminative power. Anomaly detection is performed by comparing multi-level features from the diffusion model against a learned memory bank of normal prototypes. Extensive experiments on the challenging RealIAD and MANTA datasets demonstrate that VSAD sets a new state-of-the-art, significantly outperforming existing methods in pixel, view, and sample-level visual anomaly detection, proving its robustness to large viewpoint shifts and complex textures.",
     "categories": [],
     "added_at": "2026-11-06T07:13:48+00:00",
     "url": "https://doi.org/10.1609/aaai.v40i4.37299",
@@ -4047,12 +4069,12 @@
     ],
     "published": "2026",
     "updated": "2026",
-    "abstract": "Zero-Shot Anomaly Detection (ZSAD) aims to identify and localize anomalous regions in images of unseen object classes. While recent methods based on vision-language models like CLIP show promise, their performance is constrained by existing prompt engineering strategies. Current approaches, whether relying on single fixed, learnable, or dense dynamic prompts, suffer from a representational bottleneck and are prone to overfitting on auxiliary data, failing to generalize to the complexity and diversity of unseen anomalies. To overcome these limitations, we propose PromptMoE. Our core insight is that robust ZSAD requires a compositional approach to prompt learning. Instead of learning monolithic prompts, PromptMoE learns a pool of expert prompts, which serve as a basis set of composable semantic primitives, and a visually-guided Mixture-of-Experts (MoE) mechanism to dynamically combine them for each instance. Our framework materializes this concept through a Visually-Guided Mixture of Prompt (VGMoP) that employs an image-gated sparse MoE to aggregate diverse normal and abnormal expert state prompts, generating semantically rich textual representations with strong generalization. Extensive experiments across 15 datasets in industrial and medical domains demonstrate the effectiveness and state-of-the-art performance of PromptMoE.",
+    "abstract": "Zero-Shot Anomaly Detection (ZSAD) aims to identify and localize anomalous regions in images of unseen object classes. While recent methods based on vision-language models like CLIP show promise, their performance is constrained by existing prompt engineering strategies. Current approaches, whether relying on single fixed, learnable, or dense dynamic prompts, suffer from a representational bottleneck and are prone to overfitting on auxiliary data, failing to generalize to the complexity and diversity of unseen anomalies. To overcome these limitations, we propose PromptMoE. Our core insight is that robust ZSAD requires a compositional approach to prompt learning. Instead of learning monolithic prompts, PromptMoE learns a pool of expert prompts, which serve as a basis set of composable semantic primitives, and a visually-guided Mixture-of-Experts (MoE) mechanism to dynamically combine them for each instance.\nOur framework materializes this concept through a Visually-Guided Mixture of Prompt (VGMoP) that employs an image-gated sparse MoE to aggregate diverse normal and abnormal expert state prompts, generating semantically rich textual representations with strong generalization. Extensive experiments across 15 datasets in industrial and medical domains demonstrate the effectiveness and state-of-the-art performance of PromptMoE.",
     "categories": [],
     "added_at": "2026-11-06T07:13:48+00:00",
     "url": "https://doi.org/10.1609/aaai.v40i11.37842",
     "official_url": "https://doi.org/10.1609/aaai.v40i11.37842",
-    "pdf_url": "",
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37842/41804",
     "source": "AAAI",
     "venue": "AAAI 2026",
     "journal_ref": "",
@@ -4072,7 +4094,8 @@
         "source": "https://doi.org/10.1609/aaai.v40i11.37842"
       }
     ],
-    "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37842"
+    "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37842",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "2503.07253",
@@ -4174,7 +4197,7 @@
     "added_at": "2026-11-06T07:13:48+00:00",
     "url": "https://doi.org/10.1609/aaai.v40i12.37917",
     "official_url": "https://doi.org/10.1609/aaai.v40i12.37917",
-    "pdf_url": "",
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37917/41879",
     "source": "AAAI",
     "venue": "AAAI 2026",
     "journal_ref": "",
@@ -4194,7 +4217,8 @@
         "source": "https://doi.org/10.1609/aaai.v40i12.37917"
       }
     ],
-    "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37917"
+    "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37917",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i7.37511",
@@ -4213,7 +4237,7 @@
     ],
     "published": "2026",
     "updated": "2026",
-    "abstract": "We present CHIMERA, a novel framework for generating realistic, generalizable, and prompt-driven industrial anomalies from natural language instructions. Our method addresses two key challenges in text-guided anomaly synthesis: (1) the scarcity of scalable, high-quality paired anomaly data and (2) the difficulty of efficiently adapting large diffusion models to domain-specific tasks without overfitting.\nTo tackle these challenges, we first introduce a Vision-Language Model (VLM)-guided data curation pipeline that automatically generates semantically rich and spatially grounded captions from normal images, enabling effective dataset augmentation without manual annotations. Building upon this, we propose a parameter-efficient fine-tuning strategy that adapts a pre-trained Diffusion Transformer (Stable Diffusion 3) using lightweight LoRA adapters. By aligning structured prompts with the model's pre-trained language-vision prior and introducing auxiliary attention-based mask supervision, our method prevents overfitting, enhances spatial consistency, and ensures efficient training even with limited data. Extensive experiments show that CHIMERA is the first unified framework to achieve controllable, scalable, and generalizable industrial anomaly generation by integrating VLM-guided data curation with efficient diffusion-based training, significantly improving anomaly detection in low-data and unseen scenarios.",
+    "abstract": "We present CHIMERA, a novel framework for generating realistic, generalizable, and prompt-driven industrial anomalies from natural language instructions. Our method addresses two key challenges in text-guided anomaly synthesis: (1) the scarcity of scalable, high-quality paired anomaly data and (2) the difficulty of efficiently adapting large diffusion models to domain-specific tasks without overfitting. To tackle these challenges, we first introduce a Vision-Language Model (VLM)-guided data curation pipeline that automatically generates semantically rich and spatially grounded captions from normal images, enabling effective dataset augmentation without manual annotations. Building upon this, we propose a parameter-efficient fine-tuning strategy that adapts a pre-trained Diffusion Transformer (Stable Diffusion 3) using lightweight LoRA adapters. By aligning structured prompts with the model's pre-trained language-vision prior and introducing auxiliary attention-based mask supervision, our method prevents overfitting, enhances spatial consistency, and ensures efficient training even with limited data. Extensive experiments show that CHIMERA is the first unified framework to achieve controllable, scalable, and generalizable industrial anomaly generation by integrating VLM-guided data curation with efficient diffusion-based training, significantly improving anomaly detection in low-data and unseen scenarios.",
     "categories": [],
     "added_at": "2026-11-06T07:13:48+00:00",
     "url": "https://doi.org/10.1609/aaai.v40i7.37511",
@@ -4438,7 +4462,7 @@
     "added_at": "2026-11-06T07:16:17+00:00",
     "url": "https://doi.org/10.1609/aaai.v40i9.37636",
     "official_url": "https://doi.org/10.1609/aaai.v40i9.37636",
-    "pdf_url": "https://arxiv.org/pdf/2511.05966",
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37636/41598",
     "source": "AAAI",
     "venue": "AAAI 2026",
     "journal_ref": "",
@@ -4461,7 +4485,8 @@
         "evidence": "https://arxiv.org/abs/2511.05966"
       }
     ],
-    "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37636"
+    "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37636",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "2607.23658",
@@ -4474,7 +4499,7 @@
     ],
     "published": "2026",
     "updated": "2026",
-    "abstract": "",
+    "abstract": "The remarkable success of reconstruction-based methods in Unsupervised Anomaly Detection (UAD) lies in their ability to identify and localize anomalies by modeling discrepancies between input images and their reconstructed counterparts. However, these approaches often struggle to capture subtle anomalies and tend to produce blurred anomaly boundaries, which significantly limits their effectiveness, particularly in complex multi-class scenarios. To address these issues, we present XMatchAD, a novel UAD framework that reinterprets the task from a pseudo cross-modal matching perspective. Specifically, the input and reconstructed images are treated as two complementary modalities and their matching relationships are precisely exploited for anomaly detection. First, a pre-trained feature extractor is employed to encode discriminative representations. Second, an attention-guided cross-modal matching mechanism is introduced to match local inter-modal anomaly-related patterns while mutually refining the features. This enhances the sensitivity to anomalies with diverse shapes and subtle deviations and significantly improves the precision of anomaly detection and localization. Third, we design an adaptive frequency-aware fusion module that further delineates sharp anomaly boundaries through the coupling of high-frequency components from cross-modal multi-scale representations. Comprehensive evaluations on MVTec-AD, VisA, and MPDD benchmarks demonstrate that our method consistently achieves superior performance, outperforming state-of-the-art methods in multi-class anomaly detection and localization. The code will be released at https://github.com/Mingxiu-Cai/XMatchAD.",
     "categories": [],
     "added_at": "2026-11-06T07:16:17+00:00",
     "url": "https://doi.org/10.1109/tip.2026.3718437",
@@ -4483,7 +4508,9 @@
     "source": "TIP",
     "venue": "TIP 2026",
     "journal_ref": "",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/Mingxiu-Cai/XMatchAD"
+    ],
     "status": "accepted",
     "tags": [
       "多类别",
@@ -4500,7 +4527,8 @@
         "evidence": "https://arxiv.org/abs/2607.23658"
       }
     ],
-    "publisher_url": "https://ieeexplore.ieee.org/document/11643495/"
+    "publisher_url": "https://ieeexplore.ieee.org/document/11643495/",
+    "metadata_checked_at": "2026-11-06T09:09:44+00:00"
   },
   {
     "id": "doi:10.1109/tip.2025.3646861",
@@ -4955,12 +4983,31 @@
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chen_SFR-Net_Steering-Fusion-Refining_Network_in_Multi-label_Zero-Shot_Sewer_Defect_Detection_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "accepted",
+    "topic": "少样本与零样本",
+    "summary_zh": "针对下水管道缺陷标注昂贵且类别不全的问题，提出三阶段融合精炼网络实现多标签零样本缺陷检测，可参考其视觉语义对齐思路。",
+    "tags": [
+      "下水管道缺陷",
+      "零样本学习",
+      "语义对齐"
+    ],
+    "reason": "摘要明确针对市政下水管道缺陷检测的多标签零样本学习，属于工业视觉缺陷检测场景。",
+    "trace": [
+      {
+        "action": "keep",
+        "reason": "摘要明确针对市政下水管道缺陷检测的多标签零样本学习，属于工业视觉缺陷检测场景。"
+      }
+    ],
+    "authors": [
+      "Chen, Zhao-Min",
+      "Huang, Xinjian",
+      "Ge, Yisu",
+      "Li, Yu"
+    ],
+    "abstract": "Due to the prohibitive cost of data annotation and the inability to obtain sufficient sample data for all defect categories, municipal sewer pipe defect detection poses significant generalization challenges for traditional models. Multi-Label Zero-Shot Learning (ML-ZSL) offers a viable solution to address this challenge. However, existing methods struggle to establish robust and fine-grained visual-semantic alignment between the complex visual environment inside the pipes and the often sparse semantic descriptions, leading to a critical issue: Alignment Ambiguity. To mitigate this, we propose a novel Steering-Fusion-Refining Network (SFR-Net) that follows a three-stage paradigm to progressively dissolve this ambiguity. This is achieved as the Representation Steering (RS) module first integrates a parameter-efficient feature steering mechanism to continuously adapt the representation to the pipe scene; the Multi-Granularity Evidence Fusion (MEF) module subsequently aggregates unambiguous multi-granularity visual evidence through decoupled global and local paths; and the Generalized Relational Score Refining (GR) module ultimately learns and transfers relational logic from seen defects to gain a universal score correction ability, directly refining preliminary prediction scores and significantly boosting the model's zero-shot generalization and prediction consistency. Extensive experiments on the public Sewer-ML dataset and our private WZ-Pipe dataset demonstrate that the proposed SFR-Net achieves state-of-the-art (SOTA) performance in multi-label zero-shot learning task.",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Chen_SFR-Net_Steering-Fusion-Refining_Network_in_Multi-label_Zero-Shot_Sewer_Defect_Detection_CVPR_2026_paper.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:11+00:00",
+    "reviewed_at": "2026-11-06T09:09:53+00:00"
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Schween_BUSSARD_Normalizing_Flows_for_Bijective_Universal_Scene-Specific_Anomalous_Relationship_Detection_CVPR_2026_paper.html",
@@ -4972,13 +5019,34 @@
     "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Schween_BUSSARD_Normalizing_Flows_for_Bijective_Universal_Scene-Specific_Anomalous_Relationship_Detection_CVPR_2026_paper.html",
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Schween_BUSSARD_Normalizing_Flows_for_Bijective_Universal_Scene-Specific_Anomalous_Relationship_Detection_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "code_urls": [
+      "https://github.com/mschween/BUSSARD"
+    ],
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "方法用归一化流对场景图中的物体关系三元组建模并做似然异常检测，但面向室内场景关系异常，与工业视觉质检无关。",
+    "tags": [
+      "场景图",
+      "关系异常检测",
+      "非工业"
+    ],
+    "reason": "摘要关注场景图中的异常关系检测，场景为办公室和餐厅等室内环境，不属于工业视觉异常检测、表面缺陷或异常定位分割范畴。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要关注场景图中的异常关系检测，场景为办公室和餐厅等室内环境，不属于工业视觉异常检测、表面缺陷或异常定位分割范畴。"
+      }
+    ],
+    "authors": [
+      "Schween, Melissa",
+      "Kruse, Mathis",
+      "Rosenhahn, Bodo"
+    ],
+    "abstract": "We propose Bijective Universal Scene-Specific Anomalous Relationship Detection (BUSSARD), a normalizing flow-based model for detecting anomalous relations in scene graphs, generated from images. Our work follows a multimodal approach, embedding object and relationship tokens from scene graphs with a language model to leverage semantic knowledge from the real world. A normalizing flow model is used to learn bijective transformations that map object-relation-object triplets from scene graphs to a simple base distribution (typically Gaussian), allowing anomaly detection through likelihood estimation. We evaluate our approach on the SARD dataset containing office and dining room scenes. Our method achieves around 10% better AUROC results compared to the current state-of-the-art model, while simultaneously being five times faster. Through ablation studies, we demonstrate superior robustness and universality, particularly regarding the use of synonyms, with our model maintaining stable performance while the baseline shows 17.5% deviation. This work demonstrates the strong potential of learning-based methods for relationship anomaly detection in scene graphs. Our code is available at https://github.com/mschween/BUSSARD.",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Schween_BUSSARD_Normalizing_Flows_for_Bijective_Universal_Scene-Specific_Anomalous_Relationship_Detection_CVPR_2026_paper.pdf",
+    "arxiv_id": "2603.16645",
+    "metadata_checked_at": "2026-11-06T09:08:11+00:00",
+    "reviewed_at": "2026-11-06T09:09:55+00:00"
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Kim_A_Semantically_Disentangled_Unified_Model_for_Multi-category_3D_Anomaly_Detection_CVPR_2026_paper.html",
@@ -4991,12 +5059,31 @@
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_A_Semantically_Disentangled_Unified_Model_for_Multi-category_3D_Anomaly_Detection_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "accepted",
+    "topic": "重建与生成",
+    "summary_zh": "提出语义解耦统一模型，用类别条件对比学习与几何引导解码器重建3D点云特征，缓解类别间特征纠缠，提升多类3D异常检测可靠性。",
+    "tags": [
+      "3D异常检测",
+      "点云",
+      "特征重建"
+    ],
+    "reason": "摘要明确针对3D点云工业异常检测与定位，提出基于语义解耦特征重建的统一模型，属于工业视觉异常检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "reason": "摘要明确针对3D点云工业异常检测与定位，提出基于语义解耦特征重建的统一模型，属于工业视觉异常检测范围。"
+      }
+    ],
+    "authors": [
+      "Kim, SuYeon",
+      "Lee, Wongyu",
+      "Cho, MyeongAh"
+    ],
+    "abstract": "3D anomaly detection targets the detection and localization of defects in 3D point clouds trained solely on normal data. While a unified model improves scalability by learning across multiple categories, it often suffers from Inter-Category Entanglement (ICE)--where latent features from different categories overlap, causing the model to adopt incorrect semantic priors during reconstruction and ultimately yielding unreliable anomaly scores. To address this issue, we propose the Semantically Disentangled Unified Model for 3D Anomaly Detection, which reconstructs features conditioned on disentangled semantic representations. Our framework consists of three key components: (i) Coarse-to-Fine Global Tokenization for forming instance-level semantic identity, (ii) Category-Conditioned Contrastive Learning for disentangling category semantics, and (iii) a Geometry-Guided Decoder for semantically consistent reconstruction. Extensive experiments on Real3D-AD and Anomaly-ShapeNet demonstrate that our method achieves state-of-the-art for both unified and category-specific models, improving object-level AUROC by 2.8% and 9.1%, respectively, while enhancing the reliability of unified 3D anomaly detection.",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_A_Semantically_Disentangled_Unified_Model_for_Multi-category_3D_Anomaly_Detection_CVPR_2026_paper.pdf",
+    "arxiv_id": "2603.25159",
+    "metadata_checked_at": "2026-11-06T09:08:11+00:00",
+    "reviewed_at": "2026-11-06T09:09:56+00:00"
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Zhao_Learning_from_Noisy_Supervision_A_Denoising-Debiasing_Framework_for_Weakly_Supervised_CVPR_2026_paper.html",
@@ -5009,12 +5096,34 @@
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Learning_from_Noisy_Supervision_A_Denoising-Debiasing_Framework_for_Weakly_Supervised_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该方法用去噪去偏多实例学习处理视频级弱监督异常定位，面向监控视频，不涉及工业表面缺陷检测。",
+    "tags": [
+      "视频异常检测",
+      "弱监督"
+    ],
+    "reason": "弱监督视频异常检测面向监控视频事件异常，非工业视觉表面缺陷或异常定位，且未评估工业场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "弱监督视频异常检测面向监控视频事件异常，非工业视觉表面缺陷或异常定位，且未评估工业场景。"
+      }
+    ],
+    "authors": [
+      "Zhao, Yaxin",
+      "Wang, Yang",
+      "Guo, Wenya",
+      "Xu, Sihan",
+      "Cai, Xiangrui",
+      "Lin, Xi",
+      "Zhang, Ying",
+      "Yuan, Xiaojie"
+    ],
+    "abstract": "Weakly supervised video anomaly detection (WS-VAD) aims to localize frame-level anomalies using only video-level labels. This task is typically formulated within a multiple instance learning (MIL) paradigm, where each video is treated as a bag of snippets, achieving robust performance without requiring additional information.However, existing methods often struggle with noisy supervision signals. Normal snippets within abnormal bags are frequently misclassified as anomalies due to inaccurate anomaly scores. These misclassified instances act as noisy samples, introducing false supervision that hinders the learning of true anomaly patterns.In this work, we introduce D^ 2 MIL, a Denoising-Debiasing framework within the Multiple Instance Learning paradigm designed to suppress noise and improve anomaly discrimination. Our approach integrates two key components:(1) Denoising Module: We introduce a dynamic drop rate to adaptively filter out suspected noisy samples during training, based on the observation that noisy samples incur higher training losses. (2) Debiasing Module: We leverage a vision-language model to re-evaluate the discarded samples. This recovers potentially valuable abnormal instances that were mistakenly removed, as they are similar to noisy samples but difficult for the model to recognize. D^ 2 MIL is a general purpose denoising strategy that can be integrated into any MIL-based method. Our extensive experiments on the three benchmark datasets (ShanghaiTech, UCF-Crime, and MSAD) demonstrate that D^ 2 MIL is compatible with diverse MIL frameworks and consistently enhances their performance.",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_Learning_from_Noisy_Supervision_A_Denoising-Debiasing_Framework_for_Weakly_Supervised_CVPR_2026_paper.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:11+00:00",
+    "reviewed_at": "2026-11-06T09:09:58+00:00"
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Xu_TLMA_Mitigating_the_Impact_of_Weakly_Labeled_Information_for_Video_CVPR_2026_paper.html",
@@ -5027,12 +5136,32 @@
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xu_TLMA_Mitigating_the_Impact_of_Weakly_Labeled_Information_for_Video_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向监控视频的弱监督异常检测，用三元组学习抑制弱标签干扰，与工业表面缺陷无关。",
+    "tags": [
+      "视频异常检测",
+      "弱监督"
+    ],
+    "reason": "摘要针对监控视频中的弱监督视频异常检测，数据集为UCF-Crime等，不属于工业视觉检测范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对监控视频中的弱监督视频异常检测，数据集为UCF-Crime等，不属于工业视觉检测范围。"
+      }
+    ],
+    "authors": [
+      "Xu, Rong",
+      "Wang, Runqi",
+      "Zhang, Yingjun",
+      "Tao, Tao",
+      "Li, Xiaomeng",
+      "Jing, Liping"
+    ],
+    "abstract": "Weakly Supervised Video Anomaly Detection (WSVAD) aims to localize abnormal segments using only video-level labels during training.Although the paradigm significantly reduces annotation costs, the coarse-grained labels fail to precisely describe the full videos, resulting in the introduction of substantial Weakly Labeled Information (WLI) during training. The presence of WLI makes it difficult for the model to accurately learn the boundary between normal and abnormal behaviors, leading to misclassifications and compromising the precision of anomaly localization.To tackle the challenges posed by WLI, we propose a triplet learning strategy that selects hard segments from normal videos as anchors. By combining contrastive learning with Multiple Instance Learning (MIL) strategy, we increase the projection distance between abnormal segments and anchor samples, to reduce the interference of WLI in anomaly detection.Moreover, considering that anomalies typically occur in dynamic foreground regions, we further design a motion-aware feature enhancement module that extracts dynamic areas within each video segment to emphasize the representation of critical features.This not only improves the accuracy of anchors in triplets, but also enhances the discriminative power of instance features in MIL. Extensive experiments on UCF-Crime, XD-Violence, and MSAD datasets demonstrate the effectiveness of our approach.",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_TLMA_Mitigating_the_Impact_of_Weakly_Labeled_Information_for_Video_CVPR_2026_paper.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:11+00:00",
+    "reviewed_at": "2026-11-06T09:09:59+00:00"
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Zeng_LayoutAD_Exploring_Semantic-Geometric_Misalignment_Reasoning_for_Scene_Layout_Anomaly_Detection_CVPR_2026_paper.html",
@@ -5045,12 +5174,32 @@
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_LayoutAD_Exploring_Semantic-Geometric_Misalignment_Reasoning_for_Scene_Layout_Anomaly_Detection_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "定位与分割",
+    "summary_zh": "提出场景布局异常检测新任务，用语义与几何图推理对象间错位，偏场景理解而非工业质检。",
+    "tags": [
+      "场景布局",
+      "对象级异常",
+      "非工业"
+    ],
+    "reason": "摘要聚焦场景布局异常检测（对象级语义-几何不一致），属于场景理解/生成图像瑕疵，未明确涉及工业视觉、表面缺陷或 MVTec 等工业基准。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要聚焦场景布局异常检测（对象级语义-几何不一致），属于场景理解/生成图像瑕疵，未明确涉及工业视觉、表面缺陷或 MVTec 等工业基准。"
+      }
+    ],
+    "authors": [
+      "Zeng, Zhichao",
+      "Zhang, Jiasheng",
+      "Sun, Jiyun",
+      "Cui, Jiangtao",
+      "Qiao, Xiaotian"
+    ],
+    "abstract": "Visual anomaly detection is vital for quality control applications by identifying deviations from normal patterns. Previous structural or logical anomaly detection methods mainly focus on pixel-level deviations like texture defects and reconstruction errors, ignoring the object-level structural and contextual inconsistencies. These overlooked layout anomalies remain critical yet underexplored, e.g., factually defective hallucinations appeared in generative text-to-image models. Based on the above observation, in this paper, we introduce scene layout anomaly detection, a new task that predicts an object-level anomaly map from the input image to reveal the semantic plausibility and geometric consistency of each object in the scene. Specifically, we propose LayoutAD, an unsupervised learning framework that constructs semantic and geometric graphs to jointly reason over semantic-geometric misalignment among objects. Under this formulation, we are able to detect diverse layout deviations, including object attribute implausibilities and relationship mismatches. Extensive experiments show that LayoutAD outperforms baselines qualitatively and quantitatively across various scenarios, benefiting scene understanding and generation applications like video anomaly detection and self-corrected image generation.",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zeng_LayoutAD_Exploring_Semantic-Geometric_Misalignment_Reasoning_for_Scene_Layout_Anomaly_Detection_CVPR_2026_paper.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:12+00:00",
+    "reviewed_at": "2026-11-06T09:10:00+00:00"
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Shi_Bulk_RNA-seq_Guided_Multi-modal_Detection_of_Anomalous_Regions_in_Human_CVPR_2026_paper.html",
@@ -5063,12 +5212,32 @@
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Shi_Bulk_RNA-seq_Guided_Multi-modal_Detection_of_Anomalous_Regions_in_Human_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该方法融合病理图像与空间转录组数据检测人类癌症异常区域，属生物医学组织分析，不属于工业视觉异常检测范围。",
+    "tags": [
+      "生物医学",
+      "空间转录组"
+    ],
+    "reason": "摘要针对人类癌症空间转录组学的异常区域检测，属生物医学组织分析，非工业视觉缺陷检测，且未评估工业场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对人类癌症空间转录组学的异常区域检测，属生物医学组织分析，非工业视觉缺陷检测，且未评估工业场景。"
+      }
+    ],
+    "authors": [
+      "Shi, Hang",
+      "Yang, Ruocheng",
+      "You, Wenjie",
+      "Huang, Zhilin",
+      "Zhang, Daoqiang",
+      "Shao, Wei"
+    ],
+    "abstract": "Spatial transcriptomics (ST) has emerged as a revolutionary approach in the field of tissue analysis that can offer spatial resolved molecular insights for the identification of anomalous regions (AR) on human cancers. Current ST-based methods for detecting AR focus narrowly on the molecular features of local tissue spots, overlooking the matched bulk RNA-seq data that contains crucial diagnostic information. This oversight limits their effectiveness in identifying subtle or heterogeneous tumors, where accurate detection depends on broader genetic context. Besides the genomic signatures, the pathological images can also provide rich visual information to reflect the morphology of AR. To utilize the patient-level diagnostic knowledge and harness complementary information from both histology images and ST, we develop a Bulk RNA-seq Guided Multi-modal Anomalous Regions Detection method (BRGMAR) for the identification of AR from human tissues. Specifically, to effectively model the dependencies in ST, we introduce a Dynamic Multi-Relational Graph Learning (DMRGL) module to adaptively capture complex relationships in ST, including both spatial proximity and gene expression similarity. Then, we design an Optimal Transportation-based Gene Module Alignment (OTGMA) approach to align ST data with patient-level bulk RNA-seq data by matching the compositional and functional similarities of their corresponding gene modules. Finally, we combine the learned genomic features with pathological image representations for accurate AR detection. We evaluate our method on three public available ST datasets for the purpose of identifying cancerous regions from normal tissues, and the experimental results demonstrate the advantage of our method in comparison with the existing studies.",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Shi_Bulk_RNA-seq_Guided_Multi-modal_Detection_of_Anomalous_Regions_in_Human_CVPR_2026_paper.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:12+00:00",
+    "reviewed_at": "2026-11-06T09:10:02+00:00"
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Deng_GS-CLIP_Zero-shot_3D_Anomaly_Detection_by_Geometry-Aware_Prompt_and_Synergistic_CVPR_2026_paper.html",
@@ -5081,12 +5250,31 @@
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Deng_GS-CLIP_Zero-shot_3D_Anomaly_Detection_by_Geometry-Aware_Prompt_and_Synergistic_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "accepted",
+    "topic": "视觉语言模型",
+    "summary_zh": "面向零样本3D异常检测，用几何缺陷蒸馏生成含形状先验的文本提示，并融合渲染图与深度图特征，提升检测与分割。",
+    "tags": [
+      "零样本3D异常检测",
+      "CLIP提示学习",
+      "多视图融合"
+    ],
+    "reason": "摘要明确针对零样本3D工业异常检测，提出基于CLIP的几何感知提示与多视图表示学习框架，属于工业视觉异常检测与分割范围",
+    "trace": [
+      {
+        "action": "keep",
+        "reason": "摘要明确针对零样本3D工业异常检测，提出基于CLIP的几何感知提示与多视图表示学习框架，属于工业视觉异常检测与分割范围"
+      }
+    ],
+    "authors": [
+      "Deng, Zehao",
+      "Liu, An",
+      "Wang, Yan"
+    ],
+    "abstract": "Zero-shot 3D Anomaly Detection (ZS3DAD) is an emerging task that aims to detect anomalies in a target dataset without any target training data, which is particularly important in scenarios constrained by sample scarcity and data privacy concerns. While current methods adapt CLIP by projecting 3D point clouds into 2D representations, they face challenges. The projection inherently loses some geometric details, and the reliance on a single 2D modality provides an incomplete visual understanding, limiting their ability to detect diverse anomaly types. To address these limitations, we propose the Geometry-Aware Prompt and Synergistic View Representation Learning (GS-CLIP) framework, which enables the model to identify geometric anomalies through a two-stage learning process. In the stage 1, we dynamically generate text prompts embedded with 3D geometric priors. These prompts contain global shape context and local defect information distilled by our Geometric Defect Distillation Module (GDDM). In the stage 2, we introduce Synergistic View Representation Learning architecture that processes rendered and depth images in parallel. A Synergistic Refinement Module (SRM) subsequently fuses the features of both streams, capitalizing on their complementary strengths. Comprehensive experimental results on four large-scale public datasets show that GS-CLIP achieves superior performance in detection and segmentation. Code will be released upon acceptance.",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Deng_GS-CLIP_Zero-shot_3D_Anomaly_Detection_by_Geometry-Aware_Prompt_and_Synergistic_CVPR_2026_paper.pdf",
+    "arxiv_id": "2602.19206",
+    "metadata_checked_at": "2026-11-06T09:08:12+00:00",
+    "reviewed_at": "2026-11-06T09:10:03+00:00"
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Dai_No_Need_For_Real_Anomaly_MLLM_Empowered_Zero-Shot_Video_Anomaly_CVPR_2026_paper.html",
@@ -5328,12 +5516,25 @@
     "official_url": "https://eccv.ecva.net/virtual/2026/poster/5841",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "利用多类边界框轨迹建模正常运动模式，用于公共场所视频监控中的行为异常检测。",
+    "tags": [
+      "视频监控",
+      "轨迹建模",
+      "行为异常"
+    ],
+    "reason": "摘要聚焦公共场所监控视频中的人员行为异常检测，非工业视觉场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要聚焦公共场所监控视频中的人员行为异常检测，非工业视觉场景。"
+      }
+    ],
+    "abstract": "Video anomaly detection is critical for public safety and security, yet remains highly challenging despite extensive research due to large variations in appearance, viewpoint, and scene dynamics. Among existing approaches, human pose-based methods have emerged as a major line of research, showing strong performance since many anomalies in public datasets involve humans and pose representations are robust to appearance changes while providing compact motion descriptions. However, these methods often overlook bounding-box trajectories, although such information is inherently available in pose-based pipelines. In this paper, we explicitly leverage these trajectories as a primary anomaly cue. We present TrajVAD, a framework that models multi-class boundingbox trajectories using normalizing flows to learn normal kinematic patterns. Its trajectory-only variant, TrajVAD-T, eliminates pose estimation, reaches 87.7 AP on ShanghaiTech, and achieves the best results on MSAD among compared methods. TrajVAD-P adds a reliability-gated pose branch and improves performance to 88.6 AUROC and 90.9 AP on ShanghaiTech, establishing bounding-box trajectories as an effective modality for video anomaly detection.",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/13468.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:14+00:00",
+    "reviewed_at": "2026-11-06T09:10:05+00:00"
   },
   {
     "id": "eccv:/virtual/2026/poster/5214",
@@ -5346,12 +5547,25 @@
     "official_url": "https://eccv.ecva.net/virtual/2026/poster/5214",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "数据集与评估",
+    "summary_zh": "从事件流构建视频异常检测基准并提出时空建模框架，属通用视频异常检测，非工业表面缺陷场景。",
+    "tags": [
+      "视频异常检测",
+      "事件流",
+      "非工业"
+    ],
+    "reason": "摘要聚焦事件流视频异常检测（如监控场景的时空异常），未明确涉及工业视觉场景、表面缺陷或工业异常定位与分割。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要聚焦事件流视频异常检测（如监控场景的时空异常），未明确涉及工业视觉场景、表面缺陷或工业异常定位与分割。"
+      }
+    ],
+    "abstract": "Event-based vision, characterized by low redundancy, focuson dynamic motion, and inherent privacy-preserving properties, natu-rally fits the demands of video anomaly detection (VAD). However, theabsence of dedicated event-stream anomaly detection datasets and effec-tive modeling strategies has significantly hindered progress in this field.In this work, we take the first major step toward establishing event-based VAD as a unified research direction. We first construct multi-ple simulated event-stream based benchmarks for video anomaly de-tection, featuring synchronized event and RGB recordings. Leveragingthe unique properties of events, we then propose an EVent-centric spa-tiotemporal Video Anomaly Detection framework, namely EWAD, withthree key innovations: an event density aware dynamic sampling strategyto select temporally informative segments; a density-modulated tempo-ral modeling approach that captures contextual relations from sparseevent streams; and an RGB-to-event knowledge distillation mechanismto enhance event-based representations under weak supervision. Exten-sive experiments on three benchmarks demonstrate that our EWADachieves significant improvements over existing approaches, highlight-ing the potential and effectiveness of event-driven modeling for videoanomaly detection. The benchmark datasets and code are available athttps://github.com/kanyutingfeng/EWAD.",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/9424.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:14+00:00",
+    "reviewed_at": "2026-11-06T09:10:06+00:00"
   },
   {
     "id": "eccv:/virtual/2026/poster/5411",
@@ -5364,12 +5578,25 @@
     "official_url": "https://eccv.ecva.net/virtual/2026/poster/5411",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "accepted",
+    "topic": "视觉语言模型",
+    "summary_zh": "针对有限辅助异常先验下的零样本异常检测，用浅深文本嵌入注入学习通用异常概念，并解缠视觉与文本对齐。",
+    "tags": [
+      "零样本检测",
+      "视觉语言模型",
+      "异常先验"
+    ],
+    "reason": "摘要明确研究零样本异常检测，使用文本嵌入注入与解缠机制应对有限辅助异常先验，评估跨十二个数据集，属工业视觉异常检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "reason": "摘要明确研究零样本异常检测，使用文本嵌入注入与解缠机制应对有限辅助异常先验，评估跨十二个数据集，属工业视觉异常检测范围。"
+      }
+    ],
+    "abstract": "Zero-shot anomaly detection aims to identify defects in ar-bitrary novel domains; however, existing models assume that the auxil-iary data contains a rich diversity of anomalies, neglecting the far morecomplex and unpredictable variations in real-world target domains. Thisstudy introduces DIVE, the first approach to investigate the scenario oflimited auxiliary anomaly priors and resolve the resulting substantial per-formance degradation. Through a shallow-and-deep text embedding in-jection strategy during visual encoding, DIVE learns to abstract genericanomaly concepts shared across the auxiliary training domain and di-verse target domains. Moreover, we propose a disentanglement mech-anism to tackle the suboptimal alignment between visual embeddingsentangled with object semantics and object-agnostic textual prompts.Experiments demonstrate that, under the setting of limited anomalypatterns in auxiliary data, DIVE outperforms SOTA baselines by up to16.2% and 28.5% on two classification metrics, and 23.4%, 24.1%, and47.0% on three segmentation metrics, in terms of average performanceacross twelve datasets. Furthermore, it maintains highly competitive per-formance when auxiliary data exhibits sufficient anomaly diversity.",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/10478.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:14+00:00",
+    "reviewed_at": "2026-11-06T09:10:09+00:00"
   },
   {
     "id": "eccv:/virtual/2026/poster/4744",
@@ -5382,12 +5609,25 @@
     "official_url": "https://eccv.ecva.net/virtual/2026/poster/4744",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向监控长视频的弱监督视频异常检测，用动作、环境、对象三类语义线索做可解释归因，场景非工业视觉质检。",
+    "tags": [
+      "视频异常检测",
+      "弱监督",
+      "可解释性"
+    ],
+    "reason": "摘要针对监控长视频的弱监督视频异常检测，属视频事件异常而非工业视觉表面缺陷检测，不符合筛选范围",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对监控长视频的弱监督视频异常检测，属视频事件异常而非工业视觉表面缺陷检测，不符合筛选范围"
+      }
+    ],
+    "abstract": "Weakly Supervised Video Anomaly Detection aims to detect abnor-mal events in long, untrimmed videos using only video-level supervision, provid-ing a practical solution to the high cost of temporally localized annotations. How-ever, abnormal events in real-world surveillance are often determined by complexcontextual interactions among actions, objects, and environments, making it dif-ficult for existing approaches to identify which factors actually cause an anomaly.Most prior methods rely on holistic representations or explanations that lack ex-plicit attribution to the semantic factors driving abnormal events. In this paper,we present CLUE-VAD, a structured semantic decomposition framework for ex-plainable weakly supervised video anomaly detection. Rather than relying solelyon holistic video representations or free-form explanations, CLUE-VAD decom-poses each video segment into structured semantic clues—Action, Environment,and Object—and estimates their category-aware contributions to anomaly predic-tion. By linking anomaly scores to clue-specific weights and keyword-level evi-dence, we provides factor-level attribution and supports transparent explanationgeneration. Extensive experiments on VAD benchmarks demonstrate that CLUE-VAD achieves strong detection performance among X-VAD methods while pro-viding fine-grained, clue-grounded explanations for anomaly predictions. Theproject page is available at https://visualsciencelab-khu.github.io/CLUE-VAD_project/.",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/7292.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:15+00:00",
+    "reviewed_at": "2026-11-06T09:10:10+00:00"
   },
   {
     "id": "eccv:/virtual/2026/poster/4682",
@@ -5400,12 +5640,25 @@
     "official_url": "https://eccv.ecva.net/virtual/2026/poster/4682",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向通用监控视频异常检测，用扩散模型合成伪异常并做域对齐记忆更新；非工业场景，参考价值有限。",
+    "tags": [
+      "视频异常检测",
+      "伪异常生成",
+      "扩散模型"
+    ],
+    "reason": "摘要针对通用视频异常检测（VAD）基准 ShanghaiTech、UCF-Crime、XD-Violence，未明确评估工业视觉场景；虽含无监督异常检测与记忆更新要素，但不符合工业视觉异常检测范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对通用视频异常检测（VAD）基准 ShanghaiTech、UCF-Crime、XD-Violence，未明确评估工业视觉场景；虽含无监督异常检测与记忆更新要素，但不符合工业视觉异常检测范围。"
+      }
+    ],
+    "abstract": "Deploying video anomaly detection (VAD) in the real worldis often constrained by the scarcity, privacy, and cost of collecting realabnormal footage. We propose PA-VAD, a novel pseudo-only frame-work that trains an anomaly detector without using any real abnormalvideos, by pairing real normal videos with diffusion-synthesized pseudo-abnormal videos generated from a small set of real normal images. Be-yond proposing a generation-driven training pipeline, we make a keyempirical discovery: pseudo anomalies exhibit a characteristic spatiotem-poral magnitude bias in feature space, which can dominate MultipleInstance Learning and degrade generalization if left unaddressed. Tocounter this pseudo-induced bias, we introduce the Domain-Aligned Reg-ularized Module (DARM), which combines domain alignment with usage-aware memory updates to balance prototype coverage and stabilize opti-mization under biased pseudo supervision. Extensive experiments demon-strate that PA-VAD achieves 98.2% AUC on ShanghaiTech, 82.5% onUCF-Crime, and 95.1% on XD-Violence, and further improves general-ization to unseen anomaly classes in open-set evaluations. Notably, PA-VAD surpasses the best real-abnormal WVAD baselines on ShanghaiTechand XD-Violence by +0.6% and +0.9% , respectively, and improves overthe UVAD state of the art on UCF-Crime by +1.9% —showing that high-accuracy VAD is attainable without collecting real abnormal videos.",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/6998.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:15+00:00",
+    "reviewed_at": "2026-11-06T09:10:12+00:00"
   },
   {
     "id": "eccv:/virtual/2026/poster/4406",
@@ -5579,14 +5832,29 @@
     "url": "https://eccv.ecva.net/virtual/2026/poster/5320",
     "official_url": "https://eccv.ecva.net/virtual/2026/poster/5320",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": [],
-    "deepseek_only": true
+    "code_urls": [
+      "https://github.com/zhliu-uod/VUOD"
+    ],
+    "status": "accepted",
+    "topic": "特征与记忆库",
+    "summary_zh": "针对无监督视觉离群检测依赖预训练特征的问题，利用内在分布先验增强特征判别性，并在含工业检测的多个基准上评估。",
+    "tags": [
+      "无监督异常检测",
+      "工业检测",
+      "特征判别性"
+    ],
+    "reason": "摘要提出无监督视觉离群检测框架，明确面向工业检测等场景并涉及特征判别性改进，与工业视觉异常检测范围相关。",
+    "trace": [
+      {
+        "action": "keep",
+        "reason": "摘要提出无监督视觉离群检测框架，明确面向工业检测等场景并涉及特征判别性改进，与工业视觉异常检测范围相关。"
+      }
+    ],
+    "deepseek_only": true,
+    "abstract": "Unsupervised outlier detection that automatically identifies whether visual systems involve anomalous images is a significant research topic. However, most approaches are limited to natural images because they rely on frozen and pre-trained feature extractors. So that their performance cannot be maintained in practical scenarios, especially for industrial inspection and medical imaging. In this work, we first revisit this task and then introduce a versatile unsupervised outlier detection framework to enrich the application domains. The core idea of this framework is to improve feature discriminativess via exploiting intrinsic distribution priors. Evaluated on 3 domains and 14 benchmark datasets, our proposed solution achieves state-of-the-art performance and significantly outperforms existing methods. More importantly, we show its plug-andplay property that can be integrated into diverse visual applications to improve their robustness, such as image classification and 3D reconstruction. Our code is available at https://github.com/zhliu-uod/VUOD.",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/9947.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:14+00:00",
+    "reviewed_at": "2026-11-06T09:09:46+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/153376",
@@ -5839,12 +6107,24 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/151927",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向时间序列异常检测提出免训练检索式模型选择方法，与工业视觉异常检测无关，不建议纳入。",
+    "tags": [
+      "时间序列",
+      "模型选择",
+      "检索"
+    ],
+    "reason": "标题与摘要聚焦时间序列异常检测及模型选择，未涉及工业视觉、表面缺陷或图像异常检测场景，不符合筛选范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "标题与摘要聚焦时间序列异常检测及模型选择，未涉及工业视觉、表面缺陷或图像异常检测场景，不符合筛选范围。"
+      }
+    ],
+    "abstract": "Anomaly detection is a fundamental task for time-series analytics, with important implications for the downstream performance of many applications. Despite the large number of anomaly detection methods proposed in the literature, recent benchmark studies have shown that no single detector performs best across highly heterogeneous time series. Therefore, a practical and scalable solution is to develop a model-selection method that, for a given time series, selects the anomaly detector most likely to perform well. Nevertheless, the model selection approach proposed in the literature suffers from a significant drop in accuracy when applied in Out-of-Distribution (OOD) settings. In this paper, we tackle the aforementioned limitation and propose \\textbf{\\textsc{RAMSAD}}, a train-free, retrieval-based framework for model selection in time-series anomaly detection. Given a new time series, our method queries a knowledge base of previously observed instances, retrieves the top-${k}$ most similar series, and transfers detector recommendations from their performance profiles. The framework can operate with standard similarity measures as well as embedding-based representations. Overall, we demonstrate that similarity-based retrieval constitutes a strong and efficient foundation for model selection in time-series anomaly detection.",
+    "metadata_checked_at": "2026-11-06T09:08:21+00:00",
+    "reviewed_at": "2026-11-06T09:10:14+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/150690",
@@ -5857,12 +6137,24 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/150690",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向多变量时间序列异常检测，用多尺度嵌入与码本自适应建模，不涉及工业视觉缺陷检测。",
+    "tags": [
+      "时间序列",
+      "异常检测",
+      "排除范围"
+    ],
+    "reason": "摘要明确为多变量时间序列异常检测，未涉及工业视觉或表面缺陷场景，属于排除范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要明确为多变量时间序列异常检测，未涉及工业视觉或表面缺陷场景，属于排除范围。"
+      }
+    ],
+    "abstract": "Multivariate time-series anomaly detection aims to identify abnormal temporal patterns in complex real-world systems. However, robust unsupervised time-series anomaly detection remains challenging because anomalies can manifest over different temporal ranges and emerge from interactions among variables, while distribution shifts can cause normal patterns to drift over time. To address these challenges, we propose Codebook-based Online-adaptive Multi-scale Embedding for Time-series anomaly detection (COMET), a unified framework with three tightly coupled components. First, Multi-scale Patch Encoder learns correlation-aware patch embeddings by combining variable-specific temporal dynamics with shared inter-variable structure across multiple patch scales. Second, Vector-Quantized Coreset quantizes these embeddings into representative normal prototypes, which are used to detect anomalies through a dual score combining quantization error and density-aware memory distance. Third, Online Codebook Adaptation leverages the same codebook structure to identify reliable normal samples from training-activated codebook entries, and then updates the prototypes through contrastive learning at inference time. Experiments on five benchmark datasets demonstrate that COMET achieves the best performance on 39 out of 45 evaluation metrics compared to seven baselines, showing robust performance across diverse evaluation protocols.",
+    "metadata_checked_at": "2026-11-06T09:08:25+00:00",
+    "reviewed_at": "2026-11-06T09:10:15+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/152468",
@@ -5875,12 +6167,23 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/152468",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出Flow+Diff框架，利用归一化流与扩散模型在隐空间表示差异检测多变量时间序列异常，非工业视觉任务。",
+    "tags": [
+      "时间序列",
+      "异常检测"
+    ],
+    "reason": "论文针对多变量时间序列异常检测，未明确评估工业视觉场景，不属于工业视觉异常检测范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "论文针对多变量时间序列异常检测，未明确评估工业视觉场景，不属于工业视觉异常检测范围。"
+      }
+    ],
+    "abstract": "Many existing multivariate time series anomaly detection methods formulate anomaly detection as a reconstruction problem, where detections are derived from reconstruction errors in the time domain. While effective for large deviations, reconstruction-based scoring struggles with subtle anomalies where only a small subset of features deviates slightly. In such cases, most features are well reconstructed, causing the overall reconstruction error to remain low and indistinguishable from normal data. To address these challenges, we propose Flow+Diff, a novel framework that detects anomalies via discrepancies in a latent space, where two complementary representations, induced by distinct modeling paradigms, diverge under anomalous inputs. One representation is obtained via a normalizing flow, which provides an invertible mapping that preserves temporal dependencies and captures inter-feature dependencies. The other is produced by a diffusion model that learns the distribution of normal samples in the latent space via a stochastic denoising process. When given anomalous inputs, the normalizing flow maps the inputs to latent representations that lie in low-probability regions of the learned latent distribution, while the diffusion model generates representations aligned with normal data distributions, resulting in a pronounced discrepancy between the two. We compute the anomaly score based on this latent-space discrepancy, thereby shifting anomaly detection from the time domain to the latent space. Finally, the invertibility of the normalizing flow enables reconstruction in the time domain, facilitating interpretation of anomalous features. Extensive experiments across six benchmark datasets show that Flow+Diff achieves state-of-the-art performance on four datasets against competitive baselines.",
+    "metadata_checked_at": "2026-11-06T09:08:25+00:00",
+    "reviewed_at": "2026-11-06T09:10:16+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/155727",
@@ -5893,12 +6196,24 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/155727",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向无机器标识的声学异常检测，用锚点引导的几何分区整理混合来源特征；属音频领域，与工业视觉筛选范围无关。",
+    "tags": [
+      "声学异常检测",
+      "音频",
+      "排除范围"
+    ],
+    "reason": "摘要针对声学异常检测（DCASE、MIMII），而非工业视觉缺陷检测或分割",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对声学异常检测（DCASE、MIMII），而非工业视觉缺陷检测或分割"
+      }
+    ],
+    "abstract": "In standard acoustic anomaly detection (ASD), models are usually trained separately for each machine or domain using explicit metadata. However, in realistic deployments, machine identifiers are incomplete, unreliable, or simply unavailable. Thus, metadata-free universal ASD asks a single model to monitor mixed machine populations without machine IDs. In this paper, we argue that the main failure mode is not a weak detector family, but representation entanglement. The heterogeneous normal modes overlap in frozen pre-trained feature spaces, making anomaly scoring and approximate retrieval unreliable. We study this problem directly and propose HARMONY (Hierarchical Anchor Retrieval on Manifold for Oblivious-source acoustic aNomaly detection), an anchor-guided geometric repartitioning framework that reorganizes mixed-source features into compact Voronoi regions and reuses this structure for hierarchical retrieval. On dataset DCASE 2020 and MIMII, HARMONY improves mean AUC from 75.40% to 90.00% (+14.60% absolute improvement) over the strongest unified baseline and from 83.90% to 90.00% over a strong foundation-feature baseline. On a single CPU, its hierarchical retrieval achieves a 7.8× speedup over exhaustive search with only a 0.20% AUC drop. These results suggest that incorporating explicit geometric partitioning can improve both detection accuracy and retrieval efficiency for ASD. Code and data are available at the anonymous URL: https://anonymous.4open.science/r/HARMONY-26CC.",
+    "metadata_checked_at": "2026-11-06T09:08:23+00:00",
+    "reviewed_at": "2026-11-06T09:10:18+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/153006",
@@ -5911,12 +6226,24 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/153006",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出面向多变量时序异常检测的时间点编码方法，虽在时序基准上有效，但与工业视觉表面缺陷检测无关。",
+    "tags": [
+      "时序异常",
+      "非视觉",
+      "排除"
+    ],
+    "reason": "摘要聚焦多变量时间序列异常检测，属通用时序异常检测，未明确涉及工业视觉、表面缺陷或MVTec等工业图像场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要聚焦多变量时间序列异常检测，属通用时序异常检测，未明确涉及工业视觉、表面缺陷或MVTec等工业图像场景。"
+      }
+    ],
+    "abstract": "In unsupervised multivariate time series anomaly detection (MTSAD), local variation can inflate reconstruction and forecasting errors, making observation-space discrepancy an unreliable indicator of abnormal system behavior. Since latent-space scoring can mitigate this limitation, we reframe one-class MTSAD as current-point system-state compatibility estimation and propose TENET , the T ime-point E ncoding Net work for Multivariate Time Series Anomaly Detection. We define the current-point system state as a latent representation of the target time point, constructed from variable-level temporal context in the input window. TENET constructs this state through a temporal layer that retrieves window context relative to the current point, encodes time with current-point-centered embeddings, and adaptively mixes the retrieved context with the current representation. With this design, TENET treats the input window not as the object to reconstruct, forecast, summarize, or score, but as context for constructing a latent representation evaluated with a fixed standard-normal negative log-likelihood score. Across benchmark datasets, TENET achieves state-of-the-art performance. Additional experiments further show that TENET remains effective under alternative one-class objectives and outperforms substitutions based on generic sequence encoders, suggesting that its advantage comes from decision-aligned representation construction rather than from a specialized scoring rule. These results indicate that one-class MTSAD can be strong when the latent representation is designed around the current time point.",
+    "metadata_checked_at": "2026-11-06T09:08:21+00:00",
+    "reviewed_at": "2026-11-06T09:10:19+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/139056",
@@ -5965,12 +6292,24 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/151289",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文提出多教师排序蒸馏用于无监督时间序列异常检测，面向通用时序基准而非工业视觉缺陷，因此与本筛选范围不符。",
+    "tags": [
+      "时间序列",
+      "蒸馏",
+      "非视觉"
+    ],
+    "reason": "摘要讨论的是通用无监督时间序列异常检测与多教师蒸馏，未明确涉及工业视觉场景或工业图像缺陷。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要讨论的是通用无监督时间序列异常检测与多教师蒸馏，未明确涉及工业视觉场景或工业图像缺陷。"
+      }
+    ],
+    "abstract": "Time series anomalies take diverse forms, and individual detectors encode different anomaly scoring principles that rarely cover all anomaly types. Recent unsupervised time-series anomaly detectors provide complementary scoring signals, yet deploying them as an ensemble preserves the inference and maintenance cost of every individual detector. We study whether heterogeneous teacher detectors can be distilled into a single lightweight detector in the unsupervised setting, where no anomaly labels are available to define a shared target. AnoMix addresses this by extracting weak pairwise supervision from the training-set anomaly scores of frozen teachers. It normalizes each teacher score sequence independently and trains the student with CoRank, a multi-teacher ranking-distillation objective that converts teacher score gaps into pairwise supervision through teacher consensus. Across seven benchmark datasets, AnoMix successfully integrates complementary teacher scoring principles into a single deployable model, improving over individual detectors and static score ensembles while using a compact student with under 80k parameters on the benchmark settings. A zero-shot variant further shows that the distilled ranking signal transfers to unseen datasets and can outperform large pretrained time-series foundation models for anomaly detection.",
+    "metadata_checked_at": "2026-11-06T09:08:27+00:00",
+    "reviewed_at": "2026-11-06T09:10:21+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/154063",
@@ -5983,12 +6322,24 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/154063",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "accepted",
+    "topic": "视觉语言模型",
+    "summary_zh": "提出面向3D点云的视觉语言异常检测框架，融合点级与块级特征及语言语义，实现多类别统一检测并提升异常定位。",
+    "tags": [
+      "3D异常检测",
+      "视觉语言模型",
+      "工业质检"
+    ],
+    "reason": "摘要明确针对3D工业异常检测，提出基于3D视觉语言模型的新范式，属工业视觉异常检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "reason": "摘要明确针对3D工业异常检测，提出基于3D视觉语言模型的新范式，属工业视觉异常检测范围。"
+      }
+    ],
+    "abstract": "Three-dimensional (3D) anomaly detection underpins quality assurance in advanced manufacturing and engineering, capturing subtle defects and deviations that 2D inspection struggles to resolve due to occlusion, viewpoint, and appearance confounds. Existing 3D anomaly detection methods either rely on reconstruction errors or stored normal representations to detect anomalies. While both paradigms have driven substantial progress, they share a fundamental limitation: both operate entirely in the visual domain, missing the rich semantics encoded in natural language, which also typically constrains them to per-category models. We propose FACETS, among the first frameworks that leverage a 3D vision--language model for 3D anomaly detection, opening a new paradigm beyond reconstruction- and memory-bank-based methods. The key idea is to explicitly retain native point-level features that enable reasoning at both patch and point granularities, and further leverage language grounding and cross-granularity geometric modeling along two complementary axes, linguistic semantics and geometric saliency, so that coarse semantic cues and fine-grained geometric details jointly support anomaly detection. FACETS enables unified multi-category anomaly detection, avoiding the per-category models used by most prior methods. Notably, we provide a mathematical analysis of our loss function, offering valuable insights into the substantial improvement FACETS achieves in anomaly localization. Extensive experiments on popular benchmarks reveal that FACETS establishes new SOTA performance across datasets and metrics for 3D anomaly detection, substantially and consistently outperforming existing methods. Code is provided as supplementary material.",
+    "metadata_checked_at": "2026-11-06T09:08:27+00:00",
+    "reviewed_at": "2026-11-06T09:10:23+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/150154",
@@ -6001,12 +6352,24 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/150154",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "accepted",
+    "topic": "少样本与零样本",
+    "summary_zh": "提出拓扑感知最优传输的无源测试时适应方法，用持久图对齐生成稳定伪标签，在线更新轻量头，提升分布偏移下的异常分割鲁棒性。",
+    "tags": [
+      "无源适应",
+      "异常分割",
+      "最优传输"
+    ],
+    "reason": "摘要明确涉及工业视觉常见场景下的异常分割，并采用无源测试时适应方法，属于少样本与零样本或相关适应范式，且包含无需源数据和目标标签的在线适应方案。",
+    "trace": [
+      {
+        "action": "keep",
+        "reason": "摘要明确涉及工业视觉常见场景下的异常分割，并采用无源测试时适应方法，属于少样本与零样本或相关适应范式，且包含无需源数据和目标标签的在线适应方案。"
+      }
+    ],
+    "abstract": "Deep topological data analysis (TDA) offers a principled framework for capturing structural invariants such as connectivity and cycles that persist across scales, making it a natural fit for anomaly segmentation (AS). Unlike threshold-based binarisation, which produces brittle masks under test-time distribution shift (TTDS), TDA allows anomalies to be characterised as disruptions to global structure rather than local fluctuations. We introduce TopoOT, a topology-aware optimal transport (OT) framework for source-free test-time adaptation in AS. Our key innovation is Optimal Transport Chaining, which sequentially aligns persistence diagrams (PDs) across thresholds and filtrations, yielding geodesic stability scores that identify features consistently preserved across scales. These stability-aware pseudo-labels supervise a lightweight head updated online using only unlabelled target samples, without access to source data or target labels, with OT-consistency and contrastive objectives, ensuring robust adaptation under TTDS. Across standard 2D and 3D anomaly detection benchmarks, TopoOT achieves state-of-the-art performance, outperforming second-best methods by up to +24.1\\% mean F1 on 2D datasets and +10.2\\% on 3D AS benchmarks.",
+    "metadata_checked_at": "2026-11-06T09:08:27+00:00",
+    "reviewed_at": "2026-11-06T09:10:27+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/153400",
@@ -6037,12 +6400,24 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/139119",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向云存储多维时间序列，构建含检测、可解释与解释阶段的端到端基准，与工业视觉异常检测无关。",
+    "tags": [
+      "时间序列",
+      "基准评测",
+      "可解释性"
+    ],
+    "reason": "摘要聚焦云存储系统的时间序列异常检测基准与可解释性，未涉及工业视觉、表面缺陷检测或分割。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要聚焦云存储系统的时间序列异常检测基准与可解释性，未涉及工业视觉、表面缺陷检测或分割。"
+      }
+    ],
+    "abstract": "Time Series Anomaly Detection (TSAD) has received increasing attention, driven by the growing availability of complex time series data. This surge has led to the development of numerous detection methods, as well as a variety of benchmarks aimed at thoroughly evaluating their performance. However, most existing detectors remain largely agnostic to domain context, overlooking explainability and interpretability. One of the main reasons for this gap is that current benchmarks primarily focus on detection accuracy, and only few of them evaluate spatial explainability. Moreover, no benchmark currently provides sufficiently rich semantic annotations to support the generation of human-understandable interpretations of anomalies. To address these limitations, we introduce SHAD (Scality High-dimensional Anomaly Detection benchmark), a fully annotated benchmark composed of 144 multivariate, high-dimensional time series collected from real-world distributed cloud storage systems operated by Scality. The proposed dataset includes rich contextual information, covering three families of anomalies with varying degrees of severity. As further contribution, we provide an end-to-end benchmark that covers all stages of a TSAD pipeline. For Detection, we benchmark a wide range of existing anomaly detectors, testing their effectiveness on the proposed real-world dataset. Then, we evaluate explainability by measuring the contribution of each dimension in the generated anomaly score. Finally, for interpretability, we investigate the effectiveness of frozen LLM baselines in localizing and interpreting anomalies, paving the way for future research towards interpretable and explainable TSAD.",
+    "metadata_checked_at": "2026-11-06T09:08:26+00:00",
+    "reviewed_at": "2026-11-06T09:10:28+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/152843",
@@ -6091,12 +6466,23 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/148656",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出谱视图对比学习做图级异常检测，适用于社交与生物信息图数据，与工业视觉异常检测无关。",
+    "tags": [
+      "图异常检测",
+      "对比学习"
+    ],
+    "reason": "摘要针对图级异常检测，场景为社交网络和生物信息学，未涉及工业视觉或表面缺陷检测。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对图级异常检测，场景为社交网络和生物信息学，未涉及工业视觉或表面缺陷检测。"
+      }
+    ],
+    "abstract": "Graph-level anomaly detection (GLAD) is a critical task in domains like social networks and bioinformatics. However, current unsupervised contrastive learning-based methods rely on semantically homogeneous augmentations, leading to catastrophic informational overlap that trivializes the learning objective and effectively masks anomalous signals in GLAD. To overcome this, we propose Sima (Semantically Complementary Spectral Views), a novel contrastive framework that learns from semantically complementary spectral views rather than redundant homogeneous views. Sima first constructs a pair of spectral views to separately capture global community structure and local heterophilous variations, which together cover the full graph spectrum of anomalous patterns. Inspired by the Multi-View Information Bottleneck principle, we further design a soft subgraph extraction module with Score Reconstruction Attention (SRA) and an anchor-guided condensation mechanism to distill the essential shared information from each view into a compact representation. We then optimize a contrastive objective across these distilled views to enforce cross-view alignment and amplify subtle structural deviations. Extensive experiments on challenging GLAD and graph-level out-of-distribution detection (GLOD) benchmarks demonstrate that Sima achieves substantial and consistent gains in average performance over state-of-the-art baselines.",
+    "metadata_checked_at": "2026-11-06T09:08:24+00:00",
+    "reviewed_at": "2026-11-06T09:10:30+00:00"
   },
   {
     "id": "neurips:/virtual/2026/poster/151961",
@@ -6595,13 +6981,25 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/148609",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": [],
-    "deepseek_only": true
+    "status": "accepted",
+    "topic": "定位与分割",
+    "summary_zh": "提出记忆增强多智能体框架，通过自适应修复策略与双通道蒸馏实现工业缺陷检测与跨场景自进化。",
+    "tags": [
+      "工业缺陷检测",
+      "多智能体",
+      "自进化"
+    ],
+    "reason": "摘要提出用于工业硬件缺陷目标检测的多模态多智能体框架，明确针对工业场景的表面缺陷定位与检测。",
+    "trace": [
+      {
+        "action": "keep",
+        "reason": "摘要提出用于工业硬件缺陷目标检测的多模态多智能体框架，明确针对工业场景的表面缺陷定位与检测。"
+      }
+    ],
+    "deepseek_only": true,
+    "abstract": "Human experts can accumulate experience from open-ended and complex inspection tasks, thereby continually improving their inspection capabilities. Actually, industrial hardware inspection faces challenges including open-set defect categories, complex defects (tiny, high-gloss, low-light, or blurred), high inference cost, and difficulty in accumulating experience post-deployment. Existing end-to-end inspection methods typically couple image restoration with defect recognition in a single forward pass, limiting generalization to unseen components or composite defects; cascade “restore-then-detect” approaches often rely on static preprocessing, hindering adaptive adjustment based on scenario, defect morphology, and historical failures. To address this, we propose EvoInspect, the first memory-enhanced multi-modal multi-agent framework for industrial defect object detection. It leverages a multi-modal agentic memory mechanism to distill self-evolving scenario-specific Defect Detail Restoration decisions and dynamically grounded trajectories, enabling “accumulating experience like human experts.” Specifically, (1) we introduce a dynamic Defect Detail Restoration strategy, including adaptive slicing for tiny defects, highlight suppression, low-light enhancement, super-resolution, and binarization, combined with a coarse-to-fine token-efficient grounding mechanism for efficient defect capture; (2) we design a dual-channel distillation mechanism unifying restoration and detection (perception and execution) experience, incorporating both successful and failed validation trajectories to support system self-evolution. Experiments on bearing surfaces, PCBs, solar electroluminescence (solar EL), and magnetic tile datasets show that EvoInspect consistently outperforms strong baselines in defect localization recall, inference accuracy, while demonstrating cross-scenario adaptability and offline continual improvement.",
+    "metadata_checked_at": "2026-11-06T09:08:22+00:00",
+    "reviewed_at": "2026-11-06T09:09:47+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/0b6566f471cd601cbfc895962623124e-Abstract-Conference.html",
@@ -6887,8 +7285,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "Agent 暂未完成，下次重试",
-    "trace": []
+    "reason": "DeepSeek 返回格式无效，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-06T09:10:33+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/5991785875cf5eee9c29e2ed7d26d1c0-Abstract-Conference.html",
@@ -6908,12 +7307,22 @@
     "metadata_checked_at": "2026-11-06T09:00:55+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向时间序列的轻量块表示异常检测，与工业视觉表面缺陷检测无关。",
+    "tags": [
+      "时间序列",
+      "非视觉",
+      "排除范围"
+    ],
+    "reason": "摘要为纯时间序列异常检测，未明确评估工业视觉场景，属于排除范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要为纯时间序列异常检测，未明确评估工业视觉场景，属于排除范围。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:10:39+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/59a9cc95f046e9125d8816ef971873e7-Abstract-Conference.html",
@@ -6935,12 +7344,21 @@
     "metadata_checked_at": "2026-11-06T09:00:55+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向时间序列异常检测的扩散模型方法，结合噪声调度与隐式条件生成；不涉及工业视觉缺陷场景。",
+    "tags": [
+      "时间序列",
+      "扩散模型"
+    ],
+    "reason": "标题与摘要均聚焦时间序列异常检测，未评估工业视觉场景，符合排除范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "标题与摘要均聚焦时间序列异常检测，未评估工业视觉场景，符合排除范围。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:10:40+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/61c00c07e6d27285e4b952e96cc65666-Abstract-Conference.html",
@@ -6964,12 +7382,22 @@
     ],
     "metadata_checked_at": "2026-11-06T09:00:55+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出低秩注意力Transformer用于多变量时间序列异常检测与定位，该工作面向通用时序系统而非工业视觉场景。",
+    "tags": [
+      "时间序列",
+      "异常检测",
+      "非视觉"
+    ],
+    "reason": "摘要面向多变量时间序列异常检测与定位，未明确涉及工业视觉、表面缺陷或图像场景，属于时间序列异常检测。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要面向多变量时间序列异常检测与定位，未明确涉及工业视觉、表面缺陷或图像场景，属于时间序列异常检测。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:10:41+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/634f75be78884d597c04eedeb12cc6fe-Abstract-Conference.html",
@@ -6982,12 +7410,31 @@
     "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/634f75be78884d597c04eedeb12cc6fe-Abstract-Conference.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "视觉语言模型",
+    "summary_zh": "该方法通过调控冻结多模态大模型内部表征进行视频异常检测，属于通用视频监控场景，与工业视觉异常检测任务不符。",
+    "tags": [
+      "视频异常检测",
+      "多模态大模型"
+    ],
+    "reason": "摘要针对视频异常检测（VAD），而非工业视觉缺陷检测或异常定位，且未明确评估工业场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对视频异常检测（VAD），而非工业视觉缺陷检测或异常定位，且未明确评估工业场景。"
+      }
+    ],
+    "authors": [
+      "Cai, Zhaolin",
+      "Li, Fan",
+      "Duan, Huiyu",
+      "He, Lijun",
+      "Zhai, Guangtao"
+    ],
+    "abstract": "Video anomaly detection (VAD) aims to identify abnormal events in videos. Traditional VAD methods generally suffer from the high costs of labeled data and full training, thus some recent works have explored leveraging frozen multi-modal large language models (MLLMs) in a tuning-free manner to perform VAD. However, their performance is limited as they directly inherit pre-training biases and cannot adapt internal representations to specific video contexts, leading to difficulties in handling subtle or ambiguous anomalies. To address these limitations, we propose a novel intervention framework, termed SteerVAD, which advances MLLM-based VAD by shifting from passively reading to actively steering and rectifying internal representations. Our approach first leverages the gradient-free representational separability analysis (RSA) to identify top attention heads as latent anomaly experts (LAEs) which are most discriminative for VAD. Then a hierarchical meta-controller (HMC) generates dynamic rectification signals by jointly conditioning on global context and these LAE outputs. The signals execute targeted, anisotropic scaling directly upon the LAE representation manifolds, amplifying anomaly-relevant dimensions while suppressing inherent biases. Extensive experiments on mainstream benchmarks demonstrate our method achieves state-of-the-art performance among tuning-free approaches requiring only 1\\% of training data, establishing it as a powerful new direction for video anomaly detection. The code will be released upon the publication.",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/634f75be78884d597c04eedeb12cc6fe-Paper-Conference.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:31+00:00",
+    "reviewed_at": "2026-11-06T09:10:43+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/7538e7a7a589a267f49527fe6fbc640e-Abstract-Conference.html",
@@ -7000,12 +7447,32 @@
     "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/7538e7a7a589a267f49527fe6fbc640e-Abstract-Conference.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向未见图的通用图异常检测，用双残差模块缓解异常不可判别性。该方法属图节点异常，与工业视觉表面缺陷检测无关，不纳入筛选。",
+    "tags": [
+      "图异常检测",
+      "跨域迁移"
+    ],
+    "reason": "摘要针对通用图异常检测（跨图节点异常），属于图/网络异常检测，未明确涉及工业视觉、表面缺陷或工业图像场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对通用图异常检测（跨图节点异常），属于图/网络异常检测，未明确涉及工业视觉、表面缺陷或工业图像场景。"
+      }
+    ],
+    "authors": [
+      "Fu, Changlong",
+      "He, Zhenli",
+      "Zhang, Xiong",
+      "Xie, Cheng",
+      "Jin, Xin",
+      "Yang, Yun"
+    ],
+    "abstract": "Generalist Graph Anomaly Detection (GGAD) seeks a unified representation learning model to detect anomalies in unseen graphs, but cross-domain transfer often entangles the learned anomalous and normal representations. We formalize this degradation as Anomaly non-Discriminativity (AnD) and define a normalized score to quantify it. We present DR-GGAD, which avoids direct comparison between anomalous and normal nodes via two residual modules: 1) a multi-scale Hyper Residual (HR) Center measuring node-to-center distances, yielding a compact normal residual structure with margin-pushed anomalies; 2) an Affinity-Residual (AR) module enforcing local residual directional consistency to recover structural separability. With frozen parameters (no target fine-tuning), DR-GGAD fuses both signals into a unified score. On 8 benchmark target graphs, it achieves new SOTA: mean AUROC +5.14% over the best prior GGAD, with large gains on high-AnD datasets (ACM +9.96%, Amazon +7.48%) and strong AUPRC boosts (Amazon +17.12%, CiteSeer +17.77%). Ablations confirm complementary roles of the two modules. DR-GGAD thus establishes AnD as a measurable bottleneck and delivers robust cross-domain anomaly detection.",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/7538e7a7a589a267f49527fe6fbc640e-Paper-Conference.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:31+00:00",
+    "reviewed_at": "2026-11-06T09:10:45+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/761c3284ee4859bff3c7e5d9299a45ee-Abstract-Conference.html",
@@ -7018,12 +7485,34 @@
     "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/761c3284ee4859bff3c7e5d9299a45ee-Abstract-Conference.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出上下文与季节LSTM用于单变量时间序列异常检测，面向网络与云系统，非工业视觉范畴。",
+    "tags": [
+      "时间序列",
+      "异常检测",
+      "非工业视觉"
+    ],
+    "reason": "摘要针对单变量时间序列异常检测，应用于网络系统与云服务器，未涉及工业视觉、表面缺陷或异常定位场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对单变量时间序列异常检测，应用于网络系统与云服务器，未涉及工业视觉、表面缺陷或异常定位场景。"
+      }
+    ],
+    "authors": [
+      "Zhang, Lingpei",
+      "Li, Qingming",
+      "Yang, Yong",
+      "Chen, Jiahao",
+      "Zeng, Rui",
+      "Lyu, Chenyang",
+      "Ji, Shouling"
+    ],
+    "abstract": "Univariate time series (UTS), where each timestamp records a single variable, serve as crucial indicators in web systems and cloud servers. Anomaly detection in UTS plays an essential role in both data mining and system reliability management. However, existing reconstruction-based and prediction-based methods struggle to capture certain subtle anomalies, particularly small point anomalies and slowly rising anomalies. To address these challenges, we propose a novel prediction-based framework named Contextual and Seasonal LSTMs (CS-LSTMs). CS-LSTMs are built upon a noise decomposition strategy and jointly leverage contextual dependencies and seasonal patterns, thereby strengthening the detection of subtle anomalies. By integrating both time-domain and frequency-domain representations, CS-LSTMs achieve more accurate modeling of periodic trends and anomaly localization. Extensive evaluations on public benchmark datasets demonstrate that CS-LSTMs consistently outperform state-of-the-art methods, highlighting their effectiveness and practical value in robust time series anomaly detection.",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/761c3284ee4859bff3c7e5d9299a45ee-Paper-Conference.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:31+00:00",
+    "reviewed_at": "2026-11-06T09:10:46+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/95e685b53398a58c5a9f5c5bb46bd273-Abstract-Conference.html",
@@ -7035,13 +7524,36 @@
     "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/95e685b53398a58c5a9f5c5bb46bd273-Abstract-Conference.html",
     "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/95e685b53398a58c5a9f5c5bb46bd273-Abstract-Conference.html",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "code_urls": [
+      "https://github.com/decisionintelligence/MindTS"
+    ],
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出面向多模态时间序列的语义对齐与交互异常检测方法，场景为通用动态系统而非工业视觉缺陷，与筛选范围不符。",
+    "tags": [
+      "时间序列",
+      "多模态",
+      "非工业视觉"
+    ],
+    "reason": "标题和摘要聚焦通用多模态时间序列异常检测，未明确涉及工业视觉场景、表面缺陷或工业异常定位分割，属于需排除的时间序列异常检测。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "标题和摘要聚焦通用多模态时间序列异常检测，未明确涉及工业视觉场景、表面缺陷或工业异常定位分割，属于需排除的时间序列异常检测。"
+      }
+    ],
+    "authors": [
+      "Hu, Shiyan",
+      "Jin, Jianxin",
+      "Shu, Yang",
+      "Chen, Peng",
+      "Yang, Bin",
+      "Guo, Guo"
+    ],
+    "abstract": "Time series anomaly detection plays a critical role in many dynamic systems. Despite its importance, previous approaches have primarily relied on unimodal numerical data, overlooking the importance of complementary information from other modalities. In this paper, we propose a novel multimodal time series anomaly detection model (MindTS) that focuses on addressing two key challenges: (1) how to achieve semantically consistent alignment across heterogeneous multimodal data, and (2) how to filter out redundant modality information to enhance cross-modal interaction effectively. To address the first challenge, we propose Fine-grained Time-text Semantic Alignment. It integrates exogenous and endogenous text information through cross-view text fusion and a multimodal alignment mechanism, achieving semantically consistent alignment between time and text modalities. For the second challenge, we introduce Content Condenser Reconstruction, which filters redundant information within the aligned text modality and performs cross-modal reconstruction to enable interaction. Extensive experiments on six real-world multimodal datasets demonstrate that the proposed MindTS achieves competitive or superior results compared to existing methods. The code is available at: https://github.com/decisionintelligence/MindTS.",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/95e685b53398a58c5a9f5c5bb46bd273-Paper-Conference.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:31+00:00",
+    "reviewed_at": "2026-11-06T09:10:47+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/ac8fbba029dadca99d6b8c3f913d3ed6-Abstract-Conference.html",
@@ -7054,12 +7566,32 @@
     "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/ac8fbba029dadca99d6b8c3f913d3ed6-Abstract-Conference.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向图数据的开放集异常检测，用多样本混合与梯度探索提升泛化，与工业视觉缺陷检测无关。",
+    "tags": [
+      "图异常检测",
+      "开放集",
+      "非视觉"
+    ],
+    "reason": "摘要研究开放集图异常检测，针对图神经网络节点级异常，未涉及工业视觉、表面缺陷或图像异常定位。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要研究开放集图异常检测，针对图神经网络节点级异常，未涉及工业视觉、表面缺陷或图像异常定位。"
+      }
+    ],
+    "authors": [
+      "Yu, Caiyang",
+      "Ju, Wei",
+      "Wang, Haixin",
+      "Wang, Yifan",
+      "Qiao, Ziyue"
+    ],
+    "abstract": "This paper studies the problem of open-set graph anomaly detection, which aims to generalize a graph neural network (GNN) trained with a small number of both normal and abnormal nodes to detect unseen anomalies different from training anomalies during inference. This problem is highly challenging due to both the data scarcity of unseen anomalies and the label scarcity for training nodes. Towards this end, we propose a novel approach named Dynamic Multi-sample Mixup with Gradient Exploration (DEMO) for open-set graph anomaly detection. The core of our proposed DEMO is to leverage a dynamic framework to adapt the optimization procedure with high generalizability. In particular, our DEMO first adaptively fuses multiple seen nodes to simulate the unseen anomalies, which expands the decision boundary for the detection model with enhanced generalizability. Moreover, we dynamically adjust sample weights based on their energy gradients to prioritize uncertain and informative nodes, ensuring a robust optimization procedure. To further address both label scarcity and severe class imbalance, we maintain a memory bank of historical records to guide the pseudo-labeling process of unlabeled nodes. Extensive experiments on various benchmark datasets validate the superiority of the proposed DEMO in comparison to various baselines.",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/ac8fbba029dadca99d6b8c3f913d3ed6-Paper-Conference.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:31+00:00",
+    "reviewed_at": "2026-11-06T09:10:49+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/b5b4d92374323c53c24bbbc8ee0e715c-Abstract-Conference.html",
@@ -7071,13 +7603,38 @@
     "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b5b4d92374323c53c24bbbc8ee0e715c-Abstract-Conference.html",
     "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b5b4d92374323c53c24bbbc8ee0e715c-Abstract-Conference.html",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "code_urls": [
+      "https://github.com/chuangchuangtan/Semantic-Visual-Anomaly-Detection-and-Reasoning"
+    ],
+    "status": "rejected",
+    "topic": "视觉语言模型",
+    "summary_zh": "面向AI生成图像的语义异常检测与推理基准，与工业表面缺陷检测无关，不建议纳入筛选范围。",
+    "tags": [
+      "AIGC真实性",
+      "语义异常",
+      "基准数据集"
+    ],
+    "reason": "摘要讨论AI生成图像的语义异常检测与推理基准，属于AIGC真实性评估，并非工业场景的视觉异常检测；未提及MVTec AD、VisA等工业数据集或表面缺陷检测。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要讨论AI生成图像的语义异常检测与推理基准，属于AIGC真实性评估，并非工业场景的视觉异常检测；未提及MVTec AD、VisA等工业数据集或表面缺陷检测。"
+      }
+    ],
+    "authors": [
+      "Tan, Chuangchuang",
+      "Ming, Xiang",
+      "Wang, Jinglu",
+      "Tao, Renshuai",
+      "Li, Bin",
+      "Wei, Yunchao",
+      "Zhao, Yao",
+      "Lu, Yan"
+    ],
+    "abstract": "The rapid advancement of AI-generated content (AIGC) has enabled the synthesis of visually convincing images; however, many such outputs exhibit subtle \\textbf{semantic anomalies}, including unrealistic object configurations, violations of physical laws, or commonsense inconsistencies, which compromise the overall plausibility of the generated scenes. Detecting these semantic-level anomalies is essential for assessing the trustworthiness of AIGC media, especially in AIGC image analysis, explainable deepfake detection and semantic authenticity assessment.In this paper, we formalize \\textbf{semantic anomaly detection and reasoning} for AIGC images and introduce \\textbf{AnomReason}, a large-scale benchmark with structured annotations as quadruples \\emph{(Name, Phenomenon, Reasoning, Severity)}. Annotations are produced by a modular multi-agent pipeline (\\textbf{AnomAgent}) with lightweight human-in-the-loop verification, enabling scale while preserving quality. At construction time, AnomAgent processed approximately 4.17\\,B GPT-4o tokens, providing scale evidence for the resulting structured annotations. We further show that models fine-tuned on AnomReason achieve consistent gains over strong vision-language baselines under our proposed semantic matching metric (\\textit{SemAP} and \\textit{SemF1}). Applications to {explainable deepfake detection} and {semantic reasonableness assessment of image generators} demonstrate practical utility. In summary, AnomReason and AnomAgent serve as a foundation for measuring and improving the semantic plausibility of AI-generated images. The code is available at \\url{https://github.com/chuangchuangtan/Semantic-Visual-Anomaly-Detection-and-Reasoning}.",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/b5b4d92374323c53c24bbbc8ee0e715c-Paper-Conference.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:31+00:00",
+    "reviewed_at": "2026-11-06T09:10:50+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/c204d12afa0175285e5aac65188808b4-Abstract-Conference.html",
@@ -7090,12 +7647,29 @@
     "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c204d12afa0175285e5aac65188808b4-Abstract-Conference.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出原型引导关系融合网络用于多变量时间序列异常检测，可分解四类证据辅助诊断，但非工业视觉场景。",
+    "tags": [
+      "时间序列",
+      "异常检测",
+      "可解释性"
+    ],
+    "reason": "论文针对多变量时间序列异常检测，属于时间序列领域，摘要未明确评估工业视觉场景，不符合筛选范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "论文针对多变量时间序列异常检测，属于时间序列领域，摘要未明确评估工业视觉场景，不符合筛选范围。"
+      }
+    ],
+    "authors": [
+      "Jeong, Jahoon",
+      "Yoon, Hyunsoo"
+    ],
+    "abstract": "Multivariate time-series anomaly detection (MTSAD) faces a critical trade-off between detection performance and model transparency. We propose PGRF-Net, a novel architecture designed to achieve competitive performance while providing structured evidence to support diagnostic insights. At its core, PGRF-Net uses a Multi-Faceted Evidence Extractor that combines prototype learning with the discovery of dynamic relational structures between variables. This extractor generates four distinct types of anomaly evidence: predictive deviation, structural changes in learned variable dependencies, contextual deviation from normal-behavior prototypes, and the magnitude of localized spike events. This evidence is then processed by a Gated Evidence Fusion Network, which learns to weigh each source via data-driven gating. PGRF-Net is trained via a two-stage unsupervised strategy for robust extractor learning and subsequent fusion tuning. Extensive experiments on five public MTSAD benchmarks demonstrate its competitive or superior detection performance. Importantly, by decomposing the final anomaly score into these four evidence types, our model facilitates diagnostic analysis, offering a practical step towards more interpretable, evidence-based MTSAD.",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/c204d12afa0175285e5aac65188808b4-Paper-Conference.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:32+00:00",
+    "reviewed_at": "2026-11-06T09:10:52+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/cf70320e93c08b39b1b29a348097a376-Abstract-Conference.html",
@@ -7108,12 +7682,30 @@
     "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/cf70320e93c08b39b1b29a348097a376-Abstract-Conference.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文评测时间序列基础模型在异常检测中的表现，指出其不如简单基线，并提出改进方向。",
+    "tags": [
+      "时间序列",
+      "基础模型",
+      "异常检测"
+    ],
+    "reason": "摘要主题为时间序列异常检测基础模型评测，明确不属于工业视觉异常检测，且未评估工业视觉场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要主题为时间序列异常检测基础模型评测，明确不属于工业视觉异常检测，且未评估工业视觉场景。"
+      }
+    ],
+    "authors": [
+      "Zhu, Xiaokun",
+      "Carpentier, Louis",
+      "Verbeke, Mathias"
+    ],
+    "abstract": "Recent efforts have extended the foundation model paradigm from natural language to time series, raising expectations that pre-trained time-series foundation models generalize well across downstream tasks. In this work, we focus on time-series anomaly detection, in which time-series foundation models detect anomalies based on the reconstruction or forecasting error. Specifically, we critically examine the performance of five popular families of time-series foundation models: MOMENT, Chronos, TimesFM, Time-MoE, and TSPulse. We find that for each model family using varying model sizes and context window lengths, anomaly detection performance does not significantly differ to simple one-liner baselines: moving-window variance and squared-difference. These findings suggest that the key assumptions underlying reconstruction-based and forecasting-based methodologies for time-series anomaly detection are not satisfied for time-series foundation models: anomalies are not consistently harder to reconstruct or forecast. The results suggest that current approaches for leveraging foundation models in anomaly detection are insufficient. Building upon our insights, we propose alternative directions to effectively detect anomalies using foundation models, thereby unlocking their full potential for time-series anomaly detection.",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/cf70320e93c08b39b1b29a348097a376-Paper-Conference.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:32+00:00",
+    "reviewed_at": "2026-11-06T09:10:57+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/d06768735ce7d11ade5baef7099b4e05-Abstract-Conference.html",
@@ -7126,12 +7718,33 @@
     "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d06768735ce7d11ade5baef7099b4e05-Abstract-Conference.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向时间序列基础模型的异常检测方法，未涉及工业视觉或表面缺陷场景，阅读价值有限。",
+    "tags": [
+      "时间序列",
+      "异常检测",
+      "非工业视觉"
+    ],
+    "reason": "摘要聚焦时间序列基础模型的通用异常检测，未明确涉及工业视觉、表面缺陷或工业质检场景，且未说明评估工业视觉数据。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要聚焦时间序列基础模型的通用异常检测，未明确涉及工业视觉、表面缺陷或工业质检场景，且未说明评估工业视觉数据。"
+      }
+    ],
+    "authors": [
+      "Kim, Jongwon",
+      "Yoon, Samuel",
+      "Ko, Young",
+      "Kim, Yerin",
+      "Kim, Sung",
+      "TAE, JAEUNG"
+    ],
+    "abstract": "This paper introduces a methodology for anomaly detection in time series using Time Series Foundation Models (TFMs). While TFMs have achieved strong success in forecasting, their role in anomaly detection remains underexplored. We identify two key challenges when applying TFMs to reconstruction-based anomaly detection and propose solutions. The first challenge is overgeneralization, where TFMs reconstruct both normal and abnormal data with similar accuracy, masking true anomalies. We find that this effect often occurs in data with strong low-frequency components. To address it, we propose a complexity metric, $\\alpha$, that reflects how difficult the data is for TFMs and design a Complexity-Aware Ensemble (CAE) that adaptively balances TFMs with a statistical model. The second challenge is overstationarization, caused by instance normalization layers that improve forecasting accuracy but remove essential statistical features such as mean and variance, which are critical for anomaly detection. We resolve this by reintroducing these features into the reconstruction process without retraining the TFMs. Experiments on 23 univariate and 17 multivariate benchmark datasets demonstrate that our method significantly outperforms both deep learning and statistical baselines. Furthermore, we show that our complexity-based metric, $\\alpha$, provides a theoretical foundation for improved anomaly detection, and we briefly explore prediction-based anomaly detection using TFMs.",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/d06768735ce7d11ade5baef7099b4e05-Paper-Conference.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:32+00:00",
+    "reviewed_at": "2026-11-06T09:11:03+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/da1a97b53eec1c763c6d06835538fe3e-Abstract-Conference.html",
@@ -7144,12 +7757,34 @@
     "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/da1a97b53eec1c763c6d06835538fe3e-Abstract-Conference.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出LLM作为算法师为表格异常检测器生成合成异常样本，属于表格数据领域，与工业视觉异常检测无关。",
+    "tags": [
+      "表格异常检测",
+      "LLM",
+      "合成数据"
+    ],
+    "reason": "摘要明确面向表格数据异常检测并利用LLM生成合成异常，未涉及工业视觉表面缺陷检测或异常定位场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要明确面向表格数据异常检测并利用LLM生成合成异常，未涉及工业视觉表面缺陷检测或异常定位场景。"
+      }
+    ],
+    "authors": [
+      "Ye, Hangting",
+      "Li, Jinmeng",
+      "Zhao, He",
+      "Zhuge, Mingchen",
+      "Guo, Dandan",
+      "Chang, Yi",
+      "Zha, Hongyuan"
+    ],
+    "abstract": "Existing anomaly detection (AD) methods for tabular data usually rely on some assumptions about anomaly patterns, leading to inconsistent performance in real-world scenarios. While Large Language Models (LLMs) show remarkable reasoning capabilities, their direct application to tabular AD is impeded by fundamental challenges, including difficulties in processing heterogeneous data and significant privacy risks. To address these limitations, we propose LLM-DAS, a novel framework that repositions the LLM from a data processor to an algorithmist. Instead of being exposed to raw data, our framework leverages the LLM's ability to reason about algorithms. It analyzes a high-level description of a given detector to understand its intrinsic weaknesses and then generates detector-specific, data-agnostic Python code to synthesize ``hard-to-detect'' anomalies that exploit these vulnerabilities. This generated synthesis program, which is reusable across diverse datasets, is then instantiated to augment training data, systematically enhancing the detector's robustness by transforming the problem into a more discriminative two-class classification task. Extensive experiments on 36 TAD benchmarks show that LLM-DAS consistently boosts the performance of mainstream detectors. By bridging LLM reasoning with classic AD algorithms via programmatic synthesis, LLM-DAS offers a scalable, effective, and privacy-preserving approach to patching the logical blind spots of existing detectors.",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/da1a97b53eec1c763c6d06835538fe3e-Paper-Conference.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:32+00:00",
+    "reviewed_at": "2026-11-06T09:11:04+00:00"
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/dad2fff121451d119240e53ada475ba6-Abstract-Conference.html",
@@ -7244,12 +7879,22 @@
     ],
     "metadata_checked_at": "2026-11-06T09:00:56+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "数据集与评估",
+    "summary_zh": "该文审计 Lean 定理证明基准的数据与评测缺陷，属形式化数学推理，与工业视觉异常检测无关。",
+    "tags": [
+      "定理证明",
+      "基准审计",
+      "形式化数学"
+    ],
+    "reason": "摘要针对 Lean 定理证明基准的数据集缺陷与评测失效，属于形式化数学推理，与工业视觉异常检测无关。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对 Lean 定理证明基准的数据集缺陷与评测失效，属于形式化数学推理，与工业视觉异常检测无关。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:11:06+00:00"
   },
   {
     "id": "icml:/v306/chen26v.html",
@@ -7272,12 +7917,22 @@
     ],
     "metadata_checked_at": "2026-11-06T09:00:56+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出免训练视频异常检测框架，用多模态嵌入与统计建模抑制背景噪声；但面向监控视频，非工业质检。",
+    "tags": [
+      "视频异常检测",
+      "免训练",
+      "监控场景"
+    ],
+    "reason": "摘要聚焦视频监控场景的视频异常检测（VAD），未明确涉及工业视觉异常检测、表面缺陷或异常定位，且在提及的 XD-Violence 等数据集中不涉及工业视觉场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要聚焦视频监控场景的视频异常检测（VAD），未明确涉及工业视觉异常检测、表面缺陷或异常定位，且在提及的 XD-Violence 等数据集中不涉及工业视觉场景。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:11:08+00:00"
   },
   {
     "id": "icml:/v306/fu26w.html",
@@ -7298,12 +7953,22 @@
     "metadata_checked_at": "2026-11-06T09:00:56+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出噪声鲁棒密度估计方法，用于表格数据异常检测，在合成与多基准表格数据上评估，与工业视觉表面缺陷无关。",
+    "tags": [
+      "表格数据",
+      "异常检测",
+      "密度估计"
+    ],
+    "reason": "摘要针对表格数据通用异常检测与噪声鲁棒密度估计，未涉及工业视觉、图像缺陷检测或MVTec/VisA等工业视觉基准，超出筛选范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对表格数据通用异常检测与噪声鲁棒密度估计，未涉及工业视觉、图像缺陷检测或MVTec/VisA等工业视觉基准，超出筛选范围。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:11:09+00:00"
   },
   {
     "id": "icml:/v306/hirth26a.html",
@@ -7325,12 +7990,22 @@
     "metadata_checked_at": "2026-11-06T09:00:56+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "重建与生成",
+    "summary_zh": "方法用固定噪声去噪替代扩散过程做表格数据异常检测，与工业视觉缺陷检测无关，仅可作去噪思路参考。",
+    "tags": [
+      "表格数据",
+      "去噪",
+      "非工业视觉"
+    ],
+    "reason": "摘要针对表格数据异常检测与ADBench基准，未涉及工业视觉场景，属于范围排除的表格数据异常。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对表格数据异常检测与ADBench基准，未涉及工业视觉场景，属于范围排除的表格数据异常。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:11:10+00:00"
   },
   {
     "id": "icml:/v306/hu26bf.html",
@@ -7354,12 +8029,22 @@
     "metadata_checked_at": "2026-11-06T09:00:56+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向多变量时间序列异常检测，按变量角色建模通道关系与周期依赖，与工业视觉缺陷检测无关。",
+    "tags": [
+      "时间序列",
+      "异常检测",
+      "通道建模"
+    ],
+    "reason": "摘要针对一般多变量时间序列异常检测，未提及工业视觉、表面缺陷或工业质检场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对一般多变量时间序列异常检测，未提及工业视觉、表面缺陷或工业质检场景。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:11:12+00:00"
   },
   {
     "id": "icml:/v306/iqbal26a.html",
@@ -7388,8 +8073,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 返回格式无效，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-06T09:11:19+00:00"
   },
   {
     "id": "icml:/v306/keenan26a.html",
@@ -7410,12 +8096,21 @@
     "metadata_checked_at": "2026-11-06T09:00:56+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文提出基于功能归因的模型机制异常检测，用于识别视觉模型后门与对抗样本，不涉及工业表面缺陷检测。",
+    "tags": [
+      "模型机制异常",
+      "后门检测"
+    ],
+    "reason": "摘要讨论的是模型内部机制异常检测（如后门、对抗样本），并非工业视觉表面缺陷检测或工业异常定位，与范围不符。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要讨论的是模型内部机制异常检测（如后门、对抗样本），并非工业视觉表面缺陷检测或工业异常定位，与范围不符。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:11:21+00:00"
   },
   {
     "id": "icml:/v306/lan26b.html",
@@ -7440,12 +8135,22 @@
     "metadata_checked_at": "2026-11-06T09:00:56+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文提出时间序列异常检测基础模型TimeRCD，利用相对上下文差异预训练，但并非工业视觉异常检测，与本次筛选方向无关。",
+    "tags": [
+      "时间序列",
+      "零样本",
+      "异常检测"
+    ],
+    "reason": "摘要聚焦时间序列异常检测的零样本基础模型，未明确涉及工业视觉场景，不符合筛选范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要聚焦时间序列异常检测的零样本基础模型，未明确涉及工业视觉场景，不符合筛选范围。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:11:27+00:00"
   },
   {
     "id": "icml:/v306/leng26a.html",
@@ -7468,12 +8173,21 @@
     "metadata_checked_at": "2026-11-06T09:00:56+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出视频异常理解的类引导评估指标与元基准，但面向通用视频理解，不涉及工业表面缺陷检测。",
+    "tags": [
+      "视频异常理解",
+      "评估指标"
+    ],
+    "reason": "摘要讨论视频异常理解（VAU）的评估指标与基准，属于视频异常理解而非工业视觉异常检测，未明确评估工业视觉场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要讨论视频异常理解（VAU）的评估指标与基准，属于视频异常理解而非工业视觉异常检测，未明确评估工业视觉场景。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:11:28+00:00"
   },
   {
     "id": "icml:/v306/leng26c.html",
@@ -7498,12 +8212,22 @@
     "metadata_checked_at": "2026-11-06T09:00:56+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向视频异常检测，用多模态大模型结合相对策略优化生成异常经验先验，免参数更新提升推理；属监控视频场景，非工业视觉。",
+    "tags": [
+      "视频异常检测",
+      "多模态大模型",
+      "监控场景"
+    ],
+    "reason": "摘要聚焦视频异常检测与多模态大模型推理，未明确涉及工业视觉场景，数据集为XD-Violence、UCF-Crime、UBNormal等监控视频异常检测基准，不符合工业视觉异常检测范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要聚焦视频异常检测与多模态大模型推理，未明确涉及工业视觉场景，数据集为XD-Violence、UCF-Crime、UBNormal等监控视频异常检测基准，不符合工业视觉异常检测范围。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:11:29+00:00"
   },
   {
     "id": "icml:/v306/li26du.html",
@@ -7529,12 +8253,21 @@
     ],
     "metadata_checked_at": "2026-11-06T09:00:56+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向表格数据的通用异常检测，与工业视觉缺陷检测无关，不宜纳入筛选范围。",
+    "tags": [
+      "表格数据",
+      "异常检测"
+    ],
+    "reason": "标题与摘要均针对表格数据异常检测，属于通用/非视觉数据类型，未涉及工业视觉或表面缺陷场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "标题与摘要均针对表格数据异常检测，属于通用/非视觉数据类型，未涉及工业视觉或表面缺陷场景。"
+      }
+    ],
+    "reviewed_at": "2026-11-06T09:11:31+00:00"
   },
   {
     "id": "icml:/v306/liu26cp.html",
@@ -7547,12 +8280,32 @@
     "official_url": "https://proceedings.mlr.press/v306/liu26cp.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该方法面向图数据的通用异常检测，通过关系指纹对齐特征，与工业视觉表面缺陷检测无关，不建议纳入。",
+    "tags": [
+      "图异常检测",
+      "特征对齐"
+    ],
+    "reason": "摘要为图异常检测，关注图结构数据上的通用检测器与特征对齐，未涉及工业视觉、表面缺陷或异常定位分割，不符合范围",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要为图异常检测，关注图结构数据上的通用检测器与特征对齐，未涉及工业视觉、表面缺陷或异常定位分割，不符合范围"
+      }
+    ],
+    "authors": [
+      "Yujing Liu",
+      "Yixin Liu",
+      "Yu Zheng",
+      "Alan Wee-Chung Liew",
+      "Xiaofeng Cao",
+      "Shirui Pan"
+    ],
+    "abstract": "Extending traditional graph anomaly detection (GAD) from one-for-one to one-for-all paradigms, generalist GAD aims to learn a universal detector for identifying anomalies on unseen graphs without graph-specific retraining. Nevertheless, existing approaches primarily focus on aligning heterogeneous features across different data domains via PCA-based projection, which harmonizes feature dimensions but neglects semantic alignment. As a result, GAD models fail to acquire semantically transferable knowledge from source-domain pre-training, and even exhibit negative transfer on unseen graphs. To address this issue, we propose a Relational Fingerprint-based generalist GAD approach (REFI-GAD for short), aligning heterogeneous raw features with a universal and semantics-aware relational fingerprint (REFI) that encodes anomaly-indicative cues from both contextual and structural perspectives. Building on REFI, we design a fingerprint-grounded generalist GAD model, which combines a transformer-based encoder to capture domain-invariant knowledge with an SNR-guided refinement module for domain-specific adaptation. Extensive experiments on 14 datasets demonstrate that REFI-GAD significantly outperforms state-of-the-art methods.",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/liu26cp/liu26cp.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:35+00:00",
+    "reviewed_at": "2026-11-06T09:11:32+00:00"
   },
   {
     "id": "icml:/v306/liu26gb.html",
@@ -7564,13 +8317,35 @@
     "url": "https://proceedings.mlr.press/v306/liu26gb.html",
     "official_url": "https://proceedings.mlr.press/v306/liu26gb.html",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "code_urls": [
+      "https://github.com/AICPS-Lab/Spectral-Energy-Shifts-in-GAD"
+    ],
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出能量感知图学习方法建模谱能量偏移，检测图结构中的隐蔽异常节点，但场景为通用图数据而非工业图像。",
+    "tags": [
+      "图异常检测",
+      "谱方法",
+      "非工业视觉"
+    ],
+    "reason": "摘要讨论静态与时间序列图上的节点级图异常检测，未涉及工业视觉、表面缺陷或图像异常定位，属于图数据异常检测而非工业视觉场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要讨论静态与时间序列图上的节点级图异常检测，未涉及工业视觉、表面缺陷或图像异常定位，属于图数据异常检测而非工业视觉场景。"
+      }
+    ],
+    "authors": [
+      "Yilin Liu",
+      "Hongchao Zhang",
+      "Ahmad Taha",
+      "Taylor T Johnson",
+      "Meiyi Ma"
+    ],
+    "abstract": "Graph anomaly detection methods aim to distinguish anomalous nodes. While prior methods characterize anomalies through increased variation in the spectral energy distributions, they overlook those that result in decreased variation, i.e., camouflaged anomalies that appear normal. We show that this type of anomaly persists across multiple datasets and remains undetectable by existing spectral approaches. To address this limitation, we propose a node-level spectral energy formulation that is fully compatible with message passing and enables the detection of camouflaged anomalies. Building on this formulation, we introduce an energy-aware graph learning framework that models spectral shifts through energy-driven message passing in both static and time-series graphs. Besides, our unified architecture extends to temporal settings without introducing specialized sequence modules, enabling efficient learning under long sliding windows. Extensive experiments on large-scale benchmarks demonstrate the effectiveness and scalability of our approach. Our code is available at https://github.com/AICPS-Lab/Spectral-Energy-Shifts-in-GAD.",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/liu26gb/liu26gb.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:32+00:00",
+    "reviewed_at": "2026-11-06T09:11:34+00:00"
   },
   {
     "id": "icml:/v306/mo26b.html",
@@ -7583,12 +8358,29 @@
     "official_url": "https://proceedings.mlr.press/v306/mo26b.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "提出主动式视频异常理解框架，通过交错策略优化进行证据获取，属于通用视频事件理解而非工业视觉检测。",
+    "tags": [
+      "视频异常理解",
+      "主动策略"
+    ],
+    "reason": "摘要讨论视频异常理解，未涉及工业视觉场景、表面缺陷或异常定位分割。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要讨论视频异常理解，未涉及工业视觉场景、表面缺陷或异常定位分割。"
+      }
+    ],
+    "authors": [
+      "Mengjingcheng Mo",
+      "Jiaxu Leng",
+      "Xinbo Gao"
+    ],
+    "abstract": "Video anomaly understanding (VAU) relies on sparse, context-dependent cues. However, existing passive paradigms suffer from observational aliasing, where static sampling fails to disambiguate semantically distinct events. To overcome this, we propose $Anom\\text{-}\\pi$, a closed-loop framework that reconceptualizes video understanding as an active sequential decision-making process within a dynamic environment. Inspired by human video-reviewing behavior, this framework unifies internal cognitive reasoning and strategic evidence acquisition into an interleaved policy, utilizing temporal atomic operators such as local backtracking, temporal expansion, and fine-grained sampling to endow the model with perceptual proactivity. To learn such complex interaction strategies under video-level weak supervision, we design Interactive Direct Preference Optimization (iDPO) to achieve trajectory-level policy alignment, guided by an Active Evidence Inquiry (AEI) utility that balances task success, informative evidence acquisition, and interaction cost. This approach enables the agent to learn to actively disambiguate hypotheses while suppressing redundant exploration. Extensive experiments demonstrate that our framework, with only 2B parameters, achieves highly competitive performance, significantly outperforming state-of-the-art large-scale VAU models in complex scenarios.",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/mo26b/mo26b.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:35+00:00",
+    "reviewed_at": "2026-11-06T09:11:36+00:00"
   },
   {
     "id": "icml:/v306/murad26a.html",
@@ -7601,12 +8393,29 @@
     "official_url": "https://proceedings.mlr.press/v306/murad26a.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向多变量时间序列在线异常检测，按通道相关性聚类并用因果混合器建模，未涉及工业视觉检测。",
+    "tags": [
+      "时间序列",
+      "异常检测",
+      "因果建模"
+    ],
+    "reason": "摘要针对多变量时间序列异常检测，未明确涉及工业视觉或表面缺陷场景。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要针对多变量时间序列异常检测，未明确涉及工业视觉或表面缺陷场景。"
+      }
+    ],
+    "authors": [
+      "Md Mahmuddun Nabi Murad",
+      "Yasin Yilmaz"
+    ],
+    "abstract": "Early and accurate detection of anomalies in time-series data is critical due to the substantial risks associated with false or missed detections. While MLP-based mixer models have shown promise in time-series analysis, they do not maintain temporal causality during data processing. Moreover, real-world multivariate time series often contain numerous channels with diverse inter-channel correlations. Spurious correlations in the reconstructed time series lead to noisy representations, resulting in inaccurate anomaly detection. In addition, anomaly scoring methods that ignore temporal continuity can mislead sequential detection. To address these challenges, we propose a cluster-aware causal mixer for multivariate time-series anomaly detection. Channels are grouped into clusters based on their correlations, and each cluster is embedded through a dedicated embedding layer. A causal mixer is introduced to integrate information while maintaining temporal causality. We further develop a sequential anomaly-scoring method that accumulates evidence over time and refines anomaly boundaries. Our proposed model operates in an online fashion, making it suitable for real-time time-series anomaly detection. Experimental evaluations across six public benchmark datasets demonstrate that the proposed approach consistently achieves superior performance.",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/murad26a/murad26a.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:33+00:00",
+    "reviewed_at": "2026-11-06T09:11:37+00:00"
   },
   {
     "id": "icml:/v306/nguyen26d.html",
@@ -7624,7 +8433,17 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "authors": [
+      "Xuan-Ha Nguyen",
+      "Vu Nguyen Thai Duong",
+      "Nguyen Van Hoi",
+      "Kim-Hung Le",
+      "Nhien-An Le-Khac"
+    ],
+    "abstract": "Anomaly detection (AD) on real-world tabular data is challenged by diverse anomaly types, scarce labels, and high sensitivity to data-specific hyperparameter tuning. A central difficulty is that different anomaly types favor opposing representations: compactness - tightening the normal class to expose pointwise deviations - and structure preservation - retaining cluster and cross-feature relationships. Existing one-class detectors capture only one of these or balance them via hyperparameters, which is problematic without validation labels. We propose Discriminant Vector Machine for Anomaly Detection (DVM-AD) , a closed-form one-class method derived from discriminant analysis that captures both behaviors under a single fixed configuration. From a deterministic reference point built from the training data, DVM-AD derives a bounded ratio whose two ends correspond to compressive and structure-preserving directions. This bound enables selecting directions from both ends simultaneously without dataset-specific tuning. In addition, a Moore-Penrose pseudo-inverse keeps the method well-posed under high-dimensional or rank-deficient settings, and test samples are scored by nearest-neighbor distance in the discriminant space, normalized for thresholding-ready use. Across 47 ADBench tabular datasets and 10 NLP/CV embedding benchmarks against 28 baselines, DVM-AD achieves the best average AUROC (89.65%, average rank 2.98) on tabular datasets and remains top-ranked across four anomaly types and on embedding tasks (average rank 1.60, AUROC 72.68%).",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/nguyen26d/nguyen26d.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:33+00:00"
   },
   {
     "id": "icml:/v306/nguyen26j.html",
@@ -7642,7 +8461,18 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "authors": [
+      "Dang Nguyen",
+      "Tu Anh Hoang Nguyen",
+      "Thuc Duy Le",
+      "Svetha Venkatesh",
+      "Trung Le",
+      "Sunil Gupta"
+    ],
+    "abstract": "Anomaly detection (AD) methods often ignore causal dependencies and treat anomalies as outliers, which is brittle when anomalies are primarily mechanism violations rather than extreme values. We propose CausalAno, a causal-aware detector that trains a causal GAN on normal data and leverages its discriminator to learn mechanism-consistent representations. We score test samples by fitting a Gaussian model in this feature space and computing the Mahalanobis distance, measuring deviation from the normal causal manifold. We demonstrate the effectiveness of CausalAno with extensive experiments on 28 tabular datasets (18 continuous-only and 10 mixed-type), comparing against 16 SOTA baselines. Our results show consistent improvements across both mixed-type and numerical-only settings. Our ablation studies further confirm that the gains come from the causal factorization in the causal GAN rather than a generic GAN backbone. Our CausalAno offers a practical and effective solution for real-world applications where anomalies often arise from mechanism-violating behaviors.",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/nguyen26j/nguyen26j.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:33+00:00"
   },
   {
     "id": "icml:/v306/shang26e.html",
@@ -7660,7 +8490,16 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "authors": [
+      "Wenlong Shang",
+      "Shihao Tian",
+      "Xutong Wan",
+      "Peng Chang"
+    ],
+    "abstract": "Reconstruction-based methods are a dominant paradigm in time series anomaly detection (TSAD), however, their near-universal reliance on Mean Squared Error (MSE) loss results in statistically flawed reconstruction residuals. This fundamental weakness leads to noisy, unstable anomaly scores, hindering reliable detection. To address this, we propose Constrained Gaussian-Noise Optimization and Smoothing (COGNOS), a universal, model-agnostic enhancement framework that tackles this issue at its source. COGNOS introduces a novel Gaussian-White Noise Regularization strategy during training, which directly constrains the model’s output residuals to conform to a Gaussian white noise distribution. This engineered statistical property creates the ideal precondition for our second contribution: Adaptive Residual Kalman Smoother that provably operates as a statistically robust estimator to denoise the raw anomaly scores. Extensive experiments on multiple benchmarks demonstrate that COGNOS consistently enhances the performance of state-of-the-art backbones significantly, validating the efficacy of coupling statistical regularization with adaptive filtering.",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/shang26e/shang26e.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:33+00:00"
   },
   {
     "id": "icml:/v306/tian26h.html",
@@ -7678,7 +8517,18 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "authors": [
+      "Yuxing Tian",
+      "Yiyan Qi",
+      "Fengran Mo",
+      "Weixu Zhang",
+      "Jian Guo",
+      "Jian-Yun Nie"
+    ],
+    "abstract": "Dynamic graph anomaly detection is critical for many real-world applications but remains challenging due to the scarcity of labeled anomalies. Existing methods are either unsupervised or semi-supervised: unsupervised methods avoid the need for labeled anomalies but often produce ambiguous boundary, whereas semi-supervised methods can overfit to the limited labeled anomalies and generalize poorly to unseen anomalies. To address this gap, we consider a largely underexplored problem: learning a discriminative boundary from normal/unlabeled data, while leveraging limited labeled anomalies when available without sacrificing generalization to unseen anomalies. In this paper, we propose an effective, generalizable, and model-agnostic framework with three main components: (i) residual representation encoding that capture deviations between current interactions and their historical context, providing anomaly-relevant signals; (ii) a restriction loss that constrain the normal representations within an interval bounded by two co-centered hyperspheres, ensuring consistent scales while keeping anomalies separable; (iii) a bi-boundary optimization strategy that learns a discriminative and robust boundary using the log-likelihood distribution modeled by a normalizing flow. Extensive experiments demonstrate the superiority of our framework across diverse evaluation settings.",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/tian26h/tian26h.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:33+00:00"
   },
   {
     "id": "icml:/v306/vuong26b.html",
@@ -7696,7 +8546,19 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "authors": [
+      "Hoang Tran Vuong",
+      "Linh Ngo Van",
+      "Dang Nguyen",
+      "Thin Nguyen",
+      "Phuoc Nguyen",
+      "Mehrtash Harandi",
+      "Trung Le"
+    ],
+    "abstract": "Anomaly detection in tabular data poses significant challenges due to heterogeneous feature types—mixing numerical, categorical, and textual attributes, which complicate learning meaningful representations of normality. Recent work has applied large language models (LLMs) to this problem by serializing table rows as text sequences, yet these approaches rely on one-shot supervised fine-tuning that offers limited signal to tighten the model’s description of normality. We propose DiSPaT, a self-play fine-tuning framework that strengthens the model’s understanding of normal data. Building on the theoretical foundation of $f$-divergence minimization, we derive a tight approximation connecting our training objective to reducing the distributional gap between real normal data and model-generated samples. DiSPaT operates through an alternating optimization: at each iteration, the current policy generates synthetic samples that serve as pseudo-anomalies, while a critic discriminator learns to distinguish these from real normal samples; this signal drives policy updates that progressively align the model distribution with the true normal-data distribution. Extensive experiments on diverse benchmarks demonstrate that DiSPaT consistently outperforms prior LLM-based methods, deep learning approaches, and classical unsupervised detectors for tabular anomaly detection.",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/vuong26b/vuong26b.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:33+00:00"
   },
   {
     "id": "icml:/v306/wang26ao.html",
@@ -7961,13 +8823,29 @@
     "official_url": "https://proceedings.mlr.press/v306/yoon26e.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": [],
-    "deepseek_only": true
+    "status": "rejected",
+    "topic": "定位与分割",
+    "summary_zh": "方法针对未对齐视频做像素级场景变化检测，面向长期自主移动与巡检，与工业质检中的表面缺陷定位分割场景不同。",
+    "tags": [
+      "场景变化检测",
+      "视频分割"
+    ],
+    "reason": "摘要关注室内场景的相机运动下视频级场景变化检测，非工业视觉异常检测或表面缺陷检测。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要关注室内场景的相机运动下视频级场景变化检测，非工业视觉异常检测或表面缺陷检测。"
+      }
+    ],
+    "deepseek_only": true,
+    "authors": [
+      "Jiae Yoon",
+      "Ue-Hwan Kim"
+    ],
+    "abstract": "Detecting what has changed in an environment is essential for long-term autonomy, yet most change detection settings assume fixed viewpoints, mild misalignment, or only a few changed objects. We introduce Video-based Scene Change Detection (VSCD), which predicts a pixel-wise change mask for each query frame, given a reference and a query RGB video of the same indoor space recorded at different times under unconstrained camera motion. The two videos are not temporally synchronized, and many object instances may appear or disappear. To study this setting, we build a large-scale benchmark with over 1.1 million frames annotated with pixel-accurate change masks, together with a real-world test set for evaluating transfer beyond simulation. We propose a query-centric multi-reference model that learns temporal matching implicitly from change-mask supervision, aligns candidate reference features to the query via local patch correspondence, and fuses per-candidate change features using frame-level and patch-level confidence before decoding a high-resolution mask once per frame. Our approach achieves state-of-the-art performance against strong image- and video-based baselines, and we validate its real-world impact by deploying it on a mobile robot for two downstream applications—visual surveillance and object incremental learning.",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yoon26e/yoon26e.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:32+00:00",
+    "reviewed_at": "2026-11-06T09:09:48+00:00"
   },
   {
     "id": "icml:/v306/de-coninck26a.html",
@@ -7980,13 +8858,31 @@
     "official_url": "https://proceedings.mlr.press/v306/de-coninck26a.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": [],
-    "deepseek_only": true
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文讨论工业视觉中可验证数据最小化与隐私保护，面向姿态估计等任务的边缘处理，与视觉异常检测无关。",
+    "tags": [
+      "隐私保护",
+      "工业视觉",
+      "数据最小化"
+    ],
+    "reason": "摘要讨论工业视觉中的隐私保护与数据最小化，未涉及异常检测、缺陷检测、异常定位或分割，不属于筛选范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要讨论工业视觉中的隐私保护与数据最小化，未涉及异常检测、缺陷检测、异常定位或分割，不属于筛选范围。"
+      }
+    ],
+    "deepseek_only": true,
+    "authors": [
+      "Sander De Coninck",
+      "Sam Leroux",
+      "Pieter Simoens"
+    ],
+    "abstract": "The adoption of computer vision to drive industrial efficiency and safety creates a persistent tension between operational utility and worker privacy. Current privacy measures, such as post-hoc blurring, are fundamentally flawed: they depend on the error-prone detection of sensitive attributes yet do not prevent the data from being repurposed for unintended inferences. We posit that industrial computer vision must shift from ”hiding secrets” to verifiable data minimization. Formalized through the Information Bottleneck principle, we advocate for sensing pipelines that are optimized to capture only the features necessary for a declared task (e.g., pose estimation), without requiring labels for what is sensitive. This bounds the system’s capacity for unauthorized inferences such as re-identification or function creep. We outline an implementation path using modular edge processing and trusted execution environments, and identify key research challenges for making verifiable purpose limitation a prerequisite for responsible industrial AI.",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/de-coninck26a/de-coninck26a.pdf",
+    "metadata_checked_at": "2026-11-06T09:08:32+00:00",
+    "reviewed_at": "2026-11-06T09:09:50+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i6.42436",
@@ -8064,7 +8960,7 @@
     "venue": "AAAI 2026",
     "url": "https://doi.org/10.1609/aaai.v40i7.37466",
     "official_url": "https://doi.org/10.1609/aaai.v40i7.37466",
-    "abstract": "We propose Anomagic, a zero-shot anomaly generation method that produces semantically coherent anomalies without requiring any exemplar anomalies. By unifying both visual and textual cues through  a crossmodal prompt encoding scheme, Anomagic leverages rich contextual information to steer an inpainting‐based generation pipeline. A subsequent contrastive refinement strategy enforces precise alignment between synthesized anomalies and their masks, thereby bolstering downstream anomaly detection accuracy. To facilitate training, we introduce AnomVerse, a collection of 12,987 anomaly–mask–caption triplets assembled from 13 publicly available datasets, where captions are automatically generated by multimodal large language models using structured visual prompts and template‐based textual hints. Extensive experiments demonstrate that Anomagic trained on AnomVerse can synthesize more realistic and varied anomalies than prior methods, yielding superior improvements in downstream anomaly detection. Furthermore, Anomagic can generate anomalies for any normal‐category image using user‐defined prompts, establishing a versatile foundation model for anomaly generation.",
+    "abstract": "We propose Anomagic, a zero-shot anomaly generation method that produces semantically coherent anomalies without requiring any exemplar anomalies. By unifying both visual and textual cues through a crossmodal prompt encoding scheme, Anomagic leverages rich contextual information to steer an inpainting‐based generation pipeline. A subsequent contrastive refinement strategy enforces precise alignment between synthesized anomalies and their masks, thereby bolstering downstream anomaly detection accuracy. To facilitate training, we introduce AnomVerse, a collection of 12,987 anomaly–mask–caption triplets assembled from 13 publicly available datasets, where captions are automatically generated by multimodal large language models using structured visual prompts and template‐based textual hints. Extensive experiments demonstrate that Anomagic trained on AnomVerse can synthesize more realistic and varied anomalies than prior methods, yielding superior improvements in downstream anomaly detection. Furthermore, Anomagic can generate anomalies for any normal‐category image using user‐defined prompts, establishing a versatile foundation model for anomaly generation.",
     "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37466/41428",
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37466",
     "metadata_checked_at": "2026-11-06T09:01:31+00:00",
@@ -8124,7 +9020,7 @@
     "venue": "AAAI 2026",
     "url": "https://doi.org/10.1609/aaai.v40i8.37536",
     "official_url": "https://doi.org/10.1609/aaai.v40i8.37536",
-    "abstract": "Due to the diversity of brain anatomy and the scarcity of annotated data, supervised anomaly detection for brain MRI remains challenging, driving the development of unsupervised anomaly detection (UAD) approaches. \nCurrent UAD methods typically utilize synthetically generated noise perturbations on healthy MRIs to train generative models for normal anatomy reconstruction, enabling anomaly detection via residual maps.\nHowever, such simulated anomalies lack the biophysical fidelity and morphological complexity characteristic of true clinical lesions.\nTo advance UAD in brain MRI, we conduct the first systematic frequency-domain analysis of pathological signatures, revealing two key properties: (1) anomalies exhibit unique frequency patterns distinguishable from normal anatomy, and (2) low-frequency signals maintain consistent representations across healthy scans. These insights motivate our Frequency-Decomposition Preprocessing (FDP) framework—the first UAD method to leverage frequency-domain reconstruction for simultaneous pathology suppression and anatomical preservation. FDP can integrate seamlessly with existing anomaly simulation techniques, consistently enhancing detection performance across diverse architectures while maintaining diagnostic fidelity.\nExperimental results demonstrate that FDP consistently improves anomaly detection performance when integrated with existing methods. Notably, FDP achieves a 17.63% increase in DICE score with LDM while maintaining robust improvements across multiple baselines.",
+    "abstract": "Due to the diversity of brain anatomy and the scarcity of annotated data, supervised anomaly detection for brain MRI remains challenging, driving the development of unsupervised anomaly detection (UAD) approaches. Current UAD methods typically utilize synthetically generated noise perturbations on healthy MRIs to train generative models for normal anatomy reconstruction, enabling anomaly detection via residual maps. However, such simulated anomalies lack the biophysical fidelity and morphological complexity characteristic of true clinical lesions. To advance UAD in brain MRI, we conduct the first systematic frequency-domain analysis of pathological signatures, revealing two key properties: (1) anomalies exhibit unique frequency patterns distinguishable from normal anatomy, and (2) low-frequency signals maintain consistent representations across healthy scans. These insights motivate our Frequency-Decomposition Preprocessing (FDP) framework—the first UAD method to leverage frequency-domain reconstruction for simultaneous pathology suppression and anatomical preservation. FDP can integrate seamlessly with existing anomaly simulation techniques, consistently enhancing detection performance across diverse architectures while maintaining diagnostic fidelity. Experimental results demonstrate that FDP consistently improves anomaly detection performance when integrated with existing methods. Notably, FDP achieves a 17.63% increase in DICE score with LDM while maintaining robust improvements across multiple baselines.",
     "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37536/41498",
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37536",
     "metadata_checked_at": "2026-11-06T09:01:31+00:00",
@@ -8163,7 +9059,9 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37704/41666",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i10.37770",
@@ -8180,7 +9078,7 @@
     "venue": "AAAI 2026",
     "url": "https://doi.org/10.1609/aaai.v40i10.37770",
     "official_url": "https://doi.org/10.1609/aaai.v40i10.37770",
-    "abstract": "Temporal Graph Neural Networks (TGNNs) are increasingly used in high-stakes domains, such as financial forecasting, recommendation systems, and fraud detection. However, their susceptibility to poisoning attacks poses a critical security risk. We introduce LoReTTA (Low Resource Two-phase Temporal Attack), a novel adversarial framework on Continuous-Time Dynamic Graphs, which degrades TGNN performance by an average of 29.47% across 4 widely benchmark datasets and 4 State-of-the-Art (SotA) models. LoReTTA operates through a two-stage approach: (1) sparsify the graph by removing high-impact edges using any of the 16 tested temporal importance metrics, (2) strategically replace removed edges with adversarial negatives via LoReTTA’s novel degree-preserving negative sampling algorithm. Our plug-and-play design eliminates the need for expensive surrogate models while adhering to realistic unnoticeability constraints. LoReTTA degrades performance by upto 42.0% on MOOC, 31.5% on Wikipedia, 28.8% on UCI, and 15.6% on Enron. LoReTTA outperforms 11 attack baselines, remains undetectable to 4 leading anomaly detection systems, and is robust to 4 SotA adversarial defense training methods, establishing its effectiveness, unnoticeability, and robustness.",
+    "abstract": "Temporal Graph Neural Networks (TGNNs) are increasingly used in high-stakes domains, such as financial forecasting, recommendation systems, and fraud detection. However, their susceptibility to poisoning attacks poses a critical security risk. We introduce LoReTTA (Low Resource Two-phase Temporal Attack), a novel adversarial framework on Continuous-Time Dynamic Graphs, which degrades TGNN performance by an average of 29.47% across 4 widely benchmark datasets and 4 State-of-the-Art (SotA) models. \nLoReTTA operates through a two-stage approach: (1) sparsify the graph by removing high-impact edges using any of the 16 tested temporal importance metrics, (2) strategically replace removed edges with adversarial negatives via LoReTTA’s\nnovel degree-preserving negative sampling algorithm. Our plug-and-play design eliminates the need for expensive surrogate models while adhering to realistic unnoticeability constraints. LoReTTA degrades performance by upto 42.0% on MOOC, 31.5% on Wikipedia, 28.8% on UCI, and 15.6% on Enron. LoReTTA outperforms 11 attack baselines, remains undetectable to 4 leading anomaly detection systems, and is robust to 4 SotA adversarial defense training methods, establishing its effectiveness, unnoticeability, and robustness.",
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37770",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
@@ -8189,7 +9087,9 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37770/41732",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i10.37790",
@@ -8215,7 +9115,9 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37790/41752",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i11.37882",
@@ -8244,7 +9146,9 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37882/41844",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i12.37927",
@@ -8268,7 +9172,9 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37927/41889",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i12.37947",
@@ -8294,7 +9200,9 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37947/41909",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i12.37925",
@@ -8319,7 +9227,9 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37925/41887",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i12.37926",
@@ -8346,7 +9256,9 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37926/41888",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i14.38191",
@@ -10345,13 +11257,25 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41452",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": [],
-    "deepseek_only": true
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向电网施工现场部署的多模态安全管理系统，用于识别违规行为并评估风险等级，不属于表面缺陷检测。",
+    "tags": [
+      "施工安全",
+      "多模态大模型",
+      "风险管理"
+    ],
+    "reason": "摘要聚焦建筑施工现场的安全违规识别与风险管理，并非表面缺陷检测或异常定位，与工业视觉异常检测范围不符。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "摘要聚焦建筑施工现场的安全违规识别与风险管理，并非表面缺陷检测或异常定位，与工业视觉异常检测范围不符。"
+      }
+    ],
+    "deepseek_only": true,
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/41452/45413",
+    "metadata_checked_at": "2026-11-06T09:09:10+00:00",
+    "reviewed_at": "2026-11-06T09:09:51+00:00"
   },
   {
     "id": "ijcai:/proceedings/2026/276",
@@ -10679,13 +11603,29 @@
     "url": "https://ijcai.org/proceedings/2026/802",
     "official_url": "https://ijcai.org/proceedings/2026/802",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/LuoXishuang0712/TEMG-TTA"
+    ],
     "status": "pending",
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "authors": [
+      "He, Runang",
+      "Zheng, Tongya",
+      "Peng, Huiling",
+      "Wan, Yuanyu",
+      "Hu, Bingde",
+      "Chen, Jiawei",
+      "Jin, Canghong",
+      "Song, Mingli",
+      "Wang, Can"
+    ],
+    "abstract": "Abstract Ever-evolving transaction patterns have significantly hindered anomaly detection on emerging cryptocurrency blockchains due to the vast number of addresses and diverse anomalous behaviors. Recently, advanced Graph Anomaly Detection (GAD) approaches applied to blockchains have faced two critical challenges: adversarial pattern evolution by malicious actors and the out-of-distribution (OOD) problem caused by varied transaction semantics on blockchains. To address these challenges, we propose a novel framework termed TEmporal Motif-aware Graph Test-Time Adaptation (TEMG-TTA). First, we comprehensively capture the 3-node temporal motif distribution of each active address using an efficient computational mechanism, enabling downstream temporal motif-aware graph learning. Second, we design a simple yet effective test-time adaptation strategy to facilitate the sharing of common patterns between training and testing graphs. Extensive experiments on 5 real-world datasets demonstrate that our proposed TEMG-TTA outperforms state-of-the-art GAD approaches by an average of 54.88%. A further case study on interpretable motif patterns reveals that TEMG-TTA explicitly characterizes the complex transaction patterns of anomalous addresses, thereby verifying the effectiveness of our technical designs. Our code is publicly available at https://github.com/LuoXishuang0712/TEMG-TTA/.",
+    "pdf_url": "https://ijcai.org/proceedings/2026/0802.pdf",
+    "metadata_checked_at": "2026-11-06T09:09:12+00:00"
   },
   {
     "id": "doi:10.1109/tpami.2025.3646069",
@@ -11217,7 +12157,9 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "abstract": "Visual industrial anomaly detection has evolved from one-class modeling to more challenging multi-class settings, where diverse categories and complex visual patterns must be jointly handled. Existing approaches often assume that anomalies lie far from normal samples in feature or spatial space. However, this assumption frequently fails due to two key issues: cross-class semantic confusion, where normal structures of one category are misclassified as anomalies in another, and pixel similarity failure, where anomalous regions visually blend into normal backgrounds. To address these challenges, we propose RPGAD (Region-Prompt Guided Anomaly Detection), an information-theoretic framework that models anomalies as semantic predictive instability, reflected in the joint responses of dual paths. RPGAD integrates two components: 1) DPENet (Dual-Path regional Energy evaluation Network), which compares region-level responses across normal-only and mixed paths through an entropy-guided energy formulation to generate robust region prompts; and 2) RDNet (Reverse Distillation Network), which selectively reconstructs prompted regions and employs a Prototype-Contrastive Optimal Transport (PCOT) loss to enhance inter-class separability and local feature aggregation. Experiments on five anomaly detection benchmarks - MVTecAD, VisA, BTAD, MPDD, and Real-IAD - demonstrate the effectiveness of RPGAD. At $256 \\times 256$ resolution, RPGAD achieves strong overall performance, with mAD of 87.8%, 80.3%, 85.2%, 86.2%, and 77.7% on five benchmarks, and pixel-level AP and F1-max gains of up to 12.2 and 10.4 points over strong baselines. These results confirm that RPGAD provides accurate and robust multi-class anomaly detection and localization in complex visual scenarios.",
+    "metadata_checked_at": "2026-11-06T09:09:44+00:00"
   },
   {
     "id": "doi:10.1109/tip.2026.3718433",
@@ -11236,13 +12178,17 @@
     "official_url": "https://doi.org/10.1109/tip.2026.3718433",
     "publisher_url": "https://ieeexplore.ieee.org/document/11643489/",
     "added_at": "2026-11-06T09:02:01+00:00",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/hanli6688/UAD"
+    ],
     "status": "pending",
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "abstract": "Zero-shot anomaly detection (ZSAD) aims to identify and localize anomalies in previously unseen target domains without accessing any target-domain training data, which is crucial under privacy, security, or proprietary constraints. However, existing ZSAD methods often struggle to generalize across domains, as they are tightly coupled to specific object categories or rely on fragmented designs that fail to capture both semantic consistency and structural abnormality. In this paper, we propose UAD, a unified framework that addresses ZSAD from a holistic perspective by jointly modeling semantic regularity and anomaly-aware representations. The key insight of UAD is that effective ZSAD requires aligning multi-level semantic understanding with fine-grained structural cues, rather than relying solely on object-centric semantics or local appearance statistics. To this end, UAD organizes image representations into coherent semantic contexts and identifies anomalies as deviations from both local structural patterns and high-level semantic consistency. Furthermore, we enhance cross-domain robustness by improving semantic supervision and diversity through prompt concatenation and intensity-guided anomaly synthesis, enabling UAD to better generalize to unseen anomaly types and domains. Extensive experiments on 17 real-world anomaly detection datasets show that UAD achieves superior zero-shot performance of detecting and segmenting anomalies in datasets of highly diverse class semantics from various defect inspection and medical imaging domains. Our works are available at https://github.com/hanli6688/UAD.",
+    "metadata_checked_at": "2026-11-06T09:09:43+00:00"
   },
   {
     "id": "doi:10.1109/tip.2026.3730816",
@@ -11267,7 +12213,9 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "abstract": "Video anomaly detection (VAD) is a vital yet complex open-set task in computer vision, commonly tackled through reconstruction-based methods. However, these methods struggle with two key limitations: 1) insufficient robustness in open-set scenarios, where unseen normal motions are frequently misclassified as anomalies, and 2) an overemphasis on, but restricted capacity for, local motion reconstruction, which are inherently difficult to capture accurately due to their diversity. To overcome these challenges, we introduce a novel frequency-guided diffusion model with perturbation training. First, we enhance robustness by training a generator to produce perturbed samples, which are similar to normal samples and target the weakness of the reconstruction model. This training paradigm expands the reconstruction domain of the model, improving its generalization to unseen normal motions. Second, to address the overemphasis on motion details, we employ the 2D Discrete Cosine Transform (DCT) to separate high-frequency (local) and low-frequency (global) motion components. By guiding the diffusion model with observed high-frequency information, we prioritize the reconstruction of low-frequency components, enabling more accurate and robust anomaly detection. Extensive experiments on five widely used VAD datasets demonstrate that our approach surpasses state-of-the-art methods, underscoring its effectiveness in open-set scenarios and diverse motion contexts. Our project website is https://xiaofeng-tan.github.io/projects/FG-Diff.",
+    "metadata_checked_at": "2026-11-06T09:09:44+00:00"
   },
   {
     "id": "doi:10.1109/tip.2026.3749120",
@@ -11293,6 +12241,7 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "metadata_checked_at": "2026-11-06T09:09:44+00:00"
   }
 ]
