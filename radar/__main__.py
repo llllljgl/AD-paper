@@ -49,16 +49,18 @@ def build(root=ROOT):
         entries = sorted(groups[venue, year], key=lambda paper: (paper["published"], paper["id"]), reverse=True)
         for paper in entries:
             title = markdown_link(markdown_text(paper["title"]), paper["url"])
-            links = []
+            links = [markdown_link("论文", paper["url"])]
             if paper.get("pdf_url"):
                 links.append(markdown_link("PDF", paper["pdf_url"]))
+            elif paper.get("official_url") and re.fullmatch(r"\d{4}\.\d{4,5}", paper["id"]):
+                links.append(markdown_link("arXiv", f"https://arxiv.org/abs/{paper['id']}"))
             links.extend(markdown_link("代码", url) for url in paper.get("code_urls", []))
             # Old reviewed records may only have a topic. Keep it as a fallback label.
             tags = paper.get("tags") or [paper.get("topic", "待补充")]
             labels = " ".join(f"<code>{markdown_text(tag)}</code>" for tag in tags)
             tip = markdown_text(paper.get("summary_zh", "")) or "待补充"
             details = f"<details><summary>查看 Tip</summary><p>{tip}</p></details>"
-            lines.append(f"| {title} | {labels} | {' · '.join(links) or '—'} | {details} |")
+            lines.append(f"| {title} | {labels} | {' · '.join(links)} | {details} |")
 
     before, remainder = readme.split(LIST_START)
     _, after = remainder.split(LIST_END)

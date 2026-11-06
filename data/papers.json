@@ -2114,7 +2114,9 @@
     "source": "官方会议论文页",
     "venue": "AAAI 2026",
     "journal_ref": "",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/Yanhui-Lee/IAD-R1"
+    ],
     "status": "accepted",
     "tags": [
       "多模态",
@@ -3547,7 +3549,9 @@
     "source": "官方会议日程",
     "venue": "NeurIPS 2026",
     "journal_ref": "",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/gaobb/UniADet"
+    ],
     "status": "accepted",
     "tags": [
       "视觉基础模型",
@@ -3654,7 +3658,9 @@
     "source": "官方会议 DOI",
     "venue": "AAAI 2026",
     "journal_ref": "",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/gaobb/AdaptCLIP"
+    ],
     "status": "accepted",
     "tags": [
       "CLIP",
@@ -3694,7 +3700,9 @@
     "source": "官方会议 DOI",
     "venue": "AAAI 2026",
     "journal_ref": "",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/CASIA-LMC-Lab/AnomalyMoE"
+    ],
     "status": "accepted",
     "tags": [
       "混合专家",
@@ -3729,7 +3737,9 @@
     "source": "官方会议 DOI",
     "venue": "AAAI 2026",
     "journal_ref": "",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/yulimso/AnoStyler"
+    ],
     "status": "accepted",
     "tags": [
       "零样本",
@@ -3769,7 +3779,9 @@
     "source": "官方会议 DOI",
     "venue": "AAAI 2026",
     "journal_ref": "",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/zyh16143998882/CASL"
+    ],
     "status": "accepted",
     "tags": [
       "点云",
@@ -4044,7 +4056,9 @@
     "source": "官方会议 DOI",
     "venue": "AAAI 2026",
     "journal_ref": "",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/neymarql/QARAD"
+    ],
     "status": "accepted",
     "tags": [
       "异常合成",
