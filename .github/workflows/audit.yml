@@ -1,0 +1,42 @@
+name: Audit paper collection
+
+on:
+  workflow_dispatch:
+    inputs:
+      venues:
+        description: 'Comma-separated venues to audit (same production search and scope)'
+        type: string
+        default: 'CVPR,ICLR,TPAMI,TIP'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test
+        run: python -m unittest discover -s tests -v
+      - name: Search and review against frozen baseline
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+          AUDIT_VENUES: ${{ inputs.venues }}
+        run: python -m radar.audit --venues "$AUDIT_VENUES"
+      - name: Report
+        if: always()
+        run: |
+          if [ -f audit-output/summary.md ]; then cat audit-output/summary.md >> "$GITHUB_STEP_SUMMARY"; fi
+      - name: Save evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-audit-${{ github.run_id }}
+          path: audit-output/
+          retention-days: 30
+          if-no-files-found: warn
