@@ -90,8 +90,11 @@ class RadarTests(unittest.TestCase):
         agent = Agent(config, Mock())
         decision = {"decision": "keep", "topic": "其他", "reason": "相关", "summary_zh": "方法简介", "tags": ["工业视觉", "定位"]}
         response = {"choices": [{"finish_reason": "stop", "message": {"content": json.dumps(decision)}}]}
-        with patch("radar.core.request", return_value=json.dumps(response).encode()) as req:
+        empty = {"choices": [{"finish_reason": "stop", "message": {"content": " "}}]}
+        replies = [json.dumps(result).encode() for result in (empty, response)]
+        with patch("radar.core.request", side_effect=replies) as req:
             self.assertEqual(agent.decide(paper()), decision)
+            self.assertEqual(req.call_count, 2)
             self.assertEqual(req.call_args.args[0], "https://api.deepseek.com/chat/completions")
             self.assertEqual(req.call_args.args[1]["response_format"], {"type": "json_object"})
 
@@ -122,6 +125,22 @@ class RadarTests(unittest.TestCase):
                 result = run(root, source=source)
             self.assertEqual(result["pending"], 1)
             self.assertEqual(result["review_errors"], 1)
+            self.assertFalse(result["review_blocked"])
+
+    def test_review_continues_after_an_isolated_bad_reply(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            save_json(root / "config.json", json.loads((ROOT / "config.json").read_text()))
+            source = Mock()
+            source.collect.return_value = [paper(), paper(id="second", title="Second paper")]
+            with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test"}), patch.object(
+                    Agent, "review", side_effect=[ValueError("empty"), {"status": "accepted"}]):
+                state = run(root, source=source)
+            saved = json.loads((root / "data/papers.json").read_text())
+            self.assertEqual({p["id"]: p["status"] for p in saved},
+                             {"2601.00001": "pending", "second": "accepted"})
+            self.assertEqual(state["review_errors"], 1)
+            self.assertFalse(state["review_blocked"])
 
     def test_readme_groups_reviewed_entries_and_collapses_tip(self):
         with tempfile.TemporaryDirectory() as folder:

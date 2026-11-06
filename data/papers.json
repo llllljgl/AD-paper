@@ -5585,7 +5585,8 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "deepseek_only": true
   },
   {
     "id": "neurips:/virtual/2026/poster/153376",
@@ -6599,7 +6600,8 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "deepseek_only": true
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/0b6566f471cd601cbfc895962623124e-Abstract-Conference.html",
@@ -7964,7 +7966,8 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "deepseek_only": true
   },
   {
     "id": "icml:/v306/de-coninck26a.html",
@@ -7982,7 +7985,8 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "deepseek_only": true
   },
   {
     "id": "doi:10.1609/aaai.v40i6.42436",
@@ -10346,7 +10350,8 @@
     "summary_zh": "",
     "tags": [],
     "reason": "等待 Agent 筛选",
-    "trace": []
+    "trace": [],
+    "deepseek_only": true
   },
   {
     "id": "ijcai:/proceedings/2026/276",

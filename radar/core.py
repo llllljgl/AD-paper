@@ -168,6 +168,10 @@ def validate_review(data, topics, allow_verify):
     return data
 
 
+class ReviewBudgetReached(RuntimeError):
+    pass
+
+
 class Agent:
     """One model, one bounded metadata verification tool, at most two turns per paper."""
     def __init__(self, config, source):
@@ -176,8 +180,15 @@ class Agent:
         self.key = os.environ.get("DEEPSEEK_API_KEY", "")
 
     def decide(self, paper, verified=False):
+        # JSON mode can still produce an empty or schema-incompatible reply.
+        try:
+            return self._decide_once(paper, verified)
+        except (ValueError, KeyError, IndexError, TypeError):
+            return self._decide_once(paper, verified)
+
+    def _decide_once(self, paper, verified):
         if self.calls >= self.config["max_llm_calls"]:
-            raise RuntimeError("LLM call budget reached; remaining papers stay pending")
+            raise ReviewBudgetReached("LLM call budget reached; remaining papers stay pending")
         self.calls += 1
         decisions = ["keep", "reject"] if verified else ["keep", "reject", "verify"]
         instructions = (
@@ -308,24 +319,40 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None):
         reports.update(source_reports)
     year = config.get("collection_year")
     papers = filter_collection_year(merge(existing, incoming, now_iso()), year)
-    errors = 0
-    for paper in papers:
-        if paper["status"] != "pending" or not paper.get("abstract") or no_llm or not agent.key:
-            continue
+    errors, consecutive_errors, review_blocked = 0, 0, False
+    review_queue = sorted(
+        (paper for paper in papers if paper["status"] == "pending" and paper.get("abstract")),
+        key=lambda paper: (not paper.get("deepseek_only"), paper.get("review_attempted_at", ""),
+                           paper.get("added_at", "")),
+    )
+    for paper in review_queue if agent.key and not no_llm else []:
         if agent.calls >= config["max_llm_calls"]:
             break
         try:
             paper.update(agent.review(dict(paper)))
-        except Exception as exc:
-            # Never publish an invented summary or silently reject on an API failure.
+            consecutive_errors = 0
+        except ReviewBudgetReached:
+            break
+        except (ValueError, KeyError, IndexError, TypeError) as exc:
             errors += 1
-            paper["reason"] = "Agent 暂未完成，下次重试"
-            print("Review pending for {} ({})".format(paper["id"], type(exc).__name__))
-            break  # Avoid spending the budget repeatedly on a broken provider.
+            consecutive_errors += 1
+            paper["reason"] = "DeepSeek 返回格式无效，等待重试"
+            paper["review_attempted_at"] = now_iso()
+            print(f"Review deferred for {paper['id']} ({type(exc).__name__})", flush=True)
+            if consecutive_errors >= 4:
+                review_blocked = True
+                break
+        except OSError as exc:
+            errors += 1
+            review_blocked = True
+            paper["reason"] = "DeepSeek 接口暂不可用，等待重试"
+            code = f"HTTP {exc.code}" if isinstance(exc, urllib.error.HTTPError) else type(exc).__name__
+            print(f"Review interrupted for {paper['id']} ({code})", flush=True)
+            break
     # A metadata recheck can correct the venue year after the first filter.
     papers = filter_collection_year(papers, year)
     code_backfill = {}
-    if official is not None and agent.key and not no_llm and not search_errors and not errors:
+    if official is not None and agent.key and not no_llm and not search_errors and not review_blocked:
         from .deepseek import backfill_code_links
         code_backfill = backfill_code_links(papers, agent.key, config.get("code_searches_per_run", 5))
     save_json(root / "data/papers.json", papers)
@@ -334,8 +361,11 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None):
     pending = [paper for paper in papers if paper["status"] == "pending"]
     state.update(last_run_at=now_iso(), collected=len(incoming), llm_calls=agent.calls,
                  pending=len(pending), missing_abstract=sum(not p.get("abstract") for p in pending),
-                 review_errors=errors, sources=reports,
+                 review_errors=errors, review_blocked=review_blocked, sources=reports,
                  deepseek_search_calls=search_calls, deepseek_search_errors=search_errors,
+                 deepseek_only_reviewed={status: sum(p.get("deepseek_only", False) and p["status"] == status
+                                                     for p in papers)
+                                         for status in ("accepted", "pending", "rejected")},
                  code_backfill=code_backfill,
                  llm_status="disabled" if no_llm else "enabled" if agent.key else "missing_key",
                  mode="rules-only" if no_llm or not agent.key else "agent")

@@ -330,6 +330,8 @@ class OfficialSources:
             tracked = {p["id"]: p for p in entries if title_key(p["title"]) in self.existing}
             candidates = list({**keyword, **matches, **tracked}.values())
             deepseek_only = [p for pid, p in matches.items() if pid not in keyword]
+            for paper in deepseek_only:
+                paper["deepseek_only"] = True
             deepseek_new = [p for p in deepseek_only if title_key(p["title"]) not in self.existing]
             needs_detail = []
             for paper in candidates:
@@ -338,7 +340,8 @@ class OfficialSources:
                     continue
                 needs_detail.append((paper, existing))
             # New candidates and missing abstracts go first, then refresh the oldest links.
-            needs_detail.sort(key=lambda pair: (bool(pair[1].get("abstract") or pair[0]["abstract"]),
+            needs_detail.sort(key=lambda pair: (not (pair[0].get("deepseek_only") or pair[1].get("deepseek_only")),
+                                                bool(pair[1].get("abstract") or pair[0]["abstract"]),
                                                 pair[1].get("metadata_checked_at", "")))
             def check_detail(pair):
                 paper, existing = pair
@@ -366,4 +369,5 @@ class OfficialSources:
                     deepseek_only=len(deepseek_only),
                     deepseek_new=[{"title": p["title"], "url": p["url"]} for p in deepseek_new[:20]],
                 )
+            print(f"{venue}: scanned {scanned}, {len(candidates)} candidates, {checked} details refreshed", flush=True)
         return papers, reports

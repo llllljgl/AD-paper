@@ -97,6 +97,10 @@ def report(root=ROOT):
         for hit in row.get("deepseek_new", []):
             title = markdown_link(markdown_text(hit["title"]), hit["url"])
             print(f"\n- {venue} · DeepSeek 新候选 · {title}")
+    compared = state.get("deepseek_only_reviewed", {})
+    if any(compared.values()):
+        print(f"\n仅 DeepSeek 命中的候选累计收录 {compared['accepted']} 篇，"
+              f"待筛 {compared['pending']} 篇，排除 {compared['rejected']} 篇。")
     code = state.get("code_backfill", {})
     if code:
         print(f"\n代码仓库复查 {code['checked']} 篇，补充 {code['added']} 篇。")
@@ -107,7 +111,7 @@ def report(root=ROOT):
         print("\n缺少仓库 Secret `DEEPSEEK_API_KEY`。本轮已保存官方来源候选。")
     failed_sources = any(row["status"] == "failed" for row in state.get("sources", {}).values())
     return int(missing_key or failed_sources or bool(search_errors) or bool(code.get("error"))
-               or bool(state.get("review_errors")))
+               or bool(state.get("review_blocked")))
 
 
 def main():
