@@ -984,5 +984,1420 @@
       "仅正常样本",
       "缺陷定位"
     ]
+  },
+  {
+    "id": "2508.03088",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "ADSeeker: A Knowledge-Grounded Reasoning Framework for Industry Anomaly Detection and Reasoning",
+    "authors": [
+      "Zhang, Kai",
+      "Zhang, Zekai",
+      "Sun, Xihe",
+      "Wang, Anpeng",
+      "Nie, Jingmeng",
+      "Chen, Qinghui",
+      "Hao, Han",
+      "Guo, Jianyuan",
+      "Zhang, Jinglin"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_ADSeeker_A_Knowledge-Grounded_Reasoning_Framework_for_Industry_Anomaly_Detection_and_CVPR_2026_paper.html",
+    "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_ADSeeker_A_Knowledge-Grounded_Reasoning_Framework_for_Industry_Anomaly_Detection_and_CVPR_2026_paper.html",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_ADSeeker_A_Knowledge-Grounded_Reasoning_Framework_for_Industry_Anomaly_Detection_and_CVPR_2026_paper.pdf",
+    "source": "官方会议论文页",
+    "venue": "CVPR 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "多模态",
+      "检索增强",
+      "缺陷推理"
+    ],
+    "summary_zh": "构建工业缺陷视觉知识库，根据待检图像检索相似案例与文档，让模型结合领域证据做质检推理。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_ADSeeker_A_Knowledge-Grounded_Reasoning_Framework_for_Industry_Anomaly_Detection_and_CVPR_2026_paper.html"
+      }
+    ]
+  },
+  {
+    "id": "2603.03101",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "MoECLIP: Patch-Specialized Experts for Zero-shot Anomaly Detection",
+    "authors": [
+      "Park, Jun Yeong",
+      "Seo, JunYoung",
+      "Kang, Minji",
+      "Park, Yu Rang"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Park_MoECLIP_Patch-Specialized_Experts_for_Zero-shot_Anomaly_Detection_CVPR_2026_paper.html",
+    "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Park_MoECLIP_Patch-Specialized_Experts_for_Zero-shot_Anomaly_Detection_CVPR_2026_paper.html",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Park_MoECLIP_Patch-Specialized_Experts_for_Zero-shot_Anomaly_Detection_CVPR_2026_paper.pdf",
+    "source": "官方会议论文页",
+    "venue": "CVPR 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/CoCoRessa/MoECLIP"
+    ],
+    "status": "accepted",
+    "tags": [
+      "零样本",
+      "CLIP",
+      "混合专家"
+    ],
+    "summary_zh": "按图像块动态选择 LoRA 专家，为不同局部特征提供专门适配，同时保留 CLIP 对未见类别的迁移能力。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Park_MoECLIP_Patch-Specialized_Experts_for_Zero-shot_Anomaly_Detection_CVPR_2026_paper.html"
+      }
+    ]
+  },
+  {
+    "id": "cvpr:336b0d28236418df",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Geometry-Aligned and Anomaly-Aware Reconstruction for 3D Anomaly Detection",
+    "authors": [
+      "Wu, Linchun",
+      "Zou, Qin",
+      "Yue, Yuanhao",
+      "Wang, Zhongyuan"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Geometry-Aligned_and_Anomaly-Aware_Reconstruction_for_3D_Anomaly_Detection_CVPR_2026_paper.html",
+    "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Geometry-Aligned_and_Anomaly-Aware_Reconstruction_for_3D_Anomaly_Detection_CVPR_2026_paper.html",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Wu_Geometry-Aligned_and_Anomaly-Aware_Reconstruction_for_3D_Anomaly_Detection_CVPR_2026_paper.pdf",
+    "source": "官方会议论文页",
+    "venue": "CVPR 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "点云",
+      "扩散重建",
+      "缺陷定位"
+    ],
+    "summary_zh": "沿点云表面法向加入噪声，并为异常区域引入正常参考，减少三维扩散重建中的几何失真。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Geometry-Aligned_and_Anomaly-Aware_Reconstruction_for_3D_Anomaly_Detection_CVPR_2026_paper.html"
+      }
+    ]
+  },
+  {
+    "id": "2509.25934",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "UniMMAD: Unified Multi-Modal and Multi-Class Anomaly Detection via MoE-Driven Feature Decompression",
+    "authors": [
+      "Zhao, Yuan",
+      "Pang, Youwei",
+      "Zhang, Lihe",
+      "Liu, Hanqi",
+      "Zuo, Jiaming",
+      "Lu, Huchuan",
+      "Zhao, Xiaoqi"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_UniMMAD_Unified_Multi-Modal_and_Multi-Class_Anomaly_Detection_via_MoE-Driven_Feature_CVPR_2026_paper.html",
+    "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_UniMMAD_Unified_Multi-Modal_and_Multi-Class_Anomaly_Detection_via_MoE-Driven_Feature_CVPR_2026_paper.html",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_UniMMAD_Unified_Multi-Modal_and_Multi-Class_Anomaly_Detection_via_MoE-Driven_Feature_CVPR_2026_paper.pdf",
+    "source": "官方会议论文页",
+    "venue": "CVPR 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/yuanzhao-CVLAB/UniMMAD"
+    ],
+    "status": "accepted",
+    "tags": [
+      "多模态",
+      "多类别",
+      "混合专家"
+    ],
+    "summary_zh": "先压缩不同模态的输入，再按类别和模态选择专家重建特征，让一个模型处理多种缺陷检测设置。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_UniMMAD_Unified_Multi-Modal_and_Multi-Class_Anomaly_Detection_via_MoE-Driven_Feature_CVPR_2026_paper.html"
+      }
+    ]
+  },
+  {
+    "id": "2512.24160",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Towards Open-Vocabulary Industrial Defect Understanding with a Large-Scale Multimodal Dataset",
+    "authors": [
+      "Ni, Tsai-Ching",
+      "Chen, Cheng-Chi",
+      "Yang, Yuan-Fu"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ni_Towards_Open-Vocabulary_Industrial_Defect_Understanding_with_a_Large-Scale_Multimodal_Dataset_CVPR_2026_paper.html",
+    "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ni_Towards_Open-Vocabulary_Industrial_Defect_Understanding_with_a_Large-Scale_Multimodal_Dataset_CVPR_2026_paper.html",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Ni_Towards_Open-Vocabulary_Industrial_Defect_Understanding_with_a_Large-Scale_Multimodal_Dataset_CVPR_2026_paper.pdf",
+    "source": "官方会议论文页",
+    "venue": "CVPR 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "工业数据集",
+      "图文对齐",
+      "开放词汇"
+    ],
+    "summary_zh": "发布工业缺陷图文数据集 IMDD-1M，包含细粒度位置与严重程度描述，可用于训练开放词汇质检模型。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Ni_Towards_Open-Vocabulary_Industrial_Defect_Understanding_with_a_Large-Scale_Multimodal_Dataset_CVPR_2026_paper.html"
+      }
+    ]
+  },
+  {
+    "id": "cvpr:305cb32933d807b6",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Omni-AD: A Large-scale and Versatile Benchmark for Industrial Anomaly Detection",
+    "authors": [
+      "Shi, Dahu",
+      "He, Chengshen",
+      "Zhang, Shaochen",
+      "Qian, Bo",
+      "Quan, Xiaochen",
+      "Zhang, Wencong",
+      "Wei, Xing"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Shi_Omni-AD_A_Large-scale_and_Versatile_Benchmark_for_Industrial_Anomaly_Detection_CVPR_2026_paper.html",
+    "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Shi_Omni-AD_A_Large-scale_and_Versatile_Benchmark_for_Industrial_Anomaly_Detection_CVPR_2026_paper.html",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Shi_Omni-AD_A_Large-scale_and_Versatile_Benchmark_for_Industrial_Anomaly_Detection_CVPR_2026_paper.pdf",
+    "source": "官方会议论文页",
+    "venue": "CVPR 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "工业基准",
+      "视觉问答",
+      "缺陷定位"
+    ],
+    "summary_zh": "构建覆盖多行业与产品类别的 Omni-AD 基准，同时评估传统异常检测和多模态模型的问答与定位能力。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Shi_Omni-AD_A_Large-scale_and_Versatile_Benchmark_for_Industrial_Anomaly_Detection_CVPR_2026_paper.html"
+      }
+    ]
+  },
+  {
+    "id": "cvpr:1b172dbfea647f18",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "FastRef: Fast Prototype Refinement for Few-shot Industrial Anomaly Detection",
+    "authors": [
+      "Li, Yufei",
+      "Tian, Long",
+      "Dai, Yuyang",
+      "Chen, Wenchao",
+      "Bao, Liang",
+      "Liu, Xiyang"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_FastRef_Fast_Prototype_Refinement_for_Few-shot_Industrial_Anomaly_Detection_CVPR_2026_paper.html",
+    "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_FastRef_Fast_Prototype_Refinement_for_Few-shot_Industrial_Anomaly_Detection_CVPR_2026_paper.html",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_FastRef_Fast_Prototype_Refinement_for_Few-shot_Industrial_Anomaly_Detection_CVPR_2026_paper.pdf",
+    "source": "官方会议论文页",
+    "venue": "CVPR 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "少样本",
+      "原型学习",
+      "最优传输"
+    ],
+    "summary_zh": "测试时从待检图像提取信息更新正常原型，再用最优传输抑制异常特征混入，适合正常参考图很少的场景。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_FastRef_Fast_Prototype_Refinement_for_Few-shot_Industrial_Anomaly_Detection_CVPR_2026_paper.html"
+      }
+    ]
+  },
+  {
+    "id": "2604.02905",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "UniSpector: Towards Universal Open-set Defect Recognition via Spectral-Contrastive Visual Prompting",
+    "authors": [
+      "Kim, Geonuk",
+      "Kim, Minhoi",
+      "Lee, Kangil",
+      "Kim, Minsu",
+      "Jeon, Hyeonseong",
+      "Han, Jeonghoon",
+      "Lim, Hyoungjoon",
+      "Yim, Junho"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_UniSpector_Towards_Universal_Open-set_Defect_Recognition_via_Spectral-Contrastive_Visual_Prompting_CVPR_2026_paper.html",
+    "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_UniSpector_Towards_Universal_Open-set_Defect_Recognition_via_Spectral-Contrastive_Visual_Prompting_CVPR_2026_paper.html",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_UniSpector_Towards_Universal_Open-set_Defect_Recognition_via_Spectral-Contrastive_Visual_Prompting_CVPR_2026_paper.pdf",
+    "source": "官方会议论文页",
+    "venue": "CVPR 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "开放集",
+      "视觉提示",
+      "缺陷定位"
+    ],
+    "summary_zh": "用空间与频谱特征构造可迁移的视觉提示，并提出开放集缺陷定位基准 Inspect Anything。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_UniSpector_Towards_Universal_Open-set_Defect_Recognition_via_Spectral-Contrastive_Visual_Prompting_CVPR_2026_paper.html"
+      }
+    ]
+  },
+  {
+    "id": "cvpr:6bd67b15330b6899",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Defect Cue-Preserved Structural Feature Refinement for Few-Shot Anomaly Detection",
+    "authors": [
+      "Jiang, Le",
+      "Huang, Yan",
+      "Xu, Zhen",
+      "Xu, Yong",
+      "Wong, Hau-San",
+      "Wu, Si"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jiang_Defect_Cue-Preserved_Structural_Feature_Refinement_for_Few-Shot_Anomaly_Detection_CVPR_2026_paper.html",
+    "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jiang_Defect_Cue-Preserved_Structural_Feature_Refinement_for_Few-Shot_Anomaly_Detection_CVPR_2026_paper.html",
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Jiang_Defect_Cue-Preserved_Structural_Feature_Refinement_for_Few-Shot_Anomaly_Detection_CVPR_2026_paper.pdf",
+    "source": "官方会议论文页",
+    "venue": "CVPR 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "少样本",
+      "特征重建",
+      "缺陷分割"
+    ],
+    "summary_zh": "在特征提取早期放大微弱缺陷线索，再引导重建和边界细化，减少小缺陷在深层特征中被抹去。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Jiang_Defect_Cue-Preserved_Structural_Feature_Refinement_for_Few-Shot_Anomaly_Detection_CVPR_2026_paper.html"
+      }
+    ]
+  },
+  {
+    "id": "eccv:f81e82788bfd22f8",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Global Logic and Local Search: Dual-Stream Multimodal In-Context Learning for Verifiable Industrial Anomaly Detection",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://eccv.ecva.net/virtual/2026/poster/5200",
+    "official_url": "https://eccv.ecva.net/virtual/2026/poster/5200",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/9365.pdf",
+    "source": "官方会议论文页",
+    "venue": "ECCV 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "免训练",
+      "多模态",
+      "可追溯诊断"
+    ],
+    "summary_zh": "用全局分支核对部件与检验规则，用局部分支搜索细粒度图像证据，让缺陷判断可以追溯到具体区域。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://eccv.ecva.net/virtual/2026/poster/5200"
+      }
+    ]
+  },
+  {
+    "id": "eccv:d2616c710b029824",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "DeMuS: Learning Decoupled Matching and Scoring for Batch Zero-Shot Industrial Anomaly Detection",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://eccv.ecva.net/virtual/2026/poster/3717",
+    "official_url": "https://eccv.ecva.net/virtual/2026/poster/3717",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/2743.pdf",
+    "source": "官方会议论文页",
+    "venue": "ECCV 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/evoLonation/DeMuS"
+    ],
+    "status": "accepted",
+    "tags": [
+      "零样本",
+      "批内互评分",
+      "部件匹配"
+    ],
+    "summary_zh": "把部件对齐和异常评分拆成两个学习目标，在正常参考较少且产品姿态变化时减少错误匹配。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://eccv.ecva.net/virtual/2026/poster/3717"
+      }
+    ]
+  },
+  {
+    "id": "eccv:f32e7533a91a98a2",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "O-VAD: Industrial Video Anomaly Detection through Object-Centric Tracking and Reasoning",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://eccv.ecva.net/virtual/2026/poster/4659",
+    "official_url": "https://eccv.ecva.net/virtual/2026/poster/4659",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/6897.pdf",
+    "source": "官方会议论文页",
+    "venue": "ECCV 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "工业视频",
+      "对象跟踪",
+      "异常推理"
+    ],
+    "summary_zh": "跟踪生产视频中各物体的状态变化，再沿时间轨迹推理异常，适合检测静态图像难以识别的工序错误。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://eccv.ecva.net/virtual/2026/poster/4659"
+      }
+    ]
+  },
+  {
+    "id": "eccv:cfbf60c2ad05603f",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "FuDU: A Fuzzy Dual-dimension Uncertainty Framework for Streaming Active Learning in Industrial Defect Detection",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://eccv.ecva.net/virtual/2026/poster/5087",
+    "official_url": "https://eccv.ecva.net/virtual/2026/poster/5087",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/8772.pdf",
+    "source": "官方会议论文页",
+    "venue": "ECCV 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/wangzhaoyang-508/FuDU"
+    ],
+    "status": "accepted",
+    "tags": [
+      "工业质检",
+      "主动学习",
+      "不确定性"
+    ],
+    "summary_zh": "同时估计整图和缺陷框的不确定性，用模糊推理选出值得人工复核和标注的流式样本。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://eccv.ecva.net/virtual/2026/poster/5087"
+      }
+    ]
+  },
+  {
+    "id": "eccv:98e7046673261398",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Rethinking Continual Anomaly Detection on the Edge: Benchmarking Under Realistic Industrial Conditions",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://eccv.ecva.net/virtual/2026/poster/3516",
+    "official_url": "https://eccv.ecva.net/virtual/2026/poster/3516",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/1778.pdf",
+    "source": "官方会议论文页",
+    "venue": "ECCV 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "持续学习",
+      "边缘部署",
+      "工业基准"
+    ],
+    "summary_zh": "用持续漂移和边缘设备实测评估质检模型，并给出基于冻结 DINOv3 和局部记忆检索的免训练基线。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://eccv.ecva.net/virtual/2026/poster/3516"
+      }
+    ]
+  },
+  {
+    "id": "eccv:62b4c44c4b188a2b",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Beyond Common Sense: Grounding Logical Anomaly Detection in Inspection Criteria",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://eccv.ecva.net/virtual/2026/poster/4468",
+    "official_url": "https://eccv.ecva.net/virtual/2026/poster/4468",
+    "pdf_url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/6072.pdf",
+    "source": "官方会议论文页",
+    "venue": "ECCV 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/tzjtatata/SCAN"
+    ],
+    "status": "accepted",
+    "tags": [
+      "逻辑异常",
+      "检验规则",
+      "多模态"
+    ],
+    "summary_zh": "让模型逐条核查显式检验标准，并按规则分配强化学习奖励，用于判断装配或布局是否违反规范。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://eccv.ecva.net/virtual/2026/poster/4468"
+      }
+    ]
+  },
+  {
+    "id": "iclr:4ac1cb17c2580dc2",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "MRAD: Zero-Shot Anomaly Detection with Memory-Driven Retrieval",
+    "authors": [
+      "Xu, Chaoran",
+      "Lv, Chengkan",
+      "Chen, Qiyu",
+      "Zhang, Feng",
+      "Zhang, Zhengtao"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4c12e97f2e05304a451e18c9c945036f-Abstract-Conference.html",
+    "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4c12e97f2e05304a451e18c9c945036f-Abstract-Conference.html",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/4c12e97f2e05304a451e18c9c945036f-Paper-Conference.pdf",
+    "source": "官方会议论文页",
+    "venue": "ICLR 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/CROVO1026/MRAD"
+    ],
+    "status": "accepted",
+    "tags": [
+      "零样本",
+      "记忆库",
+      "跨域"
+    ],
+    "summary_zh": "将辅助数据的图像级和像素级特征存入记忆库，通过相似检索为新类别预测异常分数和位置。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4c12e97f2e05304a451e18c9c945036f-Abstract-Conference.html"
+      }
+    ]
+  },
+  {
+    "id": "iclr:53d4d25f3c1b1119",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "JUDO: A Juxtaposed Domain-Oriented Multimodal Reasoner for Industrial Anomaly QA",
+    "authors": [
+      "Kang, Hyunju",
+      "Lee, Woohyun",
+      "Kim, Jaewon",
+      "Park, Hogun"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/92a7a03e1c716970848a4a86cc8243ee-Abstract-Conference.html",
+    "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/92a7a03e1c716970848a4a86cc8243ee-Abstract-Conference.html",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/92a7a03e1c716970848a4a86cc8243ee-Paper-Conference.pdf",
+    "source": "官方会议论文页",
+    "venue": "ICLR 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "多模态",
+      "视觉问答",
+      "缺陷分割"
+    ],
+    "summary_zh": "并排比较正常参考图和待检图以定位缺陷，再通过监督微调和强化学习提升工业异常问答能力。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/92a7a03e1c716970848a4a86cc8243ee-Abstract-Conference.html"
+      }
+    ]
+  },
+  {
+    "id": "iclr:69c3306541c79867",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Foundation Visual Encoders Are Secretly Few-Shot Anomaly Detectors",
+    "authors": [
+      "Zhai, Guangyao",
+      "Zhou, Yue",
+      "Deng, Xinyan",
+      "Heckler-Kram, Lars",
+      "Navab, Nassir",
+      "Busam, Benjamin"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9e47a0bc530cc88b09b7670d2c130a29-Abstract-Conference.html",
+    "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9e47a0bc530cc88b09b7670d2c130a29-Abstract-Conference.html",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/9e47a0bc530cc88b09b7670d2c130a29-Paper-Conference.pdf",
+    "source": "官方会议论文页",
+    "venue": "ICLR 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/ymxlzgy/FoundAD"
+    ],
+    "status": "accepted",
+    "tags": [
+      "少样本",
+      "视觉基础模型",
+      "跨类别"
+    ],
+    "summary_zh": "在视觉基础模型的嵌入空间学习投影，利用图像特征偏离自然图像分布的程度做跨类别少样本检测。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9e47a0bc530cc88b09b7670d2c130a29-Abstract-Conference.html"
+      }
+    ]
+  },
+  {
+    "id": "iclr:6087de2ef5522485",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "PIRN: Prototypical-based Intra-modal Reconstruction with Normality Communication for Multi-modal Anomaly Detection.",
+    "authors": [
+      "Li, Yiting",
+      "yang, xulei",
+      "Zhang, Jing",
+      "Tian, Sichao",
+      "Liao, Jingyi",
+      "Liu, Fayao"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/f7e7fabd73b3df96c54a320862afcb78-Abstract-Conference.html",
+    "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/f7e7fabd73b3df96c54a320862afcb78-Abstract-Conference.html",
+    "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/f7e7fabd73b3df96c54a320862afcb78-Paper-Conference.pdf",
+    "source": "官方会议论文页",
+    "venue": "ICLR 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "少样本",
+      "RGB 与点云",
+      "原型重建"
+    ],
+    "summary_zh": "为 RGB 和三维模态建立正常原型，并在重建时交换正常线索，缓解少样本下跨模态对齐不可靠的问题。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/f7e7fabd73b3df96c54a320862afcb78-Abstract-Conference.html"
+      }
+    ]
+  },
+  {
+    "id": "icml:d923dffcdb8abf22",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Remove the Ambiguity: Few-shot Multimodal Anomaly Detection Using Crossmodal Feature Replacer",
+    "authors": [
+      "Yuan Guo",
+      "Wanqi Zhang",
+      "Xu Wang"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://proceedings.mlr.press/v306/guo26ai.html",
+    "official_url": "https://proceedings.mlr.press/v306/guo26ai.html",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/guo26ai/guo26ai.pdf",
+    "source": "官方会议论文页",
+    "venue": "ICML 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/Yuan-Honoka-Guo/CFR"
+    ],
+    "status": "accepted",
+    "tags": [
+      "少样本",
+      "多模态",
+      "特征重建"
+    ],
+    "summary_zh": "先进行 RGB 与三维特征的双向重建，再用高置信正常特征替换不可靠区域，避免模糊重建干扰缺陷判断。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://proceedings.mlr.press/v306/guo26ai.html"
+      }
+    ]
+  },
+  {
+    "id": "icml:748e8996dafb7af0",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "CoGeoAD: Hierarchical Color-Geometric Fusion with Multi-View Attention for Zero-Shot 3D Anomaly Detection",
+    "authors": [
+      "Ke Xu",
+      "Xinle Wang",
+      "Yanning Hou",
+      "Xueliang Ma",
+      "Juan Xie",
+      "Jianfeng Qiu"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://proceedings.mlr.press/v306/xu26bg.html",
+    "official_url": "https://proceedings.mlr.press/v306/xu26bg.html",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/xu26bg/xu26bg.pdf",
+    "source": "官方会议论文页",
+    "venue": "ICML 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "零样本",
+      "三维质检",
+      "多视角融合"
+    ],
+    "summary_zh": "将多视角的颜色和几何信息对齐，用分层融合同时检测纹理和结构缺陷，在 MVTec 3D-AD 与 Eyecandies 上评估。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://proceedings.mlr.press/v306/xu26bg.html"
+      }
+    ]
+  },
+  {
+    "id": "icml:b9a3a3b7c22f7b06",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Is Task-Specific Training Necessary for Anomaly Detection?",
+    "authors": [
+      "Xingwu Zhang",
+      "Guanxuan Li",
+      "Paul Henderson",
+      "Gerardo Aragon-Camarasa",
+      "Zijun Long"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://proceedings.mlr.press/v306/zhang26ck.html",
+    "official_url": "https://proceedings.mlr.press/v306/zhang26ck.html",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhang26ck/zhang26ck.pdf",
+    "source": "官方会议论文页",
+    "venue": "ICML 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/longkukuhi/RAD"
+    ],
+    "status": "accepted",
+    "tags": [
+      "免训练",
+      "多类别",
+      "记忆检索"
+    ],
+    "summary_zh": "从正常图像建立局部特征库，用多层检索匹配待检图像块，检验多类别工业异常检测能否省去任务训练。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://proceedings.mlr.press/v306/zhang26ck.html"
+      }
+    ]
+  },
+  {
+    "id": "ijcai:19761cd7c018f6fd",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "GRASP: Enhancing Zero-Shot Multi-Modal Anomaly Detection via Geometric Refinement and Semantic Prompting",
+    "authors": [
+      "Sun, Zhongbin",
+      "Cui, Yuze",
+      "Zhou, Yong"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://ijcai.org/proceedings/2026/185",
+    "official_url": "https://ijcai.org/proceedings/2026/185",
+    "pdf_url": "https://ijcai.org/proceedings/2026/0185.pdf",
+    "source": "官方会议论文页",
+    "venue": "IJCAI 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "零样本",
+      "多模态",
+      "结构缺陷"
+    ],
+    "summary_zh": "用频域变换从点云构造深度输入，再融合局部视觉证据与文本提示，定位 RGB 中不易察觉的结构缺陷。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://ijcai.org/proceedings/2026/185"
+      }
+    ]
+  },
+  {
+    "id": "neurips:fa53d1a1220e5351",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "GATE-AD: Graph Attention Network Encoding for Few-Shot Industrial Visual Anomaly Detection",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://neurips.cc/virtual/2026/poster/151322",
+    "official_url": "https://neurips.cc/virtual/2026/poster/151322",
+    "pdf_url": "",
+    "source": "官方会议日程",
+    "venue": "NeurIPS 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "少样本",
+      "图注意力",
+      "特征重建"
+    ],
+    "summary_zh": "把局部图像特征建成近邻图，用图注意力重建正常的邻域关系，以重建误差检测缺陷。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://neurips.cc/virtual/2026/poster/151322"
+      }
+    ]
+  },
+  {
+    "id": "neurips:7f9438e1ab55cf42",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Towards Explainable Industrial Anomaly Detection via Knowledge-Guided Latent Reasoning",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://neurips.cc/virtual/2026/poster/151471",
+    "official_url": "https://neurips.cc/virtual/2026/poster/151471",
+    "pdf_url": "",
+    "source": "官方会议日程",
+    "venue": "NeurIPS 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "可解释性",
+      "知识检索",
+      "潜空间推理"
+    ],
+    "summary_zh": "检索产品类别的缺陷知识，用熵引导模型在潜空间迭代推理，并动态补入更有信息的局部图像特征。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://neurips.cc/virtual/2026/poster/151471"
+      }
+    ]
+  },
+  {
+    "id": "neurips:a7c3d46b9547702f",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "M3-AD: Reflection-aware Multi-modal, Multi-category, and Multi-dimensional Benchmark and Framework for Industrial Anomaly Detection",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://neurips.cc/virtual/2026/poster/149620",
+    "official_url": "https://neurips.cc/virtual/2026/poster/149620",
+    "pdf_url": "",
+    "source": "官方会议日程",
+    "venue": "NeurIPS 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "工业基准",
+      "多模态",
+      "自我纠错"
+    ],
+    "summary_zh": "提供用于训练和评估工业质检模型反思能力的数据，并让模型在初次判断不可靠时重新检查和修正结果。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://neurips.cc/virtual/2026/poster/149620"
+      }
+    ]
+  },
+  {
+    "id": "neurips:b8fc3a740b8e0362",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "AirIAD: Agentic Iterative Reasoning for Industrial Anomaly Detection",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://neurips.cc/virtual/2026/poster/153593",
+    "official_url": "https://neurips.cc/virtual/2026/poster/153593",
+    "pdf_url": "",
+    "source": "官方会议日程",
+    "venue": "NeurIPS 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "智能体",
+      "多模态",
+      "缺陷诊断"
+    ],
+    "summary_zh": "让模型迭代调用局部放大和知识检索工具，交叉核对视觉与语义证据，逐步细化缺陷诊断。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://neurips.cc/virtual/2026/poster/153593"
+      }
+    ]
+  },
+  {
+    "id": "2610.15032",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "InCLAD: A Continual Learning Benchmark for Industrial Visual Anomaly Detection",
+    "authors": [],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://neurips.cc/virtual/2026/poster/139535",
+    "official_url": "https://neurips.cc/virtual/2026/poster/139535",
+    "pdf_url": "https://arxiv.org/pdf/2610.15032",
+    "source": "官方会议日程",
+    "venue": "NeurIPS 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "持续学习",
+      "半监督",
+      "工业基准"
+    ],
+    "summary_zh": "将不同工业零件组织成连续到达的任务，比较多种任务顺序下模型学习新零件时保留旧检测能力的程度。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://neurips.cc/virtual/2026/poster/139535"
+      }
+    ]
+  },
+  {
+    "id": "doi:10.1109/tpami.2026.3658856",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "ZUMA: Training-Free Zero-Shot Unified Multimodal Anomaly Detection",
+    "authors": [
+      "Yunfeng Ma",
+      "Min Liu",
+      "Shuai Jiang",
+      "Jingyu Zhou",
+      "Yuan Bian",
+      "Xueping Wang",
+      "Yaonan Wang"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://doi.org/10.1109/tpami.2026.3658856",
+    "official_url": "https://doi.org/10.1109/tpami.2026.3658856",
+    "pdf_url": "",
+    "source": "期刊 DOI",
+    "venue": "TPAMI 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "零样本",
+      "多模态",
+      "免训练"
+    ],
+    "summary_zh": "通过跨域校准缩小 CLIP 与点云表征之间的差距，直接利用纹理和三维结构开展免训练异常检测。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://doi.org/10.1109/tpami.2026.3658856"
+      }
+    ]
+  },
+  {
+    "id": "2511.10047",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "MuSc-V2: Zero-Shot Multimodal Industrial Anomaly Classification and Segmentation With Mutual Scoring of Unlabeled Samples",
+    "authors": [
+      "Xurui Li",
+      "Feng Xue",
+      "Yu Zhou"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://doi.org/10.1109/tpami.2026.3688174",
+    "official_url": "https://doi.org/10.1109/tpami.2026.3688174",
+    "pdf_url": "https://arxiv.org/pdf/2511.10047",
+    "source": "期刊 DOI",
+    "venue": "TPAMI 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/HUST-SLOW/MuSc-V2"
+    ],
+    "status": "accepted",
+    "tags": [
+      "零样本",
+      "多模态",
+      "互评分"
+    ],
+    "summary_zh": "通过无标签样本之间的局部相似性互相评分，并融合二维与三维异常图以找回单一模态容易漏检的缺陷。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://doi.org/10.1109/tpami.2026.3688174"
+      }
+    ]
+  },
+  {
+    "id": "doi:10.1109/tpami.2026.3711750",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "PCBClip: Vision-Language Defect Detection Model for Low-Sample Inspection Systems",
+    "authors": [
+      "Zhongshu Chen",
+      "Feng Guo",
+      "Zhenghua Chen",
+      "Lin Zuo",
+      "Yu Liu"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://doi.org/10.1109/tpami.2026.3711750",
+    "official_url": "https://doi.org/10.1109/tpami.2026.3711750",
+    "pdf_url": "",
+    "source": "期刊 DOI",
+    "venue": "TPAMI 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "PCB 质检",
+      "少标注",
+      "视觉语言模型"
+    ],
+    "summary_zh": "用局部图像块生成候选区域，以领域文本提示和正常样本约束减少少量粗标注对 PCB 缺陷检测的影响。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://doi.org/10.1109/tpami.2026.3711750"
+      }
+    ]
+  },
+  {
+    "id": "doi:10.1007/s11263-026-02885-1",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "ResAD++: Towards Class Agnostic Anomaly Detection via Residual Feature Learning",
+    "authors": [
+      "Yao, Xincheng",
+      "Shi, Chao",
+      "Zhao, Muming",
+      "Zhai, Guangtao",
+      "Zhang, Chongyang"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://doi.org/10.1007/s11263-026-02885-1",
+    "official_url": "https://doi.org/10.1007/s11263-026-02885-1",
+    "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11263-026-02885-1.pdf",
+    "source": "期刊 DOI",
+    "venue": "IJCV 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/xcyao00/ResAD"
+    ],
+    "status": "accepted",
+    "tags": [
+      "跨类别",
+      "残差特征",
+      "仅正常样本"
+    ],
+    "summary_zh": "匹配正常参考并用特征差构造残差，再学习跨类别的正常残差分布，支持对未见类别直接检测。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://doi.org/10.1007/s11263-026-02885-1"
+      }
+    ]
+  },
+  {
+    "id": "doi:10.1007/s11263-026-02743-0",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "The MVTec AD 2 Dataset: Advanced Scenarios for Unsupervised Anomaly Detection",
+    "authors": [
+      "Heckler-Kram, Lars",
+      "Neudeck, Jan-Hendrik",
+      "Scheler, Ulla",
+      "König, Rebecca",
+      "Steger, Carsten"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://doi.org/10.1007/s11263-026-02743-0",
+    "official_url": "https://doi.org/10.1007/s11263-026-02743-0",
+    "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11263-026-02743-0.pdf",
+    "source": "期刊 DOI",
+    "venue": "IJCV 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "工业基准",
+      "微小缺陷",
+      "光照变化"
+    ],
+    "summary_zh": "扩展 MVTec 基准，覆盖透明件、重叠件、微小缺陷和特殊光照，并提供光照变化场景用于测试鲁棒性。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://doi.org/10.1007/s11263-026-02743-0"
+      }
+    ]
+  },
+  {
+    "id": "doi:10.1109/tip.2026.3659337",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Accurate Industrial Anomaly Detection and Localization Using Weakly-Supervised Residual Transformers",
+    "authors": [
+      "Hanxi Li",
+      "Jingqi Wu",
+      "Deyin Liu",
+      "Lin Yuanbo Wu",
+      "Hao Chen",
+      "Chunhua Shen"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://doi.org/10.1109/tip.2026.3659337",
+    "official_url": "https://doi.org/10.1109/tip.2026.3659337",
+    "pdf_url": "",
+    "source": "期刊 DOI",
+    "venue": "TIP 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/BeJane/WeakREST"
+    ],
+    "status": "accepted",
+    "tags": [
+      "弱监督",
+      "特征残差",
+      "缺陷定位"
+    ],
+    "summary_zh": "用弱标注异常样本训练残差 Transformer，在降低像素级标注成本的同时学习检测和定位工业缺陷。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://doi.org/10.1109/tip.2026.3659337"
+      }
+    ]
+  },
+  {
+    "id": "doi:10.1109/tip.2026.3728632",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Hierarchical Dense Aggregation Network for Few-Shot Metal Surface Defect Segmentation",
+    "authors": [
+      "Hu Feng",
+      "Kechen Song",
+      "Xian Tao",
+      "Fei Shen",
+      "Yunhui Yan"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://doi.org/10.1109/tip.2026.3728632",
+    "official_url": "https://doi.org/10.1109/tip.2026.3728632",
+    "pdf_url": "",
+    "source": "期刊 DOI",
+    "venue": "TIP 2026",
+    "journal_ref": "",
+    "code_urls": [
+      "https://github.com/VDT-2048/HDANet"
+    ],
+    "status": "accepted",
+    "tags": [
+      "少样本",
+      "金属表面",
+      "缺陷分割"
+    ],
+    "summary_zh": "用正常与缺陷先验引导分割，再聚合多层特征抑制噪声，同时发布带像素标注的金属表面缺陷基准。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://doi.org/10.1109/tip.2026.3728632"
+      }
+    ]
+  },
+  {
+    "id": "doi:10.1109/tip.2026.3671617",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Few-Shot Strip Steel Surface Defect Segmentation via Pre-Trained Variational Auto-Encoder-Based Latent Gaussian Process Regression",
+    "authors": [
+      "Xiaofei Zhou",
+      "Xuan Wang",
+      "Gongyang Li",
+      "Deyang Liu",
+      "Qingshan She",
+      "Xiaobin Xu",
+      "Runmin Cong"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://doi.org/10.1109/tip.2026.3671617",
+    "official_url": "https://doi.org/10.1109/tip.2026.3671617",
+    "pdf_url": "",
+    "source": "期刊 DOI",
+    "venue": "TIP 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "少样本",
+      "带钢表面",
+      "缺陷分割"
+    ],
+    "summary_zh": "结合预训练变分自编码器和潜空间高斯过程回归，用少量标注样本分割带钢表面缺陷。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://doi.org/10.1109/tip.2026.3671617"
+      }
+    ]
+  },
+  {
+    "id": "aaai:596c2e5e176b3331",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "IAD-R1: Reinforcing Consistent Reasoning in Industrial Anomaly Detection",
+    "authors": [
+      "Yanhui Li",
+      "Yunkang Cao",
+      "Chengliang Liu",
+      "Yuan Xiong",
+      "Xinghui Dong",
+      "Chao Huang"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/37588",
+    "official_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37588",
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37588/41550",
+    "source": "官方会议论文页",
+    "venue": "AAAI 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "多模态",
+      "强化学习",
+      "缺陷推理"
+    ],
+    "summary_zh": "采用两阶段后训练，先提升视觉语言模型对工业缺陷的感知，再强化缺陷判断与解释的一致性。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://ojs.aaai.org/index.php/AAAI/article/view/37588"
+      }
+    ]
+  },
+  {
+    "id": "aaai:d69a9a700e8881f0",
+    "added_at": "2026-11-06T07:00:38+00:00",
+    "abstract": "",
+    "categories": [],
+    "title": "Towards High-Resolution 3D Anomaly Detection: A Scalable Dataset and Real-Time Framework for Subtle Industrial Defects",
+    "authors": [
+      "Yuqi Cheng",
+      "Yihan Sun",
+      "Hui Zhang",
+      "Weiming Shen",
+      "Yunkang Cao"
+    ],
+    "published": "2026",
+    "updated": "2026",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/37328",
+    "official_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37328",
+    "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/37328/41290",
+    "source": "官方会议论文页",
+    "venue": "AAAI 2026",
+    "journal_ref": "",
+    "code_urls": [],
+    "status": "accepted",
+    "tags": [
+      "点云",
+      "高分辨率",
+      "工业基准"
+    ],
+    "summary_zh": "提出高分辨率点云缺陷基准 MiniShift 和轻量 Simple3D 方法，用于检测工业零件表面的微小三维异常。",
+    "reason": "核对官方发表渠道及摘要，符合工业视觉异常检测或缺陷检测范围。",
+    "trace": [
+      {
+        "action": "keep",
+        "method": "source_review",
+        "source": "https://ojs.aaai.org/index.php/AAAI/article/view/37328"
+      }
+    ]
   }
 ]

@@ -41,6 +41,12 @@ class RadarTests(unittest.TestCase):
         self.assertEqual(result[0]["summary_zh"], "简介")
         self.assertEqual(result[0]["added_at"], old["added_at"])
 
+    def test_arxiv_scan_preserves_official_record_with_same_title(self):
+        official = paper(id="cvpr:example", title="Industrial Anomaly Detection!", status="accepted",
+                         venue="CVPR 2026", official_url="https://example.org/proceedings/1")
+        result = merge([official], [paper()], "2026-02-01T00:00:00Z")
+        self.assertEqual(result, [official])
+
     def test_revision_requires_new_review(self):
         result = merge([paper(status="accepted", summary_zh="Old")], [paper(updated="2026-02-02T00:00:00Z")], "today")
         self.assertEqual(result[0]["status"], "pending")

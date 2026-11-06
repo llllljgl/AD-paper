@@ -196,8 +196,15 @@ class Agent:
 
 def merge(existing, incoming, stamp):
     records = {p["id"]: dict(p) for p in existing}
+    official_titles = {
+        re.sub(r"[^\w]+", "", paper["title"].casefold())
+        for paper in existing if paper.get("official_url")
+    }
     for paper in incoming:
         old = records.get(paper["id"], {})
+        title_key = re.sub(r"[^\w]+", "", paper["title"].casefold())
+        if old.get("official_url") or title_key in official_titles:
+            continue
         changed = old.get("updated") != paper["updated"] or old.get("abstract") != paper["abstract"]
         review_fields = {"status", "topic", "summary_zh", "tags", "reason", "trace", "reviewed_at", "added_at"}
         item = {**old, **{k: v for k, v in paper.items() if k not in review_fields}, "added_at": old.get("added_at", stamp)}
