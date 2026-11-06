@@ -132,14 +132,20 @@ class RadarTests(unittest.TestCase):
             root = Path(folder)
             save_json(root / "config.json", json.loads((ROOT / "config.json").read_text()))
             source = Mock()
-            source.collect.return_value = [paper(), paper(id="second", title="Second paper")]
+            source.collect.return_value = [
+                paper(),
+                paper(id="second", title="Second paper"),
+                paper(id="audio", title="Acoustic anomaly detection",
+                      abstract="We detect drill jamming from ultrasound in industrial manufacturing."),
+            ]
             with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test"}), patch.object(
                     Agent, "review", side_effect=[ValueError("empty"), {"status": "accepted"}]):
                 state = run(root, source=source)
             saved = json.loads((root / "data/papers.json").read_text())
             self.assertEqual({p["id"]: p["status"] for p in saved},
-                             {"2601.00001": "pending", "second": "accepted"})
+                             {"2601.00001": "pending", "second": "accepted", "audio": "pending"})
             self.assertEqual(state["review_errors"], 1)
+            self.assertEqual(state["missing_scope_evidence"], 1)
             self.assertFalse(state["review_blocked"])
 
     def test_readme_groups_reviewed_entries_and_collapses_tip(self):

@@ -3,7 +3,7 @@
   "last_run_at": "2026-11-06T09:11:54+00:00",
   "collected": 380,
   "llm_calls": 60,
-  "pending": 195,
+  "pending": 205,
   "review_errors": 2,
   "mode": "agent",
   "missing_abstract": 73,
@@ -150,5 +150,6 @@
     "accepted": 2,
     "pending": 0,
     "rejected": 3
-  }
+  },
+  "missing_scope_evidence": 119
 }

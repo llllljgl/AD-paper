@@ -147,15 +147,11 @@
       "cs.LG"
     ],
     "added_at": "2026-11-06T06:45:26+00:00",
-    "status": "accepted",
+    "status": "rejected",
     "topic": "重建与生成",
-    "summary_zh": "用超声波声学特征与自编码器对CNC钻孔过程建模，提前识别卡钻前兆，并发布17支钻头的数据集与基准。",
-    "tags": [
-      "工业异常检测",
-      "自编码器",
-      "声学监测"
-    ],
-    "reason": "摘要明确针对CNC钻孔加工中的声学异常检测与卡钻早期识别，属于工业视觉相关异常检测框架（基于声学信号、半监督自编码器），并发布工业数据集与评估。",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "声学异常检测超出工业视觉范围",
     "trace": [
       {
         "action": "verify",
@@ -168,6 +164,10 @@
       {
         "action": "keep",
         "reason": "摘要明确针对CNC钻孔加工中的声学异常检测与卡钻早期识别，属于工业视觉相关异常检测框架（基于声学信号、半监督自编码器），并发布工业数据集与评估。"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "声学异常检测超出工业视觉范围"
       }
     ],
     "reviewed_at": "2026-11-06T09:02:11+00:00",
@@ -4841,19 +4841,19 @@
     "metadata_checked_at": "2026-11-06T09:00:33+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "accepted",
+    "status": "pending",
     "topic": "少样本与零样本",
-    "summary_zh": "用三阶段合成数据生成与低秩适配器改造视觉基础模型，实现无需目标域训练图像的零样本异常检测与定位。",
-    "tags": [
-      "零样本异常检测",
-      "视觉基础模型",
-      "缺陷定位"
-    ],
-    "reason": "摘要明确面向零样本工业视觉异常检测与定位，利用视觉基础模型做异常检测。",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "公开摘要缺少明确的工业视觉证据",
     "trace": [
       {
         "action": "keep",
         "reason": "摘要明确面向零样本工业视觉异常检测与定位，利用视觉基础模型做异常检测。"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "公开摘要缺少明确的工业视觉证据"
       }
     ],
     "reviewed_at": "2026-11-06T09:02:33+00:00"
@@ -4880,19 +4880,19 @@
     "metadata_checked_at": "2026-11-06T09:00:33+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "accepted",
+    "status": "pending",
     "topic": "重建与生成",
-    "summary_zh": "提出基于扩散模型DDIM反演的无重建异常检测，用少量反演步骤加噪并依据已知先验分布打分，提升推理效率与检测精度。",
-    "tags": [
-      "扩散模型",
-      "无重建",
-      "异常检测"
-    ],
-    "reason": "摘要提出基于扩散模型反演的无重建工业视觉异常检测方法，并在常用AD基准上评估",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "公开摘要缺少明确的工业视觉证据",
     "trace": [
       {
         "action": "keep",
         "reason": "摘要提出基于扩散模型反演的无重建工业视觉异常检测方法，并在常用AD基准上评估"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "公开摘要缺少明确的工业视觉证据"
       }
     ],
     "reviewed_at": "2026-11-06T09:02:35+00:00"
@@ -4918,19 +4918,19 @@
     "metadata_checked_at": "2026-11-06T09:00:33+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "accepted",
+    "status": "pending",
     "topic": "特征与记忆库",
-    "summary_zh": "用二分图拉普拉斯能量衡量查询块偏离正常特征流形的程度，无需训练即可评分工业图像异常并稳定定位缺陷。",
-    "tags": [
-      "无监督异常检测",
-      "图拉普拉斯",
-      "缺陷定位"
-    ],
-    "reason": "摘要提出基于正常特征流形非一致性评分的无训练工业视觉异常检测方法，属于特征与记忆库范畴。",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "公开摘要缺少明确的工业视觉证据",
     "trace": [
       {
         "action": "keep",
         "reason": "摘要提出基于正常特征流形非一致性评分的无训练工业视觉异常检测方法，属于特征与记忆库范畴。"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "公开摘要缺少明确的工业视觉证据"
       }
     ],
     "reviewed_at": "2026-11-06T09:02:36+00:00"
@@ -4983,19 +4983,19 @@
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chen_SFR-Net_Steering-Fusion-Refining_Network_in_Multi-label_Zero-Shot_Sewer_Defect_Detection_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "accepted",
+    "status": "pending",
     "topic": "少样本与零样本",
-    "summary_zh": "针对下水管道缺陷标注昂贵且类别不全的问题，提出三阶段融合精炼网络实现多标签零样本缺陷检测，可参考其视觉语义对齐思路。",
-    "tags": [
-      "下水管道缺陷",
-      "零样本学习",
-      "语义对齐"
-    ],
-    "reason": "摘要明确针对市政下水管道缺陷检测的多标签零样本学习，属于工业视觉缺陷检测场景。",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "公开摘要缺少明确的工业视觉证据",
     "trace": [
       {
         "action": "keep",
         "reason": "摘要明确针对市政下水管道缺陷检测的多标签零样本学习，属于工业视觉缺陷检测场景。"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "公开摘要缺少明确的工业视觉证据"
       }
     ],
     "authors": [
@@ -5059,19 +5059,19 @@
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_A_Semantically_Disentangled_Unified_Model_for_Multi-category_3D_Anomaly_Detection_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "accepted",
+    "status": "pending",
     "topic": "重建与生成",
-    "summary_zh": "提出语义解耦统一模型，用类别条件对比学习与几何引导解码器重建3D点云特征，缓解类别间特征纠缠，提升多类3D异常检测可靠性。",
-    "tags": [
-      "3D异常检测",
-      "点云",
-      "特征重建"
-    ],
-    "reason": "摘要明确针对3D点云工业异常检测与定位，提出基于语义解耦特征重建的统一模型，属于工业视觉异常检测范围。",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "公开摘要缺少明确的工业视觉证据",
     "trace": [
       {
         "action": "keep",
         "reason": "摘要明确针对3D点云工业异常检测与定位，提出基于语义解耦特征重建的统一模型，属于工业视觉异常检测范围。"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "公开摘要缺少明确的工业视觉证据"
       }
     ],
     "authors": [
@@ -5250,19 +5250,19 @@
     "official_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Deng_GS-CLIP_Zero-shot_3D_Anomaly_Detection_by_Geometry-Aware_Prompt_and_Synergistic_CVPR_2026_paper.html",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "accepted",
+    "status": "pending",
     "topic": "视觉语言模型",
-    "summary_zh": "面向零样本3D异常检测，用几何缺陷蒸馏生成含形状先验的文本提示，并融合渲染图与深度图特征，提升检测与分割。",
-    "tags": [
-      "零样本3D异常检测",
-      "CLIP提示学习",
-      "多视图融合"
-    ],
-    "reason": "摘要明确针对零样本3D工业异常检测，提出基于CLIP的几何感知提示与多视图表示学习框架，属于工业视觉异常检测与分割范围",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "公开摘要缺少明确的工业视觉证据",
     "trace": [
       {
         "action": "keep",
         "reason": "摘要明确针对零样本3D工业异常检测，提出基于CLIP的几何感知提示与多视图表示学习框架，属于工业视觉异常检测与分割范围"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "公开摘要缺少明确的工业视觉证据"
       }
     ],
     "authors": [
@@ -5488,19 +5488,19 @@
     "metadata_checked_at": "2026-11-06T09:00:35+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "accepted",
+    "status": "pending",
     "topic": "视觉语言模型",
-    "summary_zh": "该方法用多模态大模型做异常检测持续学习，通过任务私有专家隔离参数、层级自适应共享专家实现跨任务知识迁移，应对跨类、跨域和跨模态场景。",
-    "tags": [
-      "异常检测",
-      "持续学习",
-      "多模态大模型"
-    ],
-    "reason": "摘要明确面向异常检测(AD)的持续学习，涉及跨模态、跨域与缺陷尺度异质性，并基于多模态大模型与参数高效微调，属于工业视觉异常检测范畴。",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "公开摘要缺少明确的工业视觉证据",
     "trace": [
       {
         "action": "keep",
         "reason": "摘要明确面向异常检测(AD)的持续学习，涉及跨模态、跨域与缺陷尺度异质性，并基于多模态大模型与参数高效微调，属于工业视觉异常检测范畴。"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "公开摘要缺少明确的工业视觉证据"
       }
     ],
     "reviewed_at": "2026-11-06T09:02:40+00:00"
@@ -5578,19 +5578,19 @@
     "official_url": "https://eccv.ecva.net/virtual/2026/poster/5411",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "accepted",
+    "status": "pending",
     "topic": "视觉语言模型",
-    "summary_zh": "针对有限辅助异常先验下的零样本异常检测，用浅深文本嵌入注入学习通用异常概念，并解缠视觉与文本对齐。",
-    "tags": [
-      "零样本检测",
-      "视觉语言模型",
-      "异常先验"
-    ],
-    "reason": "摘要明确研究零样本异常检测，使用文本嵌入注入与解缠机制应对有限辅助异常先验，评估跨十二个数据集，属工业视觉异常检测范围。",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "公开摘要缺少明确的工业视觉证据",
     "trace": [
       {
         "action": "keep",
         "reason": "摘要明确研究零样本异常检测，使用文本嵌入注入与解缠机制应对有限辅助异常先验，评估跨十二个数据集，属工业视觉异常检测范围。"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "公开摘要缺少明确的工业视觉证据"
       }
     ],
     "abstract": "Zero-shot anomaly detection aims to identify defects in ar-bitrary novel domains; however, existing models assume that the auxil-iary data contains a rich diversity of anomalies, neglecting the far morecomplex and unpredictable variations in real-world target domains. Thisstudy introduces DIVE, the first approach to investigate the scenario oflimited auxiliary anomaly priors and resolve the resulting substantial per-formance degradation. Through a shallow-and-deep text embedding in-jection strategy during visual encoding, DIVE learns to abstract genericanomaly concepts shared across the auxiliary training domain and di-verse target domains. Moreover, we propose a disentanglement mech-anism to tackle the suboptimal alignment between visual embeddingsentangled with object semantics and object-agnostic textual prompts.Experiments demonstrate that, under the setting of limited anomalypatterns in auxiliary data, DIVE outperforms SOTA baselines by up to16.2% and 28.5% on two classification metrics, and 23.4%, 24.1%, and47.0% on three segmentation metrics, in terms of average performanceacross twelve datasets. Furthermore, it maintains highly competitive per-formance when auxiliary data exhibits sufficient anomaly diversity.",
@@ -5929,19 +5929,19 @@
     "metadata_checked_at": "2026-11-06T09:00:47+00:00",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "accepted",
+    "status": "pending",
     "topic": "视觉语言模型",
-    "summary_zh": "TokenCLIP将视觉token动态对齐到正交文本子空间，用最优传输分配语义，提升零样本异常检测的细粒度能力。",
-    "tags": [
-      "零样本",
-      "提示学习",
-      "CLIP"
-    ],
-    "reason": "标题和摘要明确将CLIP提示学习用于零样本异常检测，属于工业视觉异常检测范围。",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "公开摘要缺少明确的工业视觉证据",
     "trace": [
       {
         "action": "keep",
         "reason": "标题和摘要明确将CLIP提示学习用于零样本异常检测，属于工业视觉异常检测范围。"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "公开摘要缺少明确的工业视觉证据"
       }
     ],
     "reviewed_at": "2026-11-06T09:02:45+00:00"
@@ -6352,19 +6352,19 @@
     "official_url": "https://neurips.cc/virtual/2026/poster/150154",
     "added_at": "2026-11-06T09:02:01+00:00",
     "code_urls": [],
-    "status": "accepted",
+    "status": "pending",
     "topic": "少样本与零样本",
-    "summary_zh": "提出拓扑感知最优传输的无源测试时适应方法，用持久图对齐生成稳定伪标签，在线更新轻量头，提升分布偏移下的异常分割鲁棒性。",
-    "tags": [
-      "无源适应",
-      "异常分割",
-      "最优传输"
-    ],
-    "reason": "摘要明确涉及工业视觉常见场景下的异常分割，并采用无源测试时适应方法，属于少样本与零样本或相关适应范式，且包含无需源数据和目标标签的在线适应方案。",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "公开摘要缺少明确的工业视觉证据",
     "trace": [
       {
         "action": "keep",
         "reason": "摘要明确涉及工业视觉常见场景下的异常分割，并采用无源测试时适应方法，属于少样本与零样本或相关适应范式，且包含无需源数据和目标标签的在线适应方案。"
+      },
+      {
+        "action": "scope_audit",
+        "reason": "公开摘要缺少明确的工业视觉证据"
       }
     ],
     "abstract": "Deep topological data analysis (TDA) offers a principled framework for capturing structural invariants such as connectivity and cycles that persist across scales, making it a natural fit for anomaly segmentation (AS). Unlike threshold-based binarisation, which produces brittle masks under test-time distribution shift (TTDS), TDA allows anomalies to be characterised as disruptions to global structure rather than local fluctuations. We introduce TopoOT, a topology-aware optimal transport (OT) framework for source-free test-time adaptation in AS. Our key innovation is Optimal Transport Chaining, which sequentially aligns persistence diagrams (PDs) across thresholds and filtrations, yielding geodesic stability scores that identify features consistently preserved across scales. These stability-aware pseudo-labels supervise a lightweight head updated online using only unlabelled target samples, without access to source data or target labels, with OT-consistency and contrastive objectives, ensuring robust adaptation under TTDS. Across standard 2D and 3D anomaly detection benchmarks, TopoOT achieves state-of-the-art performance, outperforming second-best methods by up to +24.1\\% mean F1 on 2D datasets and +10.2\\% on 3D AS benchmarks.",

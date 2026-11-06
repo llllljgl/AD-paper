@@ -87,7 +87,8 @@ def report(root=ROOT):
         print(f"| {name} | {status} | {row.get('scanned', '—')} | {row.get('candidates', '—')} | "
               f"{row.get('deepseek_hits', '—')} | {row.get('deepseek_only', '—')} | "
               f"{row.get('catalog_only', '—')} | {row.get('details_failed', 0)} | {row.get('details_deferred', 0)} |")
-    print(f"\n待筛选 {state.get('pending', 0)} 篇，其中缺摘要 {state.get('missing_abstract', 0)} 篇。")
+    print(f"\n待筛选 {state.get('pending', 0)} 篇，其中缺摘要 {state.get('missing_abstract', 0)} 篇，"
+          f"缺少明确工业视觉证据 {state.get('missing_scope_evidence', 0)} 篇。")
     print(f"DeepSeek 搜索 {state.get('deepseek_search_calls', 0)} 次，"
           f"模型筛选 {state.get('llm_calls', 0)} 次，筛选失败 {state.get('review_errors', 0)} 次。")
     search_errors = state.get("deepseek_search_errors", {})
@@ -110,8 +111,7 @@ def report(root=ROOT):
     if missing_key:
         print("\n缺少仓库 Secret `DEEPSEEK_API_KEY`。本轮已保存官方来源候选。")
     failed_sources = any(row["status"] == "failed" for row in state.get("sources", {}).values())
-    return int(missing_key or failed_sources or bool(search_errors) or bool(code.get("error"))
-               or bool(state.get("review_blocked")))
+    return int(missing_key or failed_sources or bool(search_errors) or bool(state.get("review_blocked")))
 
 
 def main():

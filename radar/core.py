@@ -13,6 +13,18 @@ UTC = timezone.utc
 NS = {"a": "http://www.w3.org/2005/Atom", "x": "http://arxiv.org/schemas/atom",
       "o": "http://a9.com/-/spec/opensearch/1.1/"}
 ARXIV = "https://export.arxiv.org/api/query"
+INDUSTRIAL_BENCHMARK = re.compile(
+    r"\b(?:mvtec|real[- ]?iad|eyecandies|btad|mpdd|kolektorsdd\d*|dagm|visa dataset)\b"
+)
+INDUSTRIAL_CONTEXT = re.compile(
+    r"\bindustr\w*\b|\bmanufactur\w*\b|\bquality inspection\b|\bquality control\b"
+    r"|\b(?:pcb|printed circuit board|strip steel|metal surface|surface defects?)\b",
+    re.I,
+)
+VISUAL_MODALITY = re.compile(
+    r"\b(?:visual|vision|images?|imaging|camera|pixels?|rgb|point[- ]clouds?|videos?|segmentation|photometric)\b",
+    re.I,
+)
 
 
 def now_iso():
@@ -53,6 +65,14 @@ def canonical_id(value):
 
 def title_key(title):
     return re.sub(r"[^\w]+", "", title.casefold())
+
+
+def has_industrial_visual_evidence(paper):
+    text = f"{paper['title']} {paper.get('abstract', '')}"
+    # VisA is case-sensitive so the word "visa" cannot qualify unrelated work.
+    benchmark_text = re.sub(r"\bVisA\b", "visa dataset", text).lower()
+    return bool(INDUSTRIAL_BENCHMARK.search(benchmark_text)
+                or (INDUSTRIAL_CONTEXT.search(text) and VISUAL_MODALITY.search(text)))
 
 
 def github_links(text):
@@ -321,7 +341,8 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None):
     papers = filter_collection_year(merge(existing, incoming, now_iso()), year)
     errors, consecutive_errors, review_blocked = 0, 0, False
     review_queue = sorted(
-        (paper for paper in papers if paper["status"] == "pending" and paper.get("abstract")),
+        (paper for paper in papers if paper["status"] == "pending" and paper.get("abstract")
+         and has_industrial_visual_evidence(paper)),
         key=lambda paper: (not paper.get("deepseek_only"), paper.get("review_attempted_at", ""),
                            paper.get("added_at", "")),
     )
@@ -330,6 +351,8 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None):
             break
         try:
             paper.update(agent.review(dict(paper)))
+            if paper["status"] == "accepted" and not has_industrial_visual_evidence(paper):
+                paper.update(status="pending", reason="公开摘要缺少明确的工业视觉证据")
             consecutive_errors = 0
         except ReviewBudgetReached:
             break
@@ -361,6 +384,8 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None):
     pending = [paper for paper in papers if paper["status"] == "pending"]
     state.update(last_run_at=now_iso(), collected=len(incoming), llm_calls=agent.calls,
                  pending=len(pending), missing_abstract=sum(not p.get("abstract") for p in pending),
+                 missing_scope_evidence=sum(bool(p.get("abstract")) and not has_industrial_visual_evidence(p)
+                                            for p in pending),
                  review_errors=errors, review_blocked=review_blocked, sources=reports,
                  deepseek_search_calls=search_calls, deepseek_search_errors=search_errors,
                  deepseek_only_reviewed={status: sum(p.get("deepseek_only", False) and p["status"] == status
