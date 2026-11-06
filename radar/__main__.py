@@ -51,17 +51,17 @@ def build(root=ROOT):
     groups = {}
     for paper in papers:
         if paper["status"] == "accepted":
-            venue, year = venue_and_year(paper)
-            groups.setdefault(venue, []).append((year, paper))
+            groups.setdefault(venue_and_year(paper), []).append(paper)
 
     total = sum(len(group) for group in groups.values())
     pending = sum(paper["status"] == "pending" for paper in papers)
     lines = [f"已收录 **{total} 篇** · 待筛选 **{pending} 篇**"]
-    for venue in sorted(groups, key=lambda name: (name == "arXiv", name.casefold())):
-        lines.extend(["", f"### {markdown_text(venue)}", "",
-                      "| 年份 | 论文 | 标签 | 链接 | Tip |", "| --- | --- | --- | --- | --- |"])
-        entries = sorted(groups[venue], key=lambda item: (item[0], item[1]["published"], item[1]["id"]), reverse=True)
-        for year, paper in entries:
+    ordered_groups = sorted(groups, key=lambda group: (group[0] == "arXiv", group[0].casefold(), -int(group[1])))
+    for venue, year in ordered_groups:
+        lines.extend(["", f"### {markdown_text(venue)} {year}", "",
+                      "| 论文 | 标签 | 链接 | Tip |", "| --- | --- | --- | --- |"])
+        entries = sorted(groups[venue, year], key=lambda paper: (paper["published"], paper["id"]), reverse=True)
+        for paper in entries:
             title = markdown_link(markdown_text(paper["title"]), paper["url"])
             links = [markdown_link("PDF", paper["pdf_url"])]
             links.extend(markdown_link("代码", url) for url in paper.get("code_urls", []))
@@ -70,7 +70,7 @@ def build(root=ROOT):
             labels = " ".join(f"<code>{markdown_text(tag)}</code>" for tag in tags)
             tip = markdown_text(paper.get("summary_zh", "")) or "待补充"
             details = f"<details><summary>查看 Tip</summary><p>{tip}</p></details>"
-            lines.append(f"| {year} | {title} | {labels} | {' · '.join(links)} | {details} |")
+            lines.append(f"| {title} | {labels} | {' · '.join(links)} | {details} |")
 
     before, remainder = readme.split(LIST_START)
     _, after = remainder.split(LIST_END)
