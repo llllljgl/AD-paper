@@ -1,5 +1,293 @@
 [
   {
+    "id": "2611.08393",
+    "version": "2611.08393v1",
+    "title": "Adaptive Low-Light Enhancement for Road Anomaly Detection: A Multi-Architecture Benchmark and Edge Deployment Study",
+    "abstract": "Road anomaly detection systems on autonomous vehicles must function reliably under degraded visual conditions including darkness, rain, and Harmattan dust haze. This paper benchmarks four object detection architectures, YOLOv8n, YOLOv12n, RT-DETR, and Faster R-CNN, under physically grounded lighting and weather degradation, and shows that uniform application of the SCI low-light enhancement network is actively harmful at dusk-level lighting (-16.1% to -30.7% mAP@50). We propose a lightweight, training-free luminance-adaptive router that selects between no enhancement, moderate SCI, and denoising plus strong SCI based on per-frame Rec. 601 luminance, recovering most of the dusk penalty while preserving low-light gains, and we validate the full pipeline on NVIDIA Jetson Nano edge hardware.",
+    "authors": [
+      "Obed Honour Eje",
+      "Oluwatosin Kolade",
+      "Glory Bagai",
+      "Taliha Abiodun Folorunso"
+    ],
+    "published": "2026-11-05T18:06:59Z",
+    "updated": "2026-11-05T18:06:59Z",
+    "url": "https://arxiv.org/abs/2611.08393",
+    "pdf_url": "https://arxiv.org/pdf/2611.08393",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "5 pages",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-06T06:45:26+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2611.08271",
+    "version": "2611.08271v1",
+    "title": "DART: Domain-Agnostic Residual Transfer for Generalist Anomaly Detection",
+    "abstract": "Generalist Anomaly Detection (GAD) aims to detect anomalies in unseen domains using only a few reference samples. Recent normal-abnormal guided methods improve this setting by exploiting abnormal references, but their residuals often mix transferable anomaly cues with domain-specific appearance factors such as texture, geometry, and acquisition conditions. This residual domain entanglement limits cross-domain transfer and may produce spurious activations on novel domains. We propose DART, a plug-in framework for normal-abnormal guided GAD that learns to separate residuals into anomaly-relevant and domain-specific components. DART combines a Residual Disentanglement Module, which preserves anomaly-discriminative information while suppressing domain information, with Cross-Domain Meta-Training, which forms episodes across source domains to make the separation effective. The method is architecture-agnostic and can be inserted between residual computation and the detection head of existing GAD pipelines. Experiments on MVTec AD, VisA, and BraTS show consistent improvements over multiple base methods, with the largest gains under stronger domain shifts. https://github.com/aqeeelmirza/DART",
+    "authors": [
+      "Muhammad Aqeel",
+      "Maham Nazir",
+      "Marco Cristani",
+      "Francesco Setti"
+    ],
+    "published": "2026-11-05T16:43:20Z",
+    "updated": "2026-11-05T16:43:20Z",
+    "url": "https://arxiv.org/abs/2611.08271",
+    "pdf_url": "https://arxiv.org/pdf/2611.08271",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Accepted to NeurIPS 2026",
+    "venue": "NEURIPS 2026（作者声明）",
+    "code_urls": [
+      "https://github.com/aqeeelmirza/DART"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "added_at": "2026-11-06T06:45:26+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2611.08140",
+    "version": "2611.08140v1",
+    "title": "Fault-Guided Cross-Layer Prediction for Unsupervised Anomaly Detection",
+    "abstract": "Feature reconstruction is widely used for unsupervised industrial anomaly detection in the single-class setting, where only normal images from one product category are available for training. We propose a single-class detector that asks what information one block can pass to another. We treat the depth of a frozen vision transformer as a sequence of discrete transitions. A directed predictor learns a block-to-block hidden-state transition pointwise over tokens. Adjacent-layer cosine similarity exposes four sharp fault lines in DINOv2 ViT-L, separating stable depth segments. The deepest blocks retain semantic context but lose local detail; a prediction from deep or shallow sources to sensitive targets therefore exposes the information that cannot be transported. The fault structure fixes the source and target roles, and the same rule transfers to ViT-B and RADIO-B. We use a bounded foreground prior calibrated solely on training images: it attenuates background evidence without also erasing defects outside the estimated foreground. Using one predictor architecture and a common training-only calibration protocol, image AUROC is 99.75 on MVTec-AD, 99.42 on VisA and 94.27 on Real-IAD. On Real-IAD the object-level AUROC is 96.26. At 256x256 pixel resolution, P-AUROC/P-AUPRO are 98.46/95.97 on MVTec-AD, 99.21/96.12 on VisA and 99.26/96.59 on Real-IAD.",
+    "authors": [
+      "Tao Wang"
+    ],
+    "published": "2026-11-05T15:03:11Z",
+    "updated": "2026-11-05T15:03:11Z",
+    "url": "https://arxiv.org/abs/2611.08140",
+    "pdf_url": "https://arxiv.org/pdf/2611.08140",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "20 pages including appendix; 4 figures and 21 tables. Preprint",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-06T06:45:26+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2611.08136",
+    "version": "2611.08136v1",
+    "title": "How Far Can Untrained Neural Networks Go in Anomaly Detection? From Tables to Pixels",
+    "abstract": "Anomaly detection (AD) is often framed as a representation-learning problem, where strong performance is expected to require learned features or AD-specific optimization. However, this view can overlook the intrinsic separability of anomalies from normal references, even in the absence of learned representations. We therefore investigate how far untrained neural networks can go in anomaly detection. To this end, we propose PRISM, a framework combining fixed random nonlinear features with normal-reference Mahalanobis scoring for tabular detection and dense visual localization. Across 47 tabular datasets in ADBench, PRISM-T achieves the highest mean AUROC (86.4%) and the second-highest mean AUPRC (65.9%) among the compared methods. On MVTec AD and VisA, covering 27 visual categories, PRISM-V achieves mean image-level and pixel-level AUROCs of 90.4% and 96.4%, respectively. Notably, both models achieve these results without neural weight optimization or pretrained representations. A theoretical analysis further characterizes how nonlinear transformations affect the mean and covariance contributions to the Mahalanobis score gap, while empirical analyses examine the resulting score separability. These findings establish PRISM as both a competitive anomaly detector and a prior-to-learning baseline for assessing the added value of learned representations in anomaly detection.",
+    "authors": [
+      "Hyojun Yi",
+      "Geunyoung Kim",
+      "Hogeon Seo",
+      "Seunghyoung Ryu"
+    ],
+    "published": "2026-11-05T15:01:17Z",
+    "updated": "2026-11-05T15:01:17Z",
+    "url": "https://arxiv.org/abs/2611.08136",
+    "pdf_url": "https://arxiv.org/pdf/2611.08136",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "16 pages, 13 figures",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "added_at": "2026-11-06T06:45:26+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2611.08080",
+    "version": "2611.08080v1",
+    "title": "Spatiotemporal Dynamics-Aware Industrial Anomaly Detection and Reasoning",
+    "abstract": "Industrial Anomaly Detection (IAD) is a long-established problem that aims to detect defects in industrial products during manufacturing for quality control. Most existing studies focus on static visual patterns as the basis for detection. However, in real manufacturing environments, many anomalies are dynamics-based, such as irregular movements that cannot be perceived from static cues alone. We observe that even recent Multimodal Large Language Model (MLLM)-based approaches fall short in identifying such dynamic anomalies due to limited temporal modeling capability. To address this, we introduce MUSTARD: MUltimodal SpatioTemporal Anomaly Reasoning and Detection, a framework that equips MLLMs with fine-grained spatiotemporal dynamics awareness for detecting and reasoning about dynamics-based defects. MUSTARD introduces optical-flow-guided keyframe selection and augmented modalities to capture critical motion irregularities through local motion patterns and global dynamic evolution. Its normal pattern-based reasoning pipeline requires only a few normal reference samples as the detection basis, avoiding any model updates. This enables efficient adaptation across various products and provides high decision interpretability. MUSTARD is the first MLLM-based framework for dynamics-based IAD. Experiments demonstrate its superior performance in detecting spatiotemporal anomalies and providing plausible explanations. The code will be made publicly available.",
+    "authors": [
+      "S-Wei Chen",
+      "Siangyu Yang",
+      "Yi-Chen Jan",
+      "Chun-Yi Lee",
+      "Shao-Yuan Lo"
+    ],
+    "published": "2026-11-05T14:30:20Z",
+    "updated": "2026-11-05T14:30:20Z",
+    "url": "https://arxiv.org/abs/2611.08080",
+    "pdf_url": "https://arxiv.org/pdf/2611.08080",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Accepted at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2027",
+    "venue": "WACV 2027（作者声明）",
+    "code_urls": [],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-06T06:45:26+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2611.07356",
+    "version": "2611.07356v1",
+    "title": "Acoustic Anomaly Detection for Early Identification of Drill Jamming",
+    "abstract": "In the context of Industry 4.0, predictive maintenance is essential to minimize unplanned downtime and ensure operational safety. In machining processes, drill jamming is a critical failure that compromises both workpiece quality and tool integrity. This work proposes an acoustic anomaly detection system using ultrasonic sensors to identify pre-failure patterns in Computer Numerical Control (CNC) machining. We release a public dataset of time- and frequency-domain acoustic features from 17 drills, and benchmark semi-supervised autoencoder-based normality modelling against supervised XGBoost classification using Leave-One-Drill-Out validation. The results demonstrate that the Autoencoder is highly effective for industrial safety, achieving a Recall of 1.00 and a consolidated F1-score of 0.81. Furthermore, the threshold-independent analysis shows that the Autoencoder better separates normal and pre-failure acoustic patterns, achieving a consolidated AUC of 0.8294, compared with 0.7559 for the supervised model under inter-tool covariate shift. In contrast, the supervised XGBoost achieved an average F1-score of 0.55 and failed to detect failures in some of the evaluated drills. The findings highlight that the ultrasonic spectrum provides a reliable window for identifying incipient mechanical instabilities, and the AE model offers a robust safety envelope by anticipating all jamming events across the tested drill bits.",
+    "authors": [
+      "Maria Beatriz Silva",
+      "Lucas Edson Silva de Araújo",
+      "Sergio F. Chevtchenko",
+      "Ermeson Andrade",
+      "Danilo Araujo",
+      "Saeed Afshar"
+    ],
+    "published": "2026-11-05T02:50:29Z",
+    "updated": "2026-11-05T02:50:29Z",
+    "url": "https://arxiv.org/abs/2611.07356",
+    "pdf_url": "https://arxiv.org/pdf/2611.07356",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Accepted for publication at IEEE INDIN 2026. 8 pages, 6 figures. (c) 2026 IEEE. Personal use of this material is permitted",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.LG"
+    ],
+    "added_at": "2026-11-06T06:45:26+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2611.04754",
+    "version": "2611.04754v1",
+    "title": "Bounded AUKS: A Novel Evaluation Metric for Anomaly Detection via Bounded Area Under the Kolmogorov--Smirnov Curve",
+    "abstract": "Recent literature widely used global metrics such as AUROC and AUPRO to quantify the detection performance. AUROC and AUPRO scores are approaching 100% in some public datasets such as MVTec AD dataset and VisA dataset, which misleadingly suggests that the pixel-level anomaly detection task has already been solved. Threshold-independent metrics represented by AUROC inherently ignore the threshold selection process, which is inevitable in practical applications. Although AUPRO restricts the False Positive rates (FPRs) to an acceptable range, extremely low FPRs can lead to increased false negative rates (FNRs). We argue that there is a lack of metrics capable of quantifying the separation between the anomaly score distributions of normal and anomalous samples, which hinders advancements in anomaly detection. In response, we propose the Bounded Area Under the Kolmogorov--Smirnov curve (Bounded AUKS), a partial integral metric that integrates the difference between TPR and FPR within a data-driven bounded range. Specifically, we introduce AUKS from KS integral as a direct measure of separability between the anomaly score distributions. The bounded range is determined only by score distributions of normal test samples. Lower bound excludes the uninformative high-FPR region. Upper bound avoids evaluation in extreme regions that aggressively push FPR towards zero, which result in a very low recall. Our experiments on 9 models across MVTec AD and VisA datasets show that Bounded AUKS can address the limitations of existing metrics and has a better performance in evaluating unsupervised anomaly detection models.",
+    "authors": [
+      "Yanshuo Zhang",
+      "Juan Du"
+    ],
+    "published": "2026-11-03T12:06:45Z",
+    "updated": "2026-11-03T12:06:45Z",
+    "url": "https://arxiv.org/abs/2611.04754",
+    "pdf_url": "https://arxiv.org/pdf/2611.04754",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-06T06:45:26+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2611.02654",
+    "version": "2611.02654v1",
+    "title": "VerdictAD: Few-Shot Anomaly Detection via Decision-Guided Refinement",
+    "abstract": "Detecting defects in real-world industrial inspection often requires learning from only a few normal images per category. Recent few-shot anomaly detection methods have achieved strong performance by measuring feature differences between query images and normal references. However, visual differences do not always indicate genuine defects, as normal appearance variations can also produce high anomaly scores. Conversely, structural or logical anomalies may not produce strong local feature differences, making them difficult to detect. To address this limitation, we introduce VerdictAD, a training-free framework that refines existing anomaly detectors through visual decisions. Rather than replacing existing detectors, VerdictAD adopts a typed decision model to assess the query image and its local regions against a few normal references. By directly producing structured decision probabilities without text generation, the model provides complementary evidence for refining anomaly responses at different spatial scales. Building on this capability, we introduce two modules: Global Verdict Refinement (GVR) uses image-level decisions to refine the overall anomaly score, while Local Verdict Refinement (LVR) aggregates regional decisions to refine the anomaly map. Combined with a simple DINOv2-based detector, VerdictAD achieves competitive performance in one-shot and few-shot anomaly detection. More importantly, as a plug-and-play framework, it consistently improves existing anomaly detectors across MVTec AD, VisA, and MVTec LOCO AD, achieving strong results across one-shot and few-shot settings. Our code and experimental logs are publicly available at https://github.com/sgstq0811/VerdictAD-Jev-AD.",
+    "authors": [
+      "Shangquan Sun",
+      "Wenjun Luo",
+      "Yuanzhi Wang",
+      "Ruiqi Li",
+      "Ruoyu Chen",
+      "Jiachen Liu",
+      "Shijian Lu"
+    ],
+    "published": "2026-11-02T07:15:42Z",
+    "updated": "2026-11-02T07:15:42Z",
+    "url": "https://arxiv.org/abs/2611.02654",
+    "pdf_url": "https://arxiv.org/pdf/2611.02654",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Preprint with 5 tables and 7 figures. Code and experimental logs available at https://github.com/sgstq0811/VerdictAD-Jev-AD",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [
+      "https://github.com/sgstq0811/VerdictAD-Jev-AD"
+    ],
+    "categories": [
+      "cs.CV"
+    ],
+    "added_at": "2026-11-06T06:45:26+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
+    "id": "2611.01230",
+    "version": "2611.01230v1",
+    "title": "Reproducing INP-Former: Reconstructing Intrinsic Normal Prototypes for Industrial Anomaly Detection",
+    "abstract": "We reproduce the central claims of INP-Former, a reconstruction-based method for multi-class industrial anomaly detection. INP-Former extracts Intrinsic Normal Prototypes (INPs) from each test image and uses them to guide a decoder that reconstructs normal features, without a stored memory bank. Using the authors' released code, we reproduce the reported performance on MVTec AD and VisA and extend the evaluation to MVTec AD 2, where image AUROC with the default settings is 63.4, compared with 99.7 on MVTec AD. On MVTec AD, a five-seed ablation shows that most of the performance comes from the INP mechanism, while the two auxiliary losses add small changes whose direction depends on the metric. A paired comparison with both losses disabled confirms the benefit of INP on MVTec AD 2. The default of six prototypes transfers less well: the plateau beyond four prototypes reproduces on MVTec AD and VisA, but on MVTec AD 2 a single prototype outperforms six in AU-PRO on the public split and on both hidden test splits. We also measure practical trade-offs in resolution, backbone size, training length, and LoRA adaptation, and examine performance by defect size, lighting condition, and a stricter AU-PRO limit. Several conclusions from the original benchmarks, including the default prototype count, do not carry over to harder data. Code: https://github.com/garasnote/Repro-INPFormer",
+    "authors": [
+      "Yunfei Liang",
+      "Juan Pablo Osorio Rivera"
+    ],
+    "published": "2026-10-31T19:56:35Z",
+    "updated": "2026-10-31T19:56:35Z",
+    "url": "https://arxiv.org/abs/2611.01230",
+    "pdf_url": "https://arxiv.org/pdf/2611.01230",
+    "source": "arXiv",
+    "journal_ref": "",
+    "comment": "Reproducibility study. 12 pages of main text (excluding references and appendix), 14 tables. Code available at https://github.com/garasnote/Repro-INPFormer",
+    "venue": "arXiv / 未确认会议",
+    "code_urls": [
+      "https://github.com/garasnote/Repro-INPFormer"
+    ],
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "added_at": "2026-11-06T06:45:26+00:00",
+    "status": "pending",
+    "topic": "待分类",
+    "summary_zh": "",
+    "tags": [],
+    "reason": "等待 Agent 筛选",
+    "trace": []
+  },
+  {
     "id": "2610.41199",
     "version": "2610.41199v1",
     "title": "Beyond CLIP: Calibrated (Few-Shot) Defect Detection With System One Decision Models",
