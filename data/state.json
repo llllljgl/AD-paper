@@ -1,9 +1,168 @@
 {
-  "last_collected_until": "2026-11-06T06:45:25.775939+00:00",
-  "last_run_at": "2026-11-06T06:45:26+00:00",
-  "collected": 9,
-  "llm_calls": 0,
-  "pending": 13,
-  "review_errors": 0,
-  "mode": "rules-only"
+  "last_collected_until": "2026-11-06T09:00:13.248737+00:00",
+  "last_run_at": "2026-11-06T09:03:03+00:00",
+  "collected": 380,
+  "llm_calls": 39,
+  "pending": 250,
+  "review_errors": 1,
+  "mode": "agent",
+  "missing_abstract": 123,
+  "sources": {
+    "arXiv": {
+      "status": "ok",
+      "candidates": 7
+    },
+    "CVPR": {
+      "status": "ok",
+      "scanned": 4041,
+      "candidates": 54,
+      "details_checked": 12,
+      "details_failed": 0,
+      "details_deferred": 42,
+      "deepseek_hits": 10,
+      "catalog_only": 44,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "ICCV": {
+      "status": "skipped",
+      "reason": "2026 年无对应届次"
+    },
+    "ECCV": {
+      "status": "ok",
+      "scanned": 2834,
+      "candidates": 38,
+      "details_checked": 12,
+      "details_failed": 0,
+      "details_deferred": 26,
+      "deepseek_hits": 10,
+      "catalog_only": 28,
+      "deepseek_only": 1,
+      "deepseek_new": [
+        {
+          "title": "A Comprehensive Analysis about Unsupervised Outlier Detection for Images",
+          "url": "https://eccv.ecva.net/virtual/2026/poster/5320"
+        }
+      ]
+    },
+    "NeurIPS": {
+      "status": "ok",
+      "scanned": 9126,
+      "candidates": 63,
+      "details_checked": 12,
+      "details_failed": 0,
+      "details_deferred": 51,
+      "deepseek_hits": 13,
+      "catalog_only": 50,
+      "deepseek_only": 1,
+      "deepseek_new": [
+        {
+          "title": "EvoInspect: A Unified Self-Evolving Multi-Agent Framework for Industrial Hardware Inspection",
+          "url": "https://neurips.cc/virtual/2026/poster/148609"
+        }
+      ]
+    },
+    "ICLR": {
+      "status": "ok",
+      "scanned": 5348,
+      "candidates": 29,
+      "details_checked": 12,
+      "details_failed": 0,
+      "details_deferred": 17,
+      "deepseek_hits": 3,
+      "catalog_only": 26,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "ICML": {
+      "status": "ok",
+      "scanned": 6552,
+      "candidates": 40,
+      "details_checked": 12,
+      "details_failed": 0,
+      "details_deferred": 28,
+      "deepseek_hits": 9,
+      "catalog_only": 31,
+      "deepseek_only": 2,
+      "deepseek_new": [
+        {
+          "title": "VSCD: Video-based Scene Change Detection in Unaligned Scenes",
+          "url": "https://proceedings.mlr.press/v306/yoon26e.html"
+        },
+        {
+          "title": "Position: Verifiable Data Minimization is a Prerequisite for Responsible, Privacy-Preserving Industrial Vision",
+          "url": "https://proceedings.mlr.press/v306/de-coninck26a.html"
+        }
+      ]
+    },
+    "AAAI": {
+      "status": "ok",
+      "scanned": 4920,
+      "candidates": 103,
+      "details_checked": 12,
+      "details_failed": 0,
+      "details_deferred": 91,
+      "deepseek_hits": 14,
+      "catalog_only": 89,
+      "deepseek_only": 1,
+      "deepseek_new": [
+        {
+          "title": "ConstructAI: From Real-Time Safety Insight to Skill Growth in Deployed Construction AI Systems",
+          "url": "https://doi.org/10.1609/aaai.v40i47.41452"
+        }
+      ]
+    },
+    "IJCAI": {
+      "status": "ok",
+      "scanned": 972,
+      "candidates": 13,
+      "details_checked": 12,
+      "details_failed": 0,
+      "details_deferred": 1,
+      "deepseek_hits": 0,
+      "catalog_only": 13,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "TPAMI": {
+      "status": "ok",
+      "scanned": 1216,
+      "candidates": 11,
+      "details_checked": 11,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 1,
+      "catalog_only": 10,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "IJCV": {
+      "status": "ok",
+      "scanned": 486,
+      "candidates": 4,
+      "details_checked": 4,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 0,
+      "catalog_only": 4,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "TIP": {
+      "status": "ok",
+      "scanned": 820,
+      "candidates": 18,
+      "details_checked": 12,
+      "details_failed": 0,
+      "details_deferred": 6,
+      "deepseek_hits": 0,
+      "catalog_only": 18,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    }
+  },
+  "deepseek_search_calls": 20,
+  "deepseek_search_errors": {},
+  "code_backfill": {},
+  "llm_status": "enabled"
 }
