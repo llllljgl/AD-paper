@@ -40,27 +40,3 @@
 | 2026 | [Agentic Ensemble with Vision-Language Models for Visual Anomaly Detection](https://arxiv.org/abs/2610.28560) | <code>视觉语言模型</code> <code>集成</code> <code>缺陷定位</code> | [PDF](https://arxiv.org/pdf/2610.28560) | <details><summary>查看 Tip</summary><p>用视觉语言模型判断多个检测器意见不一致的样本，再选择如何融合图像分数和像素异常图。</p></details> |
 
 <!-- PAPER-LIST:END -->
-
-年份优先采用 arXiv 元数据中的会议或期刊年份。仅有预印本信息的论文归入 **arXiv**，按首次提交年份排列。代码链接来自原始摘要或作者备注。Tip 基于论文摘要整理。
-
-## 自动更新
-
-把本项目推送到 GitHub 仓库的 `main` 分支，仓库首页会展示这份 README。GitHub Actions 计划每周一北京时间 **09:23** 抓取候选、筛选、生成标签和 Tip，再把清单及数据提交到仓库。
-
-1. 在仓库 **Settings → Secrets and variables → Actions** 添加 Secret `OPENAI_API_KEY`，启用 Agent 筛选和简介生成。可通过仓库 Variable `OPENAI_MODEL` 覆盖默认模型。
-2. 打开 **Actions → Update paper list → Run workflow** 手动更新。`since` 和 `until` 可用于补抓指定日期，日期按 UTC 计算，包含起止日。留空则增量抓取。
-
-未配置 Key 或勾选 `no_llm` 时只抓取候选。待筛选和已排除的记录保存在 [论文数据](data/papers.json) 中。工作流需要 `contents: write` 提交更新，仓库策略或分支保护可能限制自动推送。
-
-## 本地维护
-
-需要 Python 3.9+，使用标准库。`build` 根据已有数据重建 README 的论文清单区块。
-
-```bash
-python3 -m radar build
-python3 -m unittest discover -s tests -v
-```
-
-抓取和补抓分别使用 `python3 -m radar collect` 和 `python3 -m radar collect --since 2026-10-01 --until 2026-10-31`，随后运行 `build`。本地 Agent 从 `OPENAI_API_KEY` 环境变量读取密钥。维护者可编辑 `data/papers.json` 中的 `status`、`tags` 和 `summary_zh`，再生成清单。
-
-在 [配置](config.json) 中可以调整检索式和筛选范围。首次抓取默认回看 14 天，后续从上次成功位置回看 3 天继续抓取。同一 arXiv ID 的论文合并，抓到更新版本时重新筛选。当前数据源为 arXiv，会议和期刊归属取自其元数据，覆盖范围取决于作者提供的信息。
