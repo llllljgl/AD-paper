@@ -8,6 +8,7 @@ from unittest.mock import Mock, patch
 
 from radar.core import Agent, Arxiv, canonical_id, merge, parse_feed, run, save_json, validate_review
 from radar.__main__ import LIST_END, LIST_START, build
+from radar.official import OfficialSources, metadata_url, publisher_candidate
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -84,15 +85,15 @@ class RadarTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate_review({"decision": "keep", "topic": "invented"}, ["其他"], True)
 
-    def test_responses_payload_and_output(self):
+    def test_deepseek_payload_and_output(self):
         config = json.loads((ROOT / "config.json").read_text())
         agent = Agent(config, Mock())
         decision = {"decision": "keep", "topic": "其他", "reason": "相关", "summary_zh": "方法简介", "tags": ["工业视觉", "定位"]}
-        response = {"status": "completed", "output": [{"type": "message", "content": [{"type": "output_text", "text": json.dumps(decision)}]}]}
+        response = {"choices": [{"finish_reason": "stop", "message": {"content": json.dumps(decision)}}]}
         with patch("radar.core.request", return_value=json.dumps(response).encode()) as req:
             self.assertEqual(agent.decide(paper()), decision)
-            self.assertTrue(req.call_args.args[1]["text"]["format"]["strict"])
-            self.assertFalse(req.call_args.args[1]["store"])
+            self.assertEqual(req.call_args.args[0], "https://api.deepseek.com/chat/completions")
+            self.assertEqual(req.call_args.args[1]["response_format"], {"type": "json_object"})
 
     def test_checkpoint_backfill_and_provider_failure(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -103,7 +104,7 @@ class RadarTests(unittest.TestCase):
                 paper(published="2025-12-01T00:00:00Z", venue="CVPR 2026（作者声明）"),
                 paper(id="future", title="Future venue", venue="WACV 2027（作者声明）"),
             ]
-            with patch.dict(os.environ, {"OPENAI_API_KEY": ""}):
+            with patch.dict(os.environ, {"DEEPSEEK_API_KEY": ""}):
                 state = run(root, source=source)
                 checkpoint = state["last_collected_until"]
                 run(root, since="2026-01-01", until="2026-01-31", no_llm=True, source=source)
@@ -117,7 +118,7 @@ class RadarTests(unittest.TestCase):
                 run(root, source=source)
             self.assertEqual((root / "data/papers.json").read_bytes(), before)
             source.collect.side_effect = None
-            with patch.dict(os.environ, {"OPENAI_API_KEY": "test"}), patch.object(Agent, "review", side_effect=ValueError("refusal")):
+            with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test"}), patch.object(Agent, "review", side_effect=ValueError("refusal")):
                 result = run(root, source=source)
             self.assertEqual(result["pending"], 1)
             self.assertEqual(result["review_errors"], 1)
@@ -153,6 +154,40 @@ class RadarTests(unittest.TestCase):
             self.assertIn("### CVPR 2026\n", result)
             self.assertNotIn("### CVPR 2025\n", result)
             self.assertNotIn("### Pattern Recognition 2025\n", result)
+
+    def test_catalog_comparison_enriches_reviewed_record_and_rejects_unverified_search_hit(self):
+        base = "https://openaccess.thecvf.com"
+        catalog = f"{base}/CVPR2026?day=all"
+        known = f"{base}/content/CVPR2026/html/known_paper.html"
+        other = f"{base}/content/CVPR2026/html/other_paper.html"
+        pages = {
+            catalog: f'<a href="{known}">Industrial anomaly detection</a><a href="{other}">Learning from Sparse Normal Samples</a>',
+            known: '<div id="abstract">MVTec evaluation. Code at https://github.com/lab/repo.</div>',
+            other: '<meta name="citation_title" content="Learning from Sparse Normal Samples"><p class="paper-abstract">We test on MVTec AD.</p>',
+        }
+        existing = paper(status="accepted", venue="CVPR 2026", url=known, official_url=known, summary_zh="已核实")
+        config = {"collection_year": 2026, "official_sources": {"CVPR": {"catalog": catalog, "format": "cvf"}}}
+        hits = {"CVPR": [
+            {"title": "Learning from Sparse Normal Samples", "url": other},
+            {"title": "Fabricated industrial paper", "url": base + "/invalid"},
+        ]}
+        incoming, reports = OfficialSources(config, [existing], get=pages.__getitem__).collect(hits)
+        saved = {p["title"]: p for p in merge([existing], incoming, "today")}
+        self.assertEqual(set(saved), {"Industrial anomaly detection", "Learning from Sparse Normal Samples"})
+        self.assertEqual(saved["Industrial anomaly detection"]["summary_zh"], "已核实")
+        self.assertEqual(saved["Industrial anomaly detection"]["code_urls"], ["https://github.com/lab/repo"])
+        self.assertEqual(saved["Learning from Sparse Normal Samples"]["status"], "pending")
+        self.assertEqual(reports["CVPR"]["deepseek_only"], 1)
+        self.assertEqual(reports["CVPR"]["catalog_only"], 1)
+
+    def test_official_metadata_blocks_pdf_and_preserves_print_year(self):
+        self.assertFalse(metadata_url("https://openaccess.thecvf.com/content/papers/file.pdf"))
+        self.assertFalse(metadata_url("https://ojs.aaai.org/index.php/AAAI/article/download/123"))
+        self.assertFalse(metadata_url("https://openaccess.thecvf.com@example.org/"))
+        item = {"DOI": "10.1234/example", "title": ["Example anomaly detection"],
+                "published": {"date-parts": [[2025, 11, 12]]}, "published-print": {"date-parts": [[2026, 2]]}}
+        self.assertEqual(publisher_candidate("TIP", 2026, item)["venue"], "TIP 2026")
+        self.assertIsNone(publisher_candidate("TIP", 2025, item))
 
 
 if __name__ == "__main__":

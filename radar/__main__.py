@@ -1,6 +1,7 @@
 import argparse
 import html
 import re
+import sys
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 from .core import filter_collection_year, load_json, run, venue_and_year
@@ -52,8 +53,10 @@ def build(root=ROOT):
             links = [markdown_link("论文", paper["url"])]
             if paper.get("pdf_url"):
                 links.append(markdown_link("PDF", paper["pdf_url"]))
-            elif paper.get("official_url") and re.fullmatch(r"\d{4}\.\d{4,5}", paper["id"]):
-                links.append(markdown_link("arXiv", f"https://arxiv.org/abs/{paper['id']}"))
+            elif paper.get("official_url"):
+                preprint = paper.get("arxiv_id") or paper["id"]
+                if re.fullmatch(r"\d{4}\.\d{4,5}", preprint):
+                    links.append(markdown_link("arXiv", f"https://arxiv.org/abs/{preprint}"))
             links.extend(markdown_link("代码", url) for url in paper.get("code_urls", []))
             # Old reviewed records may only have a topic. Keep it as a fallback label.
             tags = paper.get("tags") or [paper.get("topic", "待补充")]
@@ -72,17 +75,54 @@ def build(root=ROOT):
     print(f"Updated {target} ({total} accepted papers)")
 
 
+def report(root=ROOT):
+    state = load_json(root / "data/state.json", {})
+    print("## 论文采集状态\n")
+    print("| 来源 | 状态 | 扫描 | 候选 | DeepSeek 已核对 | 仅 DeepSeek 命中 | 仅目录关键词命中 | 详情失败 | 延后复查 |")
+    print("| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
+    for name, row in state.get("sources", {}).items():
+        status = row["status"]
+        if row.get("reason"):
+            status += f" ({row['reason']})"
+        print(f"| {name} | {status} | {row.get('scanned', '—')} | {row.get('candidates', '—')} | "
+              f"{row.get('deepseek_hits', '—')} | {row.get('deepseek_only', '—')} | "
+              f"{row.get('catalog_only', '—')} | {row.get('details_failed', 0)} | {row.get('details_deferred', 0)} |")
+    print(f"\n待筛选 {state.get('pending', 0)} 篇，其中缺摘要 {state.get('missing_abstract', 0)} 篇。")
+    print(f"DeepSeek 搜索 {state.get('deepseek_search_calls', 0)} 次，"
+          f"模型筛选 {state.get('llm_calls', 0)} 次，筛选失败 {state.get('review_errors', 0)} 次。")
+    search_errors = state.get("deepseek_search_errors", {})
+    for venue, reason in search_errors.items():
+        print(f"\nDeepSeek 搜索失败 · {venue} · {reason}")
+    for venue, row in state.get("sources", {}).items():
+        for hit in row.get("deepseek_new", []):
+            title = markdown_link(markdown_text(hit["title"]), hit["url"])
+            print(f"\n- {venue} · DeepSeek 新候选 · {title}")
+    code = state.get("code_backfill", {})
+    if code:
+        print(f"\n代码仓库复查 {code['checked']} 篇，补充 {code['added']} 篇。")
+        if code.get("error"):
+            print(f"\n代码搜索失败 · {code['error']}")
+    missing_key = state.get("llm_status") == "missing_key"
+    if missing_key:
+        print("\n缺少仓库 Secret `DEEPSEEK_API_KEY`。本轮已保存官方来源候选。")
+    failed_sources = any(row["status"] == "failed" for row in state.get("sources", {}).values())
+    return int(missing_key or failed_sources or bool(search_errors) or bool(code.get("error"))
+               or bool(state.get("review_errors")))
+
+
 def main():
     parser = argparse.ArgumentParser(description="Industrial anomaly detection paper radar")
-    parser.add_argument("command", choices=["collect", "build"])
+    parser.add_argument("command", choices=["collect", "build", "report"])
     parser.add_argument("--since", help="Inclusive start date YYYY-MM-DD (manual backfill)")
     parser.add_argument("--until", help="Inclusive end date YYYY-MM-DD")
     parser.add_argument("--no-llm", action="store_true", help="Collect as pending without LLM calls")
     args = parser.parse_args()
     if args.command == "collect":
         run(ROOT, args.since, args.until, args.no_llm)
-    else:
+    elif args.command == "build":
         build()
+    else:
+        sys.exit(report())
 
 
 if __name__ == "__main__":

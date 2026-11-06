@@ -29,7 +29,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     permissions:
       contents: write
     steps:
@@ -42,10 +42,11 @@ jobs:
       - name: Test
         run: python -m unittest discover -s tests -v
       - name: Collect papers
+        id: collect
         if: github.event_name != 'push'
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
           INPUT_SINCE: ${{ inputs.since }}
           INPUT_UNTIL: ${{ inputs.until }}
           INPUT_NO_LLM: ${{ inputs.no_llm }}
@@ -68,3 +69,6 @@ jobs:
             git commit -m 'Update paper list'
             git push origin HEAD:main
           fi
+      - name: Report collection health
+        if: always() && github.event_name != 'push' && steps.collect.outcome == 'success'
+        run: python -m radar report >> "$GITHUB_STEP_SUMMARY"
