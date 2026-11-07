@@ -114,6 +114,21 @@ class InvestigationTests(unittest.TestCase):
             with self.assertRaises(ValueError): agent.review(item)
         self.assertEqual(item['investigation'],investigation)
 
+    def test_quote_context_retains_explicit_visual_description(self):
+        config=json.loads((Path(__file__).resolve().parents[1]/'config.json').read_text())
+        item=paper(title='A multimodal detection benchmark',abstract=(
+            'We use visual language models for industrial defect detection. '
+            'Our benchmark covers 29 industrial scenes and 351 defect categories.'))
+        quote='Our benchmark covers 29 industrial scenes and 351 defect categories.'
+        result={'decision':'keep','topic':'其他','reason':'相关','summary_zh':'方法简介','tags':['工业','视觉'],
+                'evidence':[{'source_id':'S1','quote':quote}]}
+        response={'choices':[{'finish_reason':'stop','message':{'content':json.dumps(result)}}]}
+        with patch('radar.core.request',return_value=json.dumps(response).encode()):
+            result=Agent(config,Mock()).decide(item)
+        self.assertEqual(result['decision'],'keep')
+        self.assertIn(result['evidence'][0]['context'],item['abstract'])
+        self.assertEqual(result['evidence'][0]['quote'],quote)
+
     def test_long_queries_preserve_quotes_and_respect_api_limit(self):
         for title in ['LACToS: Local Anomaly Detection via Conditional Typicality of Superpixels', 'Very long title ' * 30]:
             query = investigation_query(title, 'Which industrial datasets and experimental settings are used? ' * 10)
