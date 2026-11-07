@@ -90,6 +90,30 @@ class InvestigationTests(unittest.TestCase):
         self.assertLessEqual(len(result),14000)
         self.assertEqual(''.join(Text('<nav>Hidden navigation</nav><p>Paper body</p>').parts),'Paper body')
 
+    def test_source_ids_and_valid_subset_preserve_supported_decision(self):
+        config=json.loads((Path(__file__).resolve().parents[1]/'config.json').read_text())
+        result={'decision':'keep','topic':'其他','reason':'相关','summary_zh':'方法简介','tags':['工业','视觉'],
+            'evidence':[{'source_id':'S1','quote':'A method for MVTec'},
+                        {'source_id':'S1','quote':'fabricated evaluation statement'}]}
+        response={'choices':[{'finish_reason':'stop','message':{'content':json.dumps(result)}}]}
+        with patch('radar.core.request',return_value=json.dumps(response).encode()):
+            reviewed=Agent(config,Mock()).decide(paper())
+        self.assertEqual(reviewed['decision'],'keep')
+        self.assertEqual(reviewed['evidence'],[{'url':paper()['url'],'quote':'A method for MVTec'}])
+
+    def test_final_verify_means_pending_and_failed_review_preserves_sources(self):
+        config=json.loads((Path(__file__).resolve().parents[1]/'config.json').read_text())
+        result={'decision':'verify','topic':'其他','reason':'缺证据','summary_zh':'待调查','tags':['工业','视觉'],'evidence':[]}
+        response={'choices':[{'finish_reason':'stop','message':{'content':json.dumps(result)}}]}
+        agent=Agent(config,Mock())
+        with patch('radar.core.request',return_value=json.dumps(response).encode()):
+            self.assertEqual(agent.decide(paper(),verified=True)['decision'],'pending')
+        item=paper(); investigation={'sources':[{'url':'https://lab.github.io/paper/','text':'Evidence'}]}
+        agent.decide=Mock(side_effect=[result,ValueError('bad final response')])
+        with patch('radar.investigate.investigate',return_value=investigation):
+            with self.assertRaises(ValueError): agent.review(item)
+        self.assertEqual(item['investigation'],investigation)
+
     def test_long_queries_preserve_quotes_and_respect_api_limit(self):
         for title in ['LACToS: Local Anomaly Detection via Conditional Typicality of Superpixels', 'Very long title ' * 30]:
             query = investigation_query(title, 'Which industrial datasets and experimental settings are used? ' * 10)
