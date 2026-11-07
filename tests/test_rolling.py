@@ -52,6 +52,19 @@ class RollingTests(unittest.TestCase):
             _,reports,_,_=RollingSources(self.config,[],state,now=self.now).collect_with_search()
         self.assertEqual(reports['CVPR 2026']['status'],'failed')
         self.assertEqual(state['source_lifecycle']['CVPR 2026']['fingerprint'],'old')
+    def test_future_url_serving_old_meeting_is_rejected(self):
+        from radar.official import catalog_entries
+        raw='<title>NeurIPS 2026 Schedule</title><div id="maincard_1"><div class="maincardBody">Industrial anomaly detection</div></div>'
+        with self.assertRaisesRegex(ValueError,'requested meeting year'):
+            catalog_entries('https://neurips.cc/Conferences/2027/AcceptedPapersInitial',2027,'neurips',raw)
+        self.assertTrue(catalog_entries('https://neurips.cc/Conferences/2026/AcceptedPapersInitial',2026,'neurips',raw))
+
+    def test_due_date_ignores_scheduler_second_jitter(self):
+        state={'source_lifecycle':{'CVPR 2026':{'next_check_at':(self.now+timedelta(seconds=30)).isoformat()}}}
+        with patch('radar.rolling.OfficialSources.index',side_effect=self.index), patch('radar.rolling.OfficialSources.collect',side_effect=self.collect):
+            _,reports,_,_=RollingSources(self.config,[],state,now=self.now).collect_with_search()
+        self.assertEqual(reports['CVPR 2026']['status'],'ok')
+
     def test_pmlr_resolves_real_volume_and_excludes_workshops(self):
         cfg={'official_sources':{'ICML':{}}}
         get=Mock(return_value='<li><a href="/v999/"><b>Volume 999</b></a> Proceedings of ICML 2027</li><li><a href="/v998/">Volume 998</a> ICML 2027 Workshop</li>')

@@ -87,6 +87,8 @@ def report(root=ROOT):
     print("| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
     for name, row in state.get("sources", {}).items():
         status = row["status"]
+        if row.get("phase"):
+            status += " / " + {"active": "持续追踪", "dormant": "低频复查"}.get(row["phase"], row["phase"])
         if row.get("reason"):
             status += f" ({row['reason']})"
         print(f"| {name} | {status} | {row.get('scanned', '—')} | {row.get('candidates', '—')} | "

@@ -76,6 +76,11 @@ def catalog_entries(source, year, kind, raw):
     """Return title and paper-page pairs. Validate the index before filtering."""
     pairs = []
     if kind == "neurips":
+        # These sites may silently serve the current meeting at a future-year URL.
+        heading = plain_text(' '.join(re.findall(r'<title[^>]*>(.*?)</title>', raw, re.I | re.S)))
+        years = re.findall(r'\b(?:NeurIPS|ICLR)\s+(20\d{2})\b', heading, re.I)
+        if years != [str(year)]:
+            raise ValueError('Catalog page does not confirm the requested meeting year')
         cards = re.findall(r'id="maincard_(\d+)"[^>]*>.*?<div class="maincardBody">(.*?)</div>', raw, re.S)
         pairs = [(title, f"/virtual/{year}/poster/{event}") for event, title in cards]
     elif kind == "pmlr":

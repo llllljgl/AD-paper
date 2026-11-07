@@ -75,7 +75,8 @@ class RollingSources:
                         registry[name] = {**old, 'phase': 'closed', **override}
                         reports[name] = {'status': 'skipped', 'reason': '明确关闭：' + override['reason']}
                     continue
-                if old.get('next_check_at') and self.now < datetime.fromisoformat(old['next_check_at']):
+                # Compare dates: scheduler jitter must not turn a weekly scan into fortnightly.
+                if old.get('next_check_at') and self.now.date() < datetime.fromisoformat(old['next_check_at']).date():
                     reports[name] = {'status': 'skipped', 'reason': old.get('phase', '') + '，下次检查 ' + old['next_check_at']}
                     continue
                 source, snapshot, spec = None, None, None
