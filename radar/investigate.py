@@ -87,6 +87,8 @@ def investigate(paper, key, question='', stats=None):
     queries = [investigation_query(title, suffix) for suffix in
                ('industrial datasets', 'site:github.com', question or 'site:arxiv.org')]
     urls = list(paper.get('code_urls', []))
+    if paper.get('url', '').startswith('https://arxiv.org/abs/'):
+        urls.insert(0, paper['url'])
     if paper.get('arxiv_id'): urls.insert(0, 'https://arxiv.org/abs/' + paper['arxiv_id'])
     # Follow explicit author project links found in the public abstract.
     urls.extend(re.findall(r'https://[^\s<>"\\]+', paper.get('abstract', '')))

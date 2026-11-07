@@ -149,6 +149,29 @@ class RadarTests(unittest.TestCase):
             self.assertEqual(state["missing_scope_evidence"], 0)
             self.assertFalse(state["review_blocked"])
 
+    def test_review_only_preserves_collection_failure_and_reaudits_v2(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            save_json(root/'config.json',json.loads((ROOT/'config.json').read_text()))
+            checkpoint='2026-01-01T00:00:00+00:00'
+            failures={'arXiv':{'status':'failed','reason':'HTTP 503'}}
+            save_json(root/'data/state.json',{'last_collected_until':checkpoint,'sources':failures})
+            save_json(root/'data/papers.json',[
+                paper(status='accepted',review_version=2),
+                paper(id='old',title='Historical paper',status='accepted'),
+                paper(id='excluded',title='Excluded paper',status='rejected',review_version=2)])
+            source=Mock()
+            with patch.dict(os.environ,{'DEEPSEEK_API_KEY':'test'}), patch.object(
+                    Agent,'review',return_value={'status':'pending','review_version':3}) as review:
+                state=run(root,source=source,review_only=True)
+            source.collect.assert_not_called()
+            self.assertEqual(review.call_count,1)
+            self.assertEqual(state['last_collected_until'],checkpoint)
+            self.assertEqual(state['last_collection_sources'],failures)
+            self.assertEqual(state['sources']['arXiv']['status'],'skipped')
+            saved=json.loads((root/'data/papers.json').read_text())
+            self.assertEqual([p['status'] for p in saved],['pending','accepted','rejected'])
+
     def test_readme_groups_reviewed_entries_and_collapses_tip(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

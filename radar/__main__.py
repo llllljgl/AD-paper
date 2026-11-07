@@ -78,6 +78,11 @@ def build(root=ROOT):
 def report(root=ROOT):
     state = load_json(root / "data/state.json", {})
     print("## 论文采集状态\n")
+    if state.get("review_only"):
+        print("本轮仅复核已保存候选，没有重新采集，也没有推进采集时间。\n")
+        for name, row in state.get("last_collection_sources", {}).items():
+            if row.get("status") == "failed":
+                print(f"上次完整采集仍有异常：{name} · {row.get('reason', 'failed')}。\n")
     print("| 来源 | 状态 | 扫描 | 候选 | DeepSeek 已核对 | 仅 DeepSeek 命中 | 仅目录关键词命中 | 详情失败 | 延后复查 |")
     print("| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
     for name, row in state.get("sources", {}).items():
@@ -121,9 +126,10 @@ def main():
     parser.add_argument("--since", help="Inclusive start date YYYY-MM-DD (manual backfill)")
     parser.add_argument("--until", help="Inclusive end date YYYY-MM-DD")
     parser.add_argument("--no-llm", action="store_true", help="Collect as pending without LLM calls")
+    parser.add_argument("--review-only", action="store_true", help="Review saved candidates without fetching catalogs or advancing checkpoints")
     args = parser.parse_args()
     if args.command == "collect":
-        run(ROOT, args.since, args.until, args.no_llm)
+        run(ROOT, args.since, args.until, args.no_llm, review_only=args.review_only)
     elif args.command == "build":
         build()
     else:

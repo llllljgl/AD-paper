@@ -42,6 +42,31 @@ class InvestigationTests(unittest.TestCase):
             self.assertEqual(agent.decide(paper())['decision'],'verify')
             self.assertEqual(agent.decide(paper(),verified=True)['decision'],'pending')
 
+    def test_real_but_insufficient_quotes_trigger_investigation(self):
+        config=json.loads((Path(__file__).resolve().parents[1]/'config.json').read_text())
+        cases = [
+            ('CausalPulse: Root Cause Analysis in Smart Manufacturing', 'We analyze industrial manufacturing time series.'),
+            ('Visual anomaly detection', 'We study visual anomaly detection on generic images.'),
+            ('DeGlare: Industrial image restoration', 'We remove reflections from industrial images.'),
+        ]
+        for title, abstract in cases:
+            with self.subTest(title=title):
+                item=paper(title=title,abstract=abstract)
+                result={'decision':'keep','topic':'其他','reason':'相关','summary_zh':'方法简介','tags':['工业','视觉'],
+                        'evidence':[{'url':item['url'],'quote':abstract}]}
+                response={'choices':[{'finish_reason':'stop','message':{'content':json.dumps(result)}}]}
+                with patch('radar.core.request',return_value=json.dumps(response).encode()):
+                    agent=Agent(config,Mock())
+                    self.assertEqual(agent.decide(item)['decision'],'verify')
+                    self.assertEqual(agent.decide(item,verified=True)['decision'],'pending')
+
+    def test_mixed_medical_industrial_and_3d_evidence_are_allowed(self):
+        from radar.core import supports_scope
+        for quote in ['Anomaly localization evaluated on Real3D-AD and AnomalyShapeNet.',
+                      'Anomaly detection on MVTec AD and medical datasets.',
+                      'Defect inspection using industrial point clouds.']:
+            self.assertTrue(supports_scope(paper(), {'evidence':[{'quote':quote}]}), quote)
+
     def test_long_queries_preserve_quotes_and_respect_api_limit(self):
         for title in ['LACToS: Local Anomaly Detection via Conditional Typicality of Superpixels', 'Very long title ' * 30]:
             query = investigation_query(title, 'Which industrial datasets and experimental settings are used? ' * 10)

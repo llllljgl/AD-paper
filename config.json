@@ -67,5 +67,5 @@
   ],
   "scope": "工业场景中的视觉异常检测、异常定位、表面缺陷检测与分割，以及直接服务这些任务的缺陷合成、数据集和评测。包括二维图像、多模态和三维点云，MVTec、VisA、Real-IAD、Real3D-AD、Anomaly-ShapeNet、Eyecandies 等。跨工业与医学的论文只要明确包含工业视觉评估即可收录。纯医疗、网络、金融、时间序列、通用监控视频异常检测排除。没有列明数据集不等于不相关，应进一步调查。",
   "max_investigations": 60,
-  "review_version": 2
+  "review_version": 3
 }
