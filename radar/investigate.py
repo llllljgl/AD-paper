@@ -7,7 +7,7 @@ import urllib.request
 from urllib.parse import urlsplit
 from html.parser import HTMLParser
 
-from .core import now_iso, request, title_key
+from .core import now_iso, request, title_key, provider_error
 from .deepseek import search
 from .official import HOSTS
 
@@ -105,7 +105,7 @@ def investigate(paper, key, question='', stats=None):
         except (OSError, ValueError, KeyError) as exc:
             if isinstance(exc, urllib.error.HTTPError) and exc.code in (401, 402, 403):
                 raise
-            reason = f'HTTP {exc.code}' if isinstance(exc, urllib.error.HTTPError) else type(exc).__name__
+            reason = provider_error(exc)
             failures.append({'query': query, 'error': reason})
             if stats is not None:
                 stats['search_errors'] = stats.get('search_errors', 0) + 1

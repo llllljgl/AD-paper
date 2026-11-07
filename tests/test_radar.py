@@ -186,6 +186,14 @@ class RadarTests(unittest.TestCase):
                 self.assertEqual(state['review_blocked'],blocked)
                 self.assertEqual(review.call_count,count)
 
+    def test_provider_diagnostic_redacts_keys(self):
+        from radar.core import provider_error
+        import io, urllib.error
+        error=urllib.error.HTTPError('https://api.deepseek.com',500,'error',{},
+            io.BytesIO(json.dumps({'error':{'message':'Upstream unavailable sk-example-secret'}}).encode()))
+        with patch.dict(os.environ,{'DEEPSEEK_API_KEY':'sk-example-secret'}):
+            self.assertEqual(provider_error(error),'HTTP 500: Upstream unavailable [redacted]')
+
     def test_readme_groups_reviewed_entries_and_collapses_tip(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

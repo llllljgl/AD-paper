@@ -31,6 +31,25 @@ def now_iso():
     return datetime.now(UTC).isoformat(timespec="seconds")
 
 
+def provider_error(exc):
+    if not isinstance(exc, urllib.error.HTTPError):
+        return type(exc).__name__
+    label = f"HTTP {exc.code}"
+    try:
+        body = json.loads(exc.read(4096))
+        detail = body.get("error", {})
+        detail = detail.get("message", "") if isinstance(detail, dict) else ""
+        if not isinstance(detail, str):
+            return label
+        key = os.environ.get("DEEPSEEK_API_KEY", "")
+        if key:
+            detail = detail.replace(key, "[redacted]")
+        detail = re.sub(r"sk-[A-Za-z0-9_-]+", "[redacted]", detail)
+        return label + (": " + " ".join(detail.split())[:300] if detail else "")
+    except (OSError, ValueError, AttributeError, KeyError, TypeError):
+        return label
+
+
 def load_json(path, default):
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
 
@@ -378,7 +397,7 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None, 
             paper["status"] = "pending"
     review_queue = sorted(
         (paper for paper in papers if paper["status"] == "pending"),
-        key=lambda paper: (not has_industrial_visual_evidence(paper), not paper.get("deepseek_only"), paper.get("review_attempted_at", ""),
+        key=lambda paper: (not has_industrial_visual_evidence(paper), not bool(paper.get("evidence")), not paper.get("deepseek_only"), paper.get("review_attempted_at", ""),
                            paper.get("added_at", "")),
     )
     for paper in review_queue if agent.key and not no_llm else []:
@@ -386,6 +405,7 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None, 
             break
         try:
             paper.update(agent.review(dict(paper)))
+            paper.pop("review_error", None)
             print(f"Reviewed {paper['id']}: {paper['status']} (model calls {agent.calls}, investigations {agent.investigations})", flush=True)
 
             if agent.calls and agent.calls % 20 == 0:
@@ -407,7 +427,8 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None, 
             consecutive_errors += 1
             paper["reason"] = "DeepSeek 接口暂不可用，等待重试"
             paper["review_attempted_at"] = now_iso()
-            code = f"HTTP {exc.code}" if isinstance(exc, urllib.error.HTTPError) else type(exc).__name__
+            code = provider_error(exc)
+            paper["review_error"] = code
             print(f"Review deferred for {paper['id']} ({code})", flush=True)
             if (isinstance(exc, urllib.error.HTTPError) and exc.code in (401, 402, 403)) or consecutive_errors >= 4:
                 review_blocked = True
