@@ -1,11 +1,11 @@
 {
-  "last_collected_until": "2026-11-07T23:41:43.652401+00:00",
-  "last_run_at": "2026-11-07T23:45:35+00:00",
-  "collected": 599,
-  "llm_calls": 29,
+  "last_collected_until": "2026-11-07T23:49:14.206430+00:00",
+  "last_run_at": "2026-11-07T23:49:18+00:00",
+  "collected": 6,
+  "llm_calls": 0,
   "pending": 14,
   "review_errors": 0,
-  "mode": "agent",
+  "mode": "rules-only",
   "missing_abstract": 2,
   "sources": {
     "arXiv": {
@@ -13,212 +13,98 @@
       "candidates": 6
     },
     "CVPR 2026": {
-      "status": "ok",
-      "scanned": 4041,
-      "candidates": 65,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 10,
-      "catalog_only": 55,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "ICCV 2026": {
       "status": "skipped",
-      "reason": "not_scheduled"
+      "reason": "not_scheduled，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "ECCV 2026": {
-      "status": "ok",
-      "scanned": 2834,
-      "candidates": 40,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 10,
-      "catalog_only": 30,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "NeurIPS 2026": {
-      "status": "ok",
-      "scanned": 9125,
-      "candidates": 76,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 13,
-      "catalog_only": 63,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "ICLR 2026": {
-      "status": "ok",
-      "scanned": 5348,
-      "candidates": 36,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 4,
-      "catalog_only": 32,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "ICML 2026": {
-      "status": "ok",
-      "scanned": 6552,
-      "candidates": 54,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 9,
-      "catalog_only": 45,
-      "deepseek_only": 1,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "AAAI 2026": {
-      "status": "ok",
-      "scanned": 4920,
-      "candidates": 191,
-      "details_checked": 7,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 14,
-      "catalog_only": 177,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "IJCAI 2026": {
-      "status": "ok",
-      "scanned": 972,
-      "candidates": 15,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 0,
-      "catalog_only": 15,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "TPAMI 2026": {
-      "status": "ok",
-      "scanned": 2044,
-      "candidates": 15,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 1,
-      "catalog_only": 14,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "IJCV 2026": {
-      "status": "ok",
-      "scanned": 772,
-      "candidates": 5,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 0,
-      "catalog_only": 5,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "TIP 2026": {
-      "status": "ok",
-      "scanned": 1448,
-      "candidates": 20,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 0,
-      "catalog_only": 20,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "CVPR 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "ICCV 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "ECCV 2027": {
       "status": "skipped",
-      "reason": "not_scheduled"
+      "reason": "not_scheduled，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "NeurIPS 2027": {
       "status": "skipped",
-      "reason": "Future-year URL returned NeurIPS 2026; not a 2027 catalog"
+      "reason": "awaiting_catalog"
     },
     "ICLR 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "ICML 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "AAAI 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "IJCAI 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "TPAMI 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "IJCV 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "TIP 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     }
   },
-  "deepseek_search_calls": 22,
+  "deepseek_search_calls": 0,
   "deepseek_search_errors": {},
-  "code_backfill": {
-    "checked": 15,
-    "added": 3,
-    "error": ""
-  },
-  "llm_status": "enabled",
+  "code_backfill": {},
+  "llm_status": "disabled",
   "review_blocked": false,
   "deepseek_only_reviewed": {
     "accepted": 2,
@@ -226,210 +112,100 @@
     "rejected": 3
   },
   "missing_scope_evidence": 10,
-  "investigations": 14,
-  "investigation_search_calls": 42,
+  "investigations": 0,
+  "investigation_search_calls": 0,
   "last_collection_sources": {
     "arXiv": {
       "status": "ok",
       "candidates": 6
     },
     "CVPR 2026": {
-      "status": "ok",
-      "scanned": 4041,
-      "candidates": 65,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 10,
-      "catalog_only": 55,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "ICCV 2026": {
       "status": "skipped",
-      "reason": "not_scheduled"
+      "reason": "not_scheduled，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "ECCV 2026": {
-      "status": "ok",
-      "scanned": 2834,
-      "candidates": 40,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 10,
-      "catalog_only": 30,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "NeurIPS 2026": {
-      "status": "ok",
-      "scanned": 9125,
-      "candidates": 76,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 13,
-      "catalog_only": 63,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "ICLR 2026": {
-      "status": "ok",
-      "scanned": 5348,
-      "candidates": 36,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 4,
-      "catalog_only": 32,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "ICML 2026": {
-      "status": "ok",
-      "scanned": 6552,
-      "candidates": 54,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 9,
-      "catalog_only": 45,
-      "deepseek_only": 1,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "AAAI 2026": {
-      "status": "ok",
-      "scanned": 4920,
-      "candidates": 191,
-      "details_checked": 7,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 14,
-      "catalog_only": 177,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "IJCAI 2026": {
-      "status": "ok",
-      "scanned": 972,
-      "candidates": 15,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 0,
-      "catalog_only": 15,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "TPAMI 2026": {
-      "status": "ok",
-      "scanned": 2044,
-      "candidates": 15,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 1,
-      "catalog_only": 14,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "IJCV 2026": {
-      "status": "ok",
-      "scanned": 772,
-      "candidates": 5,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 0,
-      "catalog_only": 5,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "TIP 2026": {
-      "status": "ok",
-      "scanned": 1448,
-      "candidates": 20,
-      "details_checked": 0,
-      "details_failed": 0,
-      "details_deferred": 0,
-      "deepseek_hits": 0,
-      "catalog_only": 20,
-      "deepseek_only": 0,
-      "deepseek_new": [],
-      "phase": "active",
-      "catalog_changed": true,
-      "search_skipped_unchanged": false
+      "status": "skipped",
+      "reason": "active，下次检查 2026-11-14T23:41:43.694406+00:00"
     },
     "CVPR 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "ICCV 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "ECCV 2027": {
       "status": "skipped",
-      "reason": "not_scheduled"
+      "reason": "not_scheduled，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "NeurIPS 2027": {
       "status": "skipped",
-      "reason": "Future-year URL returned NeurIPS 2026; not a 2027 catalog"
+      "reason": "awaiting_catalog"
     },
     "ICLR 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "ICML 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "AAAI 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "IJCAI 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "TPAMI 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "IJCV 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     },
     "TIP 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:41:43.694406+00:00"
     }
   },
   "review_only": false,
@@ -567,7 +343,9 @@
     },
     "NeurIPS 2027": {
       "phase": "awaiting_catalog",
-      "reason": "Future-year URL returned NeurIPS 2026; rejected by year validation"
+      "reason": "Future-year URL returned NeurIPS 2026; rejected by year validation",
+      "last_checked_at": "2026-11-07T23:49:14.246673+00:00",
+      "next_check_at": "2026-11-21T23:49:14.246673+00:00"
     },
     "ICLR 2027": {
       "phase": "awaiting_catalog",
