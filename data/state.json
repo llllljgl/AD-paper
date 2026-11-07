@@ -1,13 +1,32 @@
 {
   "last_collected_until": "2026-11-07T01:58:03.731590+00:00",
-  "last_run_at": "2026-11-07T02:25:17+00:00",
-  "collected": 517,
-  "llm_calls": 400,
-  "pending": 64,
-  "review_errors": 5,
+  "last_run_at": "2026-11-07T07:03:30+00:00",
+  "collected": 0,
+  "llm_calls": 46,
+  "pending": 72,
+  "review_errors": 2,
   "mode": "agent",
-  "missing_abstract": 2,
+  "missing_abstract": 3,
   "sources": {
+    "arXiv": {
+      "status": "skipped",
+      "candidates": 0
+    }
+  },
+  "deepseek_search_calls": 0,
+  "deepseek_search_errors": {},
+  "code_backfill": {},
+  "llm_status": "enabled",
+  "review_blocked": true,
+  "deepseek_only_reviewed": {
+    "accepted": 2,
+    "pending": 0,
+    "rejected": 3
+  },
+  "missing_scope_evidence": 67,
+  "investigations": 7,
+  "investigation_search_calls": 21,
+  "last_collection_sources": {
     "arXiv": {
       "status": "failed",
       "reason": "HTTPError"
@@ -137,21 +156,5 @@
       "deepseek_new": []
     }
   },
-  "deepseek_search_calls": 20,
-  "deepseek_search_errors": {},
-  "code_backfill": {
-    "checked": 15,
-    "added": 0,
-    "error": ""
-  },
-  "llm_status": "enabled",
-  "review_blocked": false,
-  "deepseek_only_reviewed": {
-    "accepted": 2,
-    "pending": 0,
-    "rejected": 3
-  },
-  "missing_scope_evidence": 53,
-  "investigations": 34,
-  "investigation_search_calls": 102
+  "review_only": true
 }
