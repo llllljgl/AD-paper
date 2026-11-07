@@ -1,0 +1,2788 @@
+{
+  "report_date": "2026-11-07",
+  "run_url": "https://github.com/llllljgl/AD-paper/actions/runs/42194896234",
+  "baseline_commit": "7dfd81eeb2954a533ce35e5e380c4a1eb9177960",
+  "baseline_sha256": "2f761d7e9880e55efb31d0ea137c2dfc99e6940570d497e1b6ec87bb1ca51fdd",
+  "model": "deepseek-flash",
+  "search_calls": 8,
+  "review_calls": 112,
+  "sources": {
+    "CVPR": {
+      "scanned": 4041,
+      "candidates": 54,
+      "keyword_hits": 54,
+      "search_matched": 10,
+      "search_results": 40
+    },
+    "ICLR": {
+      "scanned": 5348,
+      "candidates": 29,
+      "keyword_hits": 29,
+      "search_matched": 3,
+      "search_results": 32
+    },
+    "TPAMI": {
+      "scanned": 1216,
+      "candidates": 11,
+      "keyword_hits": 11,
+      "search_matched": 1,
+      "search_results": 40
+    },
+    "TIP": {
+      "scanned": 820,
+      "candidates": 18,
+      "keyword_hits": 18,
+      "search_matched": 0,
+      "search_results": 40
+    }
+  },
+  "confirmed_omissions": [
+    {
+      "title": "AnomalyVFM -- Transforming Vision Foundation Models into Zero-Shot Anomaly Detectors",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fucka_AnomalyVFM_--_Transforming_Vision_Foundation_Models_into_Zero-Shot_Anomaly_Detectors_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "passes_scope_gate": false,
+      "evidence": "作者项目页明确说明在九个工业检测数据集上评测。",
+      "evidence_url": "https://maticfuc.github.io/anomaly_vfm/",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "InvAD: Inversion-based Reconstruction-Free Anomaly Detection with Diffusion Models",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Sakai_InvAD_Inversion-based_Reconstruction-Free_Anomaly_Detection_with_Diffusion_Models_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "passes_scope_gate": false,
+      "evidence": "更新后的作者预印本摘要明确包含工业与医学异常检测基准。",
+      "evidence_url": "https://arxiv.org/abs/2504.05662",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "Anomaly as Non-Conformity via Training-Free Graph Laplacian Energy Minimization",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Seo_Anomaly_as_Non-Conformity_via_Training-Free_Graph_Laplacian_Energy_Minimization_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "passes_scope_gate": false,
+      "evidence": "作者公开 HTML 正文实验部分明确使用 MVTec AD 与 VisA。",
+      "evidence_url": "https://arxiv.org/html/2605.28428v1",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "A Semantically Disentangled Unified Model for Multi-category 3D Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_A_Semantically_Disentangled_Unified_Model_for_Multi-category_3D_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "passes_scope_gate": false,
+      "evidence": "官方摘要明确描述点云缺陷检测，并使用 Real3D-AD 与 Anomaly-ShapeNet。",
+      "evidence_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_A_Semantically_Disentangled_Unified_Model_for_Multi-category_3D_Anomaly_Detection_CVPR_2026_paper.html",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "GS-CLIP: Zero-shot 3D Anomaly Detection by Geometry-Aware Prompt and Synergistic View Representation Learning",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Deng_GS-CLIP_Zero-shot_3D_Anomaly_Detection_by_Geometry-Aware_Prompt_and_Synergistic_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "passes_scope_gate": false,
+      "evidence": "作者仓库的数据准备部分明确包含 MVTec 3D-AD、Eyecandies 与 Real3D-AD。",
+      "evidence_url": "https://github.com/zhushengxinyue/GS-CLIP",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "Reasoning-Driven Anomaly Detection and Localization with Image-Level Supervision",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jin_Reasoning-Driven_Anomaly_Detection_and_Localization_with_Image-Level_Supervision_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "passes_scope_gate": false,
+      "evidence": "作者公开 HTML 正文列出 MVTec AD、WFDD、SDD 等工业检测实验。",
+      "evidence_url": "https://arxiv.org/html/2603.27179v1",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3710196",
+      "baseline_status": "pending",
+      "passes_scope_gate": true,
+      "evidence": "出版摘要明确列出 MVTec AD、VisA、Real-IAD、MVTec LOCO 等评测。",
+      "evidence_url": "https://doi.org/10.1109/tpami.2026.3710196",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "Improving Unsupervised Ultrasonic Image Anomaly Detection via Frequency-Spatial Feature Filtering and Gaussian Mixture Modeling",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3659292",
+      "baseline_status": "pending",
+      "passes_scope_gate": true,
+      "evidence": "出版摘要明确针对芯片封装的超声 C 扫描缺陷图像，另有 MVTec AD 与 VisA 评测。",
+      "evidence_url": "https://ieeexplore.ieee.org/document/11372587/",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "Unified Anomaly Detection via Multi-Scale Contrasted Memory",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3663923",
+      "baseline_status": "pending",
+      "passes_scope_gate": false,
+      "evidence": "出版摘要明确报告工业检测评估，方法输出空间异常图。",
+      "evidence_url": "https://doi.org/10.1109/tip.2026.3663923",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "Adapting Domain-Aware Knowledge to Vision-Language Model for Zero-Shot Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3671665",
+      "baseline_status": "pending",
+      "passes_scope_gate": true,
+      "evidence": "出版摘要明确包含工业数据集，并报告图像级与像素级检测。",
+      "evidence_url": "https://doi.org/10.1109/tip.2026.3671665",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "“Stones From Other Hills Can Polish Jade”: Zero-Shot Anomaly Synthesis via Cross-Domain Anomaly Injection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3675432",
+      "baseline_status": "pending",
+      "passes_scope_gate": true,
+      "evidence": "出版摘要明确针对工业图像的零样本异常合成，为工业异常检测提供训练样本。",
+      "evidence_url": "https://doi.org/10.1109/tip.2026.3675432",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "Advancing Pre-Trained Teacher: Towards Robust Feature Discrepancy for Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3683277",
+      "baseline_status": "pending",
+      "passes_scope_gate": true,
+      "evidence": "出版摘要明确提出工业异常检测框架，评测包含 MVTec、VisA 与 MVTec3D-RGB。",
+      "evidence_url": "https://doi.org/10.1109/tip.2026.3683277",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "Region-Prompt-Guided Anomaly Detection With Entropy-Based Consistency Modeling",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3709516",
+      "baseline_status": "pending",
+      "passes_scope_gate": true,
+      "evidence": "出版摘要明确针对多类别工业视觉异常检测，列出五个工业基准。",
+      "evidence_url": "https://doi.org/10.1109/tip.2026.3709516",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "UAD: A Unified Model for Zero-Shot Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3718433",
+      "baseline_status": "pending",
+      "passes_scope_gate": false,
+      "evidence": "出版摘要明确包含缺陷检测领域的图像检测与分割评估，同时涵盖医学领域。",
+      "evidence_url": "https://doi.org/10.1109/tip.2026.3718433",
+      "discovery": "existing_candidate"
+    },
+    {
+      "title": "Unification of Closed-Open Industrial Detection Scenarios: New Large-Scale Benchmarks, Challenges and Baselines",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3680569",
+      "baseline_status": "absent",
+      "passes_scope_gate": null,
+      "evidence": "出版记录和作者预印本共同确认该文为工业缺陷检测基准与方法研究。标题没有命中旧初筛词，目录记录原本没有摘要。",
+      "evidence_url": "https://arxiv.org/abs/2606.07953",
+      "discovery": "independent_audit"
+    }
+  ],
+  "unconfirmed_model_suggestions": [
+    {
+      "title": "Anomaly-Related Residual Fields for Cross-domain Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Gao_Anomaly-Related_Residual_Fields_for_Cross-domain_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "reason": "DeepSeek 建议收录，但本轮读到的官方摘要未明确给出工业场景或具体工业基准。缺少足够独立证据，暂不计入确认漏收。"
+    },
+    {
+      "title": "Wavelet-Driven 3D Anomaly Detection under Pose-Agnostic and Sparse-View",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Shao_Wavelet-Driven_3D_Anomaly_Detection_under_Pose-Agnostic_and_Sparse-View_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "reason": "DeepSeek 建议收录，但本轮读到的官方摘要未明确给出工业场景或具体工业基准。缺少足够独立证据，暂不计入确认漏收。"
+    },
+    {
+      "title": "Hunting Normality from Query Sample via Residual Learning for Generalist Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Hunting_Normality_from_Query_Sample_via_Residual_Learning_for_Generalist_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "reason": "DeepSeek 建议收录，但本轮读到的官方摘要未明确给出工业场景或具体工业基准。缺少足够独立证据，暂不计入确认漏收。"
+    }
+  ],
+  "records": [
+    {
+      "index": 0,
+      "title": "Anomaly-Related Residual Fields for Cross-domain Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Gao_Anomaly-Related_Residual_Fields_for_Cross-domain_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "摘要明确研究基于扩散模型残差的图像异常检测，提出跨域异常检测方法并涉及工业视觉常见基准场景。",
+        "summary_zh": "利用扩散模型逆向残差随步演化规律分离持续异常信号，并对齐跨域特征实现无标签目标域异常检测，值得关注跨域工业质检迁移。",
+        "tags": [
+          "扩散模型",
+          "跨域检测",
+          "残差分析"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 1,
+      "title": "Fine-VAD: Towards Fine-Grained Video Anomaly Detection via Progressive Cross-Granularity Learning",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Fine-VAD_Towards_Fine-Grained_Video_Anomaly_Detection_via_Progressive_Cross-Granularity_Learning_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要中的视频异常检测针对监控或通用视频中的异常事件分类，未提及工业视觉场景、表面缺陷或工业异常检测基准（如MVTec AD等），不符合筛选范围。",
+        "summary_zh": "面向通用视频的细粒度异常事件分类方法，与工业视觉缺陷检测无关，无需纳入。",
+        "tags": [
+          "视频异常检测",
+          "细粒度分类",
+          "非工业"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 2,
+      "title": "PDD: Manifold-Prior Diverse Distillation for Medical Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lu_PDD_Manifold-Prior_Diverse_Distillation_for_Medical_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要聚焦医学图像异常检测，工业场景仅作为对比提及，未在工业视觉数据集上评估。",
+        "summary_zh": "面向医学影像的多教师流形蒸馏异常检测方法，不涉及工业视觉缺陷检测场景。",
+        "tags": [
+          "医学影像",
+          "异常检测",
+          "蒸馏"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 3,
+      "title": "TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_TextPecker_Rewarding_Structural_Anomaly_Quantification_for_Enhancing_Visual_Text_Rendering_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "重建与生成",
+        "reason": "摘要聚焦文本到图像生成中的视觉文本渲染质量优化，并非工业视觉异常检测、缺陷检测或异常定位。",
+        "summary_zh": "提出强化学习奖励策略，感知生成图中文字的结构异常，以提升视觉文本渲染质量，属于文本生成优化而非工业缺陷检测。",
+        "tags": [
+          "文本渲染",
+          "强化学习",
+          "生成质量"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 4,
+      "title": "ADSeeker: A Knowledge-Grounded Reasoning Framework for Industry Anomaly Detection and Reasoning",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_ADSeeker_A_Knowledge-Grounded_Reasoning_Framework_for_Industry_Anomaly_Detection_and_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确针对工业视觉异常检测（MVTec、VisA、零样本异常检测），提出结合知识库与检索增强生成的多模态大模型推理框架，与范围高度相关。",
+        "summary_zh": "基于视觉文档知识库与检索增强生成，结合稀疏提示从图文信息中提取异常模式，用于工业零样本异常检测与推理。",
+        "tags": [
+          "工业异常检测",
+          "检索增强生成",
+          "零样本"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 5,
+      "title": "MoECLIP: Patch-Specialized Experts for Zero-shot Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Park_MoECLIP_Patch-Specialized_Experts_for_Zero-shot_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要提出基于CLIP与专家混合的零样本异常检测方法，并明确在工业基准上评估",
+        "summary_zh": "利用CLIP与专家混合，按patch路由至专用LoRA专家，实现零样本异常检测，适合工业视觉质检。",
+        "tags": [
+          "零样本异常检测",
+          "CLIP",
+          "专家混合"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 6,
+      "title": "MMR-AD: A Large-Scale Multimodal Dataset for Benchmarking General Anomaly Detection with Multimodal Large Language Models",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Yao_MMR-AD_A_Large-Scale_Multimodal_Dataset_for_Benchmarking_General_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "数据集与评估",
+        "reason": "标题和摘要明确面向工业通用视觉异常检测，提出多模态大语言模型训练与评测基准，属于工业视觉异常检测的数据集与评估范畴。",
+        "summary_zh": "构建面向多模态大语言模型的工业通用异常检测基准，支持训练与评测，并给出推理式基线用于检测和定位。",
+        "tags": [
+          "工业异常检测",
+          "多模态基准",
+          "视觉语言模型"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 7,
+      "title": "AnomalyVFM -- Transforming Vision Foundation Models into Zero-Shot Anomaly Detectors",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fucka_AnomalyVFM_--_Transforming_Vision_Foundation_Models_into_Zero-Shot_Anomaly_Detectors_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确面向零样本工业视觉异常检测与异常定位，并提出基于视觉基础模型的零样本框架",
+        "summary_zh": "将视觉基础模型适配为零样本异常检测器，结合合成数据生成与低秩适配，用于工业异常定位。",
+        "tags": [
+          "零样本",
+          "视觉基础模型",
+          "异常定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 8,
+      "title": "InvAD: Inversion-based Reconstruction-Free Anomaly Detection with Diffusion Models",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Sakai_InvAD_Inversion-based_Reconstruction-Free_Anomaly_Detection_with_Diffusion_Models_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "摘要明确提出基于扩散模型反演的无重建工业视觉异常检测方法，涉及异常评分与检测效率，属于工业视觉异常检测范围。",
+        "summary_zh": "提出InvAD，用DDIM反演在潜空间加噪替代RGB重建，据先验分布偏差打分，实现无重建异常检测并提速。",
+        "tags": [
+          "扩散模型",
+          "异常检测",
+          "反演"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 9,
+      "title": "Geometry-Aligned and Anomaly-Aware Reconstruction for 3D Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Geometry-Aligned_and_Anomaly-Aware_Reconstruction_for_3D_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "摘要聚焦工业制造中三维点云异常检测，提出基于扩散重建的方法，属于工业视觉异常检测范围",
+        "summary_zh": "面向工业点云异常检测，用几何对齐的扩散重建保持表面结构，并按异常感知参考区分正常与缺陷区域，提升定位精度。",
+        "tags": [
+          "3D异常检测",
+          "点云",
+          "扩散重建"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 10,
+      "title": "Anomaly as Non-Conformity via Training-Free Graph Laplacian Energy Minimization",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Seo_Anomaly_as_Non-Conformity_via_Training-Free_Graph_Laplacian_Energy_Minimization_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "特征与记忆库",
+        "reason": "摘要提出无需训练的图拉普拉斯能量最小化方法，利用正常特征流形上的不符合度进行无监督视觉异常检测与定位，属于工业视觉异常检测范畴。",
+        "summary_zh": "提出免训练图拉普拉斯能量优化，用查询块对齐正常特征流形的非符合度打分，实现无监督异常检测与定位。",
+        "tags": [
+          "无监督异常检测",
+          "图拉普拉斯",
+          "异常定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 11,
+      "title": "Learning to Identify Out-of-Distribution Objects for 3D LiDAR Anomaly Segmentation",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Mosco_Learning_to_Identify_Out-of-Distribution_Objects_for_3D_LiDAR_Anomaly_Segmentation_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对3D LiDAR自动驾驶与机器人感知中的异常分割，非工业视觉表面缺陷检测场景",
+        "summary_zh": "针对3D LiDAR环境感知中的分布外物体分割，属于自动驾驶场景，与工业视觉异常检测范围不符。",
+        "tags": [
+          "3D LiDAR",
+          "异常分割",
+          "自动驾驶"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 12,
+      "title": "SFR-Net: Steering-Fusion-Refining Network in Multi-label Zero-Shot Sewer Defect Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chen_SFR-Net_Steering-Fusion-Refining_Network_in_Multi-label_Zero-Shot_Sewer_Defect_Detection_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "少样本与零样本",
+        "reason": "摘要针对市政下水管道多标签零样本缺陷检测，属基础设施管道缺陷场景，并非MVTec AD、VisA等工业产品表面缺陷检测与异常定位范围，按筛选标准排除。",
+        "summary_zh": "面向市政下水管道多标签零样本缺陷检测，用特征引导与多粒度融合缓解视觉语义对齐歧义，但不属工业产品表面缺陷异常检测范围。",
+        "tags": [
+          "管道缺陷",
+          "零样本学习",
+          "语义对齐"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 13,
+      "title": "BUSSARD: Normalizing Flows for Bijective Universal Scene-Specific Anomalous Relationship Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Schween_BUSSARD_Normalizing_Flows_for_Bijective_Universal_Scene-Specific_Anomalous_Relationship_Detection_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "重建与生成",
+        "reason": "摘要针对场景图中的异常关系检测，属于通用视觉/场景理解，未涉及工业视觉、表面缺陷或工业异常检测基准。",
+        "summary_zh": "用归一化流学习场景图物体关系三元组检测异常关系，但场景为办公室与餐厅，不涉及工业视觉缺陷检测。",
+        "tags": [
+          "场景图",
+          "归一化流",
+          "非工业"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 14,
+      "title": "A Semantically Disentangled Unified Model for Multi-category 3D Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_A_Semantically_Disentangled_Unified_Model_for_Multi-category_3D_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "摘要针对3D点云工业异常检测，提出语义解耦重建统一模型，并在Real3D-AD和Anomaly-ShapeNet数据集评估，符合工业视觉异常检测范围。",
+        "summary_zh": "提出语义解耦统一模型，用类别条件对比学习分离语义，再由几何引导解码器重建特征，解决多类别3D异常检测中的类别纠缠问题。",
+        "tags": [
+          "3D异常检测",
+          "点云重建",
+          "多类别统一模型"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 15,
+      "title": "Learning from Noisy Supervision: A Denoising-Debiasing Framework for Weakly Supervised Video Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Learning_from_Noisy_Supervision_A_Denoising-Debiasing_Framework_for_Weakly_Supervised_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "视觉语言模型",
+        "reason": "摘要针对监控视频中的帧级异常定位（WS-VAD），属于视频异常检测，而非工业视觉表面缺陷或工业场景异常检测；未明确评估工业视觉场景。",
+        "summary_zh": "面向弱监督视频异常检测，用动态丢弃和视觉语言模型去噪去偏；属监控视频领域，非工业视觉缺陷检测，参考价值有限。",
+        "tags": [
+          "视频异常检测",
+          "弱监督",
+          "去噪"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 16,
+      "title": "TLMA: Mitigating the Impact of Weakly Labeled Information for Video Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xu_TLMA_Mitigating_the_Impact_of_Weakly_Labeled_Information_for_Video_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对监控视频中的弱监督视频异常检测，数据集为UCF-Crime、XD-Violence、MSAD，属通用视频异常检测，非工业视觉异常检测或表面缺陷。",
+        "summary_zh": "面向监控视频异常检测，用三元组学习与MIL抑制弱标签干扰并增强运动特征，但未涉及工业视觉场景。",
+        "tags": [
+          "视频异常检测",
+          "弱监督",
+          "监控"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 17,
+      "title": "LayoutAD: Exploring Semantic-Geometric Misalignment Reasoning for Scene Layout Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_LayoutAD_Exploring_Semantic-Geometric_Misalignment_Reasoning_for_Scene_Layout_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要聚焦生成式文本到图像模型的场景布局异常与语义几何不一致，未明确涉及工业视觉、表面缺陷或 MVTec、VisA 等工业数据集评估。",
+        "summary_zh": "面向场景布局异常检测，用语义与几何图推理物体级不一致，但应用场景偏生成模型，与工业视觉异常检测范围不符。",
+        "tags": [
+          "场景布局",
+          "生成模型",
+          "非工业"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 18,
+      "title": "Back to Point: Exploring Point-Language Models for Zero-Shot 3D Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Back_to_Point_Exploring_Point-Language_Models_for_Zero-Shot_3D_Anomaly_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确面向工业检测的零样本3D点云异常检测，方法基于点云-语言模型对齐并做缺陷定位。",
+        "summary_zh": "用点云-语言模型对齐多粒度特征与文本，在无目标类别训练数据下检测并定位工业3D结构缺陷。",
+        "tags": [
+          "零样本",
+          "点云异常检测",
+          "工业检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 19,
+      "title": "Bulk RNA-seq Guided Multi-modal Detection of Anomalous Regions in Human Cancer via Spatial Transcriptomics",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Shi_Bulk_RNA-seq_Guided_Multi-modal_Detection_of_Anomalous_Regions_in_Human_CVPR_2026_paper.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对人类癌症组织的空间转录组异常区域检测，属生物医学/组学分析，非工业视觉异常检测",
+        "summary_zh": "方法结合bulk RNA-seq与空间转录组及病理图像检测癌症异常区域，属医学组学场景，与工业视觉异常检测无关。",
+        "tags": [
+          "空间转录组",
+          "癌症检测",
+          "多模态"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 20,
+      "title": "VisualAD: Language-Free Zero-Shot Anomaly Detection via Vision Transformer",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Hou_VisualAD_Language-Free_Zero-Shot_Anomaly_Detection_via_Vision_Transformer_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要聚焦零样本异常检测与定位，并在13个基准（含工业场景）上评估，明确属于工业视觉异常检测范围。",
+        "summary_zh": "用纯视觉ViT框架替代CLIP文本分支，以可学习正常/异常token引导patch定位零样本异常，兼顾工业与医学多基准。",
+        "tags": [
+          "零样本检测",
+          "Vision Transformer",
+          "异常定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 21,
+      "title": "Multi-Prototype Compactness and Boundary-Aware Synthesis for Unsupervised Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Liao_Multi-Prototype_Compactness_and_Boundary-Aware_Synthesis_for_Unsupervised_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "特征与记忆库",
+        "reason": "摘要明确涉及工业视觉异常检测，提出多原型紧凑约束与边界感知合成，并在MVTec-AD、VisA等工业数据集上评估",
+        "summary_zh": "用多原型混合建模正常特征子模式，并在簇边界合成伪异常以收紧决策边界，提升工业缺陷检测与定位。",
+        "tags": [
+          "工业异常检测",
+          "多原型",
+          "异常合成"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 22,
+      "title": "GS-CLIP: Zero-shot 3D Anomaly Detection by Geometry-Aware Prompt and Synergistic View Representation Learning",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Deng_GS-CLIP_Zero-shot_3D_Anomaly_Detection_by_Geometry-Aware_Prompt_and_Synergistic_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确研究零样本三维工业异常检测，结合CLIP与几何提示，属于工业视觉异常检测范围",
+        "summary_zh": "用几何先验生成文本提示，并融合渲染与深度图像进行零样本三维异常检测，可参考其多视图特征融合思路。",
+        "tags": [
+          "零样本",
+          "三维异常检测",
+          "CLIP"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 23,
+      "title": "Hyperbolic Defect Feature Synthesis for Few-Shot Defect Classification",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Hyperbolic_Defect_Feature_Synthesis_for_Few-Shot_Defect_Classification_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确针对工业少样本缺陷分类，提出双曲空间缺陷特征合成方法，并在MVTec-FS等基准上验证。",
+        "summary_zh": "在双曲空间用少量缺陷原型合成缺陷特征，并施加层级对比损失，提升工业少样本缺陷分类的泛化能力。",
+        "tags": [
+          "少样本缺陷分类",
+          "特征合成",
+          "双曲空间"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 24,
+      "title": "No Need For Real Anomaly: MLLM Empowered Zero-Shot Video Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Dai_No_Need_For_Real_Anomaly_MLLM_Empowered_Zero-Shot_Video_Anomaly_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对通用视频异常检测（监控视频中的时空异常），未明确涉及工业场景或工业表面缺陷，不在筛选范围内。",
+        "summary_zh": "提出零样本视频异常检测框架，用伪异常采样与大模型增强语义理解，属通用监控视频异常检测，与工业视觉质检无关。",
+        "tags": [
+          "视频异常检测",
+          "零样本",
+          "非工业"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 25,
+      "title": "GPFlow: Gaussian Prototype Probability Flow for Unsupervised Multi-Modal Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_GPFlow_Gaussian_Prototype_Probability_Flow_for_Unsupervised_Multi-Modal_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "特征与记忆库",
+        "reason": "摘要明确针对MVTec-3D-AD与Eyecandies工业多模态异常检测，采用高斯原型特征建模与重建，属于视觉异常检测范畴。",
+        "summary_zh": "用可学习高斯原型与后验均值路由构建各向异性信息瓶颈，结合模态内与跨模态重建做少样本工业多模态异常检测。",
+        "tags": [
+          "工业异常检测",
+          "高斯原型",
+          "多模态少样本"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 26,
+      "title": "One-to-More: High-Fidelity Training-Free Anomaly Generation with Attention Control",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Rao_One-to-More_High-Fidelity_Training-Free_Anomaly_Generation_with_Attention_Control_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "标题和摘要明确涉及工业视觉异常检测，提出免训练少样本异常生成方法以增强下游异常检测。",
+        "summary_zh": "提出免训练少样本异常生成方法O2MAG，利用参考异常图像的自注意力进行扩散合成，增强下游工业异常检测。",
+        "tags": [
+          "异常生成",
+          "少样本",
+          "工业检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 27,
+      "title": "Complementary Prototype Mapping for Efficient Multimodal Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Complementary_Prototype_Mapping_for_Efficient_Multimodal_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "特征与记忆库",
+        "reason": "摘要明确针对工业场景的多模态无监督异常检测与缺陷定位，提出原型映射框架以处理正常样本变化、提升推理效率，符合工业视觉异常检测范围。",
+        "summary_zh": "提出互补原型映射框架，用共识原型与补充原型消解跨模态映射歧义，提升工业缺陷定位效率。",
+        "tags": [
+          "多模态异常检测",
+          "原型映射",
+          "缺陷定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 28,
+      "title": "UniMMAD: Unified Multi-Modal and Multi-Class Anomaly Detection via MoE-Driven Feature Decompression",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_UniMMAD_Unified_Multi-Modal_and_Multi-Class_Anomaly_Detection_via_MoE-Driven_Feature_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "摘要提出面向多模态多类异常检测的统一重建框架，评估跨9个数据集含工业视觉模态，符合工业视觉异常检测范围。",
+        "summary_zh": "用MoE驱动特征解压实现多模态多类统一重建，按模态与类别路由专家，值得关注其跨域适应与推理效率。",
+        "tags": [
+          "多模态",
+          "MoE重建",
+          "异常检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 29,
+      "title": "From Attraction to Equilibrium: Physics-Inspired Semantic Gravitons for Zero-Shot Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Pan_From_Attraction_to_Equilibrium_Physics-Inspired_Semantic_Gravitons_for_Zero-Shot_Anomaly_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确涉及零样本异常检测，并在十个工业与医疗基准上实验，其中工业视觉场景被明确评估。",
+        "summary_zh": "提出物理启发的语义引力子网络，将视觉文本对齐建模为自适应势场，用于零样本工业异常检测与定位。",
+        "tags": [
+          "零样本异常检测",
+          "视觉语言模型",
+          "工业质检"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 30,
+      "title": "Reasoning-Driven Anomaly Detection and Localization with Image-Level Supervision",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jin_Reasoning-Driven_Anomaly_Detection_and_Localization_with_Image-Level_Supervision_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确涉及基于多模态大模型的异常检测与像素级定位，属工业视觉范围（公开基准），且仅用图像级监督。",
+        "summary_zh": "利用多模态大模型的自回归推理提取异常相关 token 并聚合注意力，生成像素级异常图，仅需图像级监督实现工业异常检测与定位。",
+        "tags": [
+          "多模态大模型",
+          "异常定位",
+          "图像级监督"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 31,
+      "title": "Towards an Incremental Unified Multimodal Anomaly Detection: Augmenting Multimodal Denoising From an Information Bottleneck Perspective",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Long_Towards_an_Incremental_Unified_Multimodal_Anomaly_Detection_Augmenting_Multimodal_Denoising_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "特征与记忆库",
+        "reason": "摘要明确涉及多模态工业异常检测，并在MVTec 3D-AD和Eyecandies工业数据集上评估，核心方法围绕特征去噪与信息瓶颈融合以缓解增量学习中的灾难性遗忘。",
+        "summary_zh": "针对增量统一多模态异常检测中的灾难性遗忘问题，用信息瓶颈融合与Mamba解码器去噪冗余和伪相关特征，在MVTec 3D-AD与Eyecandies上验证。",
+        "tags": [
+          "多模态异常检测",
+          "增量学习",
+          "特征去噪"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 32,
+      "title": "Dual-Prototype-Guided Multi-task Learning for Unsupervised Anomaly Detection and Classification",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Luo_Dual-Prototype-Guided_Multi-task_Learning_for_Unsupervised_Anomaly_Detection_and_Classification_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "reject",
+        "topic": "特征与记忆库",
+        "reason": "摘要虽提及工业场景，但同时强调医疗数据集且未明确工业视觉具体评估，工业视觉相关性证据不足",
+        "summary_zh": "提出双原型特征解耦框架联合训练无监督异常检测与分类，但摘要未明确工业视觉场景的具体评估。",
+        "tags": [
+          "异常检测",
+          "异常分类",
+          "多任务"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 33,
+      "title": "Towards Open-Vocabulary Industrial Defect Understanding with a Large-Scale Multimodal Dataset",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ni_Towards_Open-Vocabulary_Industrial_Defect_Understanding_with_a_Large-Scale_Multimodal_Dataset_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "数据集与评估",
+        "reason": "摘要明确提出大规模工业多模态缺陷数据集及工业视觉缺陷理解任务，属于数据集构建与工业缺陷理解范畴。",
+        "summary_zh": "构建百万级图文对齐的工业多模态缺陷数据集，覆盖多种材料与缺陷类型，并训练面向工业场景的扩散视觉语言基础模型。",
+        "tags": [
+          "工业缺陷",
+          "多模态数据集",
+          "视觉语言模型"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 34,
+      "title": "The Road Less Seen: Segment Exploration for Weakly Supervised Video Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Acharya_The_Road_Less_Seen_Segment_Exploration_for_Weakly_Supervised_Video_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对监控视频异常检测，非工业视觉场景，且未明确评估工业视觉任务。",
+        "summary_zh": "面向弱监督监控视频异常检测，提出时序聚类与不确定性分段探索策略，不涉及工业视觉表面缺陷。",
+        "tags": [
+          "视频异常检测",
+          "弱监督",
+          "监控"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 35,
+      "title": "Omni-AD: A Large-scale and Versatile Benchmark for Industrial Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Shi_Omni-AD_A_Large-scale_and_Versatile_Benchmark_for_Industrial_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "数据集与评估",
+        "reason": "摘要明确介绍面向工业异常检测的大规模多用途基准，涵盖MVTec AD类数据集规模对比及多模态大模型评估协议。",
+        "summary_zh": "Omni-AD构建约3.5万图、150类、16行业的工业异常检测基准，支持无监督与多模态大模型评估，揭示现有方法挑战。",
+        "tags": [
+          "工业异常检测",
+          "基准数据集",
+          "多模态评估"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 36,
+      "title": "CHAL: Causal-guided Hierarchical Anomaly-aware Learning for Moving Infrared Small Target Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Duan_CHAL_Causal-guided_Hierarchical_Anomaly-aware_Learning_for_Moving_Infrared_Small_Target_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要为红外小目标检测，将目标视为背景异常，但面向移动红外目标成像而非工业场景表面缺陷或工业视觉异常检测，不符合范围。",
+        "summary_zh": "该工作用因果引导的分层异常感知学习做红外小目标检测，把目标视为背景异常，但场景为红外目标检测而非工业质检。",
+        "tags": [
+          "红外小目标",
+          "目标检测",
+          "非工业场景"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 37,
+      "title": "ClimaOoD: Improving Anomaly Segmentation via Physically Realistic Synthetic Data",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_ClimaOoD_Improving_Anomaly_Segmentation_via_Physically_Realistic_Synthetic_Data_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要聚焦自动驾驶场景的OoD异常分割与合成数据，未涉及工业视觉异常检测或表面缺陷。",
+        "summary_zh": "面向自动驾驶开放世界的异常分割，用语义引导图像生成合成天气多样的OoD数据以提升泛化，不属工业视觉质检范围。",
+        "tags": [
+          "自动驾驶",
+          "异常分割",
+          "合成数据"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 38,
+      "title": "Bidirectional Multimodal Prompt Learning with Scale-Aware Training for Few-Shot Multi-Class Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lee_Bidirectional_Multimodal_Prompt_Learning_with_Scale-Aware_Training_for_Few-Shot_Multi-Class_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确涉及工业视觉异常检测（MVTec-AD、VisA、Real-IAD）的少样本多类设定，并提出视觉语言提示学习方法",
+        "summary_zh": "提出轻量级双向多模态提示学习框架，去除对异常文本描述和外部模块的依赖，结合尺度感知前缀融合全局与局部信息以提升工业图像缺陷定位。",
+        "tags": [
+          "工业质检",
+          "少样本",
+          "视觉语言模型"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 39,
+      "title": "DLVP-CLIP: Enhancing Fine-Grained Zero-Shot Anomaly Detection via Dynamic Local Visual Prompting",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_DLVP-CLIP_Enhancing_Fine-Grained_Zero-Shot_Anomaly_Detection_via_Dynamic_Local_Visual_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确聚焦零样本异常检测（ZSAD），并在工业质检及13个工业/医疗数据集上评估，属工业视觉异常检测范围。",
+        "summary_zh": "基于CLIP动态提取关键区域局部视觉提示，结合多模态局部提示与高低频分解增强细节感知，实现零样本工业异常检测。",
+        "tags": [
+          "零样本",
+          "CLIP",
+          "工业质检"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 40,
+      "title": "Joint Learning of General and Diverse Patterns with Mixture of Memory Experts for Weakly-Supervised Video Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Sun_Joint_Learning_of_General_and_Diverse_Patterns_with_Mixture_of_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要为监控视频异常检测（wVAD），非工业视觉表面缺陷，且未评估工业场景。",
+        "summary_zh": "面向监控视频的弱监督异常检测，利用记忆专家与语言模型原型路由，与工业表面缺陷检测无关。",
+        "tags": [
+          "视频异常检测",
+          "弱监督",
+          "监控"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 41,
+      "title": "Weakly Supervised Video Anomaly Detection with Anomaly-Connected Components and Intention Reasoning",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Weakly_Supervised_Video_Anomaly_Detection_with_Anomaly-Connected_Components_and_Intention_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对监控犯罪视频的时序异常检测，评估数据集为XD-Violence与UCF-Crime，不属于工业视觉表面缺陷或工业异常检测场景。",
+        "summary_zh": "面向监控视频弱监督时序异常检测，利用异常连通分量与意图推理定位异常片段，场景非工业。",
+        "tags": [
+          "视频异常检测",
+          "弱监督",
+          "非工业"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 42,
+      "title": "RAID: Retrieval-Augmented Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Cai_RAID_Retrieval-Augmented_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "特征与记忆库",
+        "reason": "摘要明确针对无监督工业视觉异常检测与定位，采用层次化向量库检索正常样本并抑制匹配噪声，并在 MVTec、VisA、MPDD、BTAD 等工业基准上评估。",
+        "summary_zh": "用层次化向量库检索正常样本，结合MoE抑制匹配噪声，生成细粒度异常图，适用于少样本与多样工业数据集。",
+        "tags": [
+          "异常定位",
+          "检索增强",
+          "无监督检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 43,
+      "title": "FastRef: Fast Prototype Refinement for Few-shot Industrial Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_FastRef_Fast_Prototype_Refinement_for_Few-shot_Industrial_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "标题和摘要明确针对少样本工业视觉异常检测，提出原型精炼框架，并在MVTec、VisA等工业数据集上评估",
+        "summary_zh": "提出FastRef两阶段原型精炼框架，用最优传输抑制异常重建，提升少样本工业异常检测效果。",
+        "tags": [
+          "少样本",
+          "原型精炼",
+          "工业异常检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 44,
+      "title": "FB-CLIP: Fine-Grained Zero-Shot Anomaly Detection with Foreground-Background Disentanglement",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Hu_FB-CLIP_Fine-Grained_Zero-Shot_Anomaly_Detection_with_Foreground-Background_Disentanglement_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确面向工业零样本异常检测与定位，基于CLIP做前景背景解耦，属于工业视觉异常检测范围。",
+        "summary_zh": "基于CLIP做前景背景解耦，结合多策略文本表示与语义一致性正则，实现零样本细粒度异常检测与定位，适合关注视觉语言模型工业落地者阅读。",
+        "tags": [
+          "零样本",
+          "CLIP",
+          "异常定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 45,
+      "title": "UniSpector: Towards Universal Open-set Defect Recognition via Spectral-Contrastive Visual Prompting",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_UniSpector_Towards_Universal_Open-set_Defect_Recognition_via_Spectral-Contrastive_Visual_Prompting_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确涉及工业缺陷识别与定位的开放集场景，并提出视觉提示方法与新基准，属于工业视觉异常检测范畴。",
+        "summary_zh": "提出谱对比视觉提示方法，将提示空间正则化为语义角流形，实现开放集工业缺陷识别与定位，并构建新基准。",
+        "tags": [
+          "开放集缺陷检测",
+          "视觉提示",
+          "工业质检"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 46,
+      "title": "RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhou_RC-NF_Robot-Conditioned_Normalizing_Flow_for_Real-Time_Anomaly_Detection_in_Robotic_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对机器人操作任务中的异常检测与干预，关注VLA模型状态与物体轨迹对齐，非工业视觉表面缺陷检测或异常定位。",
+        "summary_zh": "面向机器人操作任务的异常检测与恢复，需正样本训练归一化流，与工业视觉缺陷检测无关。",
+        "tags": [
+          "机器人异常检测",
+          "VLA",
+          "排除范围"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 47,
+      "title": "Hierarchical Point-Patch Fusion with Adaptive Patch Codebook for 3D Shape Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kang_Hierarchical_Point-Patch_Fusion_with_Adaptive_Patch_Codebook_for_3D_Shape_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "定位与分割",
+        "reason": "摘要明确涉及工业3D形状缺陷检测与点级异常定位，并发布工业测试集。",
+        "summary_zh": "提出分层点-面片融合网络，结合自适应面片码本建模局部与区域特征，用于工业3D形状缺陷检测与点级异常定位，并发布真实CAD工业测试集。",
+        "tags": [
+          "3D异常检测",
+          "工业质检",
+          "点级定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 48,
+      "title": "Wavelet-Driven 3D Anomaly Detection under Pose-Agnostic and Sparse-View",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Shao_Wavelet-Driven_3D_Anomaly_Detection_under_Pose-Agnostic_and_Sparse-View_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "定位与分割",
+        "reason": "摘要明确涉及3D工业视觉异常检测与定位，面向稀疏视角与任意姿态，属于工业场景视觉异常检测范围。",
+        "summary_zh": "提出小波驱动3D异常检测框架，用高斯建模与姿态估计应对稀疏视角，提升工业异常定位鲁棒性。",
+        "tags": [
+          "3D异常检测",
+          "稀疏视角",
+          "定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 49,
+      "title": "AG-VAS: Anchor-Guided Zero-Shot Visual Anomaly Segmentation with Large Multimodal Models",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Qu_AG-VAS_Anchor-Guided_Zero-Shot_Visual_Anomaly_Segmentation_with_Large_Multimodal_Models_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确涉及零样本视觉异常分割，并提出用大型多模态模型与语义锚点实现工业异常定位，同时包含工业基准评估。",
+        "summary_zh": "用可学习语义锚点扩展多模态模型词表，对齐语义与像素特征，实现零样本工业异常分割与定位。",
+        "tags": [
+          "零样本分割",
+          "多模态模型",
+          "异常定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 50,
+      "title": "Defect Cue-Preserved Structural Feature Refinement for Few-Shot Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jiang_Defect_Cue-Preserved_Structural_Feature_Refinement_for_Few-Shot_Anomaly_Detection_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确涉及少样本工业视觉异常检测，使用MVTec AD与VisA基准，聚焦缺陷线索保留与结构特征细化。",
+        "summary_zh": "提出保留缺陷线索的结构特征细化模型，先放大早期异常线索，再引导重建定位与边缘对齐分割，适用于少样本工业表面缺陷检测。",
+        "tags": [
+          "少样本异常检测",
+          "缺陷定位",
+          "特征细化"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 51,
+      "title": "Hunting Normality from Query Sample via Residual Learning for Generalist Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Hunting_Normality_from_Query_Sample_via_Residual_Learning_for_Generalist_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "特征与记忆库",
+        "reason": "摘要提出基于残差学习与支持实例特征聚合的通用异常检测框架，面向工业视觉异常定位与基准评估，属于工业视觉异常检测范围。",
+        "summary_zh": "将残差作为引导学习实例级正常性，用支持样本聚合查询相关正常性原型以定位工业缺陷。",
+        "tags": [
+          "通用异常检测",
+          "残差学习",
+          "异常定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 52,
+      "title": "SubspaceAD: Training-Free Few-Shot Anomaly Detection via Subspace Modeling",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lendering_SubspaceAD_Training-Free_Few-Shot_Anomaly_Detection_via_Subspace_Modeling_CVPR_2026_paper.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确提出面向工业检测的少样本视觉异常检测，并在 MVTec-AD 与 VisA 上评估，属于工业视觉异常检测范围。",
+        "summary_zh": "用冻结DINOv2提取正常图块特征，PCA子空间重建残差做免训练少样本工业异常检测，并在MVTec-AD与VisA上验证，方法简洁值得参考。",
+        "tags": [
+          "少样本",
+          "免训练",
+          "工业异常检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 53,
+      "title": "Alert-CLIP: Abnormality-aware Latent-Enhanced Representation Tuning of CLIP for Video Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_Alert-CLIP_Abnormality-aware_Latent-Enhanced_Representation_Tuning_of_CLIP_for_Video_Anomaly_CVPR_2026_paper.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "视觉语言模型",
+        "reason": "摘要针对视频异常检测（VAD），未明确涉及工业视觉场景或表面缺陷检测，超出筛选范围",
+        "summary_zh": "面向视频异常检测，用CLIP做多级对齐增强异常感知，可用于了解视觉语言模型在异常检测中的表示调优思路。",
+        "tags": [
+          "视频异常检测",
+          "CLIP",
+          "跨模态对齐"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 54,
+      "title": "EVEREST: A Transformer for Probabilistic Rare-Event Anomaly Detection with Evidential and Tail-Aware Uncertainty",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/0b6566f471cd601cbfc895962623124e-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要为多元时间序列稀有事件预测，实验为空间天气数据，仅在泛泛提及工业监控，未明确评估工业视觉场景，故不符合范围。",
+        "summary_zh": "面向空间天气时间序列的稀有事件预测方法，含不确定性建模与尾部风险估计，但不涉及工业视觉异常检测。",
+        "tags": [
+          "时间序列",
+          "稀有事件",
+          "不属于范围"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 55,
+      "title": "ReTabAD: A Benchmark for Restoring Semantic Context in Tabular Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/19ba2b9448d5de25826f6eb408dab194-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "数据集与评估",
+        "reason": "摘要面向表格数据的异常检测基准与语义上下文，未涉及工业视觉、表面缺陷或图像异常定位，不属于指定范围。",
+        "summary_zh": "面向表格数据的上下文增强异常检测基准，与工业视觉表面缺陷检测无关，不建议纳入。",
+        "tags": [
+          "表格异常检测",
+          "基准",
+          "语义上下文"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 56,
+      "title": "Point-wise Anomaly Detection via Fold-bifurcation ODE",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/19dc8bc893019f7317df1c3bb30bffe2-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要聚焦时间序列异常检测，应用场景为工业监测与金融风险，未明确评估工业视觉缺陷检测，不符合范围。",
+        "summary_zh": "将时间序列异常检测重构为追踪系统逼近临界点，用折分岔ODE生成风险状态并零样本定阈，面向工业监测与金融等时序场景。",
+        "tags": [
+          "时间序列",
+          "异常检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 57,
+      "title": "Unmasking Backdoors: An Explainable Defense via Gradient-Attention Anomaly Scoring for Pre-trained Language Models",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/2c7967a442300bff58e9d7b73aa26f24-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对自然语言处理中的预训练语言模型后门攻击防御，与工业视觉异常检测无关",
+        "summary_zh": "提出基于注意力与梯度异常评分的语言模型后门防御方法，属于NLP安全方向，与工业视觉异常检测无关，不建议纳入本综述。",
+        "tags": [
+          "NLP安全",
+          "后门防御"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 58,
+      "title": "Topological Anomaly Quantification for Semi-supervised Graph Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/2db1a74ea14674dc75061578b3e23f5c-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对图数据上的半监督图异常检测，未涉及工业视觉场景，且明确评估的是基准图数据集而非工业视觉。",
+        "summary_zh": "面向半监督图异常检测，用拓扑度量量化节点异常并生成伪异常训练，属图数据挖掘而非工业视觉。",
+        "tags": [
+          "图异常检测",
+          "半监督",
+          "非工业视觉"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 59,
+      "title": "From Static Benchmarks to Dynamic Protocol: Agent-Centric Text Anomaly Detection for Evaluating LLM Reasoning",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/2ff46d83d1dcc063e075058b29d55efe-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要中文本异常检测仅作为评估LLM推理的基准任务，属于自然语言处理评测，不涉及工业视觉异常检测或表面缺陷。",
+        "summary_zh": "提出以智能体动态生成文本异常检测题目的LLM评测协议，与工业视觉异常检测无关，不建议纳入。",
+        "tags": [
+          "文本异常检测",
+          "LLM评测",
+          "非工业视觉"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 60,
+      "title": "OwlEye: Zero-Shot Learner for Cross-Domain Graph Data Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/387982dbf23d9975c7fc45813dd3dabc-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要聚焦跨域图结构数据异常检测，涉及金融、网络安全等，制造仅为列举之一，未明确评估工业视觉场景如表面缺陷图像。",
+        "summary_zh": "提出零样本跨域图异常检测框架，对齐特征并学习多域模式字典；面向通用图数据而非工业视觉缺陷。",
+        "tags": [
+          "图异常检测",
+          "零样本",
+          "跨域"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 61,
+      "title": "MRAD: Zero-Shot Anomaly Detection with Memory-Driven Retrieval",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4c12e97f2e05304a451e18c9c945036f-Abstract-Conference.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确涉及零样本异常检测，构建图像级与像素级记忆库进行检索，并在工业数据集上评估异常分类与分割。",
+        "summary_zh": "提出MRAD，冻结CLIP图像编码器并用辅助数据构建图像级与像素级记忆库，推理时通过相似度检索直接得到异常分数，免训练即可用于工业与医学异常分类和分割。",
+        "tags": [
+          "零样本异常检测",
+          "记忆检索",
+          "CLIP"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 62,
+      "title": "Two-Layer Convolutional Autoencoders Trained on Normal Data Provably Detect Unseen Anomalies",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/57126328c3b40cf618a34f1c5df24d8a-Abstract-Conference.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "重建与生成",
+        "reason": "摘要聚焦于重建式异常检测的通用理论分析，仅用合成实验和真实数据的可视化验证，未明确评估工业视觉场景（如MVTec AD等），证据不足。",
+        "summary_zh": "该文从理论上分析两层卷积自编码器的训练动态，解释正常与异常重建误差差异，但未明确面向工业视觉检测场景。",
+        "tags": [
+          "自编码器",
+          "理论分析",
+          "重建误差"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 63,
+      "title": "PaAno: Patch-Based Representation Learning for Time-Series Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/5991785875cf5eee9c29e2ed7d26d1c0-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "该论文针对时间序列异常检测，未明确涉及工业视觉场景，摘要中未提及工业视觉或图像数据，不符合筛选范围。",
+        "summary_zh": "提出轻量级时间序列异常检测方法，基于补丁表示学习，不涉及工业视觉场景。",
+        "tags": [
+          "时间序列",
+          "异常检测",
+          "排除"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 64,
+      "title": "ICDiffAD: Implicit Conditioning Diffusion Model for Time Series Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/59a9cc95f046e9125d8816ef971873e7-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "重建与生成",
+        "reason": "标题与摘要均为时间序列异常检测，未明确涉及工业视觉、表面缺陷或图像场景，符合排除条件",
+        "summary_zh": "面向通用时间序列异常检测的扩散模型方法，未涉及工业视觉或表面缺陷场景，与工业视觉筛选范围无关。",
+        "tags": [
+          "时间序列",
+          "扩散模型",
+          "排除范围"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 65,
+      "title": "Low Rank Transformer for Multivariate Time Series Anomaly Detection and Localization",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/61c00c07e6d27285e4b952e96cc65666-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要聚焦于多变量时间序列异常检测与定位，未涉及工业视觉、表面缺陷或图像异常检测，属于时间序列异常领域，不在筛选范围内。",
+        "summary_zh": "提出低秩Transformer用于多变量时间序列异常检测与定位，属时序分析而非工业视觉表面缺陷，参考价值有限。",
+        "tags": [
+          "时间序列",
+          "异常检测",
+          "非视觉"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 66,
+      "title": "Steering and Rectifying Latent Representation Manifolds in Frozen Multi-modal LLMs for Video Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/634f75be78884d597c04eedeb12cc6fe-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对视频异常检测（VAD），未明确涉及工业视觉或表面缺陷场景，属于视频级异常事件检测而非工业视觉异常检测/定位。",
+        "summary_zh": "面向视频异常检测，用冻结多模态大模型操控隐表示以放大异常维度，但场景为通用视频而非工业视觉。",
+        "tags": [
+          "视频异常检测",
+          "多模态大模型",
+          "非工业"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 67,
+      "title": "DR-GGAD: Dual Residual Centering for Mitigating Anomaly Non‑Discriminativity in Generalist Graph Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/7538e7a7a589a267f49527fe6fbc640e-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要面向通用图异常检测（跨域图节点异常），未涉及工业视觉、图像表面缺陷或MVTec/VisA等工业视觉基准，不符合筛选范围。",
+        "summary_zh": "面向未见图的通用图异常检测，用双残差模块缓解异常与正常表征不可分；属图数据异常检测，非工业视觉场景。",
+        "tags": [
+          "图异常检测",
+          "跨域迁移"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 68,
+      "title": "Contextual and Seasonal LSTMs for Time Series Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/761c3284ee4859bff3c7e5d9299a45ee-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要聚焦于单变量时间序列与网络/云系统异常检测，未涉及工业视觉、表面缺陷或图像异常定位，属于排除范围。",
+        "summary_zh": "面向网络与云服务器的时间序列异常检测方法，与工业视觉缺陷检测无关，不建议纳入本轮筛选。",
+        "tags": [
+          "时间序列",
+          "异常检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 69,
+      "title": "JUDO: A Juxtaposed Domain-Oriented Multimodal Reasoner for Industrial Anomaly QA",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/92a7a03e1c716970848a4a86cc8243ee-Abstract-Conference.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确涉及工业异常检测的视觉问答与多模态推理，利用正常图像对比分割缺陷并注入领域知识，属于工业视觉场景。",
+        "summary_zh": "JUDO以正常图像为对照做视觉推理分割缺陷区域，并用监督微调与强化学习注入工业领域知识，提升异常问答能力。",
+        "tags": [
+          "工业异常问答",
+          "多模态推理",
+          "缺陷分割"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 70,
+      "title": "Towards Multimodal Time Series Anomaly Detection with Semantic Alignment and Condensed Interaction",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/95e685b53398a58c5a9f5c5bb46bd273-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要为面向动态系统的多模态时间序列异常检测，未明确评估工业视觉异常检测或表面缺陷场景。",
+        "summary_zh": "该文提出多模态时间序列异常检测方法，核心是文本与数值语义对齐及冗余过滤，属于时间序列异常检测范畴。",
+        "tags": [
+          "时间序列",
+          "多模态",
+          "异常检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 71,
+      "title": "Foundation Visual Encoders Are Secretly Few-Shot Anomaly Detectors",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9e47a0bc530cc88b09b7670d2c130a29-Abstract-Conference.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确针对工业安全检查中的少样本异常检测，提出基于基础视觉编码器的FoundAD方法，属于工业视觉异常检测范围。",
+        "summary_zh": "利用基础视觉编码器特征学习非线性投影到正常图像流形，实现少样本工业异常检测，可用于多类工业安全巡检。",
+        "tags": [
+          "少样本",
+          "工业质检",
+          "基础模型"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 72,
+      "title": "Dynamic Multi-sample Mixup with Gradient Exploration for Open-set Graph Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/ac8fbba029dadca99d6b8c3f913d3ed6-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "特征与记忆库",
+        "reason": "摘要讨论图神经网络上的开放集图异常检测，未涉及工业视觉、表面缺陷或图像异常定位。",
+        "summary_zh": "面向图数据的开放集异常检测，用多样本混合与梯度探索提升泛化，但场景是图节点而非工业图像。",
+        "tags": [
+          "图异常检测",
+          "开放集",
+          "非视觉"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 73,
+      "title": "Semantic Visual Anomaly Detection and Reasoning in AI-Generated Images",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b5b4d92374323c53c24bbbc8ee0e715c-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "视觉语言模型",
+        "reason": "摘要针对AIGC图像的语义异常（物理常识不一致、深伪检测），属于生成图像可信度评估，并非工业视觉异常检测或表面缺陷场景，范围外。",
+        "summary_zh": "面向AI生成图像的语义异常检测与推理基准，关注物理常识矛盾与深伪解释，不涉及工业表面缺陷检测。",
+        "tags": [
+          "AIGC检测",
+          "语义推理",
+          "基准数据集"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 74,
+      "title": "PGRF-Net: A Prototype-Guided Relational Fusion Network for Diagnostic Multivariate Time-Series Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c204d12afa0175285e5aac65188808b4-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对多变量时间序列异常检测，未明确评估工业视觉场景，不符合范围要求",
+        "summary_zh": "提出原型引导关系融合网络用于多变量时间序列诊断式异常检测，与工业视觉表面缺陷检测无关。",
+        "tags": [
+          "时间序列",
+          "异常检测",
+          "不在范围"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 75,
+      "title": "When Foundation Models are One-Liners: Limitations and Future Directions for Time Series Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/cf70320e93c08b39b1b29a348097a376-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要明确为时间序列异常检测，未涉及工业视觉或图像表面缺陷场景，属于排除范围。",
+        "summary_zh": "评估时间序列基础模型在时序异常检测中的局限，与工业视觉表面缺陷检测无关，不建议纳入。",
+        "tags": [
+          "时间序列",
+          "基础模型"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 76,
+      "title": "Complexity- and Statistics-Guided Anomaly Detection in Time Series Foundation Models",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d06768735ce7d11ade5baef7099b4e05-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要为时间序列基础模型的异常检测研究，未涉及工业视觉、表面缺陷或图像异常定位，且未明确评估工业视觉场景。",
+        "summary_zh": "面向时间序列基础模型的异常检测方法，与工业视觉缺陷检测无关，不建议纳入本筛选范围。",
+        "tags": [
+          "时间序列",
+          "基础模型",
+          "非视觉"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 77,
+      "title": "LLM as an Algorithmist: Enhancing Anomaly Detectors via Programmatic Synthesis",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/da1a97b53eec1c763c6d06835538fe3e-Abstract-Conference.html",
+      "baseline_status": "rejected",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要聚焦表格数据异常检测，未涉及工业视觉、表面缺陷或图像异常定位，不属于本筛选范围",
+        "summary_zh": "该方法让大模型为表格异常检测器生成合成异常代码以增强训练，场景为表格数据而非工业视觉，故不纳入。",
+        "tags": [
+          "表格异常检测",
+          "大模型",
+          "非工业视觉"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 78,
+      "title": "Dual Distillation for Few-Shot Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/dad2fff121451d119240e53ada475ba6-Abstract-Conference.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确面向医学影像的少样本异常检测，评测数据为四个器官、四种成像模态的医学基准，未涉及工业视觉场景，符合排除条件。",
+        "summary_zh": "面向医学影像的少样本异常检测，用双蒸馏与参考图加权提升跨器官泛化，不涉及工业质检场景。",
+        "tags": [
+          "医学影像",
+          "少样本",
+          "双蒸馏"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 79,
+      "title": "Towards Anomaly-Aware Pre-Training and Fine-Tuning for Graph Anomaly Detection",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/dd2094ecf134f7c9740fb29640bfb620-Abstract-Conference.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对图结构数据的异常检测（GAD），未明确涉及工业视觉、表面缺陷或MVTec AD等工业视觉场景。",
+        "summary_zh": "提出图异常检测的预训练与微调框架，属图数据异常检测，与工业视觉表面缺陷检测无关，不宜纳入本筛选范围。",
+        "tags": [
+          "图异常检测",
+          "非工业视觉"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 80,
+      "title": "Adaptive Conformal Anomaly Detection with Time Series Foundation Models for Signal Monitoring.",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/f54c9fc57aa6e1c72400cc127917fcf8-Abstract-Conference.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要聚焦时间序列信号监控的保形异常检测，未明确评估工业视觉或表面缺陷场景，属于排除范围。",
+        "summary_zh": "提出面向时间序列监控的自适应保形异常检测，利用预训练基础模型预测，未涉及工业视觉检测。",
+        "tags": [
+          "时间序列",
+          "保形预测",
+          "信号监控"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 81,
+      "title": "PIRN: Prototypical-based Intra-modal Reconstruction with Normality Communication for Multi-modal Anomaly Detection.",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/f7e7fabd73b3df96c54a320862afcb78-Abstract-Conference.html",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确面向MVTec 3D-AD等工业多模态数据集的少样本无监督异常检测，属于工业视觉异常检测范围。",
+        "summary_zh": "用可学习原型捕捉正常模式并约束RGB与3D特征重建，结合原型精炼与跨模态正常性通信，提升少样本工业异常检测效果。",
+        "tags": [
+          "多模态异常检测",
+          "少样本",
+          "原型重建"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 82,
+      "title": "Language-guided Open-world Video Anomaly Detection under Weak Supervision",
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/f88bec15cc4cb56b432ee040bb63f94f-Abstract-Conference.html",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "视觉语言模型",
+        "reason": "摘要针对开放世界视频异常检测（监控场景），未明确评估工业视觉异常检测或表面缺陷场景。",
+        "summary_zh": "提出语言引导的开放世界视频异常检测范式，通过自然语言定义异常并构建视频数据集；面向通用视频监控而非工业质检。",
+        "tags": [
+          "视频异常检测",
+          "语言引导",
+          "开放世界"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 83,
+      "title": "MoEGAD: A Mixture-of-Experts Framework With Pseudo-Anomaly Generation for Graph-Level Anomaly Detection",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2025.3646069",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "标题与摘要均聚焦图级异常检测，不涉及工业视觉异常检测或表面缺陷场景，属于图数据异常检测范围。",
+        "summary_zh": "面向图级异常检测的混合专家框架，通过伪异常图生成与门控专家提升多任务适应，但不涉及工业视觉场景。",
+        "tags": [
+          "图异常检测",
+          "混合专家",
+          "伪异常生成"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 84,
+      "title": "ZUMA: Training-Free Zero-Shot Unified Multimodal Anomaly Detection",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3658856",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确涉及工业多模态异常检测，在MVTec 3D-AD与Eyecandies上评估，使用CLIP实现零样本统一检测，符合工业视觉异常检测范围。",
+        "summary_zh": "提出免训练零样本统一多模态异常检测框架ZUMA，利用CLIP跨模态能力，在MVTec 3D-AD与Eyecandies上检测2D、3D及多模态异常。",
+        "tags": [
+          "工业异常检测",
+          "零样本",
+          "多模态CLIP"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 85,
+      "title": "Catching Every Ripple: Enhanced Anomaly Awareness via Dynamic Concept Adaptation",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3682661",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要针对在线数据流的概念漂移异常检测，属通用机器学习，未提工业视觉、表面缺陷或图像异常定位。",
+        "summary_zh": "提出在线概念漂移自适应框架，用超网络与动态阈值做流式异常检测，但非工业视觉场景，与表面缺陷检测无关。",
+        "tags": [
+          "在线异常检测",
+          "概念漂移"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 86,
+      "title": "MuSc-V2: Zero-Shot Multimodal Industrial Anomaly Classification and Segmentation With Mutual Scoring of Unlabeled Samples",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3688174",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": true,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确面向工业2D/3D多模态零样本异常分类与分割，直接对应MVTec 3D-AD等工业视觉场景，属范围核心。",
+        "summary_zh": "利用正常图像块在2D与3D中均有相似近邻而异常孤立的特点，通过互评分实现零样本工业异常分类与分割，可参考其多模态融合与误报抑制思路。",
+        "tags": [
+          "零样本",
+          "多模态",
+          "异常分割"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 87,
+      "title": "Instance-Level Cost-Sensitive Hypergraph Learning With Quality-Aware Structure Judgement for Anomaly Detection",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3679048",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要为通用异常检测的超图方法，未明确涉及工业视觉、表面缺陷或MVTec/VisA等工业场景，证据不足。",
+        "summary_zh": "提出实例级代价敏感超图学习方法用于通用异常检测，未明确面向工业视觉缺陷场景，与工业视觉筛选范围不符。",
+        "tags": [
+          "超图学习",
+          "通用异常检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 88,
+      "title": "Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3710196",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "定位与分割",
+        "reason": "摘要明确面向工业异常分割，使用MVTec AD、VisA、MVTec LOCO等工业基准评估，方法为测试时适应与拓扑表示学习，属于工业视觉异常检测范围。",
+        "summary_zh": "将持久同调引入测试时适应，用拓扑伪标签提升异常分割结构一致性，工业基准上验证有效。",
+        "tags": [
+          "异常分割",
+          "测试时适应",
+          "拓扑分析"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 89,
+      "title": "PCBClip: Vision-Language Defect Detection Model for Low-Sample Inspection Systems",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3711750",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确针对印刷电路板工业缺陷检测，提出视觉语言模型方法，涉及少样本标注场景，属于工业视觉异常检测范围。",
+        "summary_zh": "面向PCB缺陷检测的视觉语言模型，利用语义桥接提示连接领域术语与开放视觉知识，并以无缺陷样本作负约束，适合少样本工业质检参考。",
+        "tags": [
+          "PCB缺陷检测",
+          "视觉语言模型",
+          "少样本"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 90,
+      "title": "Generate and Filter: A GNN-Based Approach for Graph Anomaly Detection",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3724665",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "该论文面向图结构数据的节点异常检测，属于网络安全/图数据挖掘领域，摘要未涉及工业视觉场景、表面缺陷或MVTec AD等工业视觉数据集。",
+        "summary_zh": "针对图数据节点异常提出生成与过滤框架，属图挖掘方向，与工业视觉表面缺陷检测范围不符。",
+        "tags": [
+          "图异常检测",
+          "非工业视觉"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 91,
+      "title": "Modeling Spectral-Spatial Attributes for Hyperspectral Anomaly Detection",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3727992",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要为高光谱遥感异常检测，面向遥感场景而非工业视觉表面缺陷检测，不符合筛选范围。",
+        "summary_zh": "面向遥感高光谱图像的异常目标检测，融合光谱与空间属性建模，不涉及工业表面缺陷场景。",
+        "tags": [
+          "高光谱",
+          "遥感",
+          "异常检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 92,
+      "title": "Necessity of a Dual-Engine Paradigm: Resolving the Robustness-Adaptability Trade-off in Anomaly Detection",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3733282",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "其他",
+        "reason": "摘要中的基准为金融交易、信用卡欺诈和网络入侵，未评估工业视觉或表面缺陷场景，超出筛选范围。",
+        "summary_zh": "提出双引擎异常检测框架并给出理论分析，但仅在金融与网络数据上验证，与工业视觉缺陷检测无关。",
+        "tags": [
+          "异常检测",
+          "非工业视觉"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 93,
+      "title": "Anomaly Detection and Generation with Diffusion Models: A Survey",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3739960",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "重建与生成",
+        "reason": "综述覆盖图像、视频、时间序列、表格与多模态数据的通用异常检测，未明确聚焦工业视觉异常检测或表面缺陷场景，证据不足。",
+        "summary_zh": "综述扩散模型在异常检测与生成中的协同作用，但覆盖多领域通用数据，非工业视觉专题。",
+        "tags": [
+          "扩散模型",
+          "综述",
+          "通用异常检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 94,
+      "title": "FocusPatch AD: Few-Shot Multi-Class Anomaly Detection With Unified Keywords Patch Prompts",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2025.3646861",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确面向工业少样本多类异常检测，基于视觉语言模型并评估MVTec、VisA等工业数据集。",
+        "summary_zh": "用统一关键词补丁提示将异常关键词关联到局部区域，实现少样本多类工业异常检测与定位，可参考其跨类别泛化思路。",
+        "tags": [
+          "少样本",
+          "多类别",
+          "视觉语言模型"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 95,
+      "title": "Improving Unsupervised Ultrasonic Image Anomaly Detection via Frequency-Spatial Feature Filtering and Gaussian Mixture Modeling",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3659292",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "特征与记忆库",
+        "reason": "摘要明确针对芯片超声C扫描图像的工业视觉缺陷检测，提出无监督特征过滤与高斯混合建模，并在MVTec-AD和VisA上评估跨域泛化",
+        "summary_zh": "面向芯片超声图像缺陷检测，用频域-空间特征滤波抑制噪声并加权ViT特征，再用自适应高斯混合建模正常分布，实现像素级异常定位。",
+        "tags": [
+          "超声检测",
+          "无监督异常检测",
+          "特征滤波"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 96,
+      "title": "Accurate Industrial Anomaly Detection and Localization Using Weakly-Supervised Residual Transformers",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3659337",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确面向工业异常检测与定位，提出弱监督残差Transformer并在MVTec-AD等工业数据集评测",
+        "summary_zh": "提出WeakREST弱监督残差Transformer，将像素级定位转为块级分类，用边界框弱标注降低人工成本。",
+        "tags": [
+          "工业异常检测",
+          "弱监督",
+          "定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 97,
+      "title": "Unified Anomaly Detection via Multi-Scale Contrasted Memory",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3663923",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "特征与记忆库",
+        "reason": "摘要提出多尺度记忆增强对比学习与异常偏离分数，面向零样本和少样本异常检测，明确评估工业检测场景。",
+        "summary_zh": "用多尺度正常原型和记忆增强对比学习学习特征，再以空间偏离图检测对象、风格和局部异常，兼顾零样本与少样本工业检测。",
+        "tags": [
+          "记忆库",
+          "少样本",
+          "工业检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 98,
+      "title": "Few-Shot Strip Steel Surface Defect Segmentation via Pre-Trained Variational Auto-Encoder-Based Latent Gaussian Process Regression",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3671617",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确针对带钢表面缺陷分割的少样本方法，属于工业视觉异常/缺陷检测范围",
+        "summary_zh": "用预训练变分自编码器提取图像知识，在隐空间做高斯过程回归实现带钢缺陷少样本分割，可参考其免训练的特征匹配思路。",
+        "tags": [
+          "带钢缺陷",
+          "少样本分割",
+          "隐空间回归"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 99,
+      "title": "Adapting Domain-Aware Knowledge to Vision-Language Model for Zero-Shot Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3671665",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "视觉语言模型",
+        "reason": "摘要明确研究零样本视觉异常检测，基于CLIP并评估工业数据集，属工业视觉异常检测范围。",
+        "summary_zh": "提出DACLIP，用域感知知识适配与多专家动态组合增强CLIP，提升跨域零样本图像级和像素级异常检测能力。",
+        "tags": [
+          "零样本异常检测",
+          "CLIP",
+          "域适应"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 100,
+      "title": "“Stones From Other Hills Can Polish Jade”: Zero-Shot Anomaly Synthesis via Cross-Domain Anomaly Injection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3675432",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "标题和摘要明确聚焦工业图像异常检测中的零样本异常合成，跨域异常注入生成伪异常，属于工业视觉异常检测与生成方法。",
+        "summary_zh": "提出跨域异常注入的零样本异常合成范式，无需训练即可为工业图像检测生成逼真伪异常，并构建跨域异常数据集。",
+        "tags": [
+          "异常合成",
+          "零样本",
+          "工业检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 101,
+      "title": "Advancing Pre-Trained Teacher: Towards Robust Feature Discrepancy for Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3683277",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "特征与记忆库",
+        "reason": "摘要围绕工业异常检测的教师-学生知识蒸馏框架，提出异常放大与正态蒸馏两阶段方法，并在MVTec AD、VisA、MVTec3D-RGB上验证。",
+        "summary_zh": "提出两阶段工业异常检测框架AAND，先用残差模块合成异常增强教师特征差异，再反向蒸馏训练学生重建正常模式。",
+        "tags": [
+          "知识蒸馏",
+          "特征差异",
+          "工业异常检测"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 102,
+      "title": "Dual-Masked and Discriminative Reconstruction for Unified Vision Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3687095",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "摘要明确针对工业基准MVTec、BTAD、VisA的无监督视觉异常检测与分割，提出双掩码重建与判别器方法。",
+        "summary_zh": "提出双掩码互补重建与自监督判别器，缓解恒等捷径和弱判别问题，统一实现工业图像异常分类与分割。",
+        "tags": [
+          "工业异常检测",
+          "重建",
+          "异常分割"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 103,
+      "title": "Open-Set Anomaly Segmentation in Complex Scenarios",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3693134",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "定位与分割",
+        "reason": "摘要面向自动驾驶场景的开放集语义分割异常分割，并非工业视觉异常检测，未评估工业表面缺陷场景",
+        "summary_zh": "面向自动驾驶恶劣天气的开放集异常分割基准与方法，属道路场景安全检测而非工业表面缺陷检测。",
+        "tags": [
+          "自动驾驶",
+          "异常分割",
+          "开放集"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 104,
+      "title": "IQE-CLIP: Instance-Aware Query Embedding for Zero-/Few-Shot Anomaly Detection in Medical Domain",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3697648",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "视觉语言模型",
+        "reason": "标题和摘要明确面向医学领域异常检测，仅将工业场景作为对比提及，未在工业视觉场景上评估。",
+        "summary_zh": "面向医学零样本与少样本异常检测，利用CLIP实例感知查询嵌入，非工业视觉场景。",
+        "tags": [
+          "医学影像",
+          "零样本",
+          "CLIP"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 105,
+      "title": "Fine-Grained Enhancement Convolutional Diffusion Transformer for Unsupervised Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3709502",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "摘要提出基于扩散Transformer的无监督异常检测框架，融合CNN-Transformer与跨注意力进行细粒度重建，属于工业视觉异常检测重建方法。",
+        "summary_zh": "提出卷积扩散Transformer框架，融合深浅特征与局部全局信息，以语义引导细粒度重建实现无监督多类异常检测。",
+        "tags": [
+          "扩散模型",
+          "无监督检测",
+          "特征融合"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 106,
+      "title": "Region-Prompt-Guided Anomaly Detection With Entropy-Based Consistency Modeling",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3709516",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "摘要明确针对工业视觉异常检测与定位，在多类场景下结合区域提示与反向蒸馏重建，并在多个工业数据集上评估。",
+        "summary_zh": "提出RPGAD，用区域提示与反向蒸馏重建建模多类工业异常，提升异常检测与定位的可分性与鲁棒性。",
+        "tags": [
+          "多类异常检测",
+          "反向蒸馏",
+          "区域提示"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 107,
+      "title": "XMatchAD: A Cross-Modal Matching Perspective on Reconstruction-Based Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3718437",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "重建与生成",
+        "reason": "摘要明确涉及基于重建的无监督工业视觉异常检测与定位，并在MVTec-AD、VisA等工业数据集上评估",
+        "summary_zh": "把输入与重建图像当作跨模态做注意力匹配并融合高频信息，以精确定位工业表面缺陷。",
+        "tags": [
+          "重建",
+          "跨模态匹配",
+          "缺陷定位"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 108,
+      "title": "UAD: A Unified Model for Zero-Shot Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3718433",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "摘要明确为零样本异常检测，并在17个真实数据集（含缺陷检测领域）上评估，符合工业视觉异常检测范围。",
+        "summary_zh": "提出统一零样本异常检测框架，联合建模语义规律与结构异常，通过提示拼接和强度引导合成提升跨域泛化，可用于工业缺陷检测。",
+        "tags": [
+          "零样本",
+          "异常定位",
+          "跨域泛化"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 109,
+      "title": "Hierarchical Dense Aggregation Network for Few-Shot Metal Surface Defect Segmentation",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3728632",
+      "baseline_status": "accepted",
+      "in_official_catalog": true,
+      "passes_scope_gate": true,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "keep",
+        "topic": "少样本与零样本",
+        "reason": "标题与摘要明确针对金属表面缺陷的少样本分割，并构建工业缺陷分割数据集，属工业视觉异常检测与定位范畴。",
+        "summary_zh": "提出分层密集聚合网络用于少样本金属表面缺陷分割，用双先验解耦、激活增强与渐进聚合整合多级特征，并发布MSD-Seg数据集。",
+        "tags": [
+          "少样本分割",
+          "金属表面缺陷",
+          "工业质检"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 110,
+      "title": "Frequency-Guided Diffusion Model With Perturbation Training for Skeleton-Based Video Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3730816",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": {
+        "decision": "reject",
+        "topic": "重建与生成",
+        "reason": "摘要针对骨架视频异常检测，未明确工业视觉场景，属于通用视频监控异常检测，不符合筛选范围。",
+        "summary_zh": "面向骨架视频异常检测，用频率引导扩散模型与扰动训练提升开集泛化，但场景非工业视觉缺陷检测。",
+        "tags": [
+          "视频异常检测",
+          "扩散模型",
+          "开集泛化"
+        ]
+      },
+      "review_error": null,
+      "detail_status": "ok"
+    },
+    {
+      "index": 111,
+      "title": "UniNAD: A Unified Normality-Aware Framework for Anomaly Detection via Self-Supervised Learning",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3749120",
+      "baseline_status": "pending",
+      "in_official_catalog": true,
+      "passes_scope_gate": false,
+      "deepseek_search_matched": false,
+      "review": null,
+      "review_error": "No public abstract",
+      "detail_status": "ok"
+    }
+  ],
+  "metrics": {
+    "reference_set": 56,
+    "existing_accepted": 41,
+    "confirmed_omissions": 15,
+    "known_pending_omissions": 14,
+    "new_discovery_omissions": 1,
+    "observed_false_inclusions": 0,
+    "scope_gate_blocked_pending": 8,
+    "model_false_rejections_confirmed": 1
+  },
+  "limitations": [
+    "非穷尽参考集，不能推算全部领域真实召回率或误收率。",
+    "未全面核验所有代码链接、代码可运行性与 Tip 事实准确性。",
+    "不包括 Workshops、Findings 或其他年份。",
+    "本轮诊断放开详情和模型额度，并绕过范围关键词门槛复核所有有摘要的候选，不能直接当作常规定时任务的输出。"
+  ]
+}
