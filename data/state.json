@@ -1,7 +1,7 @@
 {
-  "last_collected_until": "2026-11-07T09:39:01.635094+00:00",
-  "last_run_at": "2026-11-07T09:42:35+00:00",
-  "collected": 523,
+  "last_collected_until": "2026-11-07T23:41:43.652401+00:00",
+  "last_run_at": "2026-11-07T23:45:35+00:00",
+  "collected": 599,
   "llm_calls": 29,
   "pending": 14,
   "review_errors": 0,
@@ -12,7 +12,7 @@
       "status": "ok",
       "candidates": 6
     },
-    "CVPR": {
+    "CVPR 2026": {
       "status": "ok",
       "scanned": 4041,
       "candidates": 65,
@@ -22,13 +22,16 @@
       "deepseek_hits": 10,
       "catalog_only": 55,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "ICCV": {
+    "ICCV 2026": {
       "status": "skipped",
-      "reason": "2026 年无对应届次"
+      "reason": "not_scheduled"
     },
-    "ECCV": {
+    "ECCV 2026": {
       "status": "ok",
       "scanned": 2834,
       "candidates": 40,
@@ -38,11 +41,14 @@
       "deepseek_hits": 10,
       "catalog_only": 30,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "NeurIPS": {
+    "NeurIPS 2026": {
       "status": "ok",
-      "scanned": 9126,
+      "scanned": 9125,
       "candidates": 76,
       "details_checked": 0,
       "details_failed": 0,
@@ -50,9 +56,12 @@
       "deepseek_hits": 13,
       "catalog_only": 63,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "ICLR": {
+    "ICLR 2026": {
       "status": "ok",
       "scanned": 5348,
       "candidates": 36,
@@ -62,9 +71,12 @@
       "deepseek_hits": 4,
       "catalog_only": 32,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "ICML": {
+    "ICML 2026": {
       "status": "ok",
       "scanned": 6552,
       "candidates": 54,
@@ -74,21 +86,27 @@
       "deepseek_hits": 9,
       "catalog_only": 45,
       "deepseek_only": 1,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "AAAI": {
+    "AAAI 2026": {
       "status": "ok",
       "scanned": 4920,
       "candidates": 191,
-      "details_checked": 40,
+      "details_checked": 7,
       "details_failed": 0,
-      "details_deferred": 7,
+      "details_deferred": 0,
       "deepseek_hits": 14,
       "catalog_only": 177,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "IJCAI": {
+    "IJCAI 2026": {
       "status": "ok",
       "scanned": 972,
       "candidates": 15,
@@ -98,11 +116,14 @@
       "deepseek_hits": 0,
       "catalog_only": 15,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "TPAMI": {
+    "TPAMI 2026": {
       "status": "ok",
-      "scanned": 1222,
+      "scanned": 2044,
       "candidates": 15,
       "details_checked": 0,
       "details_failed": 0,
@@ -110,11 +131,14 @@
       "deepseek_hits": 1,
       "catalog_only": 14,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "IJCV": {
+    "IJCV 2026": {
       "status": "ok",
-      "scanned": 488,
+      "scanned": 772,
       "candidates": 5,
       "details_checked": 0,
       "details_failed": 0,
@@ -122,11 +146,14 @@
       "deepseek_hits": 0,
       "catalog_only": 5,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "TIP": {
+    "TIP 2026": {
       "status": "ok",
-      "scanned": 824,
+      "scanned": 1448,
       "candidates": 20,
       "details_checked": 0,
       "details_failed": 0,
@@ -134,10 +161,68 @@
       "deepseek_hits": 0,
       "catalog_only": 20,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
+    },
+    "CVPR 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "ICCV 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "ECCV 2027": {
+      "status": "skipped",
+      "reason": "not_scheduled"
+    },
+    "NeurIPS 2027": {
+      "status": "ok",
+      "scanned": 9125,
+      "candidates": 76,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 2,
+      "catalog_only": 74,
+      "deepseek_only": 0,
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
+    },
+    "ICLR 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "ICML 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "AAAI 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "IJCAI 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "TPAMI 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "IJCV 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "TIP 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
     }
   },
-  "deepseek_search_calls": 20,
+  "deepseek_search_calls": 22,
   "deepseek_search_errors": {},
   "code_backfill": {
     "checked": 15,
@@ -159,7 +244,7 @@
       "status": "ok",
       "candidates": 6
     },
-    "CVPR": {
+    "CVPR 2026": {
       "status": "ok",
       "scanned": 4041,
       "candidates": 65,
@@ -169,13 +254,16 @@
       "deepseek_hits": 10,
       "catalog_only": 55,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "ICCV": {
+    "ICCV 2026": {
       "status": "skipped",
-      "reason": "2026 年无对应届次"
+      "reason": "not_scheduled"
     },
-    "ECCV": {
+    "ECCV 2026": {
       "status": "ok",
       "scanned": 2834,
       "candidates": 40,
@@ -185,11 +273,14 @@
       "deepseek_hits": 10,
       "catalog_only": 30,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "NeurIPS": {
+    "NeurIPS 2026": {
       "status": "ok",
-      "scanned": 9126,
+      "scanned": 9125,
       "candidates": 76,
       "details_checked": 0,
       "details_failed": 0,
@@ -197,9 +288,12 @@
       "deepseek_hits": 13,
       "catalog_only": 63,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "ICLR": {
+    "ICLR 2026": {
       "status": "ok",
       "scanned": 5348,
       "candidates": 36,
@@ -209,9 +303,12 @@
       "deepseek_hits": 4,
       "catalog_only": 32,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "ICML": {
+    "ICML 2026": {
       "status": "ok",
       "scanned": 6552,
       "candidates": 54,
@@ -221,21 +318,27 @@
       "deepseek_hits": 9,
       "catalog_only": 45,
       "deepseek_only": 1,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "AAAI": {
+    "AAAI 2026": {
       "status": "ok",
       "scanned": 4920,
       "candidates": 191,
-      "details_checked": 40,
+      "details_checked": 7,
       "details_failed": 0,
-      "details_deferred": 7,
+      "details_deferred": 0,
       "deepseek_hits": 14,
       "catalog_only": 177,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "IJCAI": {
+    "IJCAI 2026": {
       "status": "ok",
       "scanned": 972,
       "candidates": 15,
@@ -245,11 +348,14 @@
       "deepseek_hits": 0,
       "catalog_only": 15,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "TPAMI": {
+    "TPAMI 2026": {
       "status": "ok",
-      "scanned": 1222,
+      "scanned": 2044,
       "candidates": 15,
       "details_checked": 0,
       "details_failed": 0,
@@ -257,11 +363,14 @@
       "deepseek_hits": 1,
       "catalog_only": 14,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "IJCV": {
+    "IJCV 2026": {
       "status": "ok",
-      "scanned": 488,
+      "scanned": 772,
       "candidates": 5,
       "details_checked": 0,
       "details_failed": 0,
@@ -269,11 +378,14 @@
       "deepseek_hits": 0,
       "catalog_only": 5,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
     },
-    "TIP": {
+    "TIP 2026": {
       "status": "ok",
-      "scanned": 824,
+      "scanned": 1448,
       "candidates": 20,
       "details_checked": 0,
       "details_failed": 0,
@@ -281,9 +393,245 @@
       "deepseek_hits": 0,
       "catalog_only": 20,
       "deepseek_only": 0,
-      "deepseek_new": []
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
+    },
+    "CVPR 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "ICCV 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "ECCV 2027": {
+      "status": "skipped",
+      "reason": "not_scheduled"
+    },
+    "NeurIPS 2027": {
+      "status": "ok",
+      "scanned": 9125,
+      "candidates": 76,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 2,
+      "catalog_only": 74,
+      "deepseek_only": 0,
+      "deepseek_new": [],
+      "phase": "active",
+      "catalog_changed": true,
+      "search_skipped_unchanged": false
+    },
+    "ICLR 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "ICML 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "AAAI 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "IJCAI 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "TPAMI 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "IJCV 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
+    },
+    "TIP 2027": {
+      "status": "skipped",
+      "reason": "awaiting_catalog"
     }
   },
   "review_only": false,
-  "investigation_search_errors": 0
+  "investigation_search_errors": 0,
+  "source_lifecycle": {
+    "CVPR 2026": {
+      "phase": "active",
+      "fingerprint": "5b038c0d979b46b0684a7f5a8f42e6bfa7d65658c7fca06a67c4e7613fd3093a",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "https://openaccess.thecvf.com/CVPR2026?day=all",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "ICCV 2026": {
+      "phase": "not_scheduled",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    },
+    "ECCV 2026": {
+      "phase": "active",
+      "fingerprint": "4709f543d2da3d141b0df251242bf4f34bc1dbc638d295cfe3a290fb3cbb6f6f",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "NeurIPS 2026": {
+      "phase": "active",
+      "fingerprint": "cc6c2e6bd33a44856851d68f4999adffcb6579122d43c97e7749436e8e9080ef",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "https://neurips.cc/Conferences/2026/AcceptedPapersInitial",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "ICLR 2026": {
+      "phase": "active",
+      "fingerprint": "e4d448cdee9f4de62ff33fecd4dce47ff63719d071092ea30caf93532dfe5cc1",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "https://proceedings.iclr.cc/paper_files/paper/2026",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "ICML 2026": {
+      "phase": "active",
+      "fingerprint": "cd1136c107e78daf11aedacd379192fb2287b06871c6499a82aefa4957b9a0e7",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "https://proceedings.mlr.press/v306/",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "AAAI 2026": {
+      "phase": "active",
+      "fingerprint": "dfdc36fc7be899c35e090849597df7769b34ac32973d489a119989fa533ccc06",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "Crossref",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "IJCAI 2026": {
+      "phase": "active",
+      "fingerprint": "b9053690407fc9016028a83603c3a8fc65587a6b5321ea924d2c26d0da562f89",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "https://ijcai.org/proceedings/2026/",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "TPAMI 2026": {
+      "phase": "active",
+      "fingerprint": "9c825f7a13a4b9fb21735ca8986866fbd59ea444a746dea484405412487cf21c",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "Crossref",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "IJCV 2026": {
+      "phase": "active",
+      "fingerprint": "4b229fab247613baa3376bfcd935f10fe7580872accb1d7ae581c946600aebb5",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "Crossref",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "TIP 2026": {
+      "phase": "active",
+      "fingerprint": "ee3aae3184b2dabd7dd0b765c89230f5ef62fdbad3c15db92f9b7427e1a8afc6",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "Crossref",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "CVPR 2027": {
+      "phase": "awaiting_catalog",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    },
+    "ICCV 2027": {
+      "phase": "awaiting_catalog",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    },
+    "ECCV 2027": {
+      "phase": "not_scheduled",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    },
+    "NeurIPS 2027": {
+      "phase": "active",
+      "fingerprint": "e3617653f99d90c4433fcaaa2eaaa6b4355079a1825433e5f4033a4b0e3bc1db",
+      "stable_since": "2026-11-07T23:41:43.694406+00:00",
+      "unchanged_checks": 0,
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-14T23:41:43.694406+00:00",
+      "catalog": "https://neurips.cc/Conferences/2027/AcceptedPapersInitial",
+      "search_failed": false,
+      "last_search_at": "2026-11-07T23:41:43.694406+00:00"
+    },
+    "ICLR 2027": {
+      "phase": "awaiting_catalog",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    },
+    "ICML 2027": {
+      "phase": "awaiting_catalog",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    },
+    "AAAI 2027": {
+      "phase": "awaiting_catalog",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    },
+    "IJCAI 2027": {
+      "phase": "awaiting_catalog",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    },
+    "TPAMI 2027": {
+      "phase": "awaiting_catalog",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    },
+    "IJCV 2027": {
+      "phase": "awaiting_catalog",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    },
+    "TIP 2027": {
+      "phase": "awaiting_catalog",
+      "last_checked_at": "2026-11-07T23:41:43.694406+00:00",
+      "next_check_at": "2026-11-21T23:41:43.694406+00:00"
+    }
+  }
 }
