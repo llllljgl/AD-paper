@@ -172,6 +172,20 @@ class RadarTests(unittest.TestCase):
             saved=json.loads((root/'data/papers.json').read_text())
             self.assertEqual([p['status'] for p in saved],['pending','accepted','rejected'])
 
+    def test_temporary_api_failure_continues_but_billing_error_stops(self):
+        import urllib.error
+        for code, blocked, count in [(500,False,2),(402,True,1)]:
+            with self.subTest(code=code), tempfile.TemporaryDirectory() as folder:
+                root=Path(folder)
+                save_json(root/'config.json',json.loads((ROOT/'config.json').read_text()))
+                source=Mock(); source.collect.return_value=[paper(),paper(id='second',title='Second')]
+                error=urllib.error.HTTPError('https://api.deepseek.com',code,'error',{},None)
+                with patch.dict(os.environ,{'DEEPSEEK_API_KEY':'test'}), patch.object(
+                        Agent,'review',side_effect=[error,{'status':'accepted'}]) as review:
+                    state=run(root,source=source)
+                self.assertEqual(state['review_blocked'],blocked)
+                self.assertEqual(review.call_count,count)
+
     def test_readme_groups_reviewed_entries_and_collapses_tip(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

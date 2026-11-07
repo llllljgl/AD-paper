@@ -67,6 +67,29 @@ class InvestigationTests(unittest.TestCase):
                       'Defect inspection using industrial point clouds.']:
             self.assertTrue(supports_scope(paper(), {'evidence':[{'quote':quote}]}), quote)
 
+    def test_search_failure_does_not_lose_other_evidence(self):
+        import urllib.error
+        failure=urllib.error.HTTPError('https://api.deepseek.com',500,'error',{},None)
+        item=paper(code_urls=['https://github.com/lab/repo'])
+        stats={'search_calls':0}
+        with patch('radar.investigate.search',side_effect=[failure,[],[]]), patch(
+                'radar.investigate.fetch_text',return_value=item['title']+' uses MVTec AD.'):
+            result=investigate(item,'test',stats=stats)
+        self.assertTrue(result['sources'])
+        self.assertEqual(stats,{'search_calls':3,'search_errors':1})
+        self.assertEqual(result['failures'][0]['error'],'HTTP 500')
+        auth=urllib.error.HTTPError('https://api.deepseek.com',402,'balance',{},None)
+        with patch('radar.investigate.search',side_effect=auth):
+            with self.assertRaises(urllib.error.HTTPError): investigate(item,'test')
+
+    def test_excerpt_keeps_body_instead_of_repeating_navigation(self):
+        from radar.investigate import excerpt, Text
+        text='Industrial dataset navigation. '*250+'MVTec experimental evidence. '+'x'*16000
+        result=excerpt(text)
+        self.assertIn('MVTec experimental evidence.',result)
+        self.assertLessEqual(len(result),14000)
+        self.assertEqual(''.join(Text('<nav>Hidden navigation</nav><p>Paper body</p>').parts),'Paper body')
+
     def test_long_queries_preserve_quotes_and_respect_api_limit(self):
         for title in ['LACToS: Local Anomaly Detection via Conditional Typicality of Superpixels', 'Very long title ' * 30]:
             query = investigation_query(title, 'Which industrial datasets and experimental settings are used? ' * 10)

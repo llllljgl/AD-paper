@@ -231,7 +231,7 @@ class Agent:
             '证据不足示例 JSON：{"decision":"verify","topic":"其他","reason":"需要核对数据集",'
             '"summary_zh":"待调查工业评测。","tags":["视觉检测","待核实"],"evidence":[],"investigation_query":"datasets industrial evaluation"}'
         )
-        metadata = {k: paper[k] for k in ("title", "abstract", "venue", "source") if k in paper}
+        metadata = {k: paper[k] for k in ("title", "abstract", "venue", "source", "review_feedback") if k in paper}
         sources = [{"url": paper["url"], "text": paper.get("abstract", "")}] + paper.get("investigation", {}).get("sources", [])
         metadata["evidence_sources"] = sources
         payload = {
@@ -268,6 +268,7 @@ class Agent:
             else:
                 from .investigate import investigate
                 self.investigations += 1
+                paper["review_feedback"] = result["reason"] + "。复核时请补齐直接证明工业场景、视觉模态与缺陷任务的原文引用；可分别引用多个片段。"
                 paper["investigation"] = investigate(paper, self.key, str(result.get("investigation_query", "")), stats=self.investigation_stats)
                 result = self.decide(paper, verified=True) if self.calls < self.config["max_llm_calls"] else {**result, "decision": "pending", "reason": "调查证据已保存，等待下轮判定"}
                 trace.append({"action": "investigate_public_text", "sources": [s["url"] for s in paper["investigation"]["sources"]]})
@@ -385,6 +386,7 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None, 
             break
         try:
             paper.update(agent.review(dict(paper)))
+            print(f"Reviewed {paper['id']}: {paper['status']} (model calls {agent.calls}, investigations {agent.investigations})", flush=True)
 
             if agent.calls and agent.calls % 20 == 0:
                 save_json(root / "data/papers.json", papers)
@@ -402,11 +404,14 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None, 
                 break
         except OSError as exc:
             errors += 1
-            review_blocked = True
+            consecutive_errors += 1
             paper["reason"] = "DeepSeek 接口暂不可用，等待重试"
+            paper["review_attempted_at"] = now_iso()
             code = f"HTTP {exc.code}" if isinstance(exc, urllib.error.HTTPError) else type(exc).__name__
-            print(f"Review interrupted for {paper['id']} ({code})", flush=True)
-            break
+            print(f"Review deferred for {paper['id']} ({code})", flush=True)
+            if (isinstance(exc, urllib.error.HTTPError) and exc.code in (401, 402, 403)) or consecutive_errors >= 4:
+                review_blocked = True
+                break
     # A metadata recheck can correct the venue year after the first filter.
     papers = filter_collection_year(papers, year)
     code_backfill = {}
@@ -421,6 +426,7 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None, 
         state["last_collection_sources"] = reports
     state.update(last_run_at=now_iso(), collected=len(incoming), llm_calls=agent.calls,
                  pending=len(pending), investigations=agent.investigations, investigation_search_calls=agent.investigation_stats["search_calls"], missing_abstract=sum(not p.get("abstract") for p in pending),
+                 investigation_search_errors=agent.investigation_stats.get("search_errors", 0),
                  missing_scope_evidence=sum(bool(p.get("abstract")) and not has_industrial_visual_evidence(p)
                                             for p in pending),
                  review_errors=errors, review_blocked=review_blocked, sources=reports, review_only=review_only,

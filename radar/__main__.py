@@ -97,6 +97,8 @@ def report(root=ROOT):
     print(f"DeepSeek 搜索 {state.get('deepseek_search_calls', 0)} 次，"
           f"模型筛选 {state.get('llm_calls', 0)} 次，筛选失败 {state.get('review_errors', 0)} 次。")
     print(f"\n深入调查 {state.get('investigations', 0)} 篇，调查搜索 {state.get('investigation_search_calls', 0)} 次。")
+    if state.get('investigation_search_errors'):
+        print(f"其中调查搜索失败 {state['investigation_search_errors']} 次，失败原因已按论文保存，仍缺证据的条目继续待核实。")
     search_errors = state.get("deepseek_search_errors", {})
     for venue, reason in search_errors.items():
         print(f"\nDeepSeek 搜索失败 · {venue} · {reason}")

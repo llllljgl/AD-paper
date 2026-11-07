@@ -2,6 +2,7 @@
 import base64
 import json
 import re
+import urllib.error
 import urllib.request
 from urllib.parse import urlsplit
 from html.parser import HTMLParser
@@ -34,9 +35,9 @@ class Text(HTMLParser):
     def __init__(self, raw):
         super().__init__(); self.parts = []; self.hidden = 0; self.feed(raw)
     def handle_starttag(self, tag, attrs):
-        if tag in ('script', 'style'): self.hidden += 1
+        if tag in ('script', 'style', 'nav'): self.hidden += 1
     def handle_endtag(self, tag):
-        if tag in ('script', 'style'): self.hidden = max(0, self.hidden - 1)
+        if tag in ('script', 'style', 'nav'): self.hidden = max(0, self.hidden - 1)
     def handle_data(self, text):
         if not self.hidden: self.parts.append(text)
 
@@ -67,8 +68,12 @@ def excerpt(text):
     if len(text) <= 14000: return text
     # Keep task/benchmark context even when navigation or references are lengthy.
     chunks = [text[:3000]]
+    last_end = 3000
     for m in re.finditer(r'industrial|manufactur|mvtec|visa\b|real.?3d|eyecandies|benchmark|dataset', text, re.I):
-        chunks.append(text[max(0, m.start()-250):m.end()+650])
+        if m.start() < last_end:
+            continue
+        start, last_end = max(last_end, m.start()-250), m.end()+950
+        chunks.append(text[start:last_end])
         if sum(map(len, chunks)) >= 13000: break
     return '\n'.join(chunks)[:14000]
 
@@ -92,13 +97,22 @@ def investigate(paper, key, question='', stats=None):
     if paper.get('arxiv_id'): urls.insert(0, 'https://arxiv.org/abs/' + paper['arxiv_id'])
     # Follow explicit author project links found in the public abstract.
     urls.extend(re.findall(r'https://[^\s<>"\\]+', paper.get('abstract', '')))
-    searches = []
+    searches, failures = [], []
     for query in queries:
         if stats is not None: stats["search_calls"] += 1
-        results = search(query, key, 8)
+        try:
+            results = search(query, key, 8)
+        except (OSError, ValueError, KeyError) as exc:
+            if isinstance(exc, urllib.error.HTTPError) and exc.code in (401, 402, 403):
+                raise
+            reason = f'HTTP {exc.code}' if isinstance(exc, urllib.error.HTTPError) else type(exc).__name__
+            failures.append({'query': query, 'error': reason})
+            if stats is not None:
+                stats['search_errors'] = stats.get('search_errors', 0) + 1
+            continue
         searches.append({'query': query, 'results': [{'title': r.get('title'), 'url': r.get('url')} for r in results]})
         urls.extend(r.get('url', '') for r in results)
-    sources, failures, seen = [], [], set()
+    sources, seen = [], set()
     for url in urls:
         url = url.rstrip('.,;)')
         if url in seen or not allowed(url): continue
