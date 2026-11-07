@@ -1,0 +1,739 @@
+{
+  "counts": {
+    "rejected": 378,
+    "accepted": 145,
+    "pending": 14
+  },
+  "reference_omissions": [
+    {
+      "title": "AnomalyVFM -- Transforming Vision Foundation Models into Zero-Shot Anomaly Detectors",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fucka_AnomalyVFM_--_Transforming_Vision_Foundation_Models_into_Zero-Shot_Anomaly_Detectors_CVPR_2026_paper.html",
+      "status": "accepted",
+      "reason": "项目页明确说明该方法在9个工业检测数据集上达到SOTA，并给出零样本异常检测与合成的视觉任务，证据同时覆盖工业场景、视觉模态和异常检测任务。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://maticfuc.github.io/anomaly_vfm/",
+          "quote": "It achieves SOTA results across 9 industrial inspection datasets."
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fucka_AnomalyVFM_--_Transforming_Vision_Foundation_Models_into_Zero-Shot_Anomaly_Detectors_CVPR_2026_paper.html",
+          "quote": "Zero-shot anomaly detection aims to detect and localise abnormal regions in the image without access to any in-domain training images."
+        }
+      ],
+      "investigation_sources": [
+        "https://maticfuc.github.io/anomaly_vfm/"
+      ]
+    },
+    {
+      "title": "InvAD: Inversion-based Reconstruction-Free Anomaly Detection with Diffusion Models",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Sakai_InvAD_Inversion-based_Reconstruction-Free_Anomaly_Detection_with_Diffusion_Models_CVPR_2026_paper.html",
+      "status": "accepted",
+      "reason": "论文提出基于扩散模型DDIM反演的无重建异常检测方法，明确在MVTecAD、VisA、MPDD等工业RGB图像基准上评估，包含图像级检测与像素级定位，属于工业视觉异常检测范围。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2504.05662",
+          "quote": "We use three widely-used unsupervised AD benchmarks—MVTecAD [ 28 ] , VisA [ 29 ] , MPDD [ 30 ] —all designed for measuring real-world AD performance on RGB industrial images."
+        },
+        {
+          "url": "https://arxiv.org/html/2504.05662",
+          "quote": "Since each benchmark provides both image- and pixel-level annotations, we can evaluate performance in terms of overall AD (image-level) as well as precise localization (pixel-level)."
+        },
+        {
+          "url": "https://arxiv.org/abs/2504.05662",
+          "quote": "We perform extensive experiments and detailed analyses across four widely used industrial and medical AD benchmarks under the unsupervised unified setting"
+        }
+      ],
+      "investigation_sources": [
+        "https://arxiv.org/abs/2504.05662",
+        "https://arxiv.org/html/2504.05662",
+        "https://arxiv.org/html/2504.05662v3#S8.E15#1"
+      ]
+    },
+    {
+      "title": "Anomaly as Non-Conformity via Training-Free Graph Laplacian Energy Minimization",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Seo_Anomaly_as_Non-Conformity_via_Training-Free_Graph_Laplacian_Energy_Minimization_CVPR_2026_paper.html",
+      "status": "accepted",
+      "reason": "正文明确在MVTec-AD与VisA这两个工业视觉异常检测基准上评估，方法为免训练的图拉普拉斯非一致性异常评分，任务、场景与模态均有直接证据。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2605.28428v1#1",
+          "quote": "Industrial anomaly detection aims to identify defe"
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Seo_Anomaly_as_Non-Conformity_via_Training-Free_Graph_Laplacian_Energy_Minimization_CVPR_2026_paper.html",
+          "quote": "Detecting subtle visual anomalies in images remains challenging, particularly when only normal samples are available a priori."
+        },
+        {
+          "url": "https://arxiv.org/html/2605.28428v1#1",
+          "quote": "we report few-shot results on OCT2017"
+        },
+        {
+          "url": "https://arxiv.org/html/2605.28428v1#3",
+          "quote": "These patchwise energies form the dense anomaly map, and the image-level score S ⁡ ( I q ) S(I_{q}) is computed via max-pooling across patches."
+        }
+      ],
+      "investigation_sources": [
+        "https://arxiv.org/html/2605.28428v1#1",
+        "https://arxiv.org/html/2605.28428v1#3"
+      ]
+    },
+    {
+      "title": "A Semantically Disentangled Unified Model for Multi-category 3D Anomaly Detection",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_A_Semantically_Disentangled_Unified_Model_for_Multi-category_3D_Anomaly_Detection_CVPR_2026_paper.html",
+      "status": "accepted",
+      "reason": "标题与摘要明确为三维点云异常检测与缺陷定位任务，并在工业3D数据集Real3D-AD和Anomaly-ShapeNet上评估，符合工业视觉异常检测范围。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_A_Semantically_Disentangled_Unified_Model_for_Multi-category_3D_Anomaly_Detection_CVPR_2026_paper.html",
+          "quote": "Extensive experiments on Real3D-AD and Anomaly-ShapeNet demonstrate that our method achieves state-of-the-art for both unified and category-specific models"
+        }
+      ],
+      "investigation_sources": []
+    },
+    {
+      "title": "GS-CLIP: Zero-shot 3D Anomaly Detection by Geometry-Aware Prompt and Synergistic View Representation Learning",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Deng_GS-CLIP_Zero-shot_3D_Anomaly_Detection_by_Geometry-Aware_Prompt_and_Synergistic_CVPR_2026_paper.html",
+      "status": "accepted",
+      "reason": "论文提出零样本3D异常检测框架，明确面向工业制造场景，并在MVTec3D-AD、Real3D-AD、Eyecandies、Anomaly-ShapeNet等工业3D异常检测数据集上评估检测与分割，证据同时覆盖视觉模态、工业场景与缺陷任务。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2602.19206",
+          "quote": "3D anomaly detection is a critical process in industrial manufacturing, playing a key role in ensuring the stable operation of industrial systems and reducing losses"
+        },
+        {
+          "url": "https://arxiv.org/html/2602.19206",
+          "quote": "We conduct experiments on four datasets: MVTec3D-AD [ 1 ] , Real3D-AD [ 21 ] , Eyecandies [ 3 ] , and Anomaly-ShapeNet [ 17 ] . MVTec3D-AD and Real3D-AD are real-world datasets collected with industrial-grade structured-light 3D scanners"
+        },
+        {
+          "url": "https://arxiv.org/html/2602.19206",
+          "quote": "Comprehensive experimental results on four large-scale public datasets show that GS-CLIP achieves superior performance in detection. Code can be available at https://github.com/zhushengxinyue/GS-CLIP . 1 Introduction"
+        }
+      ],
+      "investigation_sources": [
+        "https://arxiv.org/abs/2602.19206",
+        "https://arxiv.org/html/2602.19206",
+        "https://github.com/zhushengxinyue/GS-CLIP#1"
+      ]
+    },
+    {
+      "title": "Reasoning-Driven Anomaly Detection and Localization with Image-Level Supervision",
+      "venue": "CVPR",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jin_Reasoning-Driven_Anomaly_Detection_and_Localization_with_Image-Level_Supervision_CVPR_2026_paper.html",
+      "status": "accepted",
+      "reason": "S3 明确表明该方法应用于工业异常检测，并在 MVTec-AD、VisA、Real-IAD 等工业数据集上进行训练与评测，同时完成像素级异常定位。S1 也说明该研究聚焦视觉异常检测与定位，因此满足视觉模态、工业场景和异常缺陷任务三项条件。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2603.27179",
+          "quote": "Anomaly detection aims to identify and locate anomalous regions within images, which plays a critical role in industrial inspection."
+        },
+        {
+          "url": "https://arxiv.org/html/2603.27179",
+          "quote": "For training, we curate a dataset of 4K industrial images collected from multiple public anomaly detection benchmarks, including VisA [ 56 ] , GoodsAD [ 50 ] , Vision [ 2 ] , PR-REAL [ 37 ] , Real-IAD [ 44 ] , and BSData [ 40 ] ."
+        },
+        {
+          "url": "https://arxiv.org/html/2603.27179",
+          "quote": "we select four representative datasets: MVTec-AD [ 4 ] , WFDD [ 7 ] , SDD [ 42 ] and DTD [ 1 ] . These datasets simulate complex real-world industrial production scenarios"
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jin_Reasoning-Driven_Anomaly_Detection_and_Localization_with_Image-Level_Supervision_CVPR_2026_paper.html",
+          "quote": "we activate the intrinsic reasoning potential of MLLMs to perform anomaly detection, pixel-level localization, and interpretable reasoning solely from image-level supervision"
+        }
+      ],
+      "investigation_sources": [
+        "https://arxiv.org/abs/2603.27179",
+        "https://arxiv.org/html/2603.27179",
+        "https://github.com/YizhouJin313/ReADL"
+      ]
+    },
+    {
+      "title": "Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3710196",
+      "status": "accepted",
+      "reason": "论文提出面向异常分割的拓扑感知测试时适应方法，并在MVTec AD、VisA、Real-IAD、MVTec 3D-AD、AnomalyShapeNet等工业视觉异常检测基准上进行了评估，明确覆盖视觉模态、工业场景和异常分割任务。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/tpami.2026.3710196",
+          "quote": "Extensive experiments across six standard benchmarks (MVTec AD, VisA, Real-IAD, MVTec 3D-AD, AnomalyShapeNet, and MVTec LOCO) demonstrate an average 15% F1 improvement over state-of-the-art unsupervised anomaly detection and segmentation methods, with the largest gains on anomalies exhibiting complex geometric or structural variations."
+        }
+      ],
+      "investigation_sources": []
+    },
+    {
+      "title": "Improving Unsupervised Ultrasonic Image Anomaly Detection via Frequency-Spatial Feature Filtering and Gaussian Mixture Modeling",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3659292",
+      "status": "accepted",
+      "reason": "论文提出面向芯片封装超声C扫描图像的工业视觉异常检测框架FSGM-Net，并构建带像素级缺陷掩码的大规模工业数据集UltraChip，同时在MVTec-AD与VisA上验证跨域泛化，明确满足工业场景、视觉异常检测与定位分割任务。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3659292",
+          "quote": "we introduce UltraChip, a new large-scale C-scan benchmark containing about 8,000 real-world images from various chip packaging types, each meticulously annotated with pixel-level masks for cracks, holes, and layers."
+        },
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3659292",
+          "quote": "we present FSGM-Net, a fully unsupervised framework tailored for anomaly detection. FSGM-Net leverages an adaptive Frequency-Spatial feature filtering mechanism"
+        },
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3659292",
+          "quote": "FSGM-Net not only achieves state-of-the-art results on UltraChip but also exhibits superior cross-domain generalization to MVTec-AD and VisA"
+        }
+      ],
+      "investigation_sources": []
+    },
+    {
+      "title": "Unified Anomaly Detection via Multi-Scale Contrasted Memory",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3663923",
+      "status": "pending",
+      "reason": "摘要提到方法基于多尺度原型和空间偏差图，且声称在工业检测上优于SoTA，但未给出具体工业数据集或实验设置；S2仅为网页导航信息。需核实原文是否包含工业视觉缺陷检测评估。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3663923",
+          "quote": "Then, we train an efficient anomaly distance-based detector that computes spatial deviation maps between the learned prototypes and incoming observations.",
+          "context": " memory-augmented contrastive learning to jointly learn representations and memory modules across multiple scales. This allows us to effectively capture subtle features of normal data while adapting to varying levels of anomaly complexity. Then, we train an efficient anomaly distance-based detector that computes spatial deviation maps between the learned prototypes and incoming observations. Our model outperforms the SoTA on a wide range of anomalies, including object, style, and local anomalies, as well as industrial inspection and face anti-spoofing, while being on par with SoTa out-of-distribution detectors. Notably, it sta"
+        },
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3663923",
+          "quote": "Our model outperforms the SoTA on a wide range of anomalies, including object, style, and local anomalies, as well as industrial inspection and face anti-spoofing",
+          "context": "btle features of normal data while adapting to varying levels of anomaly complexity. Then, we train an efficient anomaly distance-based detector that computes spatial deviation maps between the learned prototypes and incoming observations. Our model outperforms the SoTA on a wide range of anomalies, including object, style, and local anomalies, as well as industrial inspection and face anti-spoofing, while being on par with SoTa out-of-distribution detectors. Notably, it stands as the first model capable of maintaining exceptional performance across both settings."
+        }
+      ],
+      "investigation_sources": [
+        "https://ieeexplore.ieee.org/abstract/document/11410053/authors#authors"
+      ]
+    },
+    {
+      "title": "Adapting Domain-Aware Knowledge to Vision-Language Model for Zero-Shot Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3671665",
+      "status": "accepted",
+      "reason": "摘要明确说明在跨工业与医学领域基准数据集上评估DACLIP，并报告图像级和像素级异常检测结果；工业视觉评估已明确包含在评估范围内，因此符合收录条件。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3671665",
+          "quote": "We evaluate our approach on several benchmark datasets spanning industrial and medical domains."
+        },
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3671665",
+          "quote": "Extensive experiments demonstrate that DACLIP consistently outperforms state-of-the-art methods in ZSAD, achieving significant improvements in both image-level and pixel-level anomaly detection tasks."
+        }
+      ],
+      "investigation_sources": []
+    },
+    {
+      "title": "“Stones From Other Hills Can Polish Jade”: Zero-Shot Anomaly Synthesis via Cross-Domain Anomaly Injection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3675432",
+      "status": "accepted",
+      "reason": "摘要明确指出面向工业图像异常检测（IAD）的零样本异常合成（ZSAS），提出跨域异常注入方法并构建异常数据集用于工业缺陷合成，属于直接服务缺陷检测的合成任务。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3675432",
+          "quote": "Industrial image anomaly detection (IAD) is a pivotal topic with huge value."
+        },
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3675432",
+          "quote": "Thus, zero-shot anomaly synthesis (ZSAS), which synthesizes pseudo anomaly images without any domain-specific anomaly, emerges as a vital technique for IAD."
+        },
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3675432",
+          "quote": "we build the first Domain-agnostic Anomaly Dataset (DAAD) within our best knowledge, which provides ZSAS with abundant real anomaly patterns."
+        }
+      ],
+      "investigation_sources": []
+    },
+    {
+      "title": "Advancing Pre-Trained Teacher: Towards Robust Feature Discrepancy for Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3683277",
+      "status": "accepted",
+      "reason": "摘要明确提出面向工业异常检测的两阶段框架AAND，包含教师-学生知识蒸馏、异常合成放大与反向蒸馏，并在MVTecAD、VisA和MVTec3D-RGB上进行实验，满足工业视觉异常检测的筛选范围。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3683277",
+          "quote": "In this paper, we propose a simple yet effective two-stage industrial anomaly detection framework, termed AAND, which sequentially performs Anomaly Amplification and Normality Distillation to enhance the two assumptions."
+        },
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3683277",
+          "quote": "Comprehensive experiments on the MvTecAD, VisA, and MvTec3D-RGB datasets show that our method achieves state-of-the-art performance."
+        }
+      ],
+      "investigation_sources": []
+    },
+    {
+      "title": "Region-Prompt-Guided Anomaly Detection With Entropy-Based Consistency Modeling",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3709516",
+      "status": "accepted",
+      "reason": "摘要明确针对视觉工业异常检测，在MVTecAD、VisA、BTAD、MPDD、Real-IAD五个工业基准上评估，并提出区域提示引导与逆蒸馏重建的方法，属于工业视觉异常检测与定位。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3709516",
+          "quote": "Visual industrial anomaly detection has evolved from one-class modeling to more challenging multi-class settings, where diverse categories and complex visual patterns must be jointly handled."
+        },
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3709516",
+          "quote": "Experiments on five anomaly detection benchmarks - MVTecAD, VisA, BTAD, MPDD, and Real-IAD - demonstrate the effectiveness of RPGAD."
+        },
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3709516",
+          "quote": "RDNet (Reverse Distillation Network), which selectively reconstructs prompted regions and employs a Prototype-Contrastive Optimal Transport (PCOT) loss to enhance inter-class separability and local feature aggregation."
+        }
+      ],
+      "investigation_sources": []
+    },
+    {
+      "title": "UAD: A Unified Model for Zero-Shot Anomaly Detection",
+      "venue": "TIP",
+      "url": "https://doi.org/10.1109/tip.2026.3718433",
+      "status": "accepted",
+      "reason": "摘要明确指出在多个缺陷检测与医学影像领域的数据集上进行异常检测与分割实验，GitHub页面进一步列出MVTec AD、VisA、MPDD、BTAD、KSDD等工业视觉异常检测数据集，视觉模态、工业场景与异常/缺陷任务三项证据齐备。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/tip.2026.3718433",
+          "quote": "Extensive experiments on 17 real-world anomaly detection datasets show that UAD achieves superior zero-shot performance of detecting and segmenting anomalies in datasets of highly diverse class semantics from various defect inspection and medical imaging domains."
+        },
+        {
+          "url": "https://github.com/hanli6688/UAD",
+          "quote": "UAD jointly models semantic regularity and structural deviations using coherent semantic contexts, prompt concatenation, and intensity-guided diffusion-based anomaly synthesis to achieve robust cross-domain generalization. The repository includes training and evaluation scripts, pretrained models, and instructions to reproduce results on industrial and medical anomaly datasets."
+        }
+      ],
+      "investigation_sources": [
+        "https://github.com/hanli6688/UAD",
+        "https://ieeexplore.ieee.org/abstract/document/11643489#1",
+        "https://ieeexplore.ieee.org/abstract/document/11643489/references#references#1"
+      ]
+    },
+    {
+      "title": "Unification of Closed-Open Industrial Detection Scenarios: New Large-Scale Benchmarks, Challenges and Baselines",
+      "venue": "TPAMI",
+      "url": "https://doi.org/10.1109/tpami.2026.3680569",
+      "status": "accepted",
+      "reason": "摘要与正文证据明确面向工业缺陷检测的视觉任务，构建了大规模多模态工业开闭集缺陷基准MMIOC-1M，并在该基准上进行了开集与闭集实验，同时提出了RTVPNet基线。视觉模态为RGB图像与文本多模态，工业场景与缺陷类别均明确。",
+      "review_version": 3,
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/tpami.2026.3680569",
+          "quote": "we introduce a Large-Scale Multi-Modal Industrial Open-Closed benchmark (MMIOC-1 M) containing over one million samples across 14 super-categories, 29 industrial scenes, and 351 defect subcategories",
+          "context": "diverse defect categories across multiple domains, and (ii) the reliance on manual prompts (points, boxes, masks) that introduce subjective noise and lack text-visual interaction for fine-grained understanding. To address these challenges, we introduce a Large-Scale Multi-Modal Industrial Open-Closed benchmark (MMIOC-1 M) containing over one million samples across 14 super-categories, 29 industrial scenes, and 351 defect subcategories. To our knowledge, MMIOC-1 M is the first unified largest benchmark supporting both open-vocabulary and closed-set industrial detection, providing valuable pre-training data for LVLMs in industrial scenarios. Furthermore, we propose a Refi"
+        },
+        {
+          "url": "https://doi.org/10.1109/tpami.2026.3680569",
+          "quote": "Extensive experiments demonstrate that RTVPNet achieves state-of-the-art performance on MMIOC-1 M, LVIS, and COCO benchmarks",
+          "context": "n energy-based sparse sampling strategy that automatically generates refined visual prompts without manual intervention, and (3) a bidirectional text-visual interaction module that enhances cross-modal semantic alignment and understanding. Extensive experiments demonstrate that RTVPNet achieves state-of-the-art performance on MMIOC-1 M, LVIS, and COCO benchmarks while maintaining computational efficiency."
+        },
+        {
+          "url": "https://arxiv.org/html/2606.07953#1",
+          "quote": "Several experiments on open and closed scenes on MMIOC-1M, LVIS [ 41 ] , and COCO [ 42 ] demonstrate the value of MMIOC-1M and the effectiveness of RTVPNet.",
+          "context": "t to generate a prompt embedding for a semantically specific object. Building on the inherent capabilities of Mobile-SAM, RTVPNet promotes the capability of the model in understanding and generalizing, especially in industrial open-scenes. Several experiments on open and closed scenes on MMIOC-1M, LVIS [ 41 ] , and COCO [ 42 ] demonstrate the value of MMIOC-1M and the effectiveness of RTVPNet. Parts of this paper were originally published in AAAI 2025 [ 43 ] . We extend our previous work in several valuable ways: 1) Compared to MMIO-80K, MMIOC-1M supports defect detection in both open and closed scenarios. MMIOC-1M contains more"
+        }
+      ],
+      "investigation_sources": [
+        "https://arxiv.org/html/2606.07953#1",
+        "https://arxiv.org/abs/2606.07953v1#1",
+        "https://arxiv.org/html/2606.07953v1#1"
+      ]
+    }
+  ],
+  "reference_recovered": 14,
+  "new_rule_accepted": 31,
+  "new_rule_quote_failures": [],
+  "wrong_year": [],
+  "accepted_missing_link": [],
+  "negative_cases": [
+    {
+      "title": "CausalPulse: Agentic Copilot for Root Cause Analysis in Smart Manufacturing",
+      "status": "rejected",
+      "reason": "该论文聚焦工业制造中的根因分析与多智能体协同，未提供工业视觉异常检测、缺陷定位或分割任务的证据，引用的数据集（Future Factories、Planar Oxygen Sensor Element）也非视觉缺陷数据集"
+    },
+    {
+      "title": "DeGlare: Self-Supervised Specular Removal for Industrial Metallic Surfaces via Multi-Illumination Priors",
+      "status": "rejected",
+      "reason": "该论文研究工业金属表面的镜面高光去除（自监督去反光），属于前置图像增强处理；摘要未提及任何缺陷检测、异常检测或分割实验，也未涉及MVTec等缺陷数据集，按筛选标准排除。"
+    }
+  ],
+  "state": {
+    "last_collected_until": "2026-11-07T09:39:01.635094+00:00",
+    "last_run_at": "2026-11-07T09:42:35+00:00",
+    "collected": 523,
+    "llm_calls": 29,
+    "pending": 14,
+    "review_errors": 0,
+    "mode": "agent",
+    "missing_abstract": 2,
+    "sources": {
+      "arXiv": {
+        "status": "ok",
+        "candidates": 6
+      },
+      "CVPR": {
+        "status": "ok",
+        "scanned": 4041,
+        "candidates": 65,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 10,
+        "catalog_only": 55,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "ICCV": {
+        "status": "skipped",
+        "reason": "2026 年无对应届次"
+      },
+      "ECCV": {
+        "status": "ok",
+        "scanned": 2834,
+        "candidates": 40,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 10,
+        "catalog_only": 30,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "NeurIPS": {
+        "status": "ok",
+        "scanned": 9126,
+        "candidates": 76,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 13,
+        "catalog_only": 63,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "ICLR": {
+        "status": "ok",
+        "scanned": 5348,
+        "candidates": 36,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 4,
+        "catalog_only": 32,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "ICML": {
+        "status": "ok",
+        "scanned": 6552,
+        "candidates": 54,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 9,
+        "catalog_only": 45,
+        "deepseek_only": 1,
+        "deepseek_new": []
+      },
+      "AAAI": {
+        "status": "ok",
+        "scanned": 4920,
+        "candidates": 191,
+        "details_checked": 40,
+        "details_failed": 0,
+        "details_deferred": 7,
+        "deepseek_hits": 14,
+        "catalog_only": 177,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "IJCAI": {
+        "status": "ok",
+        "scanned": 972,
+        "candidates": 15,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 0,
+        "catalog_only": 15,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "TPAMI": {
+        "status": "ok",
+        "scanned": 1222,
+        "candidates": 15,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 1,
+        "catalog_only": 14,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "IJCV": {
+        "status": "ok",
+        "scanned": 488,
+        "candidates": 5,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 0,
+        "catalog_only": 5,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "TIP": {
+        "status": "ok",
+        "scanned": 824,
+        "candidates": 20,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 0,
+        "catalog_only": 20,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      }
+    },
+    "deepseek_search_calls": 20,
+    "deepseek_search_errors": {},
+    "code_backfill": {
+      "checked": 15,
+      "added": 3,
+      "error": ""
+    },
+    "llm_status": "enabled",
+    "review_blocked": false,
+    "deepseek_only_reviewed": {
+      "accepted": 2,
+      "pending": 0,
+      "rejected": 3
+    },
+    "missing_scope_evidence": 10,
+    "investigations": 14,
+    "investigation_search_calls": 42,
+    "last_collection_sources": {
+      "arXiv": {
+        "status": "ok",
+        "candidates": 6
+      },
+      "CVPR": {
+        "status": "ok",
+        "scanned": 4041,
+        "candidates": 65,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 10,
+        "catalog_only": 55,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "ICCV": {
+        "status": "skipped",
+        "reason": "2026 年无对应届次"
+      },
+      "ECCV": {
+        "status": "ok",
+        "scanned": 2834,
+        "candidates": 40,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 10,
+        "catalog_only": 30,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "NeurIPS": {
+        "status": "ok",
+        "scanned": 9126,
+        "candidates": 76,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 13,
+        "catalog_only": 63,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "ICLR": {
+        "status": "ok",
+        "scanned": 5348,
+        "candidates": 36,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 4,
+        "catalog_only": 32,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "ICML": {
+        "status": "ok",
+        "scanned": 6552,
+        "candidates": 54,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 9,
+        "catalog_only": 45,
+        "deepseek_only": 1,
+        "deepseek_new": []
+      },
+      "AAAI": {
+        "status": "ok",
+        "scanned": 4920,
+        "candidates": 191,
+        "details_checked": 40,
+        "details_failed": 0,
+        "details_deferred": 7,
+        "deepseek_hits": 14,
+        "catalog_only": 177,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "IJCAI": {
+        "status": "ok",
+        "scanned": 972,
+        "candidates": 15,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 0,
+        "catalog_only": 15,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "TPAMI": {
+        "status": "ok",
+        "scanned": 1222,
+        "candidates": 15,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 1,
+        "catalog_only": 14,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "IJCV": {
+        "status": "ok",
+        "scanned": 488,
+        "candidates": 5,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 0,
+        "catalog_only": 5,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      },
+      "TIP": {
+        "status": "ok",
+        "scanned": 824,
+        "candidates": 20,
+        "details_checked": 0,
+        "details_failed": 0,
+        "details_deferred": 0,
+        "deepseek_hits": 0,
+        "catalog_only": 20,
+        "deepseek_only": 0,
+        "deepseek_new": []
+      }
+    },
+    "review_only": false,
+    "investigation_search_errors": 0
+  },
+  "commit": "4a56ca22481f5aec2cc023c4747b9b3b7b400281",
+  "report_date": "2026-11-08",
+  "run_url": "https://github.com/llllljgl/AD-paper/actions/runs/42360608435",
+  "pending_records": [
+    {
+      "title": "SFR-Net: Steering-Fusion-Refining Network in Multi-label Zero-Shot Sewer Defect Detection",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chen_SFR-Net_Steering-Fusion-Refining_Network_in_Multi-label_Zero-Shot_Sewer_Defect_Detection_CVPR_2026_paper.html",
+      "reason": "需补充工业视觉缺陷任务的具体证据"
+    },
+    {
+      "title": "Wavelet-Driven 3D Anomaly Detection under Pose-Agnostic and Sparse-View",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Shao_Wavelet-Driven_3D_Anomaly_Detection_under_Pose-Agnostic_and_Sparse-View_CVPR_2026_paper.html",
+      "reason": "判断缺少可核对的原文证据"
+    },
+    {
+      "title": "Hunting Normality from Query Sample via Residual Learning for Generalist Anomaly Detection",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Hunting_Normality_from_Query_Sample_via_Residual_Learning_for_Generalist_CVPR_2026_paper.html",
+      "reason": "仅有通用视觉异常检测和GAD基准实验描述，未明确工业数据集或工业场景；虽提及subtle defects与anomaly localization，但defects为泛化表述，不足以直接证明工业评估。"
+    },
+    {
+      "title": "Layer Precision Reduction for Deep Anomaly Detection",
+      "url": "https://neurips.cc/virtual/2026/poster/156082",
+      "reason": "摘要仅泛称30个真实公开数据集与通用异常检测，未明确工业场景、视觉模态或表面缺陷任务，无法确认包含工业视觉评估。"
+    },
+    {
+      "title": "Topology-Aware Optimal Transport for Source-Free Test-Time Adaptation in Anomaly Segmentation",
+      "url": "https://neurips.cc/virtual/2026/poster/150154",
+      "reason": "摘要明确涉及视觉异常分割任务，并在2D与3D异常检测基准上完成评测，但未指明这些基准是否为工业数据集（如MVTec、VisA、Real3D-AD），也未描述工业缺陷场景；个人主页的研究兴趣与另一篇DICTA工业异常检测论文不足以证明本文的工业评估。"
+    },
+    {
+      "title": "RPE-PAD: Relative Pose Estimation for Pose-agnostic Anomaly Detection",
+      "url": "https://doi.org/10.1609/aaai.v40i15.38304",
+      "reason": "摘要明确是图像位姿无关异常检测方法，但未说明工业场景，也无数据集或工业评估证据，需核实是否在MVTec等工业数据集上实验。"
+    },
+    {
+      "title": "MaskAD: Parallel Masked Autoencoder for Multi-class Unsupervised Anomaly Detection",
+      "url": "https://doi.org/10.1609/aaai.v40i18.38573",
+      "reason": "摘要提出多类无监督图像异常检测与异常定位方法，但提供的摘要和网页元数据均未明确实验场景为工业视觉，也未提及工业数据集或工业检测评估，无法根据现有证据确认其属于工业视觉异常检测范围。"
+    },
+    {
+      "title": "AEGIS: Toward Expert-in-the-loop Industrial Anomaly Detection",
+      "url": "https://doi.org/10.1609/aaai.v40i48.42359",
+      "reason": "标题和摘要仅称工业异常检测平台，未明确视觉模态、缺陷检测任务或工业数据集实验，需核实其评估是否涉及图像/点云异常检测。"
+    },
+    {
+      "title": "Automated Multi-Camera Inspection System for Aircraft",
+      "url": "https://doi.org/10.1609/aaai.v40i48.42378",
+      "reason": "需补充工业视觉缺陷任务的具体证据"
+    },
+    {
+      "title": "Instance-Level Cost-Sensitive Hypergraph Learning With Quality-Aware Structure Judgement for Anomaly Detection",
+      "url": "https://doi.org/10.1109/tpami.2026.3679048",
+      "reason": "摘要与证据仅表明该方法用于异常检测，并在三个常用异常检测数据集上评估，但未说明这些数据集属于工业视觉、图像或点云模态，也未提及表面缺陷任务；超图方法可能面向通用或非视觉异常检测，需核实是否存在工业视觉评估。"
+    },
+    {
+      "title": "Unified Anomaly Detection via Multi-Scale Contrasted Memory",
+      "url": "https://doi.org/10.1109/tip.2026.3663923",
+      "reason": "摘要提到方法基于多尺度原型和空间偏差图，且声称在工业检测上优于SoTA，但未给出具体工业数据集或实验设置；S2仅为网页导航信息。需核实原文是否包含工业视觉缺陷检测评估。"
+    },
+    {
+      "title": "UniNAD: A Unified Normality-Aware Framework for Anomaly Detection via Self-Supervised Learning",
+      "url": "https://doi.org/10.1109/tip.2026.3749120",
+      "reason": "仅有标题与期刊来源，摘要正文为空；标题只说明自监督统一正常性感知异常检测框架，未明确工业视觉场景、视觉模态或缺陷任务，需进一步调查。"
+    },
+    {
+      "title": "CaPro: Curvilinear-aware Prompt Learning with Single Unlabeled Image for Cost-effective Curvilinear Structure Segmentation",
+      "url": "https://doi.org/10.1609/aaai.v40i5.37315",
+      "reason": "摘要称曲线结构分割（CSS）在工业应用（含结构健康监测）中重要，且实验涵盖“crack segmentation”任务；但未明确裂缝分割属于工业表面缺陷检测，也未给出工业数据集名称或工业缺陷场景描述，无法直接确认工业场景与视觉缺陷任务的直接评估。"
+    },
+    {
+      "title": "Fovea-SR: Dual-Fovea Vision Transformer for Lightweight Image Super-Resolution in Industrial Detection Scenarios",
+      "url": "https://doi.org/10.1109/tip.2026.3749125",
+      "reason": "仅有标题和期刊信息，evidence_sources 文本为空。标题表明超分辨率方法面向工业检测场景，但未明确是否包含表面缺陷检测或异常定位的直接评估，需核实实验部分。"
+    }
+  ]
+}
