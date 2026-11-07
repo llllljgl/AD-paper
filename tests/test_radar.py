@@ -102,7 +102,7 @@ class RadarTests(unittest.TestCase):
     def test_checkpoint_backfill_and_provider_failure(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
-            save_json(root / "config.json", json.loads((ROOT / "config.json").read_text()))
+            save_json(root / "config.json", {**json.loads((ROOT / "config.json").read_text()), "collection_year": 2026})
             source = Mock()
             source.collect.return_value = [
                 paper(published="2025-12-01T00:00:00Z", venue="CVPR 2026（作者声明）"),

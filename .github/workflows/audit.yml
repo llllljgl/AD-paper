@@ -3,6 +3,10 @@ name: Audit paper collection
 on:
   workflow_dispatch:
     inputs:
+      year:
+        description: Year to audit
+        type: string
+        default: '2026'
       venues:
         description: 'Comma-separated venues to audit (same production search and scope)'
         type: string
@@ -26,8 +30,9 @@ jobs:
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+          AUDIT_YEAR: ${{ inputs.year }}
           AUDIT_VENUES: ${{ inputs.venues }}
-        run: python -m radar.audit --venues "$AUDIT_VENUES"
+        run: python -m radar.audit --venues "$AUDIT_VENUES" --year "$AUDIT_YEAR"
       - name: Report
         if: always()
         run: |

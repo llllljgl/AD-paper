@@ -50,8 +50,15 @@ def render(result):
     return '\n'.join(lines) + '\n'
 
 
-def audit(venues, output):
+def audit(venues, output, year=2026):
     config = load_json(ROOT / 'config.json', {})
+    config['collection_year'] = year
+    from .rolling import specs_for
+    from .official import get_metadata
+    for venue in venues:
+        if venue in config['official_sources']:
+            choices = specs_for(config, venue, year, get_metadata)
+            config['official_sources'][venue] = choices[0] if choices else {'unavailable': 'No published catalog for requested year'}
     unknown = set(venues) - config['official_sources'].keys()
     if unknown:
         raise ValueError(f'Unknown venues: {sorted(unknown)}')
@@ -155,7 +162,8 @@ def audit(venues, output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument('--year', type=int, default=2026)
     parser.add_argument('--venues', default='CVPR,ICLR,TPAMI,TIP')
     parser.add_argument('--output', type=Path, default=ROOT / 'audit-output')
     args = parser.parse_args()
-    audit([v.strip() for v in args.venues.split(',') if v.strip()], args.output)
+    audit([v.strip() for v in args.venues.split(',') if v.strip()], args.output, args.year)

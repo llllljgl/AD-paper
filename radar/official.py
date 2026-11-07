@@ -14,7 +14,7 @@ from urllib.parse import quote, urlencode, urljoin, urlsplit
 from .core import github_links, now_iso, title_key
 
 HOSTS = {
-    "openaccess.thecvf.com", "eccv.ecva.net", "neurips.cc", "proceedings.iclr.cc",
+    "iclr.cc", "openaccess.thecvf.com", "eccv.ecva.net", "neurips.cc", "proceedings.iclr.cc",
     "proceedings.mlr.press", "ijcai.org", "ojs.aaai.org", "api.crossref.org",
     "doi.org", "link.springer.com", "ieeexplore.ieee.org", "www.ebi.ac.uk",
 }
@@ -177,7 +177,7 @@ def paper_metadata(url, raw, title):
 
 
 def crossref_entries(year, spec, get):
-    start, end = f"{year}-01-01", f"{year}-12-31"
+    start, end = f"{year - 1 if 'issn' in spec else year}-01-01", f"{year}-12-31"
     filters = [f"from-pub-date:{start}", f"until-pub-date:{end}"]
     if "issn" in spec:
         endpoint = f"https://api.crossref.org/journals/{spec['issn']}/works"

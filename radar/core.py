@@ -107,7 +107,9 @@ def github_links(text):
 
 
 def source_venue(text):
-    match = re.search(r"\b(CVPR|ICCV|ECCV|ICLR|NeurIPS|AAAI|WACV|BMVC)\)?[ ,:-]*(20\d{2})\b", text, re.I)
+    if re.search(r"submitted|under[ -]review|submission|rejected", text, re.I):
+        return "arXiv / 未确认会议"
+    match = re.search(r"\b(CVPR|ICCV|ECCV|ICLR|ICML|IJCAI|NeurIPS|AAAI|WACV|BMVC)\)?[ ,:-]*(20\d{2})\b", text, re.I)
     return "{} {}（作者声明）".format(match[1].upper(), match[2]) if match else "arXiv / 未确认会议"
 
 
@@ -381,7 +383,11 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None, 
     existing = load_json(root / "data/papers.json", [])
     if not review_only and source is None and official is None and config.get("official_sources"):
         from .official import OfficialSources
-        official = OfficialSources(config, existing)
+        if config.get("rolling", {}).get("enabled"):
+            from .rolling import RollingSources
+            official = RollingSources(config, existing, state)
+        else:
+            official = OfficialSources(config, existing)
     source = source or Arxiv()
     reports = {}
     try:
@@ -397,7 +403,11 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None, 
         reports["arXiv"] = {"status": "failed", "reason": reason}
     agent = Agent(config, source)
     search_errors, search_calls = {}, 0
-    if official is not None:
+    if official is not None and hasattr(official, "collect_with_search"):
+        collected, source_reports, search_errors, search_calls = official.collect_with_search(agent.key if not no_llm else "")
+        incoming.extend(collected)
+        reports.update(source_reports)
+    elif official is not None:
         found = {}
         if agent.key and not no_llm:
             from .deepseek import search_venues
@@ -406,6 +416,8 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None, 
         incoming.extend(papers_from_venues)
         reports.update(source_reports)
     year = config.get("collection_year")
+    if config.get("rolling", {}).get("enabled"):
+        incoming = [p for p in incoming if int(venue_and_year(p)[1]) >= config.get("collection_start_year", 2026)]
     papers = filter_collection_year(merge(existing, incoming, now_iso()), year)
     errors, consecutive_errors, review_blocked = 0, 0, False
     for paper in papers:
