@@ -1,21 +1,149 @@
 {
-  "last_collected_until": "2026-11-07T09:23:01.951375+00:00",
-  "last_run_at": "2026-11-07T09:36:39+00:00",
-  "collected": 0,
-  "llm_calls": 50,
-  "pending": 15,
-  "review_errors": 1,
+  "last_collected_until": "2026-11-07T09:39:01.635094+00:00",
+  "last_run_at": "2026-11-07T09:42:35+00:00",
+  "collected": 523,
+  "llm_calls": 29,
+  "pending": 14,
+  "review_errors": 0,
   "mode": "agent",
   "missing_abstract": 2,
   "sources": {
     "arXiv": {
+      "status": "ok",
+      "candidates": 6
+    },
+    "CVPR": {
+      "status": "ok",
+      "scanned": 4041,
+      "candidates": 65,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 10,
+      "catalog_only": 55,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "ICCV": {
       "status": "skipped",
-      "candidates": 0
+      "reason": "2026 年无对应届次"
+    },
+    "ECCV": {
+      "status": "ok",
+      "scanned": 2834,
+      "candidates": 40,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 10,
+      "catalog_only": 30,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "NeurIPS": {
+      "status": "ok",
+      "scanned": 9126,
+      "candidates": 76,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 13,
+      "catalog_only": 63,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "ICLR": {
+      "status": "ok",
+      "scanned": 5348,
+      "candidates": 36,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 4,
+      "catalog_only": 32,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "ICML": {
+      "status": "ok",
+      "scanned": 6552,
+      "candidates": 54,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 9,
+      "catalog_only": 45,
+      "deepseek_only": 1,
+      "deepseek_new": []
+    },
+    "AAAI": {
+      "status": "ok",
+      "scanned": 4920,
+      "candidates": 191,
+      "details_checked": 40,
+      "details_failed": 0,
+      "details_deferred": 7,
+      "deepseek_hits": 14,
+      "catalog_only": 177,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "IJCAI": {
+      "status": "ok",
+      "scanned": 972,
+      "candidates": 15,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 0,
+      "catalog_only": 15,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "TPAMI": {
+      "status": "ok",
+      "scanned": 1222,
+      "candidates": 15,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 1,
+      "catalog_only": 14,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "IJCV": {
+      "status": "ok",
+      "scanned": 488,
+      "candidates": 5,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 0,
+      "catalog_only": 5,
+      "deepseek_only": 0,
+      "deepseek_new": []
+    },
+    "TIP": {
+      "status": "ok",
+      "scanned": 824,
+      "candidates": 20,
+      "details_checked": 0,
+      "details_failed": 0,
+      "details_deferred": 0,
+      "deepseek_hits": 0,
+      "catalog_only": 20,
+      "deepseek_only": 0,
+      "deepseek_new": []
     }
   },
-  "deepseek_search_calls": 0,
+  "deepseek_search_calls": 20,
   "deepseek_search_errors": {},
-  "code_backfill": {},
+  "code_backfill": {
+    "checked": 15,
+    "added": 3,
+    "error": ""
+  },
   "llm_status": "enabled",
   "review_blocked": false,
   "deepseek_only_reviewed": {
@@ -23,7 +151,7 @@
     "pending": 0,
     "rejected": 3
   },
-  "missing_scope_evidence": 11,
+  "missing_scope_evidence": 10,
   "investigations": 14,
   "investigation_search_calls": 42,
   "last_collection_sources": {
@@ -101,7 +229,7 @@
       "candidates": 191,
       "details_checked": 40,
       "details_failed": 0,
-      "details_deferred": 47,
+      "details_deferred": 7,
       "deepseek_hits": 14,
       "catalog_only": 177,
       "deepseek_only": 0,
@@ -156,6 +284,6 @@
       "deepseek_new": []
     }
   },
-  "review_only": true,
+  "review_only": false,
   "investigation_search_errors": 0
 }
