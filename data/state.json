@@ -1,10 +1,10 @@
 {
   "last_collected_until": "2026-11-07T01:58:03.731590+00:00",
-  "last_run_at": "2026-11-07T07:03:30+00:00",
+  "last_run_at": "2026-11-07T07:24:55+00:00",
   "collected": 0,
-  "llm_calls": 46,
-  "pending": 72,
-  "review_errors": 2,
+  "llm_calls": 27,
+  "pending": 58,
+  "review_errors": 13,
   "mode": "agent",
   "missing_abstract": 3,
   "sources": {
@@ -23,9 +23,9 @@
     "pending": 0,
     "rejected": 3
   },
-  "missing_scope_evidence": 67,
-  "investigations": 7,
-  "investigation_search_calls": 21,
+  "missing_scope_evidence": 53,
+  "investigations": 0,
+  "investigation_search_calls": 0,
   "last_collection_sources": {
     "arXiv": {
       "status": "failed",
@@ -156,5 +156,6 @@
       "deepseek_new": []
     }
   },
-  "review_only": true
+  "review_only": true,
+  "investigation_search_errors": 0
 }

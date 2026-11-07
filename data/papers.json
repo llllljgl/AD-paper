@@ -24402,7 +24402,7 @@
       "少样本",
       "SAM提示学习"
     ],
-    "reason": "需补充工业视觉缺陷任务的具体证据",
+    "reason": "DeepSeek 接口暂不可用，等待重试",
     "trace": [
       {
         "action": "verify",
@@ -24577,7 +24577,7 @@
       }
     ],
     "review_version": 3,
-    "review_attempted_at": "2026-11-07T07:01:50+00:00",
+    "review_attempted_at": "2026-11-07T07:09:38+00:00",
     "reviewed_at": "2026-11-07T07:01:50+00:00"
   },
   {
@@ -27155,12 +27155,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41033",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "DeepSeek 接口暂不可用，等待重试",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文面向车间调度优化，与工业视觉异常检测无关，不建议纳入。",
+    "tags": [
+      "调度优化",
+      "非视觉",
+      "排除"
+    ],
+    "reason": "该论文研究节能分布式异构柔性作业车间调度问题，属于生产调度优化，不涉及视觉异常检测、缺陷检测或相关数据集，明确不相关。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该论文研究节能分布式异构柔性作业车间调度问题，属于生产调度优化，不涉及视觉异常检测、缺陷检测或相关数据集，明确不相关。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i43.41033",
+        "quote": "Solving energy-saving distributed heterogeneous flexible job shop scheduling problem (ES-DHFJSP) aims to enhance industrial production efficiency while minimizing energy consumption."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:09:58+00:00",
+    "reviewed_at": "2026-11-07T07:09:58+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i43.40995",
@@ -27185,12 +27203,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40995",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文面向贝叶斯优化的元学习鲁棒性，不涉及工业视觉缺陷或异常检测，与筛选范围无关。",
+    "tags": [
+      "贝叶斯优化",
+      "元学习",
+      "无关"
+    ],
+    "reason": "该论文研究用于贝叶斯优化的元学习与博弈论方法，摘要与证据未提及工业视觉、表面缺陷或异常检测任务，也无工业数据集评估，属于明确的非视觉异常检测工作。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该论文研究用于贝叶斯优化的元学习与博弈论方法，摘要与证据未提及工业视觉、表面缺陷或异常检测任务，也无工业数据集评估，属于明确的非视觉异常检测工作。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i43.40995",
+        "quote": "Meta-learning for Bayesian optimization accelerates optimization by leveraging knowledge from previous tasks, but existing methods optimize for average performance and fail on challenging outlier tasks critical in practice."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:11:11+00:00",
+    "reviewed_at": "2026-11-07T07:11:11+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i43.40973",
@@ -27212,12 +27248,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40973",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文用强化学习优化车间调度中的结构不确定性，目标是缩短makespan，与视觉异常检测无关，不建议纳入。",
+    "tags": [
+      "车间调度",
+      "强化学习",
+      "非视觉"
+    ],
+    "reason": "该论文研究车间调度问题的强化学习优化，评估指标为最大完工时间（makespan），不涉及视觉异常检测、异常定位、表面缺陷检测或分割任务，也无线索表明使用了工业视觉异常检测数据集或模态。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该论文研究车间调度问题的强化学习优化，评估指标为最大完工时间（makespan），不涉及视觉异常检测、异常定位、表面缺陷检测或分割任务，也无线索表明使用了工业视觉异常检测数据集或模态。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i43.40973",
+        "quote": "Extensive experiments demonstrate that our method outperforms existing approaches in reducing makespan on benchmark instances."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:11:12+00:00",
+    "reviewed_at": "2026-11-07T07:11:12+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i44.41076",
@@ -27237,12 +27291,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41076",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文讨论Rashomon集预测多重性缓解，属通用机器学习，与工业视觉异常检测无关。",
+    "tags": [
+      "预测多重性",
+      "通用机器学习",
+      "非工业视觉"
+    ],
+    "reason": "论文研究Rashomon集合中的预测多重性建模问题，属通用机器学习预测一致性，未涉及视觉模态、工业场景或异常/缺陷检测任务，也无相应工业视觉数据集评估。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "论文研究Rashomon集合中的预测多重性建模问题，属通用机器学习预测一致性，未涉及视觉模态、工业场景或异常/缺陷检测任务，也无相应工业视觉数据集评估。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i44.41076",
+        "quote": "The existence of multiple, equally accurate models for a given predictive task leads to predictive multiplicity, where a ``Rashomon set'' of models achieve similar accuracy but diverge in their individual predictions."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:11:30+00:00",
+    "reviewed_at": "2026-11-07T07:11:30+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i45.41172",
@@ -27265,12 +27337,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41172",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "药品短缺供应链仿真研究，与工业视觉异常检测无关。",
+    "tags": [
+      "供应链仿真",
+      "政策评估",
+      "无关"
+    ],
+    "reason": "该论文研究的是药品供应链短缺的仿真与监管政策评估，属于供应链/医疗政策模拟，不含工业视觉异常检测、缺陷检测或分割任务，也无相关数据集或图像评估。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该论文研究的是药品供应链短缺的仿真与监管政策评估，属于供应链/医疗政策模拟，不含工业视觉异常检测、缺陷检测或分割任务，也无相关数据集或图像评估。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i45.41172",
+        "quote": "Drug shortages pose critical risks to patient care and healthcare systems worldwide, yet the effectiveness of regulatory interventions remains poorly understood due to information asymmetries in pharmaceutical supply chains."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:12:14+00:00",
+    "reviewed_at": "2026-11-07T07:12:14+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i45.41158",
@@ -27296,8 +27386,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 接口暂不可用，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-07T07:13:27+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i45.41200",
@@ -27321,12 +27412,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41200",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "水下图像增强方法，无工业缺陷检测评测，与筛选范围不符。",
+    "tags": [
+      "图像增强",
+      "水下视觉",
+      "排除"
+    ],
+    "reason": "论文聚焦水下图像增强（UIE），属于前置图像处理任务，摘要未涉及工业视觉异常检测、缺陷定位或分割实验；虽提及基础设施巡检，但仅为应用背景列举，无实际工业异常检测评估证据。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "论文聚焦水下图像增强（UIE），属于前置图像处理任务，摘要未涉及工业视觉异常检测、缺陷定位或分割实验；虽提及基础设施巡检，但仅为应用背景列举，无实际工业异常检测评估证据。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i45.41200",
+        "quote": "Rather than estimating the enhanced image directly, DRM-Net first predicts a pixel-wise Degradation Residual Map (DRM) in the perceptually uniform CIELab colour space."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:13:29+00:00",
+    "reviewed_at": "2026-11-07T07:13:29+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i46.41249",
@@ -27345,12 +27454,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41249",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文用受限restless bandits优化食品卫生检查排期，与工业视觉异常检测无关，不属筛选范围。",
+    "tags": [
+      "检查调度",
+      "强化学习",
+      "非视觉"
+    ],
+    "reason": "该论文研究的是市政检查调度（芝加哥食品卫生检查），属于 restless bandits 调度优化问题，不涉及工业视觉异常检测、缺陷检测或分割等视觉任务，标题、摘要和证据均未提及任何视觉模态或工业视觉数据集。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该论文研究的是市政检查调度（芝加哥食品卫生检查），属于 restless bandits 调度优化问题，不涉及工业视觉异常检测、缺陷检测或分割等视觉任务，标题、摘要和证据均未提及任何视觉模态或工业视觉数据集。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i46.41249",
+        "quote": "In this paper, we approach the problem of intelligently scheduling service inspections to maximize their impact, using the case of food establishment inspections in Chicago as a case study."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:14:28+00:00",
+    "reviewed_at": "2026-11-07T07:14:28+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41348",
@@ -27372,8 +27499,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 接口暂不可用，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-07T07:15:35+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41459",
@@ -27395,12 +27523,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41459",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文用多智能体LLM生成工业领域问题辅助FMEA建模，不含视觉缺陷检测任务，与工业视觉异常检测无关。",
+    "tags": [
+      "工业4.0",
+      "知识探测",
+      "非视觉任务"
+    ],
+    "reason": "该工作面向工业4.0中利用LLM多智能体生成领域问题以支持FMEA建模，属于知识获取与建模决策流程；摘要未涉及视觉模态，也无表面缺陷检测、异常定位或分割任务及相应数据集，不满足工业视觉异常检测范围。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该工作面向工业4.0中利用LLM多智能体生成领域问题以支持FMEA建模，属于知识获取与建模决策流程；摘要未涉及视觉模态，也无表面缺陷检测、异常定位或分割任务及相应数据集，不满足工业视觉异常检测范围。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i47.41459",
+        "quote": "We present a deployed Multi-Agent System (MAS) that leverages Large Language Models (LLMs) to automatically generate and refine domain-relevant questions, improving modeling decisions across industrial projects."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:15:45+00:00",
+    "reviewed_at": "2026-11-07T07:15:45+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41442",
@@ -27425,8 +27571,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 接口暂不可用，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-07T07:16:58+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41479",
@@ -27444,12 +27591,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41479",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文为体育赛事推荐系统，与工业视觉异常检测无关，阅读价值低。",
+    "tags": [
+      "推荐系统",
+      "体育",
+      "无关"
+    ],
+    "reason": "该论文研究每日梦幻体育的推荐排序系统，属于体育/娱乐推荐场景，不涉及工业视觉异常检测、缺陷分割或相关数据集，evidence明确显示为推荐系统而非视觉缺陷任务。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该论文研究每日梦幻体育的推荐排序系统，属于体育/娱乐推荐场景，不涉及工业视觉异常检测、缺陷分割或相关数据集，evidence明确显示为推荐系统而非视觉缺陷任务。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i47.41479",
+        "quote": "In daily fantasy sports (DFS), match participation is highly time-sensitive. Users must act within a narrow window before a game begins, making match recommendation a time-critical task to prevent missed engagement and revenue loss."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:17:00+00:00",
+    "reviewed_at": "2026-11-07T07:17:00+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41430",
@@ -27472,12 +27637,34 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41430",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文用大模型做IT日志诊断与摘要，与工业视觉异常检测无关，不宜纳入本领域筛选。",
+    "tags": [
+      "日志分析",
+      "IT运维",
+      "非视觉"
+    ],
+    "reason": "该论文针对IT软件支持日志分析与故障诊断，既不涉及工业视觉异常检测，也无图像或三维点云表面缺陷任务。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该论文针对IT软件支持日志分析与故障诊断，既不涉及工业视觉异常检测，也无图像或三维点云表面缺陷任务。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i47.41430",
+        "quote": "IT environments typically have logging mechanisms to monitor system health and detect issues."
+      },
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i47.41430",
+        "quote": "we propose a log analytics tool that leverages Large Language Models (LLMs) for log data processing and issue diagnosis"
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:17:01+00:00",
+    "reviewed_at": "2026-11-07T07:17:01+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41467",
@@ -27506,8 +27693,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 接口暂不可用，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-07T07:17:59+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41472",
@@ -27528,12 +27716,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41472",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "面向电池材料异质性的剩余寿命概率预测，属时间序列预测维护，与工业视觉异常检测无关，不宜纳入本综述。",
+    "tags": [
+      "电池寿命预测",
+      "时间序列",
+      "无关视觉"
+    ],
+    "reason": "该论文研究电池剩余使用寿命的概率预测，属于时间序列/预测性维护任务，而非工业视觉异常检测、缺陷检测或分割；摘要与证据均未涉及图像、点云或视觉模态。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该论文研究电池剩余使用寿命的概率预测，属于时间序列/预测性维护任务，而非工业视觉异常检测、缺陷检测或分割；摘要与证据均未涉及图像、点云或视觉模态。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i47.41472",
+        "quote": "Predicting the Remaining Useful Life (RUL) of Li-ion batteries is crucial for ensuring their reliability, safety, and cost-effectiveness in battery-powered systems."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:18:00+00:00",
+    "reviewed_at": "2026-11-07T07:18:00+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41445",
@@ -27577,8 +27783,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 接口暂不可用，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-07T07:18:58+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41455",
@@ -27602,12 +27809,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41455",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "城市铅污染空间风险预测，与工业视觉缺陷检测无关，不属筛选范围。",
+    "tags": [
+      "铅污染",
+      "空间预测",
+      "公共卫生"
+    ],
+    "reason": "论文研究城市供水系统铅污染风险预测，属于公共卫生与市政风险评估，使用社会经济人口住房特征和居民检测数据，不是工业视觉异常检测、缺陷检测或定位任务，缺乏图像或点云模态及工业缺陷评估证据。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "论文研究城市供水系统铅污染风险预测，属于公共卫生与市政风险评估，使用社会经济人口住房特征和居民检测数据，不是工业视觉异常检测、缺陷检测或定位任务，缺乏图像或点云模态及工业缺陷评估证据。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i47.41455",
+        "quote": "This paper presents a lead contamination risk prediction framework from socio-demographic housing features analytics, first of its kind, by drawing on partially anonymized residential testing data as ground truth and applying graph neural networks alongside gradient-boosted ensembles."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:19:00+00:00",
+    "reviewed_at": "2026-11-07T07:19:00+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41463",
@@ -27683,12 +27908,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41495",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "其他",
+    "summary_zh": "该文提出LLM蒸馏流水线，用于云环境定制模型部署，与工业视觉异常检测无关，无需纳入。",
+    "tags": [
+      "LLM蒸馏",
+      "云部署",
+      "无关"
+    ],
+    "reason": "该论文面向分布式云环境下定制大语言模型的知识蒸馏与部署，评估任务为麻将推理，不涉及工业视觉异常检测、缺陷检测或相关数据集。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该论文面向分布式云环境下定制大语言模型的知识蒸馏与部署，评估任务为麻将推理，不涉及工业视觉异常检测、缺陷检测或相关数据集。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i47.41495",
+        "quote": "Experiments show that Stratos produces a student model that achieves four times the accuracy of its GPT-4o teacher baseline on a rare, domain-specific Mahjong reasoning task with reverse synthetic data and knowledge injection."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:19:44+00:00",
+    "reviewed_at": "2026-11-07T07:19:44+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41345",
@@ -27710,8 +27953,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 接口暂不可用，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-07T07:20:42+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i47.41441",
@@ -27783,12 +28027,30 @@
     "publisher_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41478",
     "added_at": "2026-11-07T02:00:11+00:00",
     "code_urls": [],
-    "status": "pending",
-    "topic": "待分类",
-    "summary_zh": "",
-    "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "status": "rejected",
+    "topic": "视觉语言模型",
+    "summary_zh": "面向电商推荐系统的LLM嵌入对齐框架，与工业视觉缺陷检测无关，不属本筛选范围。",
+    "tags": [
+      "推荐系统",
+      "LLM嵌入",
+      "非视觉检测"
+    ],
+    "reason": "该论文是工业推荐系统中LLM嵌入对齐的工作，不涉及工业视觉异常检测、表面缺陷检测或分割任务，明确属于推荐系统而非视觉检测。",
+    "trace": [
+      {
+        "action": "reject",
+        "reason": "该论文是工业推荐系统中LLM嵌入对齐的工作，不涉及工业视觉异常检测、表面缺陷检测或分割任务，明确属于推荐系统而非视觉检测。"
+      }
+    ],
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1609/aaai.v40i47.41478",
+        "quote": "In this work, we present TreeBridge, a novel framework that introduces a structure-aware generative encoding tree to bridge the semantic gap between LLM embeddings and recommendation tasks."
+      }
+    ],
+    "review_version": 3,
+    "review_attempted_at": "2026-11-07T07:21:02+00:00",
+    "reviewed_at": "2026-11-07T07:21:02+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i48.42347",
@@ -27814,8 +28076,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 接口暂不可用，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-07T07:22:01+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i48.42251",
@@ -27839,8 +28102,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 接口暂不可用，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-07T07:22:59+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i48.42399",
@@ -27864,8 +28128,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 接口暂不可用，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-07T07:23:57+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i48.42372",
@@ -27892,8 +28157,9 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "等待 Agent 筛选",
-    "trace": []
+    "reason": "DeepSeek 接口暂不可用，等待重试",
+    "trace": [],
+    "review_attempted_at": "2026-11-07T07:24:55+00:00"
   },
   {
     "id": "doi:10.1609/aaai.v40i48.42269",
@@ -28287,7 +28553,7 @@
       "多模态基准",
       "开集检测"
     ],
-    "reason": "需补充工业视觉缺陷任务的具体证据",
+    "reason": "DeepSeek 接口暂不可用，等待重试",
     "trace": [
       {
         "action": "verify",
@@ -28456,7 +28722,7 @@
       }
     ],
     "review_version": 3,
-    "review_attempted_at": "2026-11-07T07:00:45+00:00",
+    "review_attempted_at": "2026-11-07T07:07:41+00:00",
     "reviewed_at": "2026-11-07T07:00:45+00:00"
   },
   {
@@ -28620,8 +28886,8 @@
     "topic": "待分类",
     "summary_zh": "",
     "tags": [],
-    "reason": "DeepSeek 返回格式无效，等待重试",
+    "reason": "DeepSeek 接口暂不可用，等待重试",
     "trace": [],
-    "review_attempted_at": "2026-11-07T07:00:56+00:00"
+    "review_attempted_at": "2026-11-07T07:08:39+00:00"
   }
 ]
