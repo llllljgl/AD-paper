@@ -22,6 +22,7 @@ MEDIA_TYPES = {"text/html", "application/xhtml+xml", "application/json"}
 ANOMALY = re.compile(
     r"\banomal\w*|\bdefects?\b|\bvisual inspection\b|\bindustrial inspection\b"
     r"|\bquality inspection\b|\bsurface flaws?\b|\bmvtec\b"
+    r"|\bindustrial\b|\bmanufactur\w*|\boutlier\w*|\binspection\b|\breal[- ]?3d[- ]?ad|\banomaly[- ]?shapenet"
     r"|\breal[- ]?iad\b|\beyecandies\b|\bbtad\b|\bmmad\b",
     re.I,
 )

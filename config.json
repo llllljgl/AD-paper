@@ -3,28 +3,69 @@
   "description": "工业异常检测论文雷达",
   "collection_year": 2026,
   "official_sources": {
-    "CVPR": {"catalog": "https://openaccess.thecvf.com/CVPR2026?day=all", "format": "cvf"},
-    "ICCV": {"unavailable": "2026 年无对应届次"},
-    "ECCV": {"catalog": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers", "format": "eccv"},
-    "NeurIPS": {"catalog": "https://neurips.cc/Conferences/2026/AcceptedPapersInitial", "format": "neurips"},
-    "ICLR": {"catalog": "https://proceedings.iclr.cc/paper_files/paper/2026", "format": "iclr"},
-    "ICML": {"catalog": "https://proceedings.mlr.press/v306/", "format": "pmlr"},
-    "AAAI": {"crossref_container": "Proceedings of the AAAI Conference on Artificial Intelligence"},
-    "IJCAI": {"catalog": "https://ijcai.org/proceedings/2026/", "format": "ijcai"},
-    "TPAMI": {"issn": "0162-8828", "search_host": "ieeexplore.ieee.org"},
-    "IJCV": {"issn": "0920-5691", "search_host": "link.springer.com"},
-    "TIP": {"issn": "1057-7149", "search_host": "ieeexplore.ieee.org"}
+    "CVPR": {
+      "catalog": "https://openaccess.thecvf.com/CVPR2026?day=all",
+      "format": "cvf"
+    },
+    "ICCV": {
+      "unavailable": "2026 年无对应届次"
+    },
+    "ECCV": {
+      "catalog": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers",
+      "format": "eccv"
+    },
+    "NeurIPS": {
+      "catalog": "https://neurips.cc/Conferences/2026/AcceptedPapersInitial",
+      "format": "neurips"
+    },
+    "ICLR": {
+      "catalog": "https://proceedings.iclr.cc/paper_files/paper/2026",
+      "format": "iclr"
+    },
+    "ICML": {
+      "catalog": "https://proceedings.mlr.press/v306/",
+      "format": "pmlr"
+    },
+    "AAAI": {
+      "crossref_container": "Proceedings of the AAAI Conference on Artificial Intelligence"
+    },
+    "IJCAI": {
+      "catalog": "https://ijcai.org/proceedings/2026/",
+      "format": "ijcai"
+    },
+    "TPAMI": {
+      "issn": "0162-8828",
+      "search_host": "ieeexplore.ieee.org"
+    },
+    "IJCV": {
+      "issn": "0920-5691",
+      "search_host": "link.springer.com"
+    },
+    "TIP": {
+      "issn": "1057-7149",
+      "search_host": "ieeexplore.ieee.org"
+    }
   },
-  "official_details_per_source": 12,
+  "official_details_per_source": 40,
   "official_metadata_refresh_days": 28,
-  "code_searches_per_run": 5,
+  "code_searches_per_run": 15,
   "arxiv_query": "(ti:\"anomaly detection\" OR ti:\"anomaly localization\" OR ti:\"defect detection\" OR ti:\"defect segmentation\") AND (all:industrial OR all:visual OR all:MVTec OR all:VisA OR all:manufacturing)",
   "initial_days": 14,
   "overlap_days": 3,
   "page_size": 100,
   "max_candidates": 1000,
-  "max_llm_calls": 60,
+  "max_llm_calls": 400,
   "model": "deepseek-flash",
-  "topics": ["特征与记忆库", "重建与生成", "视觉语言模型", "少样本与零样本", "定位与分割", "数据集与评估", "其他"],
-  "scope": "工业场景中的视觉异常检测、异常定位、表面缺陷检测与分割；包括 MVTec AD、MVTec LOCO、VisA 等。排除医疗、网络、金融、时间序列异常检测，除非论文明确评估工业视觉场景。"
+  "topics": [
+    "特征与记忆库",
+    "重建与生成",
+    "视觉语言模型",
+    "少样本与零样本",
+    "定位与分割",
+    "数据集与评估",
+    "其他"
+  ],
+  "scope": "工业场景中的视觉异常检测、异常定位、表面缺陷检测与分割，以及直接服务这些任务的缺陷合成、数据集和评测。包括二维图像、多模态和三维点云，MVTec、VisA、Real-IAD、Real3D-AD、Anomaly-ShapeNet、Eyecandies 等。跨工业与医学的论文只要明确包含工业视觉评估即可收录。纯医疗、网络、金融、时间序列、通用监控视频异常检测排除。没有列明数据集不等于不相关，应进一步调查。",
+  "max_investigations": 60,
+  "review_version": 2
 }

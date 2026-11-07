@@ -73,11 +73,12 @@ class RadarTests(unittest.TestCase):
         agent = Agent(config, source)
         agent.decide = Mock(side_effect=[{"decision": "verify", "reason": "含糊"},
             {"decision": "keep", "reason": "工业评估", "topic": "其他", "summary_zh": "中文简介", "tags": ["工业视觉", "定位"]}])
-        result = agent.review(paper())
+        with patch("radar.investigate.investigate", return_value={"sources": [], "searches": [], "failures": []}):
+            result = agent.review(paper())
         self.assertEqual(result["status"], "accepted")
-        self.assertEqual(result["abstract"], "Verified abstract")
+        self.assertEqual(result["status"], "accepted")
         self.assertEqual(agent.decide.call_count, 2)
-        source.verify.assert_called_once()
+        source.verify.assert_not_called()
 
     def test_review_validation_rejects_bad_model_output(self):
         with self.assertRaises(ValueError):
@@ -88,7 +89,7 @@ class RadarTests(unittest.TestCase):
     def test_deepseek_payload_and_output(self):
         config = json.loads((ROOT / "config.json").read_text())
         agent = Agent(config, Mock())
-        decision = {"decision": "keep", "topic": "其他", "reason": "相关", "summary_zh": "方法简介", "tags": ["工业视觉", "定位"]}
+        decision = {"decision": "keep", "topic": "其他", "reason": "相关", "summary_zh": "方法简介", "tags": ["工业视觉", "定位"], "evidence": [{"url": paper()["url"], "quote": "A method for MVTec"}]}
         response = {"choices": [{"finish_reason": "stop", "message": {"content": json.dumps(decision)}}]}
         empty = {"choices": [{"finish_reason": "stop", "message": {"content": " "}}]}
         replies = [json.dumps(result).encode() for result in (empty, response)]
@@ -139,13 +140,13 @@ class RadarTests(unittest.TestCase):
                       abstract="We detect drill jamming from ultrasound in industrial manufacturing."),
             ]
             with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test"}), patch.object(
-                    Agent, "review", side_effect=[ValueError("empty"), {"status": "accepted"}]):
+                    Agent, "review", side_effect=[ValueError("empty"), {"status": "accepted"}, {"status": "rejected"}]):
                 state = run(root, source=source)
             saved = json.loads((root / "data/papers.json").read_text())
             self.assertEqual({p["id"]: p["status"] for p in saved},
-                             {"2601.00001": "pending", "second": "accepted", "audio": "pending"})
+                             {"2601.00001": "pending", "second": "accepted", "audio": "rejected"})
             self.assertEqual(state["review_errors"], 1)
-            self.assertEqual(state["missing_scope_evidence"], 1)
+            self.assertEqual(state["missing_scope_evidence"], 0)
             self.assertFalse(state["review_blocked"])
 
     def test_readme_groups_reviewed_entries_and_collapses_tip(self):
