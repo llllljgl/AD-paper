@@ -4,7 +4,7 @@ from unittest.mock import Mock, patch
 from pathlib import Path
 from radar.core import Agent
 from radar.official import ANOMALY
-from radar.investigate import allowed, fetch_text, investigate
+from radar.investigate import allowed, fetch_text, investigate, investigation_query
 from test_radar import paper
 
 class InvestigationTests(unittest.TestCase):
@@ -41,6 +41,12 @@ class InvestigationTests(unittest.TestCase):
         with patch('radar.core.request',return_value=json.dumps(response).encode()):
             self.assertEqual(agent.decide(paper())['decision'],'verify')
             self.assertEqual(agent.decide(paper(),verified=True)['decision'],'pending')
+
+    def test_long_queries_preserve_quotes_and_respect_api_limit(self):
+        for title in ['LACToS: Local Anomaly Detection via Conditional Typicality of Superpixels', 'Very long title ' * 30]:
+            query = investigation_query(title, 'Which industrial datasets and experimental settings are used? ' * 10)
+            self.assertLessEqual(len(query), 128)
+            self.assertEqual(query.count('"'), 2)
 
     def test_audit_missed_title_enters_candidates(self):
         self.assertTrue(ANOMALY.search('Unification of Closed-Open Industrial Detection Scenarios: New Large-Scale Benchmarks'))

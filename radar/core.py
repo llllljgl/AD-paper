@@ -198,6 +198,7 @@ class Agent:
         self.config, self.source = config, source
         self.calls = 0
         self.investigations = 0
+        self.investigation_stats = {"search_calls": 0}
         self.key = os.environ.get("DEEPSEEK_API_KEY", "")
 
     def decide(self, paper, verified=False):
@@ -259,7 +260,7 @@ class Agent:
             else:
                 from .investigate import investigate
                 self.investigations += 1
-                paper["investigation"] = investigate(paper, self.key, str(result.get("investigation_query", "")))
+                paper["investigation"] = investigate(paper, self.key, str(result.get("investigation_query", "")), stats=self.investigation_stats)
                 result = self.decide(paper, verified=True) if self.calls < self.config["max_llm_calls"] else {**result, "decision": "pending", "reason": "调查证据已保存，等待下轮判定"}
                 trace.append({"action": "investigate_public_text", "sources": [s["url"] for s in paper["investigation"]["sources"]]})
                 trace.append({"action": result["decision"], "reason": result["reason"]})
@@ -404,7 +405,7 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None):
         state["last_collected_until"] = end.isoformat()
     pending = [paper for paper in papers if paper["status"] == "pending"]
     state.update(last_run_at=now_iso(), collected=len(incoming), llm_calls=agent.calls,
-                 pending=len(pending), investigations=agent.investigations, investigation_search_calls=agent.investigations * 3, missing_abstract=sum(not p.get("abstract") for p in pending),
+                 pending=len(pending), investigations=agent.investigations, investigation_search_calls=agent.investigation_stats["search_calls"], missing_abstract=sum(not p.get("abstract") for p in pending),
                  missing_scope_evidence=sum(bool(p.get("abstract")) and not has_industrial_visual_evidence(p)
                                             for p in pending),
                  review_errors=errors, review_blocked=review_blocked, sources=reports,

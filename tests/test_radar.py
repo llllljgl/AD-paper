@@ -66,7 +66,7 @@ class RadarTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Too many"):
             source.collect(config, date, date)
 
-    def test_bounded_agent_verifies_once(self):
+    def test_bounded_agent_investigates_once(self):
         config = json.loads((ROOT / "config.json").read_text())
         source = Mock()
         source.verify.return_value = paper(abstract="Verified abstract")

@@ -13,6 +13,8 @@ SEARCH_URL = "https://api.deepseek.com/v1/tools/search"
 
 
 def search(query, key, count):
+    if not 1 <= len(query.strip()) <= 128:
+        raise ValueError("DeepSeek search query must be 1 to 128 characters")
     raw = request(SEARCH_URL, {"query": query, "count": count, "need_content": False},
                   {"Authorization": f"Bearer {key}"}, timeout=20)
     results = json.loads(raw)["results"]

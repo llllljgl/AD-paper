@@ -88,7 +88,7 @@ def report(root=ROOT):
               f"{row.get('deepseek_hits', '—')} | {row.get('deepseek_only', '—')} | "
               f"{row.get('catalog_only', '—')} | {row.get('details_failed', 0)} | {row.get('details_deferred', 0)} |")
     print(f"\n待筛选 {state.get('pending', 0)} 篇，其中缺摘要 {state.get('missing_abstract', 0)} 篇，"
-          f"缺少明确工业视觉证据 {state.get('missing_scope_evidence', 0)} 篇。")
+          f"摘要未命中范围词 {state.get('missing_scope_evidence', 0)} 篇（仍进入模型判断）。")
     print(f"DeepSeek 搜索 {state.get('deepseek_search_calls', 0)} 次，"
           f"模型筛选 {state.get('llm_calls', 0)} 次，筛选失败 {state.get('review_errors', 0)} 次。")
     print(f"\n深入调查 {state.get('investigations', 0)} 篇，调查搜索 {state.get('investigation_search_calls', 0)} 次。")

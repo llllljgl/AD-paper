@@ -73,16 +73,26 @@ def excerpt(text):
     return '\n'.join(chunks)[:14000]
 
 
-def investigate(paper, key, question=''):
+def investigation_query(title, suffix):
+    suffix = ' '.join(suffix.split())[:45]
+    budget = 128 - len(suffix) - 3
+    title = title.replace('"', '')
+    if len(title) > budget:
+        title = title[:budget].rsplit(' ', 1)[0]
+    return f'"{title}" {suffix}'
+
+
+def investigate(paper, key, question='', stats=None):
     title = paper['title'].replace('"', '')
-    queries = [f'"{title}" industrial datasets', f'"{title}" site:github.com',
-               f'"{title}" {question[:160] or "site:arxiv.org"}']
+    queries = [investigation_query(title, suffix) for suffix in
+               ('industrial datasets', 'site:github.com', question or 'site:arxiv.org')]
     urls = list(paper.get('code_urls', []))
     if paper.get('arxiv_id'): urls.insert(0, 'https://arxiv.org/abs/' + paper['arxiv_id'])
     # Follow explicit author project links found in the public abstract.
     urls.extend(re.findall(r'https://[^\s<>"\\]+', paper.get('abstract', '')))
     searches = []
     for query in queries:
+        if stats is not None: stats["search_calls"] += 1
         results = search(query, key, 8)
         searches.append({'query': query, 'results': [{'title': r.get('title'), 'url': r.get('url')} for r in results]})
         urls.extend(r.get('url', '') for r in results)
