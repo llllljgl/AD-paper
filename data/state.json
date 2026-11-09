@@ -1,16 +1,16 @@
 {
-  "last_collected_until": "2026-11-07T23:49:14.206430+00:00",
-  "last_run_at": "2026-11-07T23:49:18+00:00",
-  "collected": 6,
-  "llm_calls": 0,
-  "pending": 14,
+  "last_collected_until": "2026-11-09T08:13:05.823598+00:00",
+  "last_run_at": "2026-11-09T08:15:17+00:00",
+  "collected": 7,
+  "llm_calls": 30,
+  "pending": 13,
   "review_errors": 0,
-  "mode": "rules-only",
+  "mode": "agent",
   "missing_abstract": 2,
   "sources": {
     "arXiv": {
       "status": "ok",
-      "candidates": 6
+      "candidates": 7
     },
     "CVPR 2026": {
       "status": "skipped",
@@ -70,7 +70,7 @@
     },
     "NeurIPS 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:49:14.246673+00:00"
     },
     "ICLR 2027": {
       "status": "skipped",
@@ -103,21 +103,25 @@
   },
   "deepseek_search_calls": 0,
   "deepseek_search_errors": {},
-  "code_backfill": {},
-  "llm_status": "disabled",
+  "code_backfill": {
+    "checked": 15,
+    "added": 2,
+    "error": ""
+  },
+  "llm_status": "enabled",
   "review_blocked": false,
   "deepseek_only_reviewed": {
     "accepted": 2,
     "pending": 0,
     "rejected": 3
   },
-  "missing_scope_evidence": 10,
-  "investigations": 0,
-  "investigation_search_calls": 0,
+  "missing_scope_evidence": 9,
+  "investigations": 14,
+  "investigation_search_calls": 42,
   "last_collection_sources": {
     "arXiv": {
       "status": "ok",
-      "candidates": 6
+      "candidates": 7
     },
     "CVPR 2026": {
       "status": "skipped",
@@ -177,7 +181,7 @@
     },
     "NeurIPS 2027": {
       "status": "skipped",
-      "reason": "awaiting_catalog"
+      "reason": "awaiting_catalog，下次检查 2026-11-21T23:49:14.246673+00:00"
     },
     "ICLR 2027": {
       "status": "skipped",

@@ -6,7 +6,7 @@
 
 <!-- PAPER-LIST:START -->
 
-已收录 **146 篇** · 待筛选 **14 篇**
+已收录 **147 篇** · 待筛选 **13 篇**
 
 ### AAAI 2026
 
@@ -148,10 +148,10 @@
 | [AirIAD: Agentic Iterative Reasoning for Industrial Anomaly Detection](https://neurips.cc/virtual/2026/poster/153593) | <code>智能体</code> <code>多模态</code> <code>缺陷诊断</code> | [论文](https://neurips.cc/virtual/2026/poster/153593) | <details><summary>查看 Tip</summary><p>让模型迭代调用局部放大和知识检索工具，交叉核对视觉与语义证据，逐步细化缺陷诊断。</p></details> |
 | [M3-AD: Reflection-aware Multi-modal, Multi-category, and Multi-dimensional Benchmark and Framework for Industrial Anomaly Detection](https://neurips.cc/virtual/2026/poster/149620) | <code>工业基准</code> <code>多模态</code> <code>自我纠错</code> | [论文](https://neurips.cc/virtual/2026/poster/149620) | <details><summary>查看 Tip</summary><p>提供用于训练和评估工业质检模型反思能力的数据，并让模型在初次判断不可靠时重新检查和修正结果。</p></details> |
 | [An Efficient Cross-modal Feature Reconstruction Model for Multimodal Multi-class Anomaly Detection](https://neurips.cc/virtual/2026/poster/153426) | <code>多模态</code> <code>多类别</code> <code>特征重建</code> | [论文](https://neurips.cc/virtual/2026/poster/153426) | <details><summary>查看 Tip</summary><p>重建 RGB 与三维之间的互补特征，减少多类别模型把异常特征也准确重建而导致漏检的情况。</p></details> |
-| [Towards Generalizable 3D Anomaly Detection via Relational Inconsistency Modeling](https://neurips.cc/virtual/2026/poster/152419) | <code>三维质检</code> <code>几何一致性</code> <code>伪异常</code> | [论文](https://neurips.cc/virtual/2026/poster/152419) | <details><summary>查看 Tip</summary><p>用人为构造的几何关系破坏训练模型，让它通过邻域结构不一致识别不同类别零件的三维缺陷。</p></details> |
+| [Towards Generalizable 3D Anomaly Detection via Relational Inconsistency Modeling](https://neurips.cc/virtual/2026/poster/152419) | <code>三维质检</code> <code>几何一致性</code> <code>伪异常</code> | [论文](https://neurips.cc/virtual/2026/poster/152419) · [代码](https://github.com/M-3LAB/awesome-3d-anomaly-detection) | <details><summary>查看 Tip</summary><p>用人为构造的几何关系破坏训练模型，让它通过邻域结构不一致识别不同类别零件的三维缺陷。</p></details> |
 | [Towards Explainable Industrial Anomaly Detection via Knowledge-Guided Latent Reasoning](https://neurips.cc/virtual/2026/poster/151471) | <code>可解释性</code> <code>知识检索</code> <code>潜空间推理</code> | [论文](https://neurips.cc/virtual/2026/poster/151471) | <details><summary>查看 Tip</summary><p>检索产品类别的缺陷知识，用熵引导模型在潜空间迭代推理，并动态补入更有信息的局部图像特征。</p></details> |
 | [One Language-Free Foundation Model Is Enough for Universal Vision Anomaly Detection](https://neurips.cc/virtual/2026/poster/149035) | <code>视觉基础模型</code> <code>跨域</code> <code>统一检测</code> | [论文](https://neurips.cc/virtual/2026/poster/149035) · [代码](https://github.com/gaobb/UniADet) | <details><summary>查看 Tip</summary><p>用纯视觉基础模型同时处理多领域异常检测，并为不同特征分布分开学习参数以减轻互相干扰。</p></details> |
-| [Align3D-AD: Cross-Modal Feature Alignment and Dual-Prompt Learning for Zero-shot 3D Anomaly Detection](https://neurips.cc/virtual/2026/poster/152960) | <code>零样本</code> <code>三维质检</code> <code>跨模态对齐</code> | [论文](https://neurips.cc/virtual/2026/poster/152960) | <details><summary>查看 Tip</summary><p>通过跨模态对齐与双提示学习，缩小点云投影视图与 RGB 预训练表征的差距，用于三维缺陷定位。</p></details> |
+| [Align3D-AD: Cross-Modal Feature Alignment and Dual-Prompt Learning for Zero-shot 3D Anomaly Detection](https://neurips.cc/virtual/2026/poster/152960) | <code>零样本</code> <code>三维质检</code> <code>跨模态对齐</code> | [论文](https://neurips.cc/virtual/2026/poster/152960) · [代码](https://github.com/M-3LAB/awesome-3d-anomaly-detection) | <details><summary>查看 Tip</summary><p>通过跨模态对齐与双提示学习，缩小点云投影视图与 RGB 预训练表征的差距，用于三维缺陷定位。</p></details> |
 | [SF-DST: Adapting Vision-Language Models for Anomaly Detection via Asymmetric Modulation and A-LoRA](https://neurips.cc/virtual/2026/poster/151642) | <code>视觉语言模型</code> <code>频域</code> <code>低秩适配</code> | [论文](https://neurips.cc/virtual/2026/poster/151642) | <details><summary>查看 Tip</summary><p>在空间特征之外加入离散余弦频域分支，并以低秩适配增强模型对工业图像中细微异常的感知。</p></details> |
 | [TED: Text-Axis Evidence Decomposition for Prompted Anomaly Localization](https://neurips.cc/virtual/2026/poster/155802) | <code>CLIP异常检测</code> <code>缺陷定位</code> <code>证据分解</code> | [论文](https://neurips.cc/virtual/2026/poster/155802) | <details><summary>查看 Tip</summary><p>TED用文本轴证据分解对CLIP异常定位的后处理打分，区分真实缺陷与难负样本，在MVTec、VisA等工业数据集上提升像素级定位，值得阅读。</p></details> |
 | [FACETS: Cross-Granularity Vision--Language Modeling for 3D Anomaly Detection](https://neurips.cc/virtual/2026/poster/154063) | <code>3D异常检测</code> <code>视觉语言模型</code> <code>工业质检</code> | [论文](https://neurips.cc/virtual/2026/poster/154063) | <details><summary>查看 Tip</summary><p>提出面向3D点云的视觉语言异常检测框架，融合点级与块级特征及语言语义，实现多类别统一检测并提升异常定位。</p></details> |
@@ -195,7 +195,8 @@
 
 | 论文 | 标签 | 链接 | Tip |
 | --- | --- | --- | --- |
-| [Spatiotemporal Dynamics-Aware Industrial Anomaly Detection and Reasoning](https://arxiv.org/abs/2611.08080) | <code>工业异常检测</code> <code>时空动态</code> <code>多模态大模型</code> | [论文](https://arxiv.org/abs/2611.08080) · [PDF](https://arxiv.org/pdf/2611.08080) | <details><summary>查看 Tip</summary><p>面向工业动态缺陷的MLLM时空异常检测框架，利用光流引导关键帧与多模态推理，适合关注动态工业异常定位与可解释性者阅读。</p></details> |
+| [Embedding Predictive Adaptation and Refinement for Multi-Modal Industrial Anomaly Detection](https://arxiv.org/abs/2611.09521) | <code>多模态异常检测</code> <code>记忆库</code> <code>工业检测</code> | [论文](https://arxiv.org/abs/2611.09521) · [PDF](https://arxiv.org/pdf/2611.09521) | <details><summary>查看 Tip</summary><p>EPAR通过掩码嵌入预测和VIC正则自适应编码器，并引入噪声抑制网络细化异常图，在MVTec 3D-AD和Eyecandies上提升多模态工业异常检测性能。</p></details> |
+| [Spatiotemporal Dynamics-Aware Industrial Anomaly Detection and Reasoning](https://arxiv.org/abs/2611.08080) | <code>工业异常检测</code> <code>多模态大模型</code> <code>时空动态</code> | [论文](https://arxiv.org/abs/2611.08080) · [PDF](https://arxiv.org/pdf/2611.08080) · [代码](https://github.com/racercode/Mustard) | <details><summary>查看 Tip</summary><p>该文用多模态大模型加光流关键帧做工业动态缺陷的时空异常检测与推理，适合关注动态工业异常评测者阅读。</p></details> |
 
 ### arXiv 2026
 
