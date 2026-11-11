@@ -41,6 +41,7 @@ class CodeTests(unittest.TestCase):
         self.assertEqual(search_mock.call_count,3)
         self.assertEqual(result['removed'],1)
         self.assertIn('https://github.com/lab/awesome-list',item['code_candidates'])
+        self.assertIn('https://github.com/lab/awesome-list',item['code_source_urls'])
     def test_readme_hides_unverified_links_from_all_ingestion_paths(self):
         import tempfile
         from pathlib import Path

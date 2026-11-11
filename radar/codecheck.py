@@ -158,6 +158,7 @@ def backfill(papers,key,config,limit=None):
     budget=limit if limit is not None else config.get('code_papers_per_run',100)
     processed=0
     for paper in candidates:
+        paper['code_source_urls'] = sorted(set(paper.get('code_source_urls', []) + paper.get('code_urls', [])))
         checks=paper.setdefault('code_checks',{})
         urls=sorted(set(filter(None,(repo_url(x) for x in paper.get('code_urls',[])+paper.get('code_candidates',[])))))
         due=[u for u in urls if checks.get(u,{}).get('version')!=VERSION or checks.get(u,{}).get('paper_key')!=paper_key(paper) or checks[u].get('checked_at','')<=cutoff]

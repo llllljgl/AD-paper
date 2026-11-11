@@ -389,7 +389,8 @@
       "https://github.com/Rishabh-creator601/Books"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:00:41+00:00"
+    "code_verified_at": "2026-11-11T07:00:41+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2611.08393",
@@ -564,7 +565,8 @@
       "https://github.com/alessioborgi/RTAD5G",
       "https://github.com/aryanshah295/Fault-Detection-in-IoT-Sensors"
     ],
-    "code_verified_at": "2026-11-11T06:52:55+00:00"
+    "code_verified_at": "2026-11-11T06:52:55+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2611.08136",
@@ -705,7 +707,8 @@
       "https://github.com/ikiprijanovska/Heartbeat-Classifier",
       "https://github.com/koltaib/Melanoma_Detection"
     ],
-    "code_verified_at": "2026-11-11T06:53:00+00:00"
+    "code_verified_at": "2026-11-11T06:53:00+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2611.08080",
@@ -1031,7 +1034,10 @@
       "https://github.com/embeddedsky/xinmingshi.github.io",
       "https://github.com/ml-kuleuven/dtaianomaly"
     ],
-    "code_verified_at": "2026-11-11T06:47:38+00:00"
+    "code_verified_at": "2026-11-11T06:47:38+00:00",
+    "code_source_urls": [
+      "https://github.com/racercode/Mustard"
+    ]
   },
   {
     "id": "2611.07356",
@@ -1313,7 +1319,8 @@
       "https://github.com/acidanthera/OpenCorePkg",
       "https://github.com/corinalogan/grackles"
     ],
-    "code_verified_at": "2026-11-11T06:53:04+00:00"
+    "code_verified_at": "2026-11-11T06:53:04+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2611.02654",
@@ -1441,7 +1448,10 @@
     "code_candidates": [
       "https://github.com/sgstq0811/VerdictAD-Jev-AD"
     ],
-    "code_verified_at": "2026-11-11T06:47:44+00:00"
+    "code_verified_at": "2026-11-11T06:47:44+00:00",
+    "code_source_urls": [
+      "https://github.com/sgstq0811/VerdictAD-Jev-AD"
+    ]
   },
   {
     "id": "2611.01230",
@@ -1869,7 +1879,10 @@
       "https://github.com/luow23/INP-Former",
       "https://github.com/natowi/meshroom_external_plugins"
     ],
-    "code_verified_at": "2026-11-11T06:47:49+00:00"
+    "code_verified_at": "2026-11-11T06:47:49+00:00",
+    "code_source_urls": [
+      "https://github.com/garasnote/Repro-INPFormer"
+    ]
   },
   {
     "id": "2610.41199",
@@ -2209,7 +2222,8 @@
       "https://github.com/baobab-tech/decision-models-experiments",
       "https://github.com/firebase/genkit"
     ],
-    "code_verified_at": "2026-11-11T06:53:10+00:00"
+    "code_verified_at": "2026-11-11T06:53:10+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2610.40732",
@@ -2377,7 +2391,8 @@
       "https://github.com/ahmdtaha/conference_notes",
       "https://github.com/arunadevikaruppasamy/Transformer-in-Computer-Vision"
     ],
-    "code_verified_at": "2026-11-11T06:53:15+00:00"
+    "code_verified_at": "2026-11-11T06:53:15+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2610.38194",
@@ -2620,7 +2635,8 @@
       "https://github.com/input-output-hk/ouroboros-leios",
       "https://github.com/k8-scalar/k8-resource-optimizer"
     ],
-    "code_verified_at": "2026-11-11T06:53:21+00:00"
+    "code_verified_at": "2026-11-11T06:53:21+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2610.35753",
@@ -3325,7 +3341,10 @@
       "https://github.com/Tyler-R-Kendrick/slm-training",
       "https://github.com/cloudrift-ai/emmy"
     ],
-    "code_verified_at": "2026-11-11T06:48:00+00:00"
+    "code_verified_at": "2026-11-11T06:48:00+00:00",
+    "code_source_urls": [
+      "https://github.com/Qybc/SGDB"
+    ]
   },
   {
     "id": "2610.34610",
@@ -3408,7 +3427,8 @@
       "https://github.com/dadaguailhb/CVPR",
       "https://github.com/enhansome/enhansome-egocentric-vision"
     ],
-    "code_verified_at": "2026-11-11T06:53:25+00:00"
+    "code_verified_at": "2026-11-11T06:53:25+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2610.34468",
@@ -3742,7 +3762,8 @@
       "https://github.com/ultralytics/ultralytics"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:00:48+00:00"
+    "code_verified_at": "2026-11-11T07:00:48+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2610.33143",
@@ -4317,7 +4338,8 @@
       "https://github.com/chuangchuangtan/Semantic-Visual-Anomaly-Detection-and-Reasoning",
       "https://github.com/jam-cc/AnomalyClaw"
     ],
-    "code_verified_at": "2026-11-11T06:53:32+00:00"
+    "code_verified_at": "2026-11-11T06:53:32+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2611.08271",
@@ -4460,7 +4482,10 @@
       "https://github.com/Jessejx/VAND2026-Industrial-Anomaly-Detection-ADAD",
       "https://github.com/M-A-Operating-System/shared-work"
     ],
-    "code_verified_at": "2026-11-11T06:48:07+00:00"
+    "code_verified_at": "2026-11-11T06:48:07+00:00",
+    "code_source_urls": [
+      "https://github.com/aqeeelmirza/DART"
+    ]
   },
   {
     "id": "neurips:fa53d1a1220e5351",
@@ -4577,7 +4602,8 @@
       "https://github.com/arunadevikaruppasamy/Transformer-in-Computer-Vision",
       "https://github.com/gthpapadopoulos/GATE-AD"
     ],
-    "code_verified_at": "2026-11-11T06:53:37+00:00"
+    "code_verified_at": "2026-11-11T06:53:37+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:7f9438e1ab55cf42",
@@ -4652,7 +4678,8 @@
       "https://github.com/greatwallisme/anomaly-detection-resources",
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
     ],
-    "code_verified_at": "2026-11-11T06:53:40+00:00"
+    "code_verified_at": "2026-11-11T06:53:40+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:a7c3d46b9547702f",
@@ -4942,7 +4969,8 @@
       "https://github.com/tonydzi/awesome-claude-skills-karanb192"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:00:54+00:00"
+    "code_verified_at": "2026-11-11T07:00:54+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:b8fc3a740b8e0362",
@@ -5314,7 +5342,8 @@
       "https://github.com/orgs/Gorilla-Lab-SCUT"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:01:01+00:00"
+    "code_verified_at": "2026-11-11T07:01:01+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2610.15032",
@@ -5389,7 +5418,8 @@
       "https://github.com/advanced-cs/arXiv_daily",
       "https://github.com/sparsepenn/CVPR2023-Paper-Code-Interpretation"
     ],
-    "code_verified_at": "2026-11-11T06:53:47+00:00"
+    "code_verified_at": "2026-11-11T06:53:47+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:30f0b4d8d33a42a2",
@@ -5641,7 +5671,10 @@
       "https://github.com/andypinxinliu/Awesome-LLM-3D"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:01:06+00:00"
+    "code_verified_at": "2026-11-11T07:01:06+00:00",
+    "code_source_urls": [
+      "https://github.com/M-3LAB/awesome-3d-anomaly-detection"
+    ]
   },
   {
     "id": "neurips:c77cdc087a91f909",
@@ -5716,7 +5749,8 @@
       "https://github.com/dumpmemory/LLM-in-Vision",
       "https://github.com/guanqiyuan/Awesome-CVPR2023-Low-Level-Vision"
     ],
-    "code_verified_at": "2026-11-11T06:53:49+00:00"
+    "code_verified_at": "2026-11-11T06:53:49+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:100e39bfd4114a5b",
@@ -5929,7 +5963,8 @@
       "https://github.com/awadhoothsk/animal-monitoring-system"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:01:18+00:00"
+    "code_verified_at": "2026-11-11T07:01:18+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:51482dabb6212d17",
@@ -6146,7 +6181,10 @@
     "code_candidates": [
       "https://github.com/gaobb/UniADet"
     ],
-    "code_verified_at": "2026-11-11T06:48:16+00:00"
+    "code_verified_at": "2026-11-11T06:48:16+00:00",
+    "code_source_urls": [
+      "https://github.com/gaobb/UniADet"
+    ]
   },
   {
     "id": "neurips:98cc59a28cdc47c6",
@@ -6227,7 +6265,8 @@
       "https://github.com/pinglu-zhang/pinglu-zhang.github.io",
       "https://github.com/semikonductor/ICLR2025-Paper-Collection"
     ],
-    "code_verified_at": "2026-11-11T06:53:53+00:00"
+    "code_verified_at": "2026-11-11T06:53:53+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:8a50565ade8b9ea5",
@@ -6448,7 +6487,10 @@
         "retrieved_at": "2026-11-11T07:01:21+00:00"
       }
     ],
-    "code_verified_at": "2026-11-11T07:01:24+00:00"
+    "code_verified_at": "2026-11-11T07:01:24+00:00",
+    "code_source_urls": [
+      "https://github.com/M-3LAB/awesome-3d-anomaly-detection"
+    ]
   },
   {
     "id": "neurips:/virtual/2026/poster/153376",
@@ -6897,7 +6939,8 @@
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection",
       "https://github.com/mala-lab/Awesome-Anomaly-Detection-Foundation-Models"
     ],
-    "code_verified_at": "2026-11-11T06:53:56+00:00"
+    "code_verified_at": "2026-11-11T06:53:56+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:/virtual/2026/poster/152176",
@@ -7791,7 +7834,8 @@
       "https://github.com/iAmGiG/gex-llm-patterns",
       "https://github.com/semikonductor/ICLR2025-Paper-Collection"
     ],
-    "code_verified_at": "2026-11-11T06:54:01+00:00"
+    "code_verified_at": "2026-11-11T06:54:01+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:/virtual/2026/poster/150154",
@@ -8437,7 +8481,8 @@
       "https://github.com/topics/anomaly-segmentation"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:01:26+00:00"
+    "code_verified_at": "2026-11-11T07:01:26+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:/virtual/2026/poster/149903",
@@ -9266,7 +9311,8 @@
       "https://github.com/lemonforest/mlehaptics"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:01:31+00:00"
+    "code_verified_at": "2026-11-11T07:01:31+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:/virtual/2026/poster/149584",
@@ -9930,7 +9976,8 @@
       "https://github.com/ML4ITS/tdt99-2020",
       "https://github.com/ml-kuleuven/dtaianomaly"
     ],
-    "code_verified_at": "2026-11-11T06:54:15+00:00"
+    "code_verified_at": "2026-11-11T06:54:15+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:/virtual/2026/poster/151467",
@@ -10493,7 +10540,8 @@
       "https://github.com/justsearch-app/justsearch",
       "https://github.com/magnus919/slopsearx"
     ],
-    "code_verified_at": "2026-11-11T06:54:20+00:00"
+    "code_verified_at": "2026-11-11T06:54:20+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:/virtual/2026/poster/150837",
@@ -11246,7 +11294,8 @@
       "https://github.com/ai-evo-agents/evo-common",
       "https://github.com/cdavid817/awesome-agent-tutorial"
     ],
-    "code_verified_at": "2026-11-11T06:54:23+00:00"
+    "code_verified_at": "2026-11-11T06:54:23+00:00",
+    "code_source_urls": []
   },
   {
     "id": "neurips:/virtual/2026/poster/153930",
@@ -12028,7 +12077,8 @@
       "https://github.com/topics/protege-owl-editor"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:01:40+00:00"
+    "code_verified_at": "2026-11-11T07:01:40+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2603.03101",
@@ -12143,7 +12193,10 @@
     "code_candidates": [
       "https://github.com/CoCoRessa/MoECLIP"
     ],
-    "code_verified_at": "2026-11-11T06:48:28+00:00"
+    "code_verified_at": "2026-11-11T06:48:28+00:00",
+    "code_source_urls": [
+      "https://github.com/CoCoRessa/MoECLIP"
+    ]
   },
   {
     "id": "cvpr:336b0d28236418df",
@@ -12238,7 +12291,8 @@
       "https://github.com/albertotono/ICCV2021-Papers-with-Code",
       "https://github.com/dadaguailhb/CVPR"
     ],
-    "code_verified_at": "2026-11-11T06:54:28+00:00"
+    "code_verified_at": "2026-11-11T06:54:28+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2509.25934",
@@ -12355,7 +12409,10 @@
     "code_candidates": [
       "https://github.com/yuanzhao-CVLAB/UniMMAD"
     ],
-    "code_verified_at": "2026-11-11T06:48:34+00:00"
+    "code_verified_at": "2026-11-11T06:48:34+00:00",
+    "code_source_urls": [
+      "https://github.com/yuanzhao-CVLAB/UniMMAD"
+    ]
   },
   {
     "id": "2512.24160",
@@ -12468,7 +12525,8 @@
       "https://github.com/advanced-cs/arXiv_daily",
       "https://github.com/aiben-ch/LMM-Evaluation-Survey"
     ],
-    "code_verified_at": "2026-11-11T06:54:35+00:00"
+    "code_verified_at": "2026-11-11T06:54:35+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:305cb32933d807b6",
@@ -12629,7 +12687,8 @@
       "https://github.com/easyoo/Omni-AD",
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
     ],
-    "code_verified_at": "2026-11-11T06:54:39+00:00"
+    "code_verified_at": "2026-11-11T06:54:39+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:1b172dbfea647f18",
@@ -12786,7 +12845,8 @@
       "https://github.com/quanyumath/Anomaly-Detection-awesome-industrial-anomaly-detection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:01:47+00:00"
+    "code_verified_at": "2026-11-11T07:01:47+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2604.02905",
@@ -13106,7 +13166,8 @@
         "retrieved_at": "2026-11-11T07:01:50+00:00"
       }
     ],
-    "code_verified_at": "2026-11-11T07:02:00+00:00"
+    "code_verified_at": "2026-11-11T07:02:00+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:6bd67b15330b6899",
@@ -13221,7 +13282,8 @@
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection",
       "https://github.com/zhaoyang97/Paper-Notes-en"
     ],
-    "code_verified_at": "2026-11-11T06:54:47+00:00"
+    "code_verified_at": "2026-11-11T06:54:47+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:f81e82788bfd22f8",
@@ -13386,7 +13448,8 @@
       "https://github.com/ZhikaiXu24/DAS",
       "https://github.com/komorebiwerts/glls"
     ],
-    "code_verified_at": "2026-11-11T06:54:50+00:00"
+    "code_verified_at": "2026-11-11T06:54:50+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:d2616c710b029824",
@@ -13524,7 +13587,10 @@
     "code_candidates": [
       "https://github.com/evoLonation/DeMuS"
     ],
-    "code_verified_at": "2026-11-11T06:48:40+00:00"
+    "code_verified_at": "2026-11-11T06:48:40+00:00",
+    "code_source_urls": [
+      "https://github.com/evoLonation/DeMuS"
+    ]
   },
   {
     "id": "eccv:f32e7533a91a98a2",
@@ -13614,7 +13680,8 @@
       "https://github.com/ZhikaiXu24/DAS",
       "https://github.com/advanced-cs/arXiv_daily"
     ],
-    "code_verified_at": "2026-11-11T06:54:54+00:00"
+    "code_verified_at": "2026-11-11T06:54:54+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:cfbf60c2ad05603f",
@@ -13721,7 +13788,10 @@
       "https://github.com/MacoNeko/2025CUMCM_B",
       "https://github.com/SvyJ/daily-papers"
     ],
-    "code_verified_at": "2026-11-11T06:48:44+00:00"
+    "code_verified_at": "2026-11-11T06:48:44+00:00",
+    "code_source_urls": [
+      "https://github.com/wangzhaoyang-508/FuDU"
+    ]
   },
   {
     "id": "eccv:98e7046673261398",
@@ -13981,7 +14051,8 @@
       "https://github.com/archledger/irlume",
       "https://github.com/continue-edge-ai-lab/rethinking-continual-ad"
     ],
-    "code_verified_at": "2026-11-11T06:55:01+00:00"
+    "code_verified_at": "2026-11-11T06:55:01+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:62b4c44c4b188a2b",
@@ -14408,7 +14479,10 @@
       "https://github.com/M-3LAB/awesome-industrial-anomaly-detection",
       "https://github.com/Zenetusken/memex"
     ],
-    "code_verified_at": "2026-11-11T06:48:49+00:00"
+    "code_verified_at": "2026-11-11T06:48:49+00:00",
+    "code_source_urls": [
+      "https://github.com/tzjtatata/SCAN"
+    ]
   },
   {
     "id": "iclr:4ac1cb17c2580dc2",
@@ -14551,7 +14625,10 @@
     "code_candidates": [
       "https://github.com/CROVO1026/MRAD"
     ],
-    "code_verified_at": "2026-11-11T06:48:54+00:00"
+    "code_verified_at": "2026-11-11T06:48:54+00:00",
+    "code_source_urls": [
+      "https://github.com/CROVO1026/MRAD"
+    ]
   },
   {
     "id": "iclr:53d4d25f3c1b1119",
@@ -14631,7 +14708,8 @@
       "https://github.com/advanced-cs/arXiv_daily",
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
     ],
-    "code_verified_at": "2026-11-11T06:55:04+00:00"
+    "code_verified_at": "2026-11-11T06:55:04+00:00",
+    "code_source_urls": []
   },
   {
     "id": "iclr:69c3306541c79867",
@@ -14849,7 +14927,10 @@
     "code_candidates": [
       "https://github.com/ymxlzgy/FoundAD"
     ],
-    "code_verified_at": "2026-11-11T06:49:00+00:00"
+    "code_verified_at": "2026-11-11T06:49:00+00:00",
+    "code_source_urls": [
+      "https://github.com/ymxlzgy/FoundAD"
+    ]
   },
   {
     "id": "iclr:6087de2ef5522485",
@@ -15105,7 +15186,10 @@
       "https://github.com/snoodleboot-io/pirn",
       "https://github.com/xht252/paper-notes"
     ],
-    "code_verified_at": "2026-11-11T06:49:09+00:00"
+    "code_verified_at": "2026-11-11T06:49:09+00:00",
+    "code_source_urls": [
+      "https://github.com/M-3LAB/awesome-industrial-anomaly-detection"
+    ]
   },
   {
     "id": "icml:d923dffcdb8abf22",
@@ -15234,7 +15318,10 @@
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection",
       "https://github.com/longkaifang/UCFB"
     ],
-    "code_verified_at": "2026-11-11T06:49:14+00:00"
+    "code_verified_at": "2026-11-11T06:49:14+00:00",
+    "code_source_urls": [
+      "https://github.com/Yuan-Honoka-Guo/CFR"
+    ]
   },
   {
     "id": "icml:748e8996dafb7af0",
@@ -15506,7 +15593,10 @@
       "https://github.com/orgs/Gorilla-Lab-SCUT"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:02:04+00:00"
+    "code_verified_at": "2026-11-11T07:02:04+00:00",
+    "code_source_urls": [
+      "https://github.com/M-3LAB/awesome-3d-anomaly-detection"
+    ]
   },
   {
     "id": "icml:b9a3a3b7c22f7b06",
@@ -15720,7 +15810,10 @@
     "code_candidates": [
       "https://github.com/longkukuhi/RAD"
     ],
-    "code_verified_at": "2026-11-11T06:49:26+00:00"
+    "code_verified_at": "2026-11-11T06:49:26+00:00",
+    "code_source_urls": [
+      "https://github.com/longkukuhi/RAD"
+    ]
   },
   {
     "id": "ijcai:19761cd7c018f6fd",
@@ -15865,7 +15958,8 @@
       "https://github.com/UCAS-JC/GRASP",
       "https://github.com/ZhikaiXu24/DAS"
     ],
-    "code_verified_at": "2026-11-11T06:55:09+00:00"
+    "code_verified_at": "2026-11-11T06:55:09+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1109/tpami.2026.3658856",
@@ -15997,7 +16091,10 @@
       "https://github.com/GzZning/AI-Generated-Images-Detection-Paper-Collection",
       "https://github.com/Ubuntu-Tech-Solutions/learnership-management"
     ],
-    "code_verified_at": "2026-11-11T06:49:31+00:00"
+    "code_verified_at": "2026-11-11T06:49:31+00:00",
+    "code_source_urls": [
+      "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
+    ]
   },
   {
     "id": "2511.10047",
@@ -16135,7 +16232,10 @@
     "code_candidates": [
       "https://github.com/HUST-SLOW/MuSc-V2"
     ],
-    "code_verified_at": "2026-11-11T06:49:38+00:00"
+    "code_verified_at": "2026-11-11T06:49:38+00:00",
+    "code_source_urls": [
+      "https://github.com/HUST-SLOW/MuSc-V2"
+    ]
   },
   {
     "id": "doi:10.1109/tpami.2026.3711750",
@@ -16318,7 +16418,8 @@
       "https://github.com/Serena-cooper/BALM",
       "https://github.com/yongheng0011/ASCLIP"
     ],
-    "code_verified_at": "2026-11-11T06:55:12+00:00"
+    "code_verified_at": "2026-11-11T06:55:12+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1007/s11263-026-02885-1",
@@ -16449,7 +16550,10 @@
     "code_candidates": [
       "https://github.com/xcyao00/ResAD"
     ],
-    "code_verified_at": "2026-11-11T06:49:44+00:00"
+    "code_verified_at": "2026-11-11T06:49:44+00:00",
+    "code_source_urls": [
+      "https://github.com/xcyao00/ResAD"
+    ]
   },
   {
     "id": "doi:10.1007/s11263-026-02743-0",
@@ -16837,7 +16941,8 @@
       "https://github.com/open-edge-platform/anomalib",
       "https://github.com/open-edge-platform/datumaro"
     ],
-    "code_verified_at": "2026-11-11T06:55:16+00:00"
+    "code_verified_at": "2026-11-11T06:55:16+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1109/tip.2026.3659337",
@@ -17068,7 +17173,11 @@
       "https://github.com/BeJane/Semi_REST",
       "https://github.com/BeJane/WeakREST"
     ],
-    "code_verified_at": "2026-11-11T06:49:51+00:00"
+    "code_verified_at": "2026-11-11T06:49:51+00:00",
+    "code_source_urls": [
+      "https://github.com/BeJane/Semi_REST",
+      "https://github.com/BeJane/WeakREST"
+    ]
   },
   {
     "id": "doi:10.1109/tip.2026.3728632",
@@ -17159,7 +17268,10 @@
       "https://github.com/topics/segmentation-models"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:02:06+00:00"
+    "code_verified_at": "2026-11-11T07:02:06+00:00",
+    "code_source_urls": [
+      "https://github.com/VDT-2048/HDANet"
+    ]
   },
   {
     "id": "doi:10.1109/tip.2026.3671617",
@@ -17301,7 +17413,10 @@
       "https://github.com/ZhikaiXu24/DAS",
       "https://github.com/ZhuYingJessica/cv-daily"
     ],
-    "code_verified_at": "2026-11-11T06:50:01+00:00"
+    "code_verified_at": "2026-11-11T06:50:01+00:00",
+    "code_source_urls": [
+      "https://github.com/Hlao-hub/LGPR"
+    ]
   },
   {
     "id": "aaai:596c2e5e176b3331",
@@ -17529,7 +17644,10 @@
     "code_candidates": [
       "https://github.com/Yanhui-Lee/IAD-R1"
     ],
-    "code_verified_at": "2026-11-11T06:50:09+00:00"
+    "code_verified_at": "2026-11-11T06:50:09+00:00",
+    "code_source_urls": [
+      "https://github.com/Yanhui-Lee/IAD-R1"
+    ]
   },
   {
     "id": "aaai:d69a9a700e8881f0",
@@ -17642,7 +17760,8 @@
       "https://github.com/JerryX1110/Awesome-3D-Anomaly-Detection",
       "https://github.com/M-3LAB/awesome-industrial-anomaly-detection"
     ],
-    "code_verified_at": "2026-11-11T06:55:22+00:00"
+    "code_verified_at": "2026-11-11T06:55:22+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2604.10971",
@@ -18019,7 +18138,8 @@
       "https://github.com/SinapisAI/collective-model-intelligence",
       "https://github.com/cdeust/Cortex"
     ],
-    "code_verified_at": "2026-11-11T06:55:26+00:00"
+    "code_verified_at": "2026-11-11T06:55:26+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2603.21511",
@@ -18102,7 +18222,8 @@
       "https://github.com/andypinxinliu/Awesome-LLM-3D",
       "https://github.com/gmh5225/Awesome-LLM-3D"
     ],
-    "code_verified_at": "2026-11-11T06:55:29+00:00"
+    "code_verified_at": "2026-11-11T06:55:29+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2603.07952",
@@ -18250,7 +18371,10 @@
     "code_candidates": [
       "https://github.com/7HHHHH/VisualAD"
     ],
-    "code_verified_at": "2026-11-11T06:50:15+00:00"
+    "code_verified_at": "2026-11-11T06:50:15+00:00",
+    "code_source_urls": [
+      "https://github.com/7HHHHH/VisualAD"
+    ]
   },
   {
     "id": "cvpr:440cafeeb4a23164",
@@ -18379,7 +18503,8 @@
       "https://github.com/ZhikaiXu24/DAS",
       "https://github.com/alessioborgi/RTAD5G"
     ],
-    "code_verified_at": "2026-11-11T06:55:33+00:00"
+    "code_verified_at": "2026-11-11T06:55:33+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:346206d26b16f716",
@@ -18475,7 +18600,8 @@
       "https://github.com/X10E8/The-Anatomy-of-Superintelligence-How-To-Create-ASI-Lifeform-System-The-Instructions-Manuel-",
       "https://github.com/ZhikaiXu24/DAS"
     ],
-    "code_verified_at": "2026-11-11T06:55:37+00:00"
+    "code_verified_at": "2026-11-11T06:55:37+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:8470b3f5f0a20ac1",
@@ -18705,7 +18831,8 @@
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection",
       "https://github.com/zhaoyang97/Paper-Notes"
     ],
-    "code_verified_at": "2026-11-11T06:55:45+00:00"
+    "code_verified_at": "2026-11-11T06:55:45+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2603.18093",
@@ -18854,7 +18981,10 @@
       "https://github.com/echrao/O2MAG",
       "https://github.com/guanqiyuan/Awesome-CVPR2023-Low-Level-Vision"
     ],
-    "code_verified_at": "2026-11-11T06:55:53+00:00"
+    "code_verified_at": "2026-11-11T06:55:53+00:00",
+    "code_source_urls": [
+      "https://github.com/echrao/O2MAG"
+    ]
   },
   {
     "id": "cvpr:5db676bb2c7ee101",
@@ -19052,7 +19182,10 @@
       "https://github.com/ZhikaiXu24/DAS",
       "https://github.com/advanced-cs/arXiv_daily"
     ],
-    "code_verified_at": "2026-11-11T06:50:21+00:00"
+    "code_verified_at": "2026-11-11T06:50:21+00:00",
+    "code_source_urls": [
+      "https://github.com/yuanzhao-CVLAB/CPMAD"
+    ]
   },
   {
     "id": "cvpr:89fa979c1fe26068",
@@ -19264,7 +19397,8 @@
       "https://github.com/MettaMazza/ernos-labs-sft-platform",
       "https://github.com/n5ro/selfawarenetworks"
     ],
-    "code_verified_at": "2026-11-11T06:56:01+00:00"
+    "code_verified_at": "2026-11-11T06:56:01+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2603.02629",
@@ -19491,7 +19625,8 @@
       "https://github.com/archledger/irlume",
       "https://github.com/dadaguailhb/CVPR"
     ],
-    "code_verified_at": "2026-11-11T06:56:05+00:00"
+    "code_verified_at": "2026-11-11T06:56:05+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:e50a0bcba4e26003",
@@ -19758,7 +19893,10 @@
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:02:17+00:00"
+    "code_verified_at": "2026-11-11T07:02:17+00:00",
+    "code_source_urls": [
+      "https://github.com/luoqianhao/pg-sfd"
+    ]
   },
   {
     "id": "2408.13516",
@@ -19873,7 +20011,8 @@
       "https://github.com/ZhikaiXu24/DAS"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:02:24+00:00"
+    "code_verified_at": "2026-11-11T07:02:24+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:66016bf1df0832dc",
@@ -19987,7 +20126,8 @@
       "https://github.com/zhaoyang97/Paper-Notes-en"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:02:31+00:00"
+    "code_verified_at": "2026-11-11T07:02:31+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2602.19611",
@@ -20218,7 +20358,8 @@
       "https://github.com/topics/acl2024"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:02:37+00:00"
+    "code_verified_at": "2026-11-11T07:02:37+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2603.19608",
@@ -20364,7 +20505,10 @@
     "code_candidates": [
       "https://github.com/Xi-Mu-Yu/FB-CLIP"
     ],
-    "code_verified_at": "2026-11-11T06:50:26+00:00"
+    "code_verified_at": "2026-11-11T06:50:26+00:00",
+    "code_source_urls": [
+      "https://github.com/Xi-Mu-Yu/FB-CLIP"
+    ]
   },
   {
     "id": "2604.03972",
@@ -20564,7 +20708,8 @@
       "https://github.com/natowi/meshroom_external_plugins"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:02:48+00:00"
+    "code_verified_at": "2026-11-11T07:02:48+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2603.01305",
@@ -20666,7 +20811,8 @@
       "https://github.com/semikonductor/ICLR2025-Paper-Collection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:02:53+00:00"
+    "code_verified_at": "2026-11-11T07:02:53+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:d1f598254d97200b",
@@ -20833,7 +20979,10 @@
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:03:04+00:00"
+    "code_verified_at": "2026-11-11T07:03:04+00:00",
+    "code_source_urls": [
+      "https://github.com/CLendering/SubspaceAD"
+    ]
   },
   {
     "id": "eccv:3d3b9a471b88b28d",
@@ -20947,7 +21096,10 @@
     "code_candidates": [
       "https://github.com/CLendering/ReFP-AD"
     ],
-    "code_verified_at": "2026-11-11T06:50:32+00:00"
+    "code_verified_at": "2026-11-11T06:50:32+00:00",
+    "code_source_urls": [
+      "https://github.com/CLendering/ReFP-AD"
+    ]
   },
   {
     "id": "eccv:2ebe36e8d38d07dc",
@@ -21137,7 +21289,8 @@
       "https://github.com/topics/iccv2021"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:03:14+00:00"
+    "code_verified_at": "2026-11-11T07:03:14+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:4a3ca877dadd8ec0",
@@ -21354,7 +21507,10 @@
     "code_candidates": [
       "https://github.com/HULEI7/IMMoE"
     ],
-    "code_verified_at": "2026-11-11T06:50:38+00:00"
+    "code_verified_at": "2026-11-11T06:50:38+00:00",
+    "code_source_urls": [
+      "https://github.com/HULEI7/IMMoE"
+    ]
   },
   {
     "id": "eccv:68eb50ed17033dfc",
@@ -21429,7 +21585,8 @@
       "https://github.com/JackYFL/awesome-VLLMs"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:03:18+00:00"
+    "code_verified_at": "2026-11-11T07:03:18+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:7decf4d361aa76bf",
@@ -21576,7 +21733,8 @@
       "https://github.com/whuhxb/AdaCLIP-1"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:03:23+00:00"
+    "code_verified_at": "2026-11-11T07:03:23+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:a958fc4200ac8c55",
@@ -21651,7 +21809,8 @@
       "https://github.com/orgs/google-research"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:03:26+00:00"
+    "code_verified_at": "2026-11-11T07:03:26+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:bd0dfffc4a040105",
@@ -21949,7 +22108,11 @@
         "retrieved_at": "2026-11-11T07:03:28+00:00"
       }
     ],
-    "code_verified_at": "2026-11-11T07:03:42+00:00"
+    "code_verified_at": "2026-11-11T07:03:42+00:00",
+    "code_source_urls": [
+      "https://github.com/Junhaocai27/CMDS-AD",
+      "https://github.com/junhaocai27/cmds-ad"
+    ]
   },
   {
     "id": "eccv:914576ae517d21fc",
@@ -22153,7 +22316,10 @@
       "https://github.com/tinyMLx/courseware"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:03:49+00:00"
+    "code_verified_at": "2026-11-11T07:03:49+00:00",
+    "code_source_urls": [
+      "https://github.com/lmlpy/FDP.git"
+    ]
   },
   {
     "id": "eccv:bfffbc443d9c6895",
@@ -22340,7 +22506,8 @@
       "https://github.com/Yizhe-Liu/SplatPosePlus"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:03:55+00:00"
+    "code_verified_at": "2026-11-11T07:03:55+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:74efad1369f4d184",
@@ -22415,7 +22582,8 @@
       "https://github.com/topics/image-transformation"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:04:00+00:00"
+    "code_verified_at": "2026-11-11T07:04:00+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:fae16bc59b8dd600",
@@ -22533,7 +22701,10 @@
     "code_candidates": [
       "https://github.com/m-kruse98/MATCH"
     ],
-    "code_verified_at": "2026-11-11T06:50:43+00:00"
+    "code_verified_at": "2026-11-11T06:50:43+00:00",
+    "code_source_urls": [
+      "https://github.com/m-kruse98/MATCH"
+    ]
   },
   {
     "id": "eccv:c135e6143f0f1955",
@@ -22765,7 +22936,10 @@
     "code_candidates": [
       "https://github.com/LGC-AD/ArcAD"
     ],
-    "code_verified_at": "2026-11-11T06:50:50+00:00"
+    "code_verified_at": "2026-11-11T06:50:50+00:00",
+    "code_source_urls": [
+      "https://github.com/LGC-AD/ArcAD"
+    ]
   },
   {
     "id": "eccv:7b9d6c57f0fc14d4",
@@ -22985,7 +23159,10 @@
     "code_candidates": [
       "https://github.com/cnulab/LogiCo"
     ],
-    "code_verified_at": "2026-11-11T06:50:56+00:00"
+    "code_verified_at": "2026-11-11T06:50:56+00:00",
+    "code_source_urls": [
+      "https://github.com/cnulab/LogiCo"
+    ]
   },
   {
     "id": "eccv:4841bd901f8e8259",
@@ -23060,7 +23237,8 @@
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:04:06+00:00"
+    "code_verified_at": "2026-11-11T07:04:06+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:3be25c56ba93eda2",
@@ -23143,7 +23321,10 @@
       "https://github.com/SuperInstance/alphabet",
       "https://github.com/hust-slow/deco"
     ],
-    "code_verified_at": "2026-11-11T06:51:00+00:00"
+    "code_verified_at": "2026-11-11T06:51:00+00:00",
+    "code_source_urls": [
+      "https://github.com/HUST-SLOW/DeCo"
+    ]
   },
   {
     "id": "eccv:7791cd2524391a0a",
@@ -23310,7 +23491,10 @@
       "https://github.com/advanced-cs/arXiv_daily",
       "https://github.com/guanqiyuan/Awesome-CVPR2023-Low-Level-Vision"
     ],
-    "code_verified_at": "2026-11-11T06:51:04+00:00"
+    "code_verified_at": "2026-11-11T06:51:04+00:00",
+    "code_source_urls": [
+      "https://github.com/HUST-SLOW/UniScale"
+    ]
   },
   {
     "id": "icml:cb9af1c0d97f92ca",
@@ -23598,7 +23782,10 @@
       "https://github.com/zhaoyang97/Paper-Notes-en"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:04:20+00:00"
+    "code_verified_at": "2026-11-11T07:04:20+00:00",
+    "code_source_urls": [
+      "https://github.com/SirojbekSafarov/MeDS"
+    ]
   },
   {
     "id": "2505.09926",
@@ -23754,7 +23941,10 @@
     "code_candidates": [
       "https://github.com/gaobb/AdaptCLIP"
     ],
-    "code_verified_at": "2026-11-11T06:51:10+00:00"
+    "code_verified_at": "2026-11-11T06:51:10+00:00",
+    "code_source_urls": [
+      "https://github.com/gaobb/AdaptCLIP"
+    ]
   },
   {
     "id": "2508.06203",
@@ -23980,7 +24170,10 @@
     "code_candidates": [
       "https://github.com/CASIA-LMC-Lab/AnomalyMoE"
     ],
-    "code_verified_at": "2026-11-11T06:51:17+00:00"
+    "code_verified_at": "2026-11-11T06:51:17+00:00",
+    "code_source_urls": [
+      "https://github.com/CASIA-LMC-Lab/AnomalyMoE"
+    ]
   },
   {
     "id": "2511.06687",
@@ -24084,7 +24277,10 @@
     "code_candidates": [
       "https://github.com/yulimso/AnoStyler"
     ],
-    "code_verified_at": "2026-11-11T06:51:23+00:00"
+    "code_verified_at": "2026-11-11T06:51:23+00:00",
+    "code_source_urls": [
+      "https://github.com/yulimso/AnoStyler"
+    ]
   },
   {
     "id": "2511.12909",
@@ -24202,7 +24398,10 @@
     "code_candidates": [
       "https://github.com/zyh16143998882/CASL"
     ],
-    "code_verified_at": "2026-11-11T06:51:28+00:00"
+    "code_verified_at": "2026-11-11T06:51:28+00:00",
+    "code_source_urls": [
+      "https://github.com/zyh16143998882/CASL"
+    ]
   },
   {
     "id": "2511.18766",
@@ -24451,7 +24650,8 @@
       "https://github.com/tinery/AICUP-2024-competition"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:04:26+00:00"
+    "code_verified_at": "2026-11-11T07:04:26+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2511.18116",
@@ -24551,7 +24751,8 @@
       "https://github.com/m-3lab/awesome-industrial-anomaly-detection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:04:31+00:00"
+    "code_verified_at": "2026-11-11T07:04:31+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2503.07253",
@@ -24650,7 +24851,8 @@
       "https://github.com/wd1511/Awesome-Diffusion-for-Image-Translation"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:04:35+00:00"
+    "code_verified_at": "2026-11-11T07:04:35+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1609/aaai.v40i13.38029",
@@ -24861,7 +25063,8 @@
       "https://github.com/open-edge-platform/geti"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:04:39+00:00"
+    "code_verified_at": "2026-11-11T07:04:39+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1609/aaai.v40i12.37917",
@@ -24965,7 +25168,8 @@
       "https://github.com/guanqiyuan/Awesome-CVPR2023-Low-Level-Vision"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:04:44+00:00"
+    "code_verified_at": "2026-11-11T07:04:44+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1609/aaai.v40i7.37511",
@@ -25052,7 +25256,8 @@
       "https://github.com/paulapacheco/xai"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:04:49+00:00"
+    "code_verified_at": "2026-11-11T07:04:49+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2508.03539",
@@ -25210,7 +25415,10 @@
     "code_candidates": [
       "https://github.com/neymarql/QARAD"
     ],
-    "code_verified_at": "2026-11-11T06:51:34+00:00"
+    "code_verified_at": "2026-11-11T06:51:34+00:00",
+    "code_source_urls": [
+      "https://github.com/neymarql/QARAD"
+    ]
   },
   {
     "id": "2602.07011",
@@ -25346,7 +25554,8 @@
         "retrieved_at": "2026-11-11T07:04:52+00:00"
       }
     ],
-    "code_verified_at": "2026-11-11T07:04:55+00:00"
+    "code_verified_at": "2026-11-11T07:04:55+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2508.04175",
@@ -25461,7 +25670,8 @@
       "https://github.com/semikonductor/ICLR2025-Paper-Collection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:04:59+00:00"
+    "code_verified_at": "2026-11-11T07:04:59+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2512.11284",
@@ -25569,7 +25779,8 @@
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:05:05+00:00"
+    "code_verified_at": "2026-11-11T07:05:05+00:00",
+    "code_source_urls": []
   },
   {
     "id": "2511.05966",
@@ -25688,7 +25899,10 @@
     "code_candidates": [
       "https://github.com/Sunny5250/CIF"
     ],
-    "code_verified_at": "2026-11-11T06:51:39+00:00"
+    "code_verified_at": "2026-11-11T06:51:39+00:00",
+    "code_source_urls": [
+      "https://github.com/Sunny5250/CIF"
+    ]
   },
   {
     "id": "2607.23658",
@@ -25778,7 +25992,10 @@
       "https://github.com/andypinxinliu/cv-arxiv-daily",
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
     ],
-    "code_verified_at": "2026-11-11T06:51:43+00:00"
+    "code_verified_at": "2026-11-11T06:51:43+00:00",
+    "code_source_urls": [
+      "https://github.com/Mingxiu-Cai/XMatchAD"
+    ]
   },
   {
     "id": "doi:10.1109/tip.2025.3646861",
@@ -26065,7 +26282,8 @@
       "https://github.com/M-3LAB/awesome-industrial-anomaly-detection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:05:10+00:00"
+    "code_verified_at": "2026-11-11T07:05:10+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1109/tip.2026.3687095",
@@ -26277,7 +26495,10 @@
     "code_candidates": [
       "https://github.com/gaobb/D2Rec"
     ],
-    "code_verified_at": "2026-11-11T06:51:49+00:00"
+    "code_verified_at": "2026-11-11T06:51:49+00:00",
+    "code_source_urls": [
+      "https://github.com/gaobb/D2Rec"
+    ]
   },
   {
     "id": "doi:10.1109/tip.2026.3709502",
@@ -26580,7 +26801,10 @@
       "https://github.com/climateainordics/AICC2025",
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
     ],
-    "code_verified_at": "2026-11-11T06:51:58+00:00"
+    "code_verified_at": "2026-11-11T06:51:58+00:00",
+    "code_source_urls": [
+      "https://github.com/Mazeqi/FECDTAD"
+    ]
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Gao_Anomaly-Related_Residual_Fields_for_Cross-domain_Anomaly_Detection_CVPR_2026_paper.html",
@@ -27079,7 +27303,8 @@
       "https://github.com/ruvnet/ruvector"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:05:20+00:00"
+    "code_verified_at": "2026-11-11T07:05:20+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Zhang_Fine-VAD_Towards_Fine-Grained_Video_Anomaly_Detection_via_Progressive_Cross-Granularity_Learning_CVPR_2026_paper.html",
@@ -27337,7 +27562,8 @@
     "code_checks": {},
     "code_candidates": [],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:05:22+00:00"
+    "code_verified_at": "2026-11-11T07:05:22+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Sakai_InvAD_Inversion-based_Reconstruction-Free_Anomaly_Detection_with_Diffusion_Models_CVPR_2026_paper.html",
@@ -27717,7 +27943,8 @@
       "https://github.com/mala-lab/ADer"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:05:28+00:00"
+    "code_verified_at": "2026-11-11T07:05:28+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Seo_Anomaly_as_Non-Conformity_via_Training-Free_Graph_Laplacian_Energy_Minimization_CVPR_2026_paper.html",
@@ -28051,7 +28278,8 @@
         "retrieved_at": "2026-11-11T07:05:30+00:00"
       }
     ],
-    "code_verified_at": "2026-11-11T07:05:35+00:00"
+    "code_verified_at": "2026-11-11T07:05:35+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Mosco_Learning_to_Identify_Out-of-Distribution_Objects_for_3D_LiDAR_Anomaly_Segmentation_CVPR_2026_paper.html",
@@ -28452,7 +28680,8 @@
       "https://github.com/M-3LAB/awesome-industrial-anomaly-detection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:05:39+00:00"
+    "code_verified_at": "2026-11-11T07:05:39+00:00",
+    "code_source_urls": []
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Zhao_Learning_from_Noisy_Supervision_A_Denoising-Debiasing_Framework_for_Weakly_Supervised_CVPR_2026_paper.html",
@@ -29138,7 +29367,10 @@
       "https://github.com/Rishabh-creator601/Books"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:05:51+00:00"
+    "code_verified_at": "2026-11-11T07:05:51+00:00",
+    "code_source_urls": [
+      "https://github.com/zhushengxinyue/GS-CLIP"
+    ]
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Dai_No_Need_For_Real_Anomaly_MLLM_Empowered_Zero-Shot_Video_Anomaly_CVPR_2026_paper.html",
@@ -29637,7 +29869,10 @@
       "https://github.com/peifengLiu42/ACMMM26-evidence-guided-detector-localizer-reasoner-system",
       "https://github.com/zhaoyang97/Paper-Notes-en"
     ],
-    "code_verified_at": "2026-11-11T06:52:05+00:00"
+    "code_verified_at": "2026-11-11T06:52:05+00:00",
+    "code_source_urls": [
+      "https://github.com/YizhouJin313/ReADL"
+    ]
   },
   {
     "id": "cvpr:/content/CVPR2026/html/Acharya_The_Road_Less_Seen_Segment_Exploration_for_Weakly_Supervised_Video_CVPR_2026_paper.html",
@@ -30744,7 +30979,8 @@
       "https://github.com/aiben-ch/LMM-Evaluation-Survey"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:05:58+00:00"
+    "code_verified_at": "2026-11-11T07:05:58+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:/virtual/2026/poster/5841",
@@ -31283,7 +31519,10 @@
       "https://github.com/zhaoyang97/Paper-Notes-en"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:06:10+00:00"
+    "code_verified_at": "2026-11-11T07:06:10+00:00",
+    "code_source_urls": [
+      "https://github.com/zhouf-ecnu/dive"
+    ]
   },
   {
     "id": "eccv:/virtual/2026/poster/4744",
@@ -31759,7 +31998,10 @@
       "https://github.com/crovo1026/deltadeno",
       "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection"
     ],
-    "code_verified_at": "2026-11-11T06:52:09+00:00"
+    "code_verified_at": "2026-11-11T06:52:09+00:00",
+    "code_source_urls": [
+      "https://github.com/CROVO1026/DeltaDeno"
+    ]
   },
   {
     "id": "eccv:/virtual/2026/poster/3474",
@@ -31983,7 +32225,8 @@
       "https://github.com/dwzhangzjnu/VOT"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:06:15+00:00"
+    "code_verified_at": "2026-11-11T07:06:15+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:/virtual/2026/poster/4954",
@@ -32365,7 +32608,8 @@
       "https://github.com/YouAreSpecialToMe/ResearchArena"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:06:22+00:00"
+    "code_verified_at": "2026-11-11T07:06:22+00:00",
+    "code_source_urls": []
   },
   {
     "id": "eccv:/virtual/2026/poster/4995",
@@ -32544,7 +32788,10 @@
     "code_candidates": [
       "https://github.com/vpc-ccg/AF3AD"
     ],
-    "code_verified_at": "2026-11-11T06:52:17+00:00"
+    "code_verified_at": "2026-11-11T06:52:17+00:00",
+    "code_source_urls": [
+      "https://github.com/vpc-ccg/AF3AD"
+    ]
   },
   {
     "id": "eccv:/virtual/2026/poster/3501",
@@ -32939,7 +33186,10 @@
       "https://github.com/alessioborgi/RTAD5G",
       "https://github.com/mansoura-cis/4th_Grade_IS-Master-"
     ],
-    "code_verified_at": "2026-11-11T06:52:23+00:00"
+    "code_verified_at": "2026-11-11T06:52:23+00:00",
+    "code_source_urls": [
+      "https://github.com/zhliu-uod/VUOD"
+    ]
   },
   {
     "id": "iclr:/paper_files/paper/2026/hash/0b6566f471cd601cbfc895962623124e-Abstract-Conference.html",
@@ -35891,7 +36141,8 @@
       "https://github.com/NVIDIA/cdf-orchestration"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:06:31+00:00"
+    "code_verified_at": "2026-11-11T07:06:31+00:00",
+    "code_source_urls": []
   },
   {
     "id": "icml:/v306/wang26ht.html",
@@ -36132,7 +36383,8 @@
       "https://github.com/52CV/CVPR-2022-Papers"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:06:37+00:00"
+    "code_verified_at": "2026-11-11T07:06:37+00:00",
+    "code_source_urls": []
   },
   {
     "id": "icml:/v306/wang26iy.html",
@@ -37224,7 +37476,8 @@
       "https://github.com/alessiopiroli/parallel-3d-ground-segmentation"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:06:44+00:00"
+    "code_verified_at": "2026-11-11T07:06:44+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1609/aaai.v40i6.42412",
@@ -37652,7 +37905,10 @@
         "retrieved_at": "2026-11-11T07:06:47+00:00"
       }
     ],
-    "code_verified_at": "2026-11-11T07:06:57+00:00"
+    "code_verified_at": "2026-11-11T07:06:57+00:00",
+    "code_source_urls": [
+      "https://github.com/yuxin-jiang/Anomagic"
+    ]
   },
   {
     "id": "doi:10.1609/aaai.v40i7.37512",
@@ -43719,7 +43975,8 @@
         "retrieved_at": "2026-11-11T07:07:00+00:00"
       }
     ],
-    "code_verified_at": "2026-11-11T07:07:04+00:00"
+    "code_verified_at": "2026-11-11T07:07:04+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1109/tpami.2026.3724665",
@@ -44267,7 +44524,8 @@
     "code_checks": {},
     "code_candidates": [],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:07:06+00:00"
+    "code_verified_at": "2026-11-11T07:07:06+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1007/s11263-026-02983-0",
@@ -44794,7 +45052,8 @@
       "https://github.com/safinal/zeroshot-anomaly-detection"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:07:11+00:00"
+    "code_verified_at": "2026-11-11T07:07:11+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1109/tip.2026.3663923",
@@ -45241,7 +45500,8 @@
       "https://github.com/honda-research-institute/Anomaly-OneVision"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:07:17+00:00"
+    "code_verified_at": "2026-11-11T07:07:17+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1109/tip.2026.3675432",
@@ -45384,7 +45644,8 @@
       "https://github.com/Awesome3DGS/3D-Gaussian-Splatting-Papers"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:07:26+00:00"
+    "code_verified_at": "2026-11-11T07:07:26+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1109/tip.2026.3683277",
@@ -45532,7 +45793,10 @@
     "code_candidates": [
       "https://github.com/Hui-design/AAND"
     ],
-    "code_verified_at": "2026-11-11T06:52:30+00:00"
+    "code_verified_at": "2026-11-11T06:52:30+00:00",
+    "code_source_urls": [
+      "https://github.com/Hui-design/AAND"
+    ]
   },
   {
     "id": "doi:10.1109/tip.2026.3693134",
@@ -45752,7 +46016,8 @@
       "https://github.com/0x00ctrl/CyberSec-Books"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:07:31+00:00"
+    "code_verified_at": "2026-11-11T07:07:31+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1109/tip.2026.3718433",
@@ -46357,7 +46622,10 @@
       "https://github.com/alessioborgi/RTAD5G",
       "https://github.com/gaobb/UniADet"
     ],
-    "code_verified_at": "2026-11-11T06:52:41+00:00"
+    "code_verified_at": "2026-11-11T06:52:41+00:00",
+    "code_source_urls": [
+      "https://github.com/hanli6688/UAD"
+    ]
   },
   {
     "id": "doi:10.1109/tip.2026.3730816",
@@ -53738,7 +54006,8 @@
       "https://github.com/rwilliamspbg-ops/Mohawk-Nexus"
     ],
     "code_discovery_sources": [],
-    "code_verified_at": "2026-11-11T07:07:38+00:00"
+    "code_verified_at": "2026-11-11T07:07:38+00:00",
+    "code_source_urls": []
   },
   {
     "id": "doi:10.1109/tpami.2026.3708591",

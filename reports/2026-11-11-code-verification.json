@@ -1,0 +1,194 @@
+{
+  "date": "2026-11-11",
+  "runs": [
+    "https://github.com/llllljgl/AD-paper/actions/runs/42974868165",
+    "https://github.com/llllljgl/AD-paper/actions/runs/42976337087"
+  ],
+  "accepted_papers": 147,
+  "papers_with_verified_code": 36,
+  "verified_links": 37,
+  "model_calls": 92,
+  "search_calls": 328,
+  "original_links": {
+    "pending": 20,
+    "verified": 28,
+    "rejected": 4,
+    "unsupported": 1
+  },
+  "cases": [
+    {
+      "title": "Align3D-AD: Cross-Modal Feature Alignment and Dual-Prompt Learning for Zero-shot 3D Anomaly Detection",
+      "code_urls": [],
+      "checks": [
+        {
+          "url": "https://github.com/M-3LAB/awesome-3d-anomaly-detection",
+          "status": "rejected",
+          "reason": "论文汇总仓库不是目标论文实现",
+          "checked_at": "2026-11-11T06:48:07+00:00"
+        },
+        {
+          "url": "https://github.com/BozsyIneedMoon/Awesome-LLM-3D",
+          "status": "rejected",
+          "reason": "论文汇总仓库不是目标论文实现",
+          "checked_at": "2026-11-11T06:48:09+00:00"
+        },
+        {
+          "url": "https://github.com/Starlec-Estypeng/Awesome-LLM-3D",
+          "status": "rejected",
+          "reason": "论文汇总仓库不是目标论文实现",
+          "checked_at": "2026-11-11T06:48:09+00:00"
+        },
+        {
+          "url": "https://github.com/Xiaoda-Zhong/awesome-diffusion-categorized",
+          "status": "rejected",
+          "reason": "论文汇总仓库不是目标论文实现",
+          "checked_at": "2026-11-11T06:48:09+00:00"
+        },
+        {
+          "url": "https://github.com/advanced-cs/arXiv_daily",
+          "status": "pending",
+          "reason": "Reading list or no implementation source files",
+          "checked_at": "2026-11-11T06:48:09+00:00"
+        },
+        {
+          "url": "https://github.com/ncbi/pubchem-align3d",
+          "status": "pending",
+          "reason": "候选仓库或README/文件树不可访问（HTTP 404），不发布此地址",
+          "checked_at": "2026-11-11T07:01:03+00:00"
+        },
+        {
+          "url": "https://github.com/cryoem/eman2",
+          "status": "pending",
+          "reason": "README缺少目标论文标题或论文标识，无法核对身份",
+          "checked_at": "2026-11-11T07:01:04+00:00"
+        },
+        {
+          "url": "https://github.com/az7dev/Awesome-LLM-3D",
+          "status": "rejected",
+          "reason": "论文汇总仓库不是目标论文实现",
+          "checked_at": "2026-11-11T07:01:06+00:00"
+        },
+        {
+          "url": "https://github.com/andypinxinliu/Awesome-LLM-3D",
+          "status": "rejected",
+          "reason": "论文汇总仓库不是目标论文实现",
+          "checked_at": "2026-11-11T07:01:06+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Towards Generalizable 3D Anomaly Detection via Relational Inconsistency Modeling",
+      "code_urls": [],
+      "checks": [
+        {
+          "url": "https://github.com/M-3LAB/awesome-3d-anomaly-detection",
+          "status": "rejected",
+          "reason": "论文汇总仓库不是目标论文实现",
+          "checked_at": "2026-11-11T06:48:16+00:00"
+        },
+        {
+          "url": "https://github.com/LuigiFederico/PatchCore-for-Industrial-Anomaly-Detection",
+          "status": "pending",
+          "reason": "README缺少目标论文标题或论文标识，无法核对身份",
+          "checked_at": "2026-11-11T06:48:19+00:00"
+        },
+        {
+          "url": "https://github.com/ZhikaiXu24/DAS",
+          "status": "pending",
+          "reason": "README缺少目标论文标题或论文标识，无法核对身份",
+          "checked_at": "2026-11-11T06:48:19+00:00"
+        },
+        {
+          "url": "https://github.com/enes-plt/Deep-Learning-Medical-Imaging-Analysis",
+          "status": "pending",
+          "reason": "README缺少目标论文标题或论文标识，无法核对身份",
+          "checked_at": "2026-11-11T06:48:20+00:00"
+        },
+        {
+          "url": "https://github.com/ixuejiaozhao/ixuejiaozhao.github.io",
+          "status": "pending",
+          "reason": "Reading list or no implementation source files",
+          "checked_at": "2026-11-11T06:48:21+00:00"
+        },
+        {
+          "url": "https://github.com/VisualScienceLab-KHU/GRIM",
+          "status": "pending",
+          "reason": "Fork, archived or empty repository; needs manual evidence",
+          "checked_at": "2026-11-11T07:01:21+00:00"
+        },
+        {
+          "url": "https://github.com/semikonductor/ICLR2025-Paper-Collection",
+          "status": "rejected",
+          "reason": "论文汇总仓库不是目标论文实现",
+          "checked_at": "2026-11-11T07:01:21+00:00"
+        },
+        {
+          "url": "https://github.com/ryu57/EnsembleHateDetection",
+          "status": "pending",
+          "reason": "README缺少目标论文标题或论文标识，无法核对身份",
+          "checked_at": "2026-11-11T07:01:21+00:00"
+        },
+        {
+          "url": "https://github.com/agkushal/Deepfake-images-",
+          "status": "pending",
+          "reason": "README缺少目标论文标题或论文标识，无法核对身份",
+          "checked_at": "2026-11-11T07:01:23+00:00"
+        }
+      ]
+    },
+    {
+      "title": "CoGeoAD: Hierarchical Color-Geometric Fusion with Multi-View Attention for Zero-Shot 3D Anomaly Detection",
+      "code_urls": [],
+      "checks": [
+        {
+          "url": "https://github.com/M-3LAB/awesome-3d-anomaly-detection",
+          "status": "rejected",
+          "reason": "论文汇总仓库不是目标论文实现",
+          "checked_at": "2026-11-11T06:49:14+00:00"
+        },
+        {
+          "url": "https://github.com/guanqiyuan/Awesome-CVPR2023-Low-Level-Vision",
+          "status": "rejected",
+          "reason": "论文汇总仓库不是目标论文实现",
+          "checked_at": "2026-11-11T06:49:16+00:00"
+        },
+        {
+          "url": "https://github.com/hustCYQ/Towards-Practical-Industrial-Anomaly-Detection",
+          "status": "pending",
+          "reason": "Reading list or no implementation source files",
+          "checked_at": "2026-11-11T06:49:16+00:00"
+        },
+        {
+          "url": "https://github.com/kingdomShu/CoGeoAD",
+          "status": "pending",
+          "reason": "README 开头明确写着“Open source code is being prepared...”，表明代码尚在准备中，仓库目前仅有数据渲染脚本（gen_data/），并非可运行的 CoGeoAD 官方实现。README 中也没有出现能直接证明作者身份与目标论文官方关联的原文（例如作者列表、与作者主页/论文页面明确绑定的声明）。因此既不能认定为官方实现，也不应直接 reject，按规则返回 uncertain。",
+          "checked_at": "2026-11-11T06:49:17+00:00"
+        },
+        {
+          "url": "https://github.com/opengeos/geoai",
+          "status": "pending",
+          "reason": "README缺少目标论文标题或论文标识，无法核对身份",
+          "checked_at": "2026-11-11T06:49:19+00:00"
+        },
+        {
+          "url": "https://github.com/wangqiannudt/nerf-arxiv-daily",
+          "status": "pending",
+          "reason": "README too long for complete identity review",
+          "checked_at": "2026-11-11T07:02:02+00:00"
+        },
+        {
+          "url": "https://github.com/orgs/BIT-DA",
+          "status": "pending",
+          "reason": "候选仓库或README/文件树不可访问（HTTP 404），不发布此地址",
+          "checked_at": "2026-11-11T07:02:03+00:00"
+        },
+        {
+          "url": "https://github.com/orgs/Gorilla-Lab-SCUT",
+          "status": "pending",
+          "reason": "候选仓库或README/文件树不可访问（HTTP 404），不发布此地址",
+          "checked_at": "2026-11-11T07:02:03+00:00"
+        }
+      ]
+    }
+  ]
+}
