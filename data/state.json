@@ -104,9 +104,62 @@
   "deepseek_search_calls": 0,
   "deepseek_search_errors": {},
   "code_backfill": {
-    "checked": 15,
-    "added": 2,
-    "error": ""
+    "checked": 100,
+    "added": 1,
+    "removed": 25,
+    "search_calls": 142,
+    "model_calls": 69,
+    "errors": [
+      {
+        "paper_id": "doi:10.1109/tip.2026.3728632",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "eccv:914576ae517d21fc",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "2611.09521",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "2610.34304",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "neurips:a7c3d46b9547702f",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "neurips:b8fc3a740b8e0362",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "neurips:100e39bfd4114a5b",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "neurips:/virtual/2026/poster/151961",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "neurips:/virtual/2026/poster/153262",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "2508.03088",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "cvpr:1b172dbfea647f18",
+        "reason": "HTTP 404"
+      },
+      {
+        "paper_id": "2604.02905",
+        "reason": "HTTP 404"
+      }
+    ],
+    "error": "HTTP 404"
   },
   "llm_status": "enabled",
   "review_blocked": false,
