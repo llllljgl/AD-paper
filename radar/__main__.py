@@ -42,28 +42,38 @@ def build(root=ROOT):
 
     total = sum(len(group) for group in groups.values())
     pending = sum(paper["status"] == "pending" for paper in papers)
-    lines = [f"已收录 **{total} 篇** · 待筛选 **{pending} 篇**"]
     ordered_groups = sorted(groups, key=lambda group: (group[0] == "arXiv", group[0].casefold(), -int(group[1])))
+    navigation = []
+    for venue, year in ordered_groups:
+        heading = f"{venue} {year}"
+        anchor = re.sub(r"[^\w -]", "", heading.lower()).replace(" ", "-")
+        navigation.append(f"[{markdown_text(heading)}](#{anchor})")
+    lines = ["**快速导航**", "", " · ".join(navigation), "",
+             f"已收录 **{total} 篇** · 待筛选 **{pending} 篇**"]
     for venue, year in ordered_groups:
         lines.extend(["", f"### {markdown_text(venue)} {year}", "",
-                      "| 论文 | 标签 | 链接 | Tip |", "| --- | --- | --- | --- |"])
+                      "| 论文 (Paper) | 核心亮点 / 方法简述 | 链接 |", "| :--- | :--- | :---: |"])
         entries = sorted(groups[venue, year], key=lambda paper: (paper["published"], paper["id"]), reverse=True)
         for paper in entries:
-            title = markdown_link(markdown_text(paper["title"]), paper["url"])
-            links = [markdown_link("论文", paper["url"])]
+            title = f'**{markdown_link(markdown_text(paper["title"]), paper["url"])}**'
+            links = []
             if paper.get("pdf_url"):
                 links.append(markdown_link("PDF", paper["pdf_url"]))
             elif paper.get("official_url"):
                 preprint = paper.get("arxiv_id") or paper["id"]
                 if re.fullmatch(r"\d{4}\.\d{4,5}", preprint):
                     links.append(markdown_link("arXiv", f"https://arxiv.org/abs/{preprint}"))
-            links.extend(markdown_link("代码", url) for url in paper.get("code_urls", []))
+            links.extend(markdown_link("Code", url) for url in paper.get("code_urls", []))
             # Old reviewed records may only have a topic. Keep it as a fallback label.
             tags = paper.get("tags") or [paper.get("topic", "待补充")]
-            labels = " ".join(f"<code>{markdown_text(tag)}</code>" for tag in tags)
+            # A code span treats Markdown punctuation literally; keep backticks and pipes safe.
+            labels = " ".join(
+                "`" + " ".join(tag.split()).replace("`", "ˋ").replace("|", "&#124;") + "`"
+                for tag in tags[:2]
+            )
             tip = markdown_text(paper.get("summary_zh", "")) or "待补充"
-            details = f"<details><summary>查看 Tip</summary><p>{tip}</p></details>"
-            lines.append(f"| {title} | {labels} | {' · '.join(links)} | {details} |")
+            lines.append(f"| {title} | {labels} {tip} | {' · '.join(links) or '—'} |")
+        lines.extend(["", "[↑ 返回导航](#论文清单)"])
 
     before, remainder = readme.split(LIST_START)
     _, after = remainder.split(LIST_END)

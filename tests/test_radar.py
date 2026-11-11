@@ -194,15 +194,16 @@ class RadarTests(unittest.TestCase):
         with patch.dict(os.environ,{'DEEPSEEK_API_KEY':'sk-example-secret'}):
             self.assertEqual(provider_error(error),'HTTP 500: Upstream unavailable [redacted]')
 
-    def test_readme_groups_reviewed_entries_and_collapses_tip(self):
+    def test_readme_groups_reviewed_entries_and_shows_highlights(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             readme = root / "README.md"
             readme.write_text(f"# Paper list\n{LIST_START}\nOld content\n{LIST_END}\nKeep this text.\n", encoding="utf-8")
             save_json(root / "data/papers.json", [
-                paper(title="A | B", status="accepted", venue="CVPR 2026（作者声明）", tags=["视觉", "定位"], summary_zh="一句 Tip"),
+                paper(title="A | B", status="accepted", venue="CVPR 2026（作者声明）", tags=["视觉", "定位", "第三标签"], summary_zh="一句 Tip",
+                      code_urls=["https://github.com/example/model"]),
                 paper(id="old", title="Older entry", status="accepted", venue="CVPR 2025（作者声明）", topic="原分类"),
-                paper(id="journal", title="Journal entry", status="accepted", journal_ref="Pattern Recognition, vol. 100, 2025"),
+                paper(id="journal", title="Journal entry", status="accepted", journal_ref="Pattern Recognition, vol. 100, 2025", pdf_url=""),
                 paper(id="pending", title="Pending entry"),
                 paper(id="rejected", title="Rejected entry", status="rejected"),
             ])
@@ -212,8 +213,14 @@ class RadarTests(unittest.TestCase):
             self.assertEqual(result.count("### CVPR 2025\n"), 1)
             self.assertIn("### Pattern Recognition 2025\n", result)
             self.assertLess(result.index("A &#124; B"), result.index("Older entry"))
-            self.assertIn("<details><summary>查看 Tip</summary><p>一句 Tip</p></details>", result)
-            self.assertIn("<code>原分类</code>", result)
+            self.assertIn("| 论文 (Paper) | 核心亮点 / 方法简述 | 链接 |\n| :--- | :--- | :---: |", result)
+            self.assertIn("**[A &#124; B](https://arxiv.org/abs/2601.00001)**", result)
+            self.assertIn("| `视觉` `定位` 一句 Tip | [PDF](https://arxiv.org/pdf/2601.00001) · [Code](https://github.com/example/model) |", result)
+            self.assertIn("`原分类`", result)
+            self.assertIn("| `待分类` 待补充 | — |", result)
+            self.assertNotIn("第三标签", result)
+            self.assertNotIn("<details>", result)
+            self.assertNotIn("<summary>", result)
             self.assertNotIn("Pending entry", result)
             self.assertNotIn("Rejected entry", result)
             self.assertTrue(result.endswith("Keep this text.\n"))
