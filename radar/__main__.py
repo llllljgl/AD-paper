@@ -63,7 +63,9 @@ def build(root=ROOT):
                 preprint = paper.get("arxiv_id") or paper["id"]
                 if re.fullmatch(r"\d{4}\.\d{4,5}", preprint):
                     links.append(markdown_link("arXiv", f"https://arxiv.org/abs/{preprint}"))
-            links.extend(markdown_link("Code", url) for url in paper.get("code_urls", []))
+            from .codecheck import visible_codes
+            codes = visible_codes(paper) if config.get("verify_code_links") else paper.get("code_urls", [])
+            links.extend(markdown_link("Code", url) for url in codes)
             # Old reviewed records may only have a topic. Keep it as a fallback label.
             tags = paper.get("tags") or [paper.get("topic", "待补充")]
             # A code span treats Markdown punctuation literally; keep backticks and pipes safe.

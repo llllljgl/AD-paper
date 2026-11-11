@@ -38,9 +38,43 @@ class CodeTests(unittest.TestCase):
         with patch('radar.deepseek.search',return_value=[]),patch('radar.codecheck.search',return_value=[]) as search_mock:
             result=backfill([item],'key',{'model':'test'},1)
         self.assertEqual(item['code_urls'],[])
-        self.assertEqual(search_mock.call_count,2)
+        self.assertEqual(search_mock.call_count,3)
         self.assertEqual(result['removed'],1)
         self.assertIn('https://github.com/lab/awesome-list',item['code_candidates'])
+    def test_readme_hides_unverified_links_from_all_ingestion_paths(self):
+        import tempfile
+        from pathlib import Path
+        from radar.__main__ import build, LIST_START, LIST_END
+        from radar.core import save_json
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            (root/'README.md').write_text(f'{LIST_START}\n{LIST_END}')
+            save_json(root/'config.json',{'verify_code_links':True})
+            item=paper(status='accepted',code_urls=['https://github.com/lab/repo'])
+            save_json(root/'data/papers.json',[item]);build(root)
+            self.assertNotIn('github.com/lab/repo',(root/'README.md').read_text())
+            item['code_checks']={'https://github.com/lab/repo':{'url':'https://github.com/lab/repo','status':'verified','version':1,'paper_key':paper_key(item)}}
+            save_json(root/'data/papers.json',[item]);build(root)
+            self.assertIn('[Code](https://github.com/lab/repo)',(root/'README.md').read_text())
+
+    def test_missing_candidate_does_not_abort_other_repository_checks(self):
+        import urllib.error
+        error=urllib.error.HTTPError('https://api.github.com/repos/lab/missing',404,'missing',{},None)
+        with patch('radar.codecheck.snapshot',side_effect=error):
+            row=verify(paper(),'https://github.com/lab/missing','key',{}, {})
+        self.assertEqual(row['status'],'pending')
+        self.assertIn('404',row['reason'])
+
+    def test_project_page_keeps_code_target_even_when_label_is_only_code(self):
+        from radar.investigate import Text
+        from radar.codecheck import discover
+        raw='<h1>Industrial anomaly detection</h1><a href="https://github.com/lab/model">Code</a>'
+        text=' '.join(Text(raw).parts)
+        self.assertIn('https://github.com/lab/model',text)
+        with patch('radar.codecheck.search',return_value=[{'url':'https://lab.github.io/model/'}]),patch('radar.investigate.fetch_text',return_value=text):
+            result=discover(paper(),'key',{}, {'search_calls':0})
+        self.assertEqual(result,['https://github.com/lab/model'])
+
     def test_valid_readme_without_source_files_is_placeholder(self):
         import base64
         replies=[{'full_name':'lab/repo','size':3,'default_branch':'main'},

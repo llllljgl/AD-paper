@@ -1,13 +1,11 @@
 """DeepSeek's independent search, bounded by the configured venue list."""
 
-import base64
 import json
 import re
 import urllib.error
-from datetime import datetime, timedelta, timezone
 from urllib.parse import urlsplit
 
-from .core import github_links, now_iso, request, title_key
+from .core import request
 
 SEARCH_URL = "https://api.deepseek.com/v1/tools/search"
 

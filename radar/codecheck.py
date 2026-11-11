@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import re
+import urllib.error
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlsplit
 
@@ -95,7 +96,12 @@ def verify(paper, url, key, config, stats):
     if re.search(r'/awesome[-_]|paper[-_]?(?:list|collection)',url,re.I):
         return {**row, 'status':'rejected','reason':'论文汇总仓库不是目标论文实现'}
     try:
-        data=snapshot(url)
+        try:
+            data=snapshot(url)
+        except urllib.error.HTTPError as exc:
+            if exc.code in (404, 410):
+                return {**row,'status':'pending','reason':f'候选仓库或README/文件树不可访问（HTTP {exc.code}），不发布此地址'}
+            raise
         identity=title_key(paper['title']) in title_key(data['readme'])
         identifiers=[paper.get('arxiv_id',''),paper.get('id','').removeprefix('doi:')]
         identity=identity or any(len(i)>8 and i in data['readme'] for i in identifiers if i)
@@ -116,8 +122,34 @@ def verify(paper, url, key, config, stats):
     return row
 
 
+
+def discover(paper, key, config, stats):
+    from .investigate import investigation_query, allowed, fetch_text
+    urls, pages = [], []
+    for suffix in ['site:github.com official implementation','github code repository', 'official project page code']:
+        stats['search_calls']+=1
+        hits=search(investigation_query(paper['title'],suffix),key,10)
+        for hit in hits:
+            url=hit.get('url','')
+            repo=repo_url(url)
+            if repo: urls.append(repo)
+            elif allowed(url) and urlsplit(url).hostname.endswith('.github.io'):
+                pages.append(url)
+    # Author project pages often point to code even when search only returns paper lists.
+    endorsed=[]
+    paper.setdefault('code_discovery_sources',[])
+    for url in list(dict.fromkeys(pages))[:3]:
+        try:
+            text=fetch_text(url)
+            if title_key(paper['title']) not in title_key(text):continue
+            links=github_links(text)
+            endorsed.extend(links)
+            paper['code_discovery_sources'].append({'url':url,'github_links':links,'retrieved_at':now_iso()})
+        except (OSError,ValueError,KeyError):
+            continue
+    return list(dict.fromkeys(endorsed+urls))
+
 def backfill(papers,key,config,limit=None):
-    from .investigate import investigation_query
     now=datetime.now(timezone.utc);cutoff=(now-timedelta(days=28)).isoformat()
     stats={'checked':0,'added':0,'removed':0,'search_calls':0,'model_calls':0,'errors':[],'error':''}
     candidates=[p for p in papers if p['status']=='accepted']
@@ -143,12 +175,7 @@ def backfill(papers,key,config,limit=None):
                 checks[url]=verify(paper,url,key,config,stats)
                 print(f"Code check {paper['id']} {url}: {checks[url]['status']}",flush=True)
             if not any(checks.get(u,{}).get('status')=='verified' for u in urls):
-                discovered=[]
-                for suffix in ['site:github.com official implementation','github code repository']:
-                    stats['search_calls']+=1
-                    results=search(investigation_query(paper['title'],suffix),key,10)
-                    discovered.extend(repo_url(r.get('url','')) for r in results if repo_url(r.get('url','')))
-                discovered=[u for u in sorted(set(discovered)) if u not in urls][:config.get('code_candidates_per_paper',4)]
+                discovered=[u for u in discover(paper,key,config,stats) if u not in urls][:config.get('code_candidates_per_paper',4)]
                 urls+=discovered
                 paper['code_candidates']=urls
                 for url in discovered:

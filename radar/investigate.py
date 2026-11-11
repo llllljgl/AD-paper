@@ -36,6 +36,10 @@ class Text(HTMLParser):
         super().__init__(); self.parts = []; self.hidden = 0; self.feed(raw)
     def handle_starttag(self, tag, attrs):
         if tag in ('script', 'style', 'nav'): self.hidden += 1
+        if tag == 'a' and not self.hidden:
+            href = dict(attrs).get('href', '')
+            if href.startswith('https://github.com/'):
+                self.parts.append(href)
     def handle_endtag(self, tag):
         if tag in ('script', 'style', 'nav'): self.hidden = max(0, self.hidden - 1)
     def handle_data(self, text):
