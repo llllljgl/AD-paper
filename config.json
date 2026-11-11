@@ -48,7 +48,6 @@
   },
   "official_details_per_source": 40,
   "official_metadata_refresh_days": 28,
-  "code_searches_per_run": 15,
   "arxiv_query": "(ti:\"anomaly detection\" OR ti:\"anomaly localization\" OR ti:\"defect detection\" OR ti:\"defect segmentation\") AND (all:industrial OR all:visual OR all:MVTec OR all:VisA OR all:manufacturing)",
   "initial_days": 14,
   "overlap_days": 3,
@@ -72,5 +71,8 @@
   "rolling": {
     "enabled": true,
     "overrides": {}
-  }
+  },
+  "verify_code_links": true,
+  "code_papers_per_run": 100,
+  "code_candidates_per_paper": 4
 }

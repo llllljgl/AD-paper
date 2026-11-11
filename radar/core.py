@@ -469,7 +469,7 @@ def run(root, since=None, until=None, no_llm=False, source=None, official=None, 
     code_backfill = {}
     if official is not None and agent.key and not no_llm and not search_errors and not review_blocked:
         from .deepseek import backfill_code_links
-        code_backfill = backfill_code_links(papers, agent.key, config.get("code_searches_per_run", 5))
+        code_backfill = backfill_code_links(papers, agent.key, config.get("code_papers_per_run", 100), config)
     save_json(root / "data/papers.json", papers)
     if not since and not until and reports["arXiv"]["status"] == "ok":
         state["last_collected_until"] = end.isoformat()

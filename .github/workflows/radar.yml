@@ -15,6 +15,10 @@ on:
         description: Review saved candidates without collecting sources
         type: boolean
         default: false
+      verify_codes_only:
+        description: Verify existing code links and search missing implementations
+        type: boolean
+        default: false
       no_llm:
         description: 'Collect without LLM'
         type: boolean
@@ -49,11 +53,13 @@ jobs:
         id: collect
         if: github.event_name != 'push'
         env:
+          GITHUB_TOKEN: ${{ github.token }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
           INPUT_SINCE: ${{ inputs.since }}
           INPUT_UNTIL: ${{ inputs.until }}
           INPUT_REVIEW_ONLY: ${{ inputs.review_only }}
+          INPUT_VERIFY_CODES_ONLY: ${{ inputs.verify_codes_only }}
           INPUT_NO_LLM: ${{ inputs.no_llm }}
         shell: bash
         run: |
@@ -62,7 +68,11 @@ jobs:
           if [ -n "$INPUT_UNTIL" ]; then args+=(--until "$INPUT_UNTIL"); fi
           if [ "$INPUT_NO_LLM" = "true" ]; then args+=(--no-llm); fi
           if [ "$INPUT_REVIEW_ONLY" = "true" ]; then args+=(--review-only); fi
-          python -m radar collect "${args[@]}"
+          if [ "$INPUT_VERIFY_CODES_ONLY" = "true" ]; then
+            python -m radar verify-codes
+          else
+            python -m radar collect "${args[@]}"
+          fi
       - name: Update README
         run: python -m radar build
       - name: Save collection and README

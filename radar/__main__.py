@@ -125,18 +125,19 @@ def report(root=ROOT):
     code = state.get("code_backfill", {})
     if code:
         print(f"\n代码仓库复查 {code['checked']} 篇，补充 {code['added']} 篇。")
+        print(f"代码核验模型调用 {code.get('model_calls', 0)} 次，搜索 {code.get('search_calls', 0)} 次，移除未通过链接 {code.get('removed', 0)} 条。")
         if code.get("error"):
             print(f"\n代码搜索失败 · {code['error']}")
     missing_key = state.get("llm_status") == "missing_key"
     if missing_key:
         print("\n缺少仓库 Secret `DEEPSEEK_API_KEY`。本轮已保存官方来源候选。")
     failed_sources = any(row["status"] == "failed" for row in state.get("sources", {}).values())
-    return int(missing_key or failed_sources or bool(search_errors) or bool(state.get("review_blocked")))
+    return int(missing_key or failed_sources or bool(search_errors) or bool(state.get("review_blocked")) or bool(code.get("error")))
 
 
 def main():
     parser = argparse.ArgumentParser(description="Industrial anomaly detection paper radar")
-    parser.add_argument("command", choices=["collect", "build", "report"])
+    parser.add_argument("command", choices=["collect", "build", "report", "verify-codes"])
     parser.add_argument("--since", help="Inclusive start date YYYY-MM-DD (manual backfill)")
     parser.add_argument("--until", help="Inclusive end date YYYY-MM-DD")
     parser.add_argument("--no-llm", action="store_true", help="Collect as pending without LLM calls")
@@ -144,6 +145,20 @@ def main():
     args = parser.parse_args()
     if args.command == "collect":
         run(ROOT, args.since, args.until, args.no_llm, review_only=args.review_only)
+    elif args.command == "verify-codes":
+        import os
+        from .core import save_json
+        from .codecheck import backfill
+        config = load_json(ROOT / "config.json", {})
+        papers = load_json(ROOT / "data/papers.json", [])
+        state = load_json(ROOT / "data/state.json", {})
+        key = os.environ.get("DEEPSEEK_API_KEY")
+        if not key: raise ValueError("Missing DEEPSEEK_API_KEY")
+        stats = backfill(papers, key, config)
+        state["code_backfill"] = stats
+        save_json(ROOT / "data/papers.json", papers)
+        save_json(ROOT / "data/state.json", state)
+        print(stats)
     elif args.command == "build":
         build()
     else:
