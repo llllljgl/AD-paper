@@ -109,6 +109,11 @@ def github_links(text):
 def source_venue(text):
     if re.search(r"submitted|under[ -]review|submission|rejected", text, re.I):
         return "arXiv / 未确认会议"
+    acmmm = re.search(r"\bACM\s*(?:MM|Multimedia|International Conference on Multimedia)"
+                      r"(?:\s*\(\s*MM)?\s*[’'\"(),:-]*\s*(20\d{2}|\d{2})\b", text, re.I)
+    if acmmm:
+        year = acmmm[1] if len(acmmm[1]) == 4 else "20" + acmmm[1]
+        return f"ACMMM {year}（作者声明）"
     match = re.search(r"\b(CVPR|ICCV|ECCV|ICLR|ICML|IJCAI|NeurIPS|AAAI|WACV|BMVC)\)?[ ,:-]*(20\d{2})\b", text, re.I)
     return "{} {}（作者声明）".format(match[1].upper(), match[2]) if match else "arXiv / 未确认会议"
 

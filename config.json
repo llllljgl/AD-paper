@@ -3,6 +3,10 @@
   "description": "工业异常检测论文雷达",
   "collection_year": null,
   "official_sources": {
+    "ACMMM": {
+      "catalog": "https://2026.acmmm.org/site/technical-programme.html",
+      "format": "acmmm"
+    },
     "CVPR": {
       "catalog": "https://openaccess.thecvf.com/CVPR2026?day=all",
       "format": "cvf"

@@ -37,7 +37,8 @@ def plain_text(value):
 
 def metadata_url(url):
     parsed = urlsplit(url)
-    return (parsed.scheme == "https" and parsed.hostname in HOSTS and not parsed.username
+    official_host = parsed.hostname in HOSTS or bool(re.fullmatch(r"20\d{2}\.acmmm\.org", parsed.hostname or ""))
+    return (parsed.scheme == "https" and official_host and not parsed.username
             and parsed.port in (None, 443)
             and not re.search(r"\.pdf(?:/|$)|/(?:pdf|download)(?:/|$)", parsed.path, re.I))
 
@@ -269,7 +270,7 @@ def compare_discovery(entries, results):
         try:
             if not metadata_url(url):
                 continue
-            paper = by_url.get(url_key(url)) or by_title.get(title_key(title.split("|", 1)[0]))
+            paper = by_title.get(title_key(title.split("|", 1)[0])) or by_url.get(url_key(url))
         except ValueError:
             continue
         if paper:
@@ -285,6 +286,8 @@ class OfficialSources:
 
     def index(self, venue, spec):
         year = self.config["collection_year"]
+        if spec.get("format") == "acmmm":
+            return self.acmmm_index(year, spec["catalog"])
         if "catalog" in spec:
             url = spec["catalog"]
             entries = catalog_entries(url, year, spec["format"], self.get(url))
@@ -294,7 +297,43 @@ class OfficialSources:
         papers = [paper for row in rows if (paper := publisher_candidate(venue, year, row))]
         return len(rows), papers
 
+    def acmmm_index(self, year, url):
+        raw = self.get(url)
+        heading = plain_text(' '.join(re.findall(r'<title[^>]*>(.*?)</title>', raw, re.I | re.S)))
+        if re.findall(r'\bACM Multimedia\s+(20\d{2})\b', heading, re.I) != [str(year)]:
+            raise ValueError('Catalog page does not confirm the requested meeting year')
+        data_url = urljoin(url, 'program-data.json')
+        data = json.loads(self.get(data_url))
+        papers = {}
+        for entry in data['entries']:
+            # Workshops and ancillary events are not the main proceedings.
+            if entry.get('type') not in {'oral', 'poster', 'bni', 'datasets'}:
+                continue
+            for row in entry.get('papers', []):
+                if row.get('track') not in {'Main Track', 'BNI', 'Datasets', 'Reproducibility'}:
+                    continue
+                pid, title = str(row.get('paper_id', '')), plain_text(row.get('title'))
+                if not pid or len(title) < 12:
+                    continue
+                if not re.fullmatch(r'[A-Za-z0-9_-]+', pid):
+                    raise ValueError('Invalid ACM MM paper identifier')
+                paper = official_candidate('ACMMM', year, data_url + '#paper-' + pid,
+                                           title, f'acmmm:{year}:{pid}')
+                # The programme links to sessions; the metadata fragment gives
+                # each paper a stable distinct source identity for merging.
+                paper['url'] = url + '#entry-session-' + str(entry['id'])
+                paper['abstract'] = plain_text(row.get('abstract'))
+                paper['authors'] = row.get('authors', [])
+                paper['code_urls'] = github_links(paper['abstract'])
+                papers.setdefault(pid, paper)
+        if not papers:
+            raise ValueError('No paper entries recognized in the official catalog')
+        return len(papers), list(papers.values())
+
     def detail(self, paper):
+        if paper['id'].startswith('acmmm:'):
+            # The official JSON index already includes the paper abstracts.
+            return {}
         url = paper.get("publisher_url") or paper["official_url"]
         detail = {}
         try:

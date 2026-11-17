@@ -1,5 +1,11 @@
 # 收集与不确定论文调查
 
+## ACMMM 来源（2026-11-17）
+
+ACMMM 已加入主动采集名单。使用对应年份的 ACM Multimedia 官方 Technical Programme 及其 program-data.json，读取论文标题、作者和摘要；合并同一论文的口头与海报展示，排除 workshop 和非论文活动。每次先验证目录页面标题中的会议年份，未来年份目录未发布或结构变化时沿用现有等待／失败报告规则，不将上一届数据归到新年份。官网结构变化仍可能需要维护解析器。
+
+ACMMM、ACM MM、ACM Multimedia 的年份声明统一识别为 ACMMM；仅有作者录用声明时保留“作者声明”标注，submitted／under review 不算录用。新来源沿用每周检查、目录变化后补漏搜索、范围筛选及代码核验流程。首次完整扫描在下一次采集时执行；历史 PAR 条目先按已有录用声明修正分类。
+
 规则版本 3，更新于 2026-11-07。
 
 候选初筛覆盖 anomaly、defect、industrial、manufacturing、inspection、outlier 及主要工业三维基准。初筛追求覆盖，最终由模型按研究任务与评测场景判定。摘要未命中工业关键词不会阻止模型评审，没有摘要的候选也能进入调查。

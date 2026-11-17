@@ -8,7 +8,7 @@
 
 **快速导航**
 
-[AAAI 2026](#aaai-2026) · [CVPR 2026](#cvpr-2026) · [ECCV 2026](#eccv-2026) · [ICLR 2026](#iclr-2026) · [ICML 2026](#icml-2026) · [IJCAI 2026](#ijcai-2026) · [IJCV 2026](#ijcv-2026) · [NeurIPS 2026](#neurips-2026) · [TIP 2026](#tip-2026) · [TPAMI 2026](#tpami-2026) · [WACV 2027](#wacv-2027) · [arXiv 2026](#arxiv-2026)
+[AAAI 2026](#aaai-2026) · [ACMMM 2026](#acmmm-2026) · [CVPR 2026](#cvpr-2026) · [ECCV 2026](#eccv-2026) · [ICLR 2026](#iclr-2026) · [ICML 2026](#icml-2026) · [IJCAI 2026](#ijcai-2026) · [IJCV 2026](#ijcv-2026) · [NeurIPS 2026](#neurips-2026) · [TIP 2026](#tip-2026) · [TPAMI 2026](#tpami-2026) · [WACV 2027](#wacv-2027) · [arXiv 2026](#arxiv-2026)
 
 已收录 **153 篇** · 待筛选 **12 篇**
 
@@ -35,6 +35,14 @@
 | **[Quality-Aware Language-Conditioned Local Auto-Regressive Anomaly Synthesis and Detection](https://doi.org/10.1609/aaai.v40i18.38592)** | `异常合成` `自回归` 按文本要求在正常图像的局部自回归生成缺陷，再根据图文匹配质量给合成样本加权以训练检测器。 | [PDF](https://ojs.aaai.org/index.php/AAAI/article/download/38592/42554) · [Code](https://github.com/neymarql/QARAD) |
 | **[AdaptCLIP: Adapting CLIP for Universal Visual Anomaly Detection](https://doi.org/10.1609/aaai.v40i6.42404)** | `CLIP` `零样本` 交替训练视觉和文本适配器，并把正常参考图和待检图的上下文与残差一起用于比较，支持在目标域免微调检测。 | [PDF](https://ojs.aaai.org/index.php/AAAI/article/download/42404/46365) · [Code](https://github.com/gaobb/AdaptCLIP) |
 | **[AnomalyPainter: Vision-Language-Diffusion Synergy for Realistic and Diverse Unseen Industrial Anomaly Synthesis](https://doi.org/10.1609/aaai.v40i7.37501)** | `异常合成` `扩散模型` 用视觉语言模型描述缺陷并从纹理库选取材料纹理，引导扩散模型在正常工业图像上生成多样缺陷。 | [PDF](https://ojs.aaai.org/index.php/AAAI/article/download/37501/41463) |
+
+[↑ 返回导航](#论文清单)
+
+### ACMMM 2026
+
+| 论文 (Paper) | 核心亮点 / 方法简述 | 链接 |
+| :--- | :--- | :---: |
+| **[Perturb, Aggregate then Reconstruct: Consensus Aggregation and Fourier-Attended Multi-Decoders for Reconstruction-based Multi-View Anomaly Detection](https://arxiv.org/abs/2611.12477)** | `多视角异常检测` `重建` 提出特征扰动与共识聚合的多解码器重建框架，在Real-IAD多视角工业异常检测上完成像素级定位评估，值得关注。 | [PDF](https://arxiv.org/pdf/2611.12477) · [Code](https://github.com/SpatialAILab/PAR_mvad) |
 
 [↑ 返回导航](#论文清单)
 
@@ -231,7 +239,6 @@
 | 论文 (Paper) | 核心亮点 / 方法简述 | 链接 |
 | :--- | :--- | :---: |
 | **[CASCADE: Constraint-Aware SCAffolded DEcomposition for Logical Anomaly Detection](https://arxiv.org/abs/2611.13820)** | `逻辑异常检测` `视觉语言模型` 提出免训练约束感知视觉支架分解框架，用LVLM在MVTec-LOCO与VID-AD上验证逻辑异常检测，提升少样本性能。 | [PDF](https://arxiv.org/pdf/2611.13820) |
-| **[Perturb, Aggregate then Reconstruct: Consensus Aggregation and Fourier-Attended Multi-Decoders for Reconstruction-based Multi-View Anomaly Detection](https://arxiv.org/abs/2611.12477)** | `多视角异常检测` `重建` 提出特征扰动与共识聚合的多解码器重建框架，在Real-IAD多视角工业异常检测上完成像素级定位评估，值得关注。 | [PDF](https://arxiv.org/pdf/2611.12477) · [Code](https://github.com/SpatialAILab/PAR_mvad) |
 | **[TIRAD: Text-guided Image Residual Learning for Generalist Anomaly Detection](https://arxiv.org/abs/2611.12023)** | `多模态` `残差学习` TIRAD用文本残差门控图像残差做通用异常检测，并在工业基准上验证，可作为多模态工业异常检测的参考。 | [PDF](https://arxiv.org/pdf/2611.12023) |
 | **[TripletAD: Weakly Supervised Anomaly Detection in Embedding Space with Rare Anomalies and Scarce Labels](https://arxiv.org/abs/2611.10352)** | `弱监督` `嵌入空间` TripletAD用三元组间隔嵌入与软惩罚实现弱监督异常检测，在MVTec-AD稀疏标签下优于基线，可参考其稀缺标签利用思路。 | [PDF](https://arxiv.org/pdf/2611.10352) |
 | **[Fault-Guided Cross-Layer Prediction for Unsupervised Anomaly Detection](https://arxiv.org/abs/2611.08140)** | `无监督异常检测` `特征预测` 利用冻结ViT各层之间特征预测的不可传递信息来检测工业产品缺陷，并在多个工业数据集上验证了定位与分类性能。 | [PDF](https://arxiv.org/pdf/2611.08140) |

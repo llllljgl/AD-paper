@@ -10,6 +10,7 @@ from .official import OfficialSources, get_metadata, ANCHOR, plain_text, metadat
 from .deepseek import search_venues
 
 TEMPLATES = {
+    'ACMMM': ('https://{year}.acmmm.org/site/technical-programme.html', 'acmmm'),
     'CVPR': ('https://openaccess.thecvf.com/CVPR{year}?day=all', 'cvf'),
     'ICCV': ('https://openaccess.thecvf.com/ICCV{year}?day=all', 'cvf'),
     'ECCV': ('https://eccv.ecva.net/Conferences/{year}/AcceptedPapers', 'eccv'),
